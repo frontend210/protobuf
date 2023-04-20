@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+
+package com.sts.rpclib;
+
+import "sports.proto";
+import "languages.proto";
+
+message SportCategoryMessage {
+    string season = 1;
+    Sport sport = 2;
+    repeated CategoryMessage category = 3;
+}
+
+message CategoryMessage {
+    string id = 1;
+    string season = 2;
+    Sport sport = 3;
+    repeated LocalizedName name = 4;
+    int64 updated = 5;
+//    repeated MatchStageMessage stage = 6;
+}

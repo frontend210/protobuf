@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+
+package com.sts.rpclib;
+
+import "languages.proto";
+import "sports.proto";
+
+message RankingsMessage {
+  string categoryId = 1;
+
+  repeated LocalizedName categoryName = 2;
+
+  string stageId = 3;
+
+  repeated LocalizedName stageName = 4;
+
+  map<string, RankingsPoll> polls = 5;
+
+  Sport sport = 6;
+
+  string season = 7;
+}
+
+message RankingsPoll {
+  string pollId = 1;
+  string pollName = 2;
+  string week = 3;
+  int64 effectiveTime = 4;
+
+  repeated RankingEntry entries = 5;
+}
+
+message RankingEntry {
+  string teamId = 1;
+  repeated LocalizedName team_name = 2;
+  int32 ranking = 3;
+  int32 previousRanking = 4;
+  int32 wins = 5;
+  int32 losses = 6;
+  int32 points = 7;
+}
+
+message RankingsFullMessage {
+  bytes data = 1;
+}

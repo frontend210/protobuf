@@ -1,0 +1,125 @@
+syntax = "proto3";
+
+import "enums.proto";
+import "sports.proto";
+import "match.proto";
+import "incident.proto";
+import "providers.proto";
+import "stages.proto";
+import "top_scorer.proto";
+import "league_tables.proto";
+import "rankings.proto";
+import "widget_event.proto";
+import "var.proto";
+import "h2h.proto";
+import "image.proto";
+import "odds.proto";
+import "team_page.proto";
+import "draw.proto";
+
+option java_multiple_files = true;
+option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+
+package com.sts.rpclib;
+
+message Headers {
+
+  // the provider
+  Provider provider = 1;
+
+  // the sport
+  Sport sport = 2;
+
+  string matchId = 3;
+
+  string stageId = 4;
+
+  string season = 5;
+
+  // timestamp of when the message was created
+  int64 timestamp = 6;
+
+  // the type of message the body of the envelope contains
+  MessageType message_type = 7;
+
+}
+
+message ResponseMessage {
+  RpcResponseStatus status = 1;
+  string description = 2;
+  Headers header = 3;
+  int64 serverStartedTs = 4;
+
+}
+
+message HeartbeatMessage {
+  int32 providerId = 1;
+  int64 serverStartedTs = 2;
+}
+
+message CommandRequestMessage {
+  int32 providerId = 1;
+  int64 counter = 2;
+}
+
+// The event coming from the providers
+message EventMessage {
+
+  Headers headers = 1;
+
+  oneof body {
+
+    // BASIC INFO
+    StageMessage stage = 2;
+    CommentaryMessage commentary = 3;
+    AddCommentaryMessage matchCommentaryAdd = 4;
+
+    ProviderStatusMessage providerStatus = 5;
+
+    // League table
+    LeagueTableMessage leagueTable = 6;
+
+    // Top Scorer
+    TopScorerMessage topScorer = 7;
+
+    ScoutConnectionMessage scoutConnection = 8;
+
+    WidgetEventMessage widgetEvent = 9;
+
+    VarStatusMessage varStatus = 10;
+
+    VarReasonMessage varReason = 11;
+
+    // API
+    FullMatchDataMessage fullMatchData = 12;
+    MatchDeletedMessage matchDeleted = 13;
+
+    IncidentMessage incident = 14;
+
+    MatchStatusChangeMessage matchStatusChange = 15;
+    MatchScoreChangeMessage matchScoreChange = 16;
+    MatchIncidentChangeMessage matchIncidentChange = 17;
+    MatchWinnerChangeMessage matchWinnerChange = 18;
+    MatchParticipantsChangeMessage matchParticipantsChange = 19;
+    MatchLineupChangeMessage matchLineupChange = 20;
+    MatchStatsChangeMessage matchStatsMessage = 21;
+    DeleteIncidentMessage deletedIncidentMessage = 22;
+    ResponseMessage responseMessage = 23;
+    HeartbeatMessage heartbeatMessage = 24;
+
+    LeagueTableFullMessage leagueTableMessageFull = 25;
+    TopScorerFullMessage topScorerFullMessage = 26;
+    H2HMatchesMessage H2HMatchesMessage = 27;
+    Base64ImageMessage base64image = 28;
+    ImageFullMessage imageFullMessage = 29;
+    StageParticipantsStatisticsFullMessage stageParticipantsStatisticsFullMessage = 30;
+    MatchOddsFullMessage matchOddsFullMessage = 31;
+    TeamPageMessage teamPageMessage = 32;
+    TeamPageFullMessage teamPageFullMessage = 33;
+    DrawFullMessage drawFullMessage = 34;
+    RankingsMessage rankingsMessage = 35;
+    RankingsFullMessage rankingsFullMessage = 36;
+
+  }
+
+}

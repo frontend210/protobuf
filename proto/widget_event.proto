@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+
+package com.sts.rpclib;
+
+import "enums.proto";
+
+message WidgetEventMessage {
+    string id = 1;
+
+    WidgetEventType eventType = 2;
+
+    string refEventId = 3;
+
+    PitchZone zone = 4;
+
+    int64 timestamp = 5;
+}
