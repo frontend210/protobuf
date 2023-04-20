@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+
+package com.sts.rpclib;
+
+import "enums.proto";
+
+message VarStatusMessage {
+    string id = 1;
+
+    VarStatus status = 2;
+
+    int64 timestamp = 3;
+}
+
+message VarReasonMessage {
+    string id = 1;
+
+    VarReason reason = 2;
+
+    int64 timestamp = 3;
+}

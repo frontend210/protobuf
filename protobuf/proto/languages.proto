@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+
+package com.sts.rpclib;
+
+enum Language {
+    UNKNOWN_LANGUAGE = 0;
+    ENGLISH = 1;
+    DANISH = 2;
+    RUSSIAN =  3;
+    GERMAN = 4;
+    ITALIAN = 5;
+    SPANISH = 6;
+    CZECH = 7;
+    FRENCH = 8;
+    ARABIC = 9;
+    PORTUGUESE = 10;
+    DUTCH = 11;
+    SWEDISH = 12;
+    JAPANESE = 13;
+    HINDI = 14;
+}
+
+message LocalizedName {
+    Language language = 1;
+    string value = 2;
+    int32 manual = 3;
+}
+
+enum LocaleType {
+    AUTOMATIC = 0;
+    MANUAL = 1;
+}

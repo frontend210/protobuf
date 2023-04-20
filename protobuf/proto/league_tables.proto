@@ -1,0 +1,92 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+
+package com.sts.rpclib;
+
+import "sports.proto";
+import "languages.proto";
+
+message LeagueTableEntry {
+    int32 ranking = 1;
+
+    string team_id = 2;
+
+    repeated LocalizedName team_name = 3;
+
+    string played = 4;
+
+    string wins = 5;
+
+    string draws = 6;
+
+    string loss = 7;
+
+    string goal_for = 8;
+
+    string goal_against = 9;
+
+    string goal_difference = 10;
+
+    string points = 11;
+
+    string percentage = 12;
+
+    enum LeagueTableKind {
+        TOTAL = 0;
+        HOME = 1;
+        AWAY = 2;
+    }
+
+    LeagueTableKind league_table_kind = 13;
+
+    repeated int32 stage_phases = 14;
+
+    string points_deduction = 15;
+
+    string abandoned = 16;
+
+    string no_result = 17;
+
+    string net_run_rate = 18;
+}
+
+message LeagueTableMessage {
+    string categoryId = 1;
+
+    repeated LocalizedName categoryName = 2;
+
+    string stageId = 3;
+
+    repeated LocalizedName stageName = 4;
+
+    repeated LeagueTableEntry entries= 5;
+
+    enum LeagueTableGroups {
+        LEAGUE = 0;
+        CONFERENCE = 1;
+        DIVISION = 2;
+    }
+
+    LeagueTableGroups leagueTableGroups = 6;
+
+    Sport sport = 7;
+
+    string season = 8;
+
+    string name = 9;
+
+    repeated LeagueTableAdditionalInfo additionalInfo = 10;
+
+    repeated LocalizedName tableName = 11;
+
+}
+
+message LeagueTableAdditionalInfo {
+    string additionalInfoId = 1;
+}
+
+message LeagueTableFullMessage {
+    bytes data = 1;
+}

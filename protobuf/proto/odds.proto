@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+
+package com.sts.rpclib;
+
+message MatchOddsFullMessage {
+
+    // UPDATE / MATCH_ODDS_DELETED
+
+    // serialised MatchOdds instance into json
+    bytes data = 1;
+
+}
