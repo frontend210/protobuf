@@ -2,7 +2,7 @@ syntax = "proto3";
 import "enums.proto";
 
 option java_multiple_files = true;
-option go_package = "github.com/snapscoregroup/protobuf/gorpclib";
+option go_package = "github.com/frontend210/protobuf/gorpclib";
 
 package com.sts.rpclib;
 

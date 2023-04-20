@@ -1,4 +1,4 @@
-module github.com/snapscoregroup/protobuf/gorpclib
+module github.com/frontend210/protobuf/gorpclib
 
 go 1.19
 
