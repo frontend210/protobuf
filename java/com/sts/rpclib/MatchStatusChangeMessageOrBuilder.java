@@ -70,14 +70,12 @@ public interface MatchStatusChangeMessageOrBuilder extends
   /**
    * <code>map&lt;int32, int32&gt; injuryTime = 6;</code>
    */
-
   int getInjuryTimeOrDefault(
       int key,
       int defaultValue);
   /**
    * <code>map&lt;int32, int32&gt; injuryTime = 6;</code>
    */
-
   int getInjuryTimeOrThrow(
       int key);
 
@@ -113,4 +111,28 @@ public interface MatchStatusChangeMessageOrBuilder extends
    * @return The elapsedType.
    */
   com.sts.rpclib.ElapsedType getElapsedType();
+
+  /**
+   * <code>string description = 11;</code>
+   * @return The description.
+   */
+  java.lang.String getDescription();
+  /**
+   * <code>string description = 11;</code>
+   * @return The bytes for description.
+   */
+  com.google.protobuf.ByteString
+      getDescriptionBytes();
+
+  /**
+   * <code>string description2 = 12;</code>
+   * @return The description2.
+   */
+  java.lang.String getDescription2();
+  /**
+   * <code>string description2 = 12;</code>
+   * @return The bytes for description2.
+   */
+  com.google.protobuf.ByteString
+      getDescription2Bytes();
 }

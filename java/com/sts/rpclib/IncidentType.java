@@ -220,6 +220,386 @@ public enum IncidentType
    * <code>DEFENSIVE_TWO_POINT_CONVERSION_GOAL = 51;</code>
    */
   DEFENSIVE_TWO_POINT_CONVERSION_GOAL(51),
+  /**
+   * <pre>
+   * BASEBALL
+   * </pre>
+   *
+   * <code>BALK = 52;</code>
+   */
+  BALK(52),
+  /**
+   * <code>CATCHER_INTERFERENCE = 53;</code>
+   */
+  CATCHER_INTERFERENCE(53),
+  /**
+   * <code>DOUBLE = 54;</code>
+   */
+  DOUBLE(54),
+  /**
+   * <code>DOUBLE_ADV_3RD = 55;</code>
+   */
+  DOUBLE_ADV_3RD(55),
+  /**
+   * <code>DOUBLE_ADV_HOME = 56;</code>
+   */
+  DOUBLE_ADV_HOME(56),
+  /**
+   * <code>FIELDERS_CHOICE_ADV_2ND = 57;</code>
+   */
+  FIELDERS_CHOICE_ADV_2ND(57),
+  /**
+   * <code>FIELDERS_CHOICE_ADV_3RD = 58;</code>
+   */
+  FIELDERS_CHOICE_ADV_3RD(58),
+  /**
+   * <code>FIELDERS_CHOICE_ADV_HOME = 59;</code>
+   */
+  FIELDERS_CHOICE_ADV_HOME(59),
+  /**
+   * <code>HIT_BY_PITCH = 60;</code>
+   */
+  HIT_BY_PITCH(60),
+  /**
+   * <code>HOME_RUN = 61;</code>
+   */
+  HOME_RUN(61),
+  /**
+   * <code>INTENTIONAL_WALK = 62;</code>
+   */
+  INTENTIONAL_WALK(62),
+  /**
+   * <code>STRIKE_LOOKING_ADV_1ST = 63;</code>
+   */
+  STRIKE_LOOKING_ADV_1ST(63),
+  /**
+   * <code>STRIKE_LOOKING_ADV_2ND = 64;</code>
+   */
+  STRIKE_LOOKING_ADV_2ND(64),
+  /**
+   * <code>STRIKE_LOOKING_ADV_3RD = 65;</code>
+   */
+  STRIKE_LOOKING_ADV_3RD(65),
+  /**
+   * <code>STRIKE_LOOKING_ADV_HOME = 66;</code>
+   */
+  STRIKE_LOOKING_ADV_HOME(66),
+  /**
+   * <code>STRIKE_SWINGING_ADV_1ST = 67;</code>
+   */
+  STRIKE_SWINGING_ADV_1ST(67),
+  /**
+   * <code>STRIKE_SWINGING_ADV_2ND = 68;</code>
+   */
+  STRIKE_SWINGING_ADV_2ND(68),
+  /**
+   * <code>STRIKE_SWINGING_ADV_3RD = 69;</code>
+   */
+  STRIKE_SWINGING_ADV_3RD(69),
+  /**
+   * <code>STRIKE_SWINGING_ADV_HOME = 70;</code>
+   */
+  STRIKE_SWINGING_ADV_HOME(70),
+  /**
+   * <code>REACHED_ON_ERROR = 71;</code>
+   */
+  REACHED_ON_ERROR(71),
+  /**
+   * <code>REACHED_ON_ERROR_ADV_2ND = 72;</code>
+   */
+  REACHED_ON_ERROR_ADV_2ND(72),
+  /**
+   * <code>REACHED_ON_ERROR_ADV_3RD = 73;</code>
+   */
+  REACHED_ON_ERROR_ADV_3RD(73),
+  /**
+   * <code>REACHED_ON_ERROR_ADV_HOME = 74;</code>
+   */
+  REACHED_ON_ERROR_ADV_HOME(74),
+  /**
+   * <code>SINGLE = 75;</code>
+   */
+  SINGLE(75),
+  /**
+   * <code>SINGLE_ADV_2ND = 76;</code>
+   */
+  SINGLE_ADV_2ND(76),
+  /**
+   * <code>SINGLE_ADV_3RD = 77;</code>
+   */
+  SINGLE_ADV_3RD(77),
+  /**
+   * <code>SINGLE_ADV_HOME = 78;</code>
+   */
+  SINGLE_ADV_HOME(78),
+  /**
+   * <code>SACRIFICE_BUNT_ADV_1ST = 79;</code>
+   */
+  SACRIFICE_BUNT_ADV_1ST(79),
+  /**
+   * <code>SACRIFICE_BUNT_ADV_2ND = 80;</code>
+   */
+  SACRIFICE_BUNT_ADV_2ND(80),
+  /**
+   * <code>SACRIFICE_BUNT_ADV_3RD = 81;</code>
+   */
+  SACRIFICE_BUNT_ADV_3RD(81),
+  /**
+   * <code>SACRIFICE_BUNT_ADV_HOME = 82;</code>
+   */
+  SACRIFICE_BUNT_ADV_HOME(82),
+  /**
+   * <code>SACRIFICE_FLY_ADV_1ST = 83;</code>
+   */
+  SACRIFICE_FLY_ADV_1ST(83),
+  /**
+   * <code>SACRIFICE_FLY_ADV_2ND = 84;</code>
+   */
+  SACRIFICE_FLY_ADV_2ND(84),
+  /**
+   * <code>SACRIFICE_FLY_ADV_3RD = 85;</code>
+   */
+  SACRIFICE_FLY_ADV_3RD(85),
+  /**
+   * <code>SACRIFICE_FLY_ADV_HOME = 86;</code>
+   */
+  SACRIFICE_FLY_ADV_HOME(86),
+  /**
+   * <code>TRIPLE = 87;</code>
+   */
+  TRIPLE(87),
+  /**
+   * <code>TRIPLE_ADV_HOME = 88;</code>
+   */
+  TRIPLE_ADV_HOME(88),
+  /**
+   * <code>ENFORCED_BALL = 89;</code>
+   */
+  ENFORCED_BALL(89),
+  /**
+   * <code>BALL = 90;</code>
+   */
+  BALL(90),
+  /**
+   * <code>DIRT_BALL = 91;</code>
+   */
+  DIRT_BALL(91),
+  /**
+   * <code>INTENTIONAL_BALL = 92;</code>
+   */
+  INTENTIONAL_BALL(92),
+  /**
+   * <code>PITCHOUT = 93;</code>
+   */
+  PITCHOUT(93),
+  /**
+   * <code>FOUL_BALL = 94;</code>
+   */
+  FOUL_BALL(94),
+  /**
+   * <code>FOUL_TIP = 95;</code>
+   */
+  FOUL_TIP(95),
+  /**
+   * <code>STRIKE_LOOKING = 96;</code>
+   */
+  STRIKE_LOOKING(96),
+  /**
+   * <code>STRIKE_SWINGING = 97;</code>
+   */
+  STRIKE_SWINGING(97),
+  /**
+   * <code>HITTER_INTERFERENCE = 98;</code>
+   */
+  HITTER_INTERFERENCE(98),
+  /**
+   * <code>DOUBLE_OUT_AT_3RD = 99;</code>
+   */
+  DOUBLE_OUT_AT_3RD(99),
+  /**
+   * <code>DOUBLE_OUT_AT_HOME = 100;</code>
+   */
+  DOUBLE_OUT_AT_HOME(100),
+  /**
+   * <code>FIELDERS_CHOICE = 101;</code>
+   */
+  FIELDERS_CHOICE(101),
+  /**
+   * <code>FIELDERS_CHOICE_OUT_AT_2ND = 102;</code>
+   */
+  FIELDERS_CHOICE_OUT_AT_2ND(102),
+  /**
+   * <code>FIELDERS_CHOICE_OUT_AT_3RD = 103;</code>
+   */
+  FIELDERS_CHOICE_OUT_AT_3RD(103),
+  /**
+   * <code>FIELDERS_CHOICE_OUT_AT_HOME = 104;</code>
+   */
+  FIELDERS_CHOICE_OUT_AT_HOME(104),
+  /**
+   * <code>FLY_OUT = 105;</code>
+   */
+  FLY_OUT(105),
+  /**
+   * <code>GROUND_OUT = 106;</code>
+   */
+  GROUND_OUT(106),
+  /**
+   * <code>STRIKE_LOOKING_OUT_AT_1ST = 107;</code>
+   */
+  STRIKE_LOOKING_OUT_AT_1ST(107),
+  /**
+   * <code>STRIKE_LOOKING_OUT_AT_2ND = 108;</code>
+   */
+  STRIKE_LOOKING_OUT_AT_2ND(108),
+  /**
+   * <code>STRIKE_LOOKING_OUT_AT_3RD = 109;</code>
+   */
+  STRIKE_LOOKING_OUT_AT_3RD(109),
+  /**
+   * <code>STRIKE_LOOKING_OUT_AT_HOME = 110;</code>
+   */
+  STRIKE_LOOKING_OUT_AT_HOME(110),
+  /**
+   * <code>STRIKE_SWINGING_OUT_AT_1ST = 111;</code>
+   */
+  STRIKE_SWINGING_OUT_AT_1ST(111),
+  /**
+   * <code>STRIKE_SWINGING_OUT_AT_2ND = 112;</code>
+   */
+  STRIKE_SWINGING_OUT_AT_2ND(112),
+  /**
+   * <code>STRIKE_SWINGING_OUT_AT_3RD = 113;</code>
+   */
+  STRIKE_SWINGING_OUT_AT_3RD(113),
+  /**
+   * <code>STRIKE_SWINGING_OUT_AT_HOME = 114;</code>
+   */
+  STRIKE_SWINGING_OUT_AT_HOME(114),
+  /**
+   * <code>LINE_OUT = 115;</code>
+   */
+  LINE_OUT(115),
+  /**
+   * <code>OUT_OF_BATTERS_BOX = 116;</code>
+   */
+  OUT_OF_BATTERS_BOX(116),
+  /**
+   * <code>OUT_ON_APPEAL = 117;</code>
+   */
+  OUT_ON_APPEAL(117),
+  /**
+   * <code>POP_OUT = 118;</code>
+   */
+  POP_OUT(118),
+  /**
+   * <code>REACHED_ON_ERROR_OUT_AT_2ND = 119;</code>
+   */
+  REACHED_ON_ERROR_OUT_AT_2ND(119),
+  /**
+   * <code>REACHED_ON_ERROR_OUT_AT_3RD = 120;</code>
+   */
+  REACHED_ON_ERROR_OUT_AT_3RD(120),
+  /**
+   * <code>REACHED_ON_ERROR_OUT_AT_HOME = 121;</code>
+   */
+  REACHED_ON_ERROR_OUT_AT_HOME(121),
+  /**
+   * <code>SACRIFICE_BUNT = 122;</code>
+   */
+  SACRIFICE_BUNT(122),
+  /**
+   * <code>SACRIFICE_BUNT_OUT_AT_2ND = 123;</code>
+   */
+  SACRIFICE_BUNT_OUT_AT_2ND(123),
+  /**
+   * <code>SACRIFICE_BUNT_OUT_AT_3RD = 124;</code>
+   */
+  SACRIFICE_BUNT_OUT_AT_3RD(124),
+  /**
+   * <code>SACRIFICE_BUNT_OUT_AT_HOME = 125;</code>
+   */
+  SACRIFICE_BUNT_OUT_AT_HOME(125),
+  /**
+   * <code>SACRIFICE_FLY = 126;</code>
+   */
+  SACRIFICE_FLY(126),
+  /**
+   * <code>SACRIFICE_FLY_OUT_AT_2ND = 127;</code>
+   */
+  SACRIFICE_FLY_OUT_AT_2ND(127),
+  /**
+   * <code>SACRIFICE_FLY_OUT_AT_3RD = 128;</code>
+   */
+  SACRIFICE_FLY_OUT_AT_3RD(128),
+  /**
+   * <code>SACRIFICE_FLY_OUT_AT_HOME = 129;</code>
+   */
+  SACRIFICE_FLY_OUT_AT_HOME(129),
+  /**
+   * <code>SINGLE_OUT_AT_2ND = 130;</code>
+   */
+  SINGLE_OUT_AT_2ND(130),
+  /**
+   * <code>SINGLE_OUT_AT_3RD = 131;</code>
+   */
+  SINGLE_OUT_AT_3RD(131),
+  /**
+   * <code>SINGLE_OUT_AT_HOME = 132;</code>
+   */
+  SINGLE_OUT_AT_HOME(132),
+  /**
+   * <code>TRIPLE_OUT_AT_HOME = 133;</code>
+   */
+  TRIPLE_OUT_AT_HOME(133),
+  /**
+   * <code>RULING_PENDING_AT_BAT_CONTINUES = 134;</code>
+   */
+  RULING_PENDING_AT_BAT_CONTINUES(134),
+  /**
+   * <code>RULING_PENDING_AT_BAT_OVER = 135;</code>
+   */
+  RULING_PENDING_AT_BAT_OVER(135),
+  /**
+   * <code>STEAL = 136;</code>
+   */
+  STEAL(136),
+  /**
+   * <code>AT_BAT = 137;</code>
+   */
+  AT_BAT(137),
+  /**
+   * <pre>
+   * RUGBY
+   * </pre>
+   *
+   * <code>TWO_POINT_FIELD_GOAL = 138;</code>
+   */
+  TWO_POINT_FIELD_GOAL(138),
+  /**
+   * <code>BEHIND = 139;</code>
+   */
+  BEHIND(139),
+  /**
+   * <code>BEHIND_RUSHED = 140;</code>
+   */
+  BEHIND_RUSHED(140),
+  /**
+   * <code>EXTRA_TIME_BEHIND = 141;</code>
+   */
+  EXTRA_TIME_BEHIND(141),
+  /**
+   * <code>EXTRA_TIME_BEHIND_RUSHED = 142;</code>
+   */
+  EXTRA_TIME_BEHIND_RUSHED(142),
+  /**
+   * <code>MISSED_CONVERSION = 143;</code>
+   */
+  MISSED_CONVERSION(143),
+  /**
+   * <code>EXTRA_TIME_MISSED_CONVERSION = 144;</code>
+   */
+  EXTRA_TIME_MISSED_CONVERSION(144),
   UNRECOGNIZED(-1),
   ;
 
@@ -435,6 +815,386 @@ public enum IncidentType
    * <code>DEFENSIVE_TWO_POINT_CONVERSION_GOAL = 51;</code>
    */
   public static final int DEFENSIVE_TWO_POINT_CONVERSION_GOAL_VALUE = 51;
+  /**
+   * <pre>
+   * BASEBALL
+   * </pre>
+   *
+   * <code>BALK = 52;</code>
+   */
+  public static final int BALK_VALUE = 52;
+  /**
+   * <code>CATCHER_INTERFERENCE = 53;</code>
+   */
+  public static final int CATCHER_INTERFERENCE_VALUE = 53;
+  /**
+   * <code>DOUBLE = 54;</code>
+   */
+  public static final int DOUBLE_VALUE = 54;
+  /**
+   * <code>DOUBLE_ADV_3RD = 55;</code>
+   */
+  public static final int DOUBLE_ADV_3RD_VALUE = 55;
+  /**
+   * <code>DOUBLE_ADV_HOME = 56;</code>
+   */
+  public static final int DOUBLE_ADV_HOME_VALUE = 56;
+  /**
+   * <code>FIELDERS_CHOICE_ADV_2ND = 57;</code>
+   */
+  public static final int FIELDERS_CHOICE_ADV_2ND_VALUE = 57;
+  /**
+   * <code>FIELDERS_CHOICE_ADV_3RD = 58;</code>
+   */
+  public static final int FIELDERS_CHOICE_ADV_3RD_VALUE = 58;
+  /**
+   * <code>FIELDERS_CHOICE_ADV_HOME = 59;</code>
+   */
+  public static final int FIELDERS_CHOICE_ADV_HOME_VALUE = 59;
+  /**
+   * <code>HIT_BY_PITCH = 60;</code>
+   */
+  public static final int HIT_BY_PITCH_VALUE = 60;
+  /**
+   * <code>HOME_RUN = 61;</code>
+   */
+  public static final int HOME_RUN_VALUE = 61;
+  /**
+   * <code>INTENTIONAL_WALK = 62;</code>
+   */
+  public static final int INTENTIONAL_WALK_VALUE = 62;
+  /**
+   * <code>STRIKE_LOOKING_ADV_1ST = 63;</code>
+   */
+  public static final int STRIKE_LOOKING_ADV_1ST_VALUE = 63;
+  /**
+   * <code>STRIKE_LOOKING_ADV_2ND = 64;</code>
+   */
+  public static final int STRIKE_LOOKING_ADV_2ND_VALUE = 64;
+  /**
+   * <code>STRIKE_LOOKING_ADV_3RD = 65;</code>
+   */
+  public static final int STRIKE_LOOKING_ADV_3RD_VALUE = 65;
+  /**
+   * <code>STRIKE_LOOKING_ADV_HOME = 66;</code>
+   */
+  public static final int STRIKE_LOOKING_ADV_HOME_VALUE = 66;
+  /**
+   * <code>STRIKE_SWINGING_ADV_1ST = 67;</code>
+   */
+  public static final int STRIKE_SWINGING_ADV_1ST_VALUE = 67;
+  /**
+   * <code>STRIKE_SWINGING_ADV_2ND = 68;</code>
+   */
+  public static final int STRIKE_SWINGING_ADV_2ND_VALUE = 68;
+  /**
+   * <code>STRIKE_SWINGING_ADV_3RD = 69;</code>
+   */
+  public static final int STRIKE_SWINGING_ADV_3RD_VALUE = 69;
+  /**
+   * <code>STRIKE_SWINGING_ADV_HOME = 70;</code>
+   */
+  public static final int STRIKE_SWINGING_ADV_HOME_VALUE = 70;
+  /**
+   * <code>REACHED_ON_ERROR = 71;</code>
+   */
+  public static final int REACHED_ON_ERROR_VALUE = 71;
+  /**
+   * <code>REACHED_ON_ERROR_ADV_2ND = 72;</code>
+   */
+  public static final int REACHED_ON_ERROR_ADV_2ND_VALUE = 72;
+  /**
+   * <code>REACHED_ON_ERROR_ADV_3RD = 73;</code>
+   */
+  public static final int REACHED_ON_ERROR_ADV_3RD_VALUE = 73;
+  /**
+   * <code>REACHED_ON_ERROR_ADV_HOME = 74;</code>
+   */
+  public static final int REACHED_ON_ERROR_ADV_HOME_VALUE = 74;
+  /**
+   * <code>SINGLE = 75;</code>
+   */
+  public static final int SINGLE_VALUE = 75;
+  /**
+   * <code>SINGLE_ADV_2ND = 76;</code>
+   */
+  public static final int SINGLE_ADV_2ND_VALUE = 76;
+  /**
+   * <code>SINGLE_ADV_3RD = 77;</code>
+   */
+  public static final int SINGLE_ADV_3RD_VALUE = 77;
+  /**
+   * <code>SINGLE_ADV_HOME = 78;</code>
+   */
+  public static final int SINGLE_ADV_HOME_VALUE = 78;
+  /**
+   * <code>SACRIFICE_BUNT_ADV_1ST = 79;</code>
+   */
+  public static final int SACRIFICE_BUNT_ADV_1ST_VALUE = 79;
+  /**
+   * <code>SACRIFICE_BUNT_ADV_2ND = 80;</code>
+   */
+  public static final int SACRIFICE_BUNT_ADV_2ND_VALUE = 80;
+  /**
+   * <code>SACRIFICE_BUNT_ADV_3RD = 81;</code>
+   */
+  public static final int SACRIFICE_BUNT_ADV_3RD_VALUE = 81;
+  /**
+   * <code>SACRIFICE_BUNT_ADV_HOME = 82;</code>
+   */
+  public static final int SACRIFICE_BUNT_ADV_HOME_VALUE = 82;
+  /**
+   * <code>SACRIFICE_FLY_ADV_1ST = 83;</code>
+   */
+  public static final int SACRIFICE_FLY_ADV_1ST_VALUE = 83;
+  /**
+   * <code>SACRIFICE_FLY_ADV_2ND = 84;</code>
+   */
+  public static final int SACRIFICE_FLY_ADV_2ND_VALUE = 84;
+  /**
+   * <code>SACRIFICE_FLY_ADV_3RD = 85;</code>
+   */
+  public static final int SACRIFICE_FLY_ADV_3RD_VALUE = 85;
+  /**
+   * <code>SACRIFICE_FLY_ADV_HOME = 86;</code>
+   */
+  public static final int SACRIFICE_FLY_ADV_HOME_VALUE = 86;
+  /**
+   * <code>TRIPLE = 87;</code>
+   */
+  public static final int TRIPLE_VALUE = 87;
+  /**
+   * <code>TRIPLE_ADV_HOME = 88;</code>
+   */
+  public static final int TRIPLE_ADV_HOME_VALUE = 88;
+  /**
+   * <code>ENFORCED_BALL = 89;</code>
+   */
+  public static final int ENFORCED_BALL_VALUE = 89;
+  /**
+   * <code>BALL = 90;</code>
+   */
+  public static final int BALL_VALUE = 90;
+  /**
+   * <code>DIRT_BALL = 91;</code>
+   */
+  public static final int DIRT_BALL_VALUE = 91;
+  /**
+   * <code>INTENTIONAL_BALL = 92;</code>
+   */
+  public static final int INTENTIONAL_BALL_VALUE = 92;
+  /**
+   * <code>PITCHOUT = 93;</code>
+   */
+  public static final int PITCHOUT_VALUE = 93;
+  /**
+   * <code>FOUL_BALL = 94;</code>
+   */
+  public static final int FOUL_BALL_VALUE = 94;
+  /**
+   * <code>FOUL_TIP = 95;</code>
+   */
+  public static final int FOUL_TIP_VALUE = 95;
+  /**
+   * <code>STRIKE_LOOKING = 96;</code>
+   */
+  public static final int STRIKE_LOOKING_VALUE = 96;
+  /**
+   * <code>STRIKE_SWINGING = 97;</code>
+   */
+  public static final int STRIKE_SWINGING_VALUE = 97;
+  /**
+   * <code>HITTER_INTERFERENCE = 98;</code>
+   */
+  public static final int HITTER_INTERFERENCE_VALUE = 98;
+  /**
+   * <code>DOUBLE_OUT_AT_3RD = 99;</code>
+   */
+  public static final int DOUBLE_OUT_AT_3RD_VALUE = 99;
+  /**
+   * <code>DOUBLE_OUT_AT_HOME = 100;</code>
+   */
+  public static final int DOUBLE_OUT_AT_HOME_VALUE = 100;
+  /**
+   * <code>FIELDERS_CHOICE = 101;</code>
+   */
+  public static final int FIELDERS_CHOICE_VALUE = 101;
+  /**
+   * <code>FIELDERS_CHOICE_OUT_AT_2ND = 102;</code>
+   */
+  public static final int FIELDERS_CHOICE_OUT_AT_2ND_VALUE = 102;
+  /**
+   * <code>FIELDERS_CHOICE_OUT_AT_3RD = 103;</code>
+   */
+  public static final int FIELDERS_CHOICE_OUT_AT_3RD_VALUE = 103;
+  /**
+   * <code>FIELDERS_CHOICE_OUT_AT_HOME = 104;</code>
+   */
+  public static final int FIELDERS_CHOICE_OUT_AT_HOME_VALUE = 104;
+  /**
+   * <code>FLY_OUT = 105;</code>
+   */
+  public static final int FLY_OUT_VALUE = 105;
+  /**
+   * <code>GROUND_OUT = 106;</code>
+   */
+  public static final int GROUND_OUT_VALUE = 106;
+  /**
+   * <code>STRIKE_LOOKING_OUT_AT_1ST = 107;</code>
+   */
+  public static final int STRIKE_LOOKING_OUT_AT_1ST_VALUE = 107;
+  /**
+   * <code>STRIKE_LOOKING_OUT_AT_2ND = 108;</code>
+   */
+  public static final int STRIKE_LOOKING_OUT_AT_2ND_VALUE = 108;
+  /**
+   * <code>STRIKE_LOOKING_OUT_AT_3RD = 109;</code>
+   */
+  public static final int STRIKE_LOOKING_OUT_AT_3RD_VALUE = 109;
+  /**
+   * <code>STRIKE_LOOKING_OUT_AT_HOME = 110;</code>
+   */
+  public static final int STRIKE_LOOKING_OUT_AT_HOME_VALUE = 110;
+  /**
+   * <code>STRIKE_SWINGING_OUT_AT_1ST = 111;</code>
+   */
+  public static final int STRIKE_SWINGING_OUT_AT_1ST_VALUE = 111;
+  /**
+   * <code>STRIKE_SWINGING_OUT_AT_2ND = 112;</code>
+   */
+  public static final int STRIKE_SWINGING_OUT_AT_2ND_VALUE = 112;
+  /**
+   * <code>STRIKE_SWINGING_OUT_AT_3RD = 113;</code>
+   */
+  public static final int STRIKE_SWINGING_OUT_AT_3RD_VALUE = 113;
+  /**
+   * <code>STRIKE_SWINGING_OUT_AT_HOME = 114;</code>
+   */
+  public static final int STRIKE_SWINGING_OUT_AT_HOME_VALUE = 114;
+  /**
+   * <code>LINE_OUT = 115;</code>
+   */
+  public static final int LINE_OUT_VALUE = 115;
+  /**
+   * <code>OUT_OF_BATTERS_BOX = 116;</code>
+   */
+  public static final int OUT_OF_BATTERS_BOX_VALUE = 116;
+  /**
+   * <code>OUT_ON_APPEAL = 117;</code>
+   */
+  public static final int OUT_ON_APPEAL_VALUE = 117;
+  /**
+   * <code>POP_OUT = 118;</code>
+   */
+  public static final int POP_OUT_VALUE = 118;
+  /**
+   * <code>REACHED_ON_ERROR_OUT_AT_2ND = 119;</code>
+   */
+  public static final int REACHED_ON_ERROR_OUT_AT_2ND_VALUE = 119;
+  /**
+   * <code>REACHED_ON_ERROR_OUT_AT_3RD = 120;</code>
+   */
+  public static final int REACHED_ON_ERROR_OUT_AT_3RD_VALUE = 120;
+  /**
+   * <code>REACHED_ON_ERROR_OUT_AT_HOME = 121;</code>
+   */
+  public static final int REACHED_ON_ERROR_OUT_AT_HOME_VALUE = 121;
+  /**
+   * <code>SACRIFICE_BUNT = 122;</code>
+   */
+  public static final int SACRIFICE_BUNT_VALUE = 122;
+  /**
+   * <code>SACRIFICE_BUNT_OUT_AT_2ND = 123;</code>
+   */
+  public static final int SACRIFICE_BUNT_OUT_AT_2ND_VALUE = 123;
+  /**
+   * <code>SACRIFICE_BUNT_OUT_AT_3RD = 124;</code>
+   */
+  public static final int SACRIFICE_BUNT_OUT_AT_3RD_VALUE = 124;
+  /**
+   * <code>SACRIFICE_BUNT_OUT_AT_HOME = 125;</code>
+   */
+  public static final int SACRIFICE_BUNT_OUT_AT_HOME_VALUE = 125;
+  /**
+   * <code>SACRIFICE_FLY = 126;</code>
+   */
+  public static final int SACRIFICE_FLY_VALUE = 126;
+  /**
+   * <code>SACRIFICE_FLY_OUT_AT_2ND = 127;</code>
+   */
+  public static final int SACRIFICE_FLY_OUT_AT_2ND_VALUE = 127;
+  /**
+   * <code>SACRIFICE_FLY_OUT_AT_3RD = 128;</code>
+   */
+  public static final int SACRIFICE_FLY_OUT_AT_3RD_VALUE = 128;
+  /**
+   * <code>SACRIFICE_FLY_OUT_AT_HOME = 129;</code>
+   */
+  public static final int SACRIFICE_FLY_OUT_AT_HOME_VALUE = 129;
+  /**
+   * <code>SINGLE_OUT_AT_2ND = 130;</code>
+   */
+  public static final int SINGLE_OUT_AT_2ND_VALUE = 130;
+  /**
+   * <code>SINGLE_OUT_AT_3RD = 131;</code>
+   */
+  public static final int SINGLE_OUT_AT_3RD_VALUE = 131;
+  /**
+   * <code>SINGLE_OUT_AT_HOME = 132;</code>
+   */
+  public static final int SINGLE_OUT_AT_HOME_VALUE = 132;
+  /**
+   * <code>TRIPLE_OUT_AT_HOME = 133;</code>
+   */
+  public static final int TRIPLE_OUT_AT_HOME_VALUE = 133;
+  /**
+   * <code>RULING_PENDING_AT_BAT_CONTINUES = 134;</code>
+   */
+  public static final int RULING_PENDING_AT_BAT_CONTINUES_VALUE = 134;
+  /**
+   * <code>RULING_PENDING_AT_BAT_OVER = 135;</code>
+   */
+  public static final int RULING_PENDING_AT_BAT_OVER_VALUE = 135;
+  /**
+   * <code>STEAL = 136;</code>
+   */
+  public static final int STEAL_VALUE = 136;
+  /**
+   * <code>AT_BAT = 137;</code>
+   */
+  public static final int AT_BAT_VALUE = 137;
+  /**
+   * <pre>
+   * RUGBY
+   * </pre>
+   *
+   * <code>TWO_POINT_FIELD_GOAL = 138;</code>
+   */
+  public static final int TWO_POINT_FIELD_GOAL_VALUE = 138;
+  /**
+   * <code>BEHIND = 139;</code>
+   */
+  public static final int BEHIND_VALUE = 139;
+  /**
+   * <code>BEHIND_RUSHED = 140;</code>
+   */
+  public static final int BEHIND_RUSHED_VALUE = 140;
+  /**
+   * <code>EXTRA_TIME_BEHIND = 141;</code>
+   */
+  public static final int EXTRA_TIME_BEHIND_VALUE = 141;
+  /**
+   * <code>EXTRA_TIME_BEHIND_RUSHED = 142;</code>
+   */
+  public static final int EXTRA_TIME_BEHIND_RUSHED_VALUE = 142;
+  /**
+   * <code>MISSED_CONVERSION = 143;</code>
+   */
+  public static final int MISSED_CONVERSION_VALUE = 143;
+  /**
+   * <code>EXTRA_TIME_MISSED_CONVERSION = 144;</code>
+   */
+  public static final int EXTRA_TIME_MISSED_CONVERSION_VALUE = 144;
 
 
   public final int getNumber() {
@@ -512,6 +1272,99 @@ public enum IncidentType
       case 49: return EXTRA_TIME_PENALTY_TRY_GOAL;
       case 50: return EXTRA_TIME_DROPKICK_GOAL;
       case 51: return DEFENSIVE_TWO_POINT_CONVERSION_GOAL;
+      case 52: return BALK;
+      case 53: return CATCHER_INTERFERENCE;
+      case 54: return DOUBLE;
+      case 55: return DOUBLE_ADV_3RD;
+      case 56: return DOUBLE_ADV_HOME;
+      case 57: return FIELDERS_CHOICE_ADV_2ND;
+      case 58: return FIELDERS_CHOICE_ADV_3RD;
+      case 59: return FIELDERS_CHOICE_ADV_HOME;
+      case 60: return HIT_BY_PITCH;
+      case 61: return HOME_RUN;
+      case 62: return INTENTIONAL_WALK;
+      case 63: return STRIKE_LOOKING_ADV_1ST;
+      case 64: return STRIKE_LOOKING_ADV_2ND;
+      case 65: return STRIKE_LOOKING_ADV_3RD;
+      case 66: return STRIKE_LOOKING_ADV_HOME;
+      case 67: return STRIKE_SWINGING_ADV_1ST;
+      case 68: return STRIKE_SWINGING_ADV_2ND;
+      case 69: return STRIKE_SWINGING_ADV_3RD;
+      case 70: return STRIKE_SWINGING_ADV_HOME;
+      case 71: return REACHED_ON_ERROR;
+      case 72: return REACHED_ON_ERROR_ADV_2ND;
+      case 73: return REACHED_ON_ERROR_ADV_3RD;
+      case 74: return REACHED_ON_ERROR_ADV_HOME;
+      case 75: return SINGLE;
+      case 76: return SINGLE_ADV_2ND;
+      case 77: return SINGLE_ADV_3RD;
+      case 78: return SINGLE_ADV_HOME;
+      case 79: return SACRIFICE_BUNT_ADV_1ST;
+      case 80: return SACRIFICE_BUNT_ADV_2ND;
+      case 81: return SACRIFICE_BUNT_ADV_3RD;
+      case 82: return SACRIFICE_BUNT_ADV_HOME;
+      case 83: return SACRIFICE_FLY_ADV_1ST;
+      case 84: return SACRIFICE_FLY_ADV_2ND;
+      case 85: return SACRIFICE_FLY_ADV_3RD;
+      case 86: return SACRIFICE_FLY_ADV_HOME;
+      case 87: return TRIPLE;
+      case 88: return TRIPLE_ADV_HOME;
+      case 89: return ENFORCED_BALL;
+      case 90: return BALL;
+      case 91: return DIRT_BALL;
+      case 92: return INTENTIONAL_BALL;
+      case 93: return PITCHOUT;
+      case 94: return FOUL_BALL;
+      case 95: return FOUL_TIP;
+      case 96: return STRIKE_LOOKING;
+      case 97: return STRIKE_SWINGING;
+      case 98: return HITTER_INTERFERENCE;
+      case 99: return DOUBLE_OUT_AT_3RD;
+      case 100: return DOUBLE_OUT_AT_HOME;
+      case 101: return FIELDERS_CHOICE;
+      case 102: return FIELDERS_CHOICE_OUT_AT_2ND;
+      case 103: return FIELDERS_CHOICE_OUT_AT_3RD;
+      case 104: return FIELDERS_CHOICE_OUT_AT_HOME;
+      case 105: return FLY_OUT;
+      case 106: return GROUND_OUT;
+      case 107: return STRIKE_LOOKING_OUT_AT_1ST;
+      case 108: return STRIKE_LOOKING_OUT_AT_2ND;
+      case 109: return STRIKE_LOOKING_OUT_AT_3RD;
+      case 110: return STRIKE_LOOKING_OUT_AT_HOME;
+      case 111: return STRIKE_SWINGING_OUT_AT_1ST;
+      case 112: return STRIKE_SWINGING_OUT_AT_2ND;
+      case 113: return STRIKE_SWINGING_OUT_AT_3RD;
+      case 114: return STRIKE_SWINGING_OUT_AT_HOME;
+      case 115: return LINE_OUT;
+      case 116: return OUT_OF_BATTERS_BOX;
+      case 117: return OUT_ON_APPEAL;
+      case 118: return POP_OUT;
+      case 119: return REACHED_ON_ERROR_OUT_AT_2ND;
+      case 120: return REACHED_ON_ERROR_OUT_AT_3RD;
+      case 121: return REACHED_ON_ERROR_OUT_AT_HOME;
+      case 122: return SACRIFICE_BUNT;
+      case 123: return SACRIFICE_BUNT_OUT_AT_2ND;
+      case 124: return SACRIFICE_BUNT_OUT_AT_3RD;
+      case 125: return SACRIFICE_BUNT_OUT_AT_HOME;
+      case 126: return SACRIFICE_FLY;
+      case 127: return SACRIFICE_FLY_OUT_AT_2ND;
+      case 128: return SACRIFICE_FLY_OUT_AT_3RD;
+      case 129: return SACRIFICE_FLY_OUT_AT_HOME;
+      case 130: return SINGLE_OUT_AT_2ND;
+      case 131: return SINGLE_OUT_AT_3RD;
+      case 132: return SINGLE_OUT_AT_HOME;
+      case 133: return TRIPLE_OUT_AT_HOME;
+      case 134: return RULING_PENDING_AT_BAT_CONTINUES;
+      case 135: return RULING_PENDING_AT_BAT_OVER;
+      case 136: return STEAL;
+      case 137: return AT_BAT;
+      case 138: return TWO_POINT_FIELD_GOAL;
+      case 139: return BEHIND;
+      case 140: return BEHIND_RUSHED;
+      case 141: return EXTRA_TIME_BEHIND;
+      case 142: return EXTRA_TIME_BEHIND_RUSHED;
+      case 143: return MISSED_CONVERSION;
+      case 144: return EXTRA_TIME_MISSED_CONVERSION;
       default: return null;
     }
   }

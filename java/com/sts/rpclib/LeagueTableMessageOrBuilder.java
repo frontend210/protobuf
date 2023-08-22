@@ -172,4 +172,28 @@ public interface LeagueTableMessageOrBuilder extends
    */
   com.sts.rpclib.LeagueTableAdditionalInfoOrBuilder getAdditionalInfoOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .com.sts.rpclib.LocalizedName tableName = 11;</code>
+   */
+  java.util.List<com.sts.rpclib.LocalizedName> 
+      getTableNameList();
+  /**
+   * <code>repeated .com.sts.rpclib.LocalizedName tableName = 11;</code>
+   */
+  com.sts.rpclib.LocalizedName getTableName(int index);
+  /**
+   * <code>repeated .com.sts.rpclib.LocalizedName tableName = 11;</code>
+   */
+  int getTableNameCount();
+  /**
+   * <code>repeated .com.sts.rpclib.LocalizedName tableName = 11;</code>
+   */
+  java.util.List<? extends com.sts.rpclib.LocalizedNameOrBuilder> 
+      getTableNameOrBuilderList();
+  /**
+   * <code>repeated .com.sts.rpclib.LocalizedName tableName = 11;</code>
+   */
+  com.sts.rpclib.LocalizedNameOrBuilder getTableNameOrBuilder(
+      int index);
 }

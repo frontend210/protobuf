@@ -29,8 +29,9 @@ public final class Odds {
   static {
     java.lang.String[] descriptorData = {
       "\n\nodds.proto\022\016com.sts.rpclib\"$\n\024MatchOdd" +
-      "sFullMessage\022\014\n\004data\030\001 \001(\014B\rP\001Z\t/gorpcli" +
-      "bb\006proto3"
+      "sFullMessage\022\014\n\004data\030\001 \001(\014B/P\001Z+github.c" +
+      "om/frontend210/protobuf/gorpclibb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

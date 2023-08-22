@@ -41,8 +41,8 @@ public final class Categories {
       "ategoryMessage\022\n\n\002id\030\001 \001(\t\022\016\n\006season\030\002 \001" +
       "(\t\022$\n\005sport\030\003 \001(\0162\025.com.sts.rpclib.Sport" +
       "\022+\n\004name\030\004 \003(\0132\035.com.sts.rpclib.Localize" +
-      "dName\022\017\n\007updated\030\005 \001(\003B\rP\001Z\t/gorpclibb\006p" +
-      "roto3"
+      "dName\022\017\n\007updated\030\005 \001(\003B/P\001Z+github.com/s" +
+      "napscoregroup/protobuf/gorpclibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -196,4 +196,40 @@ public interface LeagueTableEntryOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPointsDeductionBytes();
+
+  /**
+   * <code>string abandoned = 16;</code>
+   * @return The abandoned.
+   */
+  java.lang.String getAbandoned();
+  /**
+   * <code>string abandoned = 16;</code>
+   * @return The bytes for abandoned.
+   */
+  com.google.protobuf.ByteString
+      getAbandonedBytes();
+
+  /**
+   * <code>string no_result = 17;</code>
+   * @return The noResult.
+   */
+  java.lang.String getNoResult();
+  /**
+   * <code>string no_result = 17;</code>
+   * @return The bytes for noResult.
+   */
+  com.google.protobuf.ByteString
+      getNoResultBytes();
+
+  /**
+   * <code>string net_run_rate = 18;</code>
+   * @return The netRunRate.
+   */
+  java.lang.String getNetRunRate();
+  /**
+   * <code>string net_run_rate = 18;</code>
+   * @return The bytes for netRunRate.
+   */
+  com.google.protobuf.ByteString
+      getNetRunRateBytes();
 }

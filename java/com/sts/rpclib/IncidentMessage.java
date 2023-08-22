@@ -37,202 +37,6 @@ private static final long serialVersionUID = 0L;
     return new IncidentMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private IncidentMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            id_ = s;
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            incidentType_ = rawValue;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            period_ = rawValue;
-            break;
-          }
-          case 32: {
-
-            minute_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            second_ = input.readInt32();
-            break;
-          }
-          case 48: {
-
-            teamNumber_ = input.readInt32();
-            break;
-          }
-          case 56: {
-
-            playerId_ = input.readInt64();
-            break;
-          }
-          case 64: {
-
-            playerIdOut_ = input.readInt64();
-            break;
-          }
-          case 72: {
-
-            playerNum_ = input.readInt32();
-            break;
-          }
-          case 80: {
-
-            playerNumOut_ = input.readInt32();
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            playerName_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            playerNameOut_ = s;
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            playerShortName_ = s;
-            break;
-          }
-          case 114: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            playerShortNameOut_ = s;
-            break;
-          }
-          case 120: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              score_ = newIntList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            score_.addInt(input.readInt32());
-            break;
-          }
-          case 122: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-              score_ = newIntList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              score_.addInt(input.readInt32());
-            }
-            input.popLimit(limit);
-            break;
-          }
-          case 130: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            extraInfo_ = s;
-            break;
-          }
-          case 136: {
-
-            isShootoutWithTotalScore_ = input.readBool();
-            break;
-          }
-          case 144: {
-            int rawValue = input.readEnum();
-
-            action_ = rawValue;
-            break;
-          }
-          case 152: {
-
-            isPlayerDataConfirmed_ = input.readBool();
-            break;
-          }
-          case 160: {
-
-            sortOrder_ = input.readInt32();
-            break;
-          }
-          case 170: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            refIncidentId_ = s;
-            break;
-          }
-          case 178: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              assists_ = new java.util.ArrayList<com.sts.rpclib.AssistMessage>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            assists_.add(
-                input.readMessage(com.sts.rpclib.AssistMessage.parser(), extensionRegistry));
-            break;
-          }
-          case 184: {
-
-            timestamp_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        score_.makeImmutable(); // C
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        assists_ = java.util.Collections.unmodifiableList(assists_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Incident.internal_static_com_sts_rpclib_IncidentMessage_descriptor;
@@ -247,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object id_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object id_ = "";
   /**
    * <code>string id = 1;</code>
    * @return The id.
@@ -285,7 +90,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCIDENTTYPE_FIELD_NUMBER = 2;
-  private int incidentType_;
+  private int incidentType_ = 0;
   /**
    * <pre>
    * The type of incident the message is about
@@ -306,13 +111,12 @@ private static final long serialVersionUID = 0L;
    * @return The incidentType.
    */
   @java.lang.Override public com.sts.rpclib.IncidentType getIncidentType() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.IncidentType result = com.sts.rpclib.IncidentType.valueOf(incidentType_);
+    com.sts.rpclib.IncidentType result = com.sts.rpclib.IncidentType.forNumber(incidentType_);
     return result == null ? com.sts.rpclib.IncidentType.UNRECOGNIZED : result;
   }
 
   public static final int PERIOD_FIELD_NUMBER = 3;
-  private int period_;
+  private int period_ = 0;
   /**
    * <code>.com.sts.rpclib.Period period = 3;</code>
    * @return The enum numeric value on the wire for period.
@@ -325,13 +129,12 @@ private static final long serialVersionUID = 0L;
    * @return The period.
    */
   @java.lang.Override public com.sts.rpclib.Period getPeriod() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.Period result = com.sts.rpclib.Period.valueOf(period_);
+    com.sts.rpclib.Period result = com.sts.rpclib.Period.forNumber(period_);
     return result == null ? com.sts.rpclib.Period.UNRECOGNIZED : result;
   }
 
   public static final int MINUTE_FIELD_NUMBER = 4;
-  private int minute_;
+  private int minute_ = 0;
   /**
    * <pre>
    * the minute of the incident
@@ -346,7 +149,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECOND_FIELD_NUMBER = 5;
-  private int second_;
+  private int second_ = 0;
   /**
    * <pre>
    * the second of the incident: in case for example of Ice Hockey
@@ -361,7 +164,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEAMNUMBER_FIELD_NUMBER = 6;
-  private int teamNumber_;
+  private int teamNumber_ = 0;
   /**
    * <pre>
    * this marks whether the incident is about the home or away team
@@ -376,7 +179,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYERID_FIELD_NUMBER = 7;
-  private long playerId_;
+  private long playerId_ = 0L;
   /**
    * <pre>
    * Player id
@@ -391,7 +194,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYERIDOUT_FIELD_NUMBER = 8;
-  private long playerIdOut_;
+  private long playerIdOut_ = 0L;
   /**
    * <pre>
    * the playerIdOut, in case of substitution
@@ -406,7 +209,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYERNUM_FIELD_NUMBER = 9;
-  private int playerNum_;
+  private int playerNum_ = 0;
   /**
    * <pre>
    * Player T shirt number
@@ -421,7 +224,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYERNUMOUT_FIELD_NUMBER = 10;
-  private int playerNumOut_;
+  private int playerNumOut_ = 0;
   /**
    * <pre>
    * Player T shirt number in case of subs
@@ -436,7 +239,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYERNAME_FIELD_NUMBER = 11;
-  private volatile java.lang.Object playerName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object playerName_ = "";
   /**
    * <pre>
    * Player name
@@ -482,7 +286,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYERNAMEOUT_FIELD_NUMBER = 12;
-  private volatile java.lang.Object playerNameOut_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object playerNameOut_ = "";
   /**
    * <code>string playerNameOut = 12;</code>
    * @return The playerNameOut.
@@ -520,7 +325,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYERSHORTNAME_FIELD_NUMBER = 13;
-  private volatile java.lang.Object playerShortName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object playerShortName_ = "";
   /**
    * <pre>
    * Player short name: can be for example the Shirt Name
@@ -566,7 +372,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYERSHORTNAMEOUT_FIELD_NUMBER = 14;
-  private volatile java.lang.Object playerShortNameOut_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object playerShortNameOut_ = "";
   /**
    * <code>string playerShortNameOut = 14;</code>
    * @return The playerShortNameOut.
@@ -604,6 +411,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCORE_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.IntList score_;
   /**
    * <code>repeated int32 score = 15 [packed = true];</code>
@@ -632,7 +440,8 @@ private static final long serialVersionUID = 0L;
   private int scoreMemoizedSerializedSize = -1;
 
   public static final int EXTRAINFO_FIELD_NUMBER = 16;
-  private volatile java.lang.Object extraInfo_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object extraInfo_ = "";
   /**
    * <pre>
    * Additional information about the incident (goal via header for example)
@@ -678,7 +487,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISSHOOTOUTWITHTOTALSCORE_FIELD_NUMBER = 17;
-  private boolean isShootoutWithTotalScore_;
+  private boolean isShootoutWithTotalScore_ = false;
   /**
    * <code>bool isShootoutWithTotalScore = 17;</code>
    * @return The isShootoutWithTotalScore.
@@ -689,7 +498,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACTION_FIELD_NUMBER = 18;
-  private int action_;
+  private int action_ = 0;
   /**
    * <code>.com.sts.rpclib.UpdateAction action = 18;</code>
    * @return The enum numeric value on the wire for action.
@@ -702,13 +511,12 @@ private static final long serialVersionUID = 0L;
    * @return The action.
    */
   @java.lang.Override public com.sts.rpclib.UpdateAction getAction() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.UpdateAction result = com.sts.rpclib.UpdateAction.valueOf(action_);
+    com.sts.rpclib.UpdateAction result = com.sts.rpclib.UpdateAction.forNumber(action_);
     return result == null ? com.sts.rpclib.UpdateAction.UNRECOGNIZED : result;
   }
 
   public static final int ISPLAYERDATACONFIRMED_FIELD_NUMBER = 19;
-  private boolean isPlayerDataConfirmed_;
+  private boolean isPlayerDataConfirmed_ = false;
   /**
    * <code>bool isPlayerDataConfirmed = 19;</code>
    * @return The isPlayerDataConfirmed.
@@ -719,7 +527,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SORT_ORDER_FIELD_NUMBER = 20;
-  private int sortOrder_;
+  private int sortOrder_ = 0;
   /**
    * <code>int32 sort_order = 20;</code>
    * @return The sortOrder.
@@ -730,7 +538,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REFINCIDENTID_FIELD_NUMBER = 21;
-  private volatile java.lang.Object refIncidentId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object refIncidentId_ = "";
   /**
    * <code>string refIncidentId = 21;</code>
    * @return The refIncidentId.
@@ -768,6 +577,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSISTS_FIELD_NUMBER = 22;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.AssistMessage> assists_;
   /**
    * <code>repeated .com.sts.rpclib.AssistMessage assists = 22;</code>
@@ -808,7 +618,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIMESTAMP_FIELD_NUMBER = 23;
-  private long timestamp_;
+  private long timestamp_ = 0L;
   /**
    * <code>int64 timestamp = 23;</code>
    * @return The timestamp.
@@ -816,6 +626,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getTimestamp() {
     return timestamp_;
+  }
+
+  public static final int MINUTEPLUS_FIELD_NUMBER = 24;
+  private int minutePlus_ = 0;
+  /**
+   * <code>int32 minutePlus = 24;</code>
+   * @return The minutePlus.
+   */
+  @java.lang.Override
+  public int getMinutePlus() {
+    return minutePlus_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -906,7 +727,10 @@ private static final long serialVersionUID = 0L;
     if (timestamp_ != 0L) {
       output.writeInt64(23, timestamp_);
     }
-    unknownFields.writeTo(output);
+    if (minutePlus_ != 0) {
+      output.writeInt32(24, minutePlus_);
+    }
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1010,7 +834,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(23, timestamp_);
     }
-    size += unknownFields.getSerializedSize();
+    if (minutePlus_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(24, minutePlus_);
+    }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1068,7 +896,9 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAssistsList())) return false;
     if (getTimestamp()
         != other.getTimestamp()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (getMinutePlus()
+        != other.getMinutePlus()) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1134,7 +964,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTimestamp());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (37 * hash) + MINUTEPLUS_FIELD_NUMBER;
+    hash = (53 * hash) + getMinutePlus();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1183,11 +1015,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.IncidentMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.IncidentMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1251,73 +1085,48 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.IncidentMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAssistsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       id_ = "";
-
       incidentType_ = 0;
-
       period_ = 0;
-
       minute_ = 0;
-
       second_ = 0;
-
       teamNumber_ = 0;
-
       playerId_ = 0L;
-
       playerIdOut_ = 0L;
-
       playerNum_ = 0;
-
       playerNumOut_ = 0;
-
       playerName_ = "";
-
       playerNameOut_ = "";
-
       playerShortName_ = "";
-
       playerShortNameOut_ = "";
-
       score_ = emptyIntList();
-      bitField0_ = (bitField0_ & ~0x00000001);
       extraInfo_ = "";
-
       isShootoutWithTotalScore_ = false;
-
       action_ = 0;
-
       isPlayerDataConfirmed_ = false;
-
       sortOrder_ = 0;
-
       refIncidentId_ = "";
-
       if (assistsBuilder_ == null) {
         assists_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        assists_ = null;
         assistsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00200000);
       timestamp_ = 0L;
-
+      minutePlus_ = 0;
       return this;
     }
 
@@ -1344,44 +1153,97 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.IncidentMessage buildPartial() {
       com.sts.rpclib.IncidentMessage result = new com.sts.rpclib.IncidentMessage(this);
-      int from_bitField0_ = bitField0_;
-      result.id_ = id_;
-      result.incidentType_ = incidentType_;
-      result.period_ = period_;
-      result.minute_ = minute_;
-      result.second_ = second_;
-      result.teamNumber_ = teamNumber_;
-      result.playerId_ = playerId_;
-      result.playerIdOut_ = playerIdOut_;
-      result.playerNum_ = playerNum_;
-      result.playerNumOut_ = playerNumOut_;
-      result.playerName_ = playerName_;
-      result.playerNameOut_ = playerNameOut_;
-      result.playerShortName_ = playerShortName_;
-      result.playerShortNameOut_ = playerShortNameOut_;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.sts.rpclib.IncidentMessage result) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         score_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00004000);
       }
       result.score_ = score_;
-      result.extraInfo_ = extraInfo_;
-      result.isShootoutWithTotalScore_ = isShootoutWithTotalScore_;
-      result.action_ = action_;
-      result.isPlayerDataConfirmed_ = isPlayerDataConfirmed_;
-      result.sortOrder_ = sortOrder_;
-      result.refIncidentId_ = refIncidentId_;
       if (assistsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00200000) != 0)) {
           assists_ = java.util.Collections.unmodifiableList(assists_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00200000);
         }
         result.assists_ = assists_;
       } else {
         result.assists_ = assistsBuilder_.build();
       }
-      result.timestamp_ = timestamp_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.IncidentMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.incidentType_ = incidentType_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.period_ = period_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.minute_ = minute_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.second_ = second_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.teamNumber_ = teamNumber_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.playerId_ = playerId_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.playerIdOut_ = playerIdOut_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.playerNum_ = playerNum_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.playerNumOut_ = playerNumOut_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.playerName_ = playerName_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.playerNameOut_ = playerNameOut_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.playerShortName_ = playerShortName_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.playerShortNameOut_ = playerShortNameOut_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.extraInfo_ = extraInfo_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.isShootoutWithTotalScore_ = isShootoutWithTotalScore_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.action_ = action_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.isPlayerDataConfirmed_ = isPlayerDataConfirmed_;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.sortOrder_ = sortOrder_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.refIncidentId_ = refIncidentId_;
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.timestamp_ = timestamp_;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.minutePlus_ = minutePlus_;
+      }
     }
 
     @java.lang.Override
@@ -1430,6 +1292,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.sts.rpclib.IncidentMessage.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.incidentType_ != 0) {
@@ -1461,24 +1324,28 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPlayerName().isEmpty()) {
         playerName_ = other.playerName_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (!other.getPlayerNameOut().isEmpty()) {
         playerNameOut_ = other.playerNameOut_;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (!other.getPlayerShortName().isEmpty()) {
         playerShortName_ = other.playerShortName_;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
       if (!other.getPlayerShortNameOut().isEmpty()) {
         playerShortNameOut_ = other.playerShortNameOut_;
+        bitField0_ |= 0x00002000;
         onChanged();
       }
       if (!other.score_.isEmpty()) {
         if (score_.isEmpty()) {
           score_ = other.score_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00004000);
         } else {
           ensureScoreIsMutable();
           score_.addAll(other.score_);
@@ -1487,6 +1354,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getExtraInfo().isEmpty()) {
         extraInfo_ = other.extraInfo_;
+        bitField0_ |= 0x00008000;
         onChanged();
       }
       if (other.getIsShootoutWithTotalScore() != false) {
@@ -1503,13 +1371,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getRefIncidentId().isEmpty()) {
         refIncidentId_ = other.refIncidentId_;
+        bitField0_ |= 0x00100000;
         onChanged();
       }
       if (assistsBuilder_ == null) {
         if (!other.assists_.isEmpty()) {
           if (assists_.isEmpty()) {
             assists_ = other.assists_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00200000);
           } else {
             ensureAssistsIsMutable();
             assists_.addAll(other.assists_);
@@ -1522,7 +1391,7 @@ private static final long serialVersionUID = 0L;
             assistsBuilder_.dispose();
             assistsBuilder_ = null;
             assists_ = other.assists_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00200000);
             assistsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAssistsFieldBuilder() : null;
@@ -1534,7 +1403,10 @@ private static final long serialVersionUID = 0L;
       if (other.getTimestamp() != 0L) {
         setTimestamp(other.getTimestamp());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      if (other.getMinutePlus() != 0) {
+        setMinutePlus(other.getMinutePlus());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1549,17 +1421,169 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.IncidentMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              id_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              incidentType_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              period_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              minute_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              second_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              teamNumber_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              playerId_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              playerIdOut_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              playerNum_ = input.readInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              playerNumOut_ = input.readInt32();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 90: {
+              playerName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              playerNameOut_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              playerShortName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            case 114: {
+              playerShortNameOut_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
+            case 120: {
+              int v = input.readInt32();
+              ensureScoreIsMutable();
+              score_.addInt(v);
+              break;
+            } // case 120
+            case 122: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureScoreIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                score_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 122
+            case 130: {
+              extraInfo_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 130
+            case 136: {
+              isShootoutWithTotalScore_ = input.readBool();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 136
+            case 144: {
+              action_ = input.readEnum();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 144
+            case 152: {
+              isPlayerDataConfirmed_ = input.readBool();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 152
+            case 160: {
+              sortOrder_ = input.readInt32();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 160
+            case 170: {
+              refIncidentId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 170
+            case 178: {
+              com.sts.rpclib.AssistMessage m =
+                  input.readMessage(
+                      com.sts.rpclib.AssistMessage.parser(),
+                      extensionRegistry);
+              if (assistsBuilder_ == null) {
+                ensureAssistsIsMutable();
+                assists_.add(m);
+              } else {
+                assistsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 178
+            case 184: {
+              timestamp_ = input.readInt64();
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 184
+            case 192: {
+              minutePlus_ = input.readInt32();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 192
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.IncidentMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1605,11 +1629,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1618,8 +1640,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
       id_ = getDefaultInstance().getId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1630,12 +1652,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1662,8 +1682,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncidentTypeValue(int value) {
-      
       incidentType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1677,8 +1697,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.IncidentType getIncidentType() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.IncidentType result = com.sts.rpclib.IncidentType.valueOf(incidentType_);
+      com.sts.rpclib.IncidentType result = com.sts.rpclib.IncidentType.forNumber(incidentType_);
       return result == null ? com.sts.rpclib.IncidentType.UNRECOGNIZED : result;
     }
     /**
@@ -1694,7 +1713,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       incidentType_ = value.getNumber();
       onChanged();
       return this;
@@ -1708,7 +1727,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncidentType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       incidentType_ = 0;
       onChanged();
       return this;
@@ -1728,8 +1747,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPeriodValue(int value) {
-      
       period_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1739,8 +1758,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.Period getPeriod() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.Period result = com.sts.rpclib.Period.valueOf(period_);
+      com.sts.rpclib.Period result = com.sts.rpclib.Period.forNumber(period_);
       return result == null ? com.sts.rpclib.Period.UNRECOGNIZED : result;
     }
     /**
@@ -1752,7 +1770,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       period_ = value.getNumber();
       onChanged();
       return this;
@@ -1762,7 +1780,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPeriod() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       period_ = 0;
       onChanged();
       return this;
@@ -1791,8 +1809,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMinute(int value) {
-      
+
       minute_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1805,7 +1824,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMinute() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       minute_ = 0;
       onChanged();
       return this;
@@ -1834,8 +1853,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSecond(int value) {
-      
+
       second_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1848,7 +1868,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSecond() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       second_ = 0;
       onChanged();
       return this;
@@ -1877,8 +1897,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTeamNumber(int value) {
-      
+
       teamNumber_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1891,7 +1912,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTeamNumber() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       teamNumber_ = 0;
       onChanged();
       return this;
@@ -1920,8 +1941,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlayerId(long value) {
-      
+
       playerId_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1934,7 +1956,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayerId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       playerId_ = 0L;
       onChanged();
       return this;
@@ -1963,8 +1985,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlayerIdOut(long value) {
-      
+
       playerIdOut_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1977,7 +2000,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayerIdOut() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       playerIdOut_ = 0L;
       onChanged();
       return this;
@@ -2006,8 +2029,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlayerNum(int value) {
-      
+
       playerNum_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2020,7 +2044,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayerNum() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       playerNum_ = 0;
       onChanged();
       return this;
@@ -2049,8 +2073,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlayerNumOut(int value) {
-      
+
       playerNumOut_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2063,7 +2088,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayerNumOut() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       playerNumOut_ = 0;
       onChanged();
       return this;
@@ -2122,11 +2147,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayerName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       playerName_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2139,8 +2162,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayerName() {
-      
       playerName_ = getDefaultInstance().getPlayerName();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2155,12 +2178,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayerNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       playerName_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2206,11 +2227,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayerNameOut(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       playerNameOut_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2219,8 +2238,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayerNameOut() {
-      
       playerNameOut_ = getDefaultInstance().getPlayerNameOut();
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -2231,12 +2250,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayerNameOutBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       playerNameOut_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2294,11 +2311,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayerShortName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       playerShortName_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2311,8 +2326,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayerShortName() {
-      
       playerShortName_ = getDefaultInstance().getPlayerShortName();
+      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -2327,12 +2342,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayerShortNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       playerShortName_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2378,11 +2391,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayerShortNameOut(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       playerShortNameOut_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2391,8 +2402,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayerShortNameOut() {
-      
       playerShortNameOut_ = getDefaultInstance().getPlayerShortNameOut();
+      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -2403,22 +2414,20 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayerShortNameOutBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       playerShortNameOut_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.Internal.IntList score_ = emptyIntList();
     private void ensureScoreIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00004000) != 0)) {
         score_ = mutableCopy(score_);
-        bitField0_ |= 0x00000001;
-       }
+        bitField0_ |= 0x00004000;
+      }
     }
     /**
      * <code>repeated int32 score = 15 [packed = true];</code>
@@ -2426,7 +2435,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Integer>
         getScoreList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
+      return ((bitField0_ & 0x00004000) != 0) ?
                java.util.Collections.unmodifiableList(score_) : score_;
     }
     /**
@@ -2452,6 +2461,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setScore(
         int index, int value) {
+
       ensureScoreIsMutable();
       score_.setInt(index, value);
       onChanged();
@@ -2463,6 +2473,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addScore(int value) {
+
       ensureScoreIsMutable();
       score_.addInt(value);
       onChanged();
@@ -2487,7 +2498,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearScore() {
       score_ = emptyIntList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -2545,11 +2556,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtraInfo(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       extraInfo_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -2562,8 +2571,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExtraInfo() {
-      
       extraInfo_ = getDefaultInstance().getExtraInfo();
+      bitField0_ = (bitField0_ & ~0x00008000);
       onChanged();
       return this;
     }
@@ -2578,12 +2587,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtraInfoBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       extraInfo_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -2603,8 +2610,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsShootoutWithTotalScore(boolean value) {
-      
+
       isShootoutWithTotalScore_ = value;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -2613,7 +2621,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsShootoutWithTotalScore() {
-      
+      bitField0_ = (bitField0_ & ~0x00010000);
       isShootoutWithTotalScore_ = false;
       onChanged();
       return this;
@@ -2633,8 +2641,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActionValue(int value) {
-      
       action_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -2644,8 +2652,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.UpdateAction getAction() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.UpdateAction result = com.sts.rpclib.UpdateAction.valueOf(action_);
+      com.sts.rpclib.UpdateAction result = com.sts.rpclib.UpdateAction.forNumber(action_);
       return result == null ? com.sts.rpclib.UpdateAction.UNRECOGNIZED : result;
     }
     /**
@@ -2657,7 +2664,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00020000;
       action_ = value.getNumber();
       onChanged();
       return this;
@@ -2667,7 +2674,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAction() {
-      
+      bitField0_ = (bitField0_ & ~0x00020000);
       action_ = 0;
       onChanged();
       return this;
@@ -2688,8 +2695,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsPlayerDataConfirmed(boolean value) {
-      
+
       isPlayerDataConfirmed_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -2698,7 +2706,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsPlayerDataConfirmed() {
-      
+      bitField0_ = (bitField0_ & ~0x00040000);
       isPlayerDataConfirmed_ = false;
       onChanged();
       return this;
@@ -2719,8 +2727,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSortOrder(int value) {
-      
+
       sortOrder_ = value;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -2729,7 +2738,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSortOrder() {
-      
+      bitField0_ = (bitField0_ & ~0x00080000);
       sortOrder_ = 0;
       onChanged();
       return this;
@@ -2776,11 +2785,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRefIncidentId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       refIncidentId_ = value;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -2789,8 +2796,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRefIncidentId() {
-      
       refIncidentId_ = getDefaultInstance().getRefIncidentId();
+      bitField0_ = (bitField0_ & ~0x00100000);
       onChanged();
       return this;
     }
@@ -2801,12 +2808,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRefIncidentIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       refIncidentId_ = value;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -2814,9 +2819,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.AssistMessage> assists_ =
       java.util.Collections.emptyList();
     private void ensureAssistsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00200000) != 0)) {
         assists_ = new java.util.ArrayList<com.sts.rpclib.AssistMessage>(assists_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00200000;
        }
     }
 
@@ -2966,7 +2971,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAssists() {
       if (assistsBuilder_ == null) {
         assists_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00200000);
         onChanged();
       } else {
         assistsBuilder_.clear();
@@ -3043,7 +3048,7 @@ private static final long serialVersionUID = 0L;
         assistsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.AssistMessage, com.sts.rpclib.AssistMessage.Builder, com.sts.rpclib.AssistMessageOrBuilder>(
                 assists_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00200000) != 0),
                 getParentForChildren(),
                 isClean());
         assists_ = null;
@@ -3066,8 +3071,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimestamp(long value) {
-      
+
       timestamp_ = value;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -3076,8 +3082,40 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimestamp() {
-      
+      bitField0_ = (bitField0_ & ~0x00400000);
       timestamp_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int minutePlus_ ;
+    /**
+     * <code>int32 minutePlus = 24;</code>
+     * @return The minutePlus.
+     */
+    @java.lang.Override
+    public int getMinutePlus() {
+      return minutePlus_;
+    }
+    /**
+     * <code>int32 minutePlus = 24;</code>
+     * @param value The minutePlus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMinutePlus(int value) {
+
+      minutePlus_ = value;
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 minutePlus = 24;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMinutePlus() {
+      bitField0_ = (bitField0_ & ~0x00800000);
+      minutePlus_ = 0;
       onChanged();
       return this;
     }
@@ -3114,7 +3152,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new IncidentMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

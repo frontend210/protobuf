@@ -38,8 +38,9 @@ public final class Var {
       "us\030\002 \001(\0162\031.com.sts.rpclib.VarStatus\022\021\n\tt" +
       "imestamp\030\003 \001(\003\"\\\n\020VarReasonMessage\022\n\n\002id" +
       "\030\001 \001(\t\022)\n\006reason\030\002 \001(\0162\031.com.sts.rpclib." +
-      "VarReason\022\021\n\ttimestamp\030\003 \001(\003B\rP\001Z\t/gorpc" +
-      "libb\006proto3"
+      "VarReason\022\021\n\ttimestamp\030\003 \001(\003B/P\001Z+github" +
+      ".com/frontend210/protobuf/gorpclibb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -166,14 +166,12 @@ public interface MatchIncidentChangeMessageOrBuilder extends
   /**
    * <code>map&lt;int32, int32&gt; score = 15;</code>
    */
-
   int getScoreOrDefault(
       int key,
       int defaultValue);
   /**
    * <code>map&lt;int32, int32&gt; score = 15;</code>
    */
-
   int getScoreOrThrow(
       int key);
 
@@ -200,14 +198,12 @@ public interface MatchIncidentChangeMessageOrBuilder extends
   /**
    * <code>map&lt;int32, int64&gt; scoreFloat = 16;</code>
    */
-
   long getScoreFloatOrDefault(
       int key,
       long defaultValue);
   /**
    * <code>map&lt;int32, int64&gt; scoreFloat = 16;</code>
    */
-
   long getScoreFloatOrThrow(
       int key);
 
@@ -281,4 +277,10 @@ public interface MatchIncidentChangeMessageOrBuilder extends
    * @return The confirmed.
    */
   boolean getConfirmed();
+
+  /**
+   * <code>int32 minutePlus = 24;</code>
+   * @return The minutePlus.
+   */
+  int getMinutePlus();
 }

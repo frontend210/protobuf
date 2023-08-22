@@ -47,7 +47,7 @@ public final class Incident {
       "proto\"$\n\026ConfirmIncidentMessage\022\n\n\002id\030\001 " +
       "\001(\t\"#\n\025DeleteIncidentMessage\022\n\n\002id\030\001 \001(\t" +
       "\")\n\rAssistMessage\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 " +
-      "\001(\t\"\340\004\n\017IncidentMessage\022\n\n\002id\030\001 \001(\t\0222\n\014i" +
+      "\001(\t\"\364\004\n\017IncidentMessage\022\n\n\002id\030\001 \001(\t\0222\n\014i" +
       "ncidentType\030\002 \001(\0162\034.com.sts.rpclib.Incid" +
       "entType\022&\n\006period\030\003 \001(\0162\026.com.sts.rpclib" +
       ".Period\022\016\n\006minute\030\004 \001(\005\022\016\n\006second\030\005 \001(\005\022" +
@@ -62,7 +62,9 @@ public final class Incident {
       "layerDataConfirmed\030\023 \001(\010\022\022\n\nsort_order\030\024" +
       " \001(\005\022\025\n\rrefIncidentId\030\025 \001(\t\022.\n\007assists\030\026" +
       " \003(\0132\035.com.sts.rpclib.AssistMessage\022\021\n\tt" +
-      "imestamp\030\027 \001(\003B\rP\001Z\t/gorpclibb\006proto3"
+      "imestamp\030\027 \001(\003\022\022\n\nminutePlus\030\030 \001(\005B/P\001Z+" +
+      "github.com/frontend210/protobuf/gorpc" +
+      "libb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -92,7 +94,7 @@ public final class Incident {
     internal_static_com_sts_rpclib_IncidentMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_IncidentMessage_descriptor,
-        new java.lang.String[] { "Id", "IncidentType", "Period", "Minute", "Second", "TeamNumber", "PlayerId", "PlayerIdOut", "PlayerNum", "PlayerNumOut", "PlayerName", "PlayerNameOut", "PlayerShortName", "PlayerShortNameOut", "Score", "ExtraInfo", "IsShootoutWithTotalScore", "Action", "IsPlayerDataConfirmed", "SortOrder", "RefIncidentId", "Assists", "Timestamp", });
+        new java.lang.String[] { "Id", "IncidentType", "Period", "Minute", "Second", "TeamNumber", "PlayerId", "PlayerIdOut", "PlayerNum", "PlayerNumOut", "PlayerName", "PlayerNameOut", "PlayerShortName", "PlayerShortNameOut", "Score", "ExtraInfo", "IsShootoutWithTotalScore", "Action", "IsPlayerDataConfirmed", "SortOrder", "RefIncidentId", "Assists", "Timestamp", "MinutePlus", });
     com.sts.rpclib.Enums.getDescriptor();
   }
 

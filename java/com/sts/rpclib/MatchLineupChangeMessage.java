@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     injured_ = java.util.Collections.emptyList();
     suspended_ = java.util.Collections.emptyList();
     coaches_ = java.util.Collections.emptyList();
+    squad_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -30,116 +31,6 @@ private static final long serialVersionUID = 0L;
     return new MatchLineupChangeMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private MatchLineupChangeMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            teamPosition_ = input.readInt32();
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              starting_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            starting_.add(
-                input.readMessage(com.sts.rpclib.LineupEntryMessage.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              substitute_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            substitute_.add(
-                input.readMessage(com.sts.rpclib.LineupEntryMessage.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              injured_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            injured_.add(
-                input.readMessage(com.sts.rpclib.LineupEntryMessage.parser(), extensionRegistry));
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              suspended_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            suspended_.add(
-                input.readMessage(com.sts.rpclib.LineupEntryMessage.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-              coaches_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>();
-              mutable_bitField0_ |= 0x00000010;
-            }
-            coaches_.add(
-                input.readMessage(com.sts.rpclib.LineupEntryMessage.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        starting_ = java.util.Collections.unmodifiableList(starting_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        substitute_ = java.util.Collections.unmodifiableList(substitute_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        injured_ = java.util.Collections.unmodifiableList(injured_);
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        suspended_ = java.util.Collections.unmodifiableList(suspended_);
-      }
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
-        coaches_ = java.util.Collections.unmodifiableList(coaches_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Match.internal_static_com_sts_rpclib_MatchLineupChangeMessage_descriptor;
@@ -154,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEAMPOSITION_FIELD_NUMBER = 1;
-  private int teamPosition_;
+  private int teamPosition_ = 0;
   /**
    * <code>int32 teamPosition = 1;</code>
    * @return The teamPosition.
@@ -165,6 +56,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STARTING_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LineupEntryMessage> starting_;
   /**
    * <code>repeated .com.sts.rpclib.LineupEntryMessage starting = 2;</code>
@@ -205,6 +97,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUBSTITUTE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LineupEntryMessage> substitute_;
   /**
    * <code>repeated .com.sts.rpclib.LineupEntryMessage substitute = 3;</code>
@@ -245,6 +138,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INJURED_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LineupEntryMessage> injured_;
   /**
    * <code>repeated .com.sts.rpclib.LineupEntryMessage injured = 4;</code>
@@ -285,6 +179,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUSPENDED_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LineupEntryMessage> suspended_;
   /**
    * <code>repeated .com.sts.rpclib.LineupEntryMessage suspended = 5;</code>
@@ -325,6 +220,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COACHES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LineupEntryMessage> coaches_;
   /**
    * <code>repeated .com.sts.rpclib.LineupEntryMessage coaches = 6;</code>
@@ -364,6 +260,47 @@ private static final long serialVersionUID = 0L;
     return coaches_.get(index);
   }
 
+  public static final int SQUAD_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<com.sts.rpclib.LineupEntryMessage> squad_;
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.sts.rpclib.LineupEntryMessage> getSquadList() {
+    return squad_;
+  }
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.sts.rpclib.LineupEntryMessageOrBuilder> 
+      getSquadOrBuilderList() {
+    return squad_;
+  }
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  @java.lang.Override
+  public int getSquadCount() {
+    return squad_.size();
+  }
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  @java.lang.Override
+  public com.sts.rpclib.LineupEntryMessage getSquad(int index) {
+    return squad_.get(index);
+  }
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  @java.lang.Override
+  public com.sts.rpclib.LineupEntryMessageOrBuilder getSquadOrBuilder(
+      int index) {
+    return squad_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -396,7 +333,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < coaches_.size(); i++) {
       output.writeMessage(6, coaches_.get(i));
     }
-    unknownFields.writeTo(output);
+    for (int i = 0; i < squad_.size(); i++) {
+      output.writeMessage(7, squad_.get(i));
+    }
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -429,7 +369,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, coaches_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    for (int i = 0; i < squad_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, squad_.get(i));
+    }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -456,7 +400,9 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSuspendedList())) return false;
     if (!getCoachesList()
         .equals(other.getCoachesList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getSquadList()
+        .equals(other.getSquadList())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -489,7 +435,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COACHES_FIELD_NUMBER;
       hash = (53 * hash) + getCoachesList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    if (getSquadCount() > 0) {
+      hash = (37 * hash) + SQUAD_FIELD_NUMBER;
+      hash = (53 * hash) + getSquadList().hashCode();
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -538,11 +488,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.MatchLineupChangeMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.MatchLineupChangeMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -606,59 +558,61 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.MatchLineupChangeMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getStartingFieldBuilder();
-        getSubstituteFieldBuilder();
-        getInjuredFieldBuilder();
-        getSuspendedFieldBuilder();
-        getCoachesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       teamPosition_ = 0;
-
       if (startingBuilder_ == null) {
         starting_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        starting_ = null;
         startingBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (substituteBuilder_ == null) {
         substitute_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        substitute_ = null;
         substituteBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (injuredBuilder_ == null) {
         injured_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        injured_ = null;
         injuredBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       if (suspendedBuilder_ == null) {
         suspended_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
+        suspended_ = null;
         suspendedBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (coachesBuilder_ == null) {
         coaches_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
+        coaches_ = null;
         coachesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000020);
+      if (squadBuilder_ == null) {
+        squad_ = java.util.Collections.emptyList();
+      } else {
+        squad_ = null;
+        squadBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -685,55 +639,74 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.MatchLineupChangeMessage buildPartial() {
       com.sts.rpclib.MatchLineupChangeMessage result = new com.sts.rpclib.MatchLineupChangeMessage(this);
-      int from_bitField0_ = bitField0_;
-      result.teamPosition_ = teamPosition_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.sts.rpclib.MatchLineupChangeMessage result) {
       if (startingBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           starting_ = java.util.Collections.unmodifiableList(starting_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.starting_ = starting_;
       } else {
         result.starting_ = startingBuilder_.build();
       }
       if (substituteBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           substitute_ = java.util.Collections.unmodifiableList(substitute_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.substitute_ = substitute_;
       } else {
         result.substitute_ = substituteBuilder_.build();
       }
       if (injuredBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           injured_ = java.util.Collections.unmodifiableList(injured_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.injured_ = injured_;
       } else {
         result.injured_ = injuredBuilder_.build();
       }
       if (suspendedBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           suspended_ = java.util.Collections.unmodifiableList(suspended_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.suspended_ = suspended_;
       } else {
         result.suspended_ = suspendedBuilder_.build();
       }
       if (coachesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           coaches_ = java.util.Collections.unmodifiableList(coaches_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.coaches_ = coaches_;
       } else {
         result.coaches_ = coachesBuilder_.build();
       }
-      onBuilt();
-      return result;
+      if (squadBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          squad_ = java.util.Collections.unmodifiableList(squad_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.squad_ = squad_;
+      } else {
+        result.squad_ = squadBuilder_.build();
+      }
+    }
+
+    private void buildPartial0(com.sts.rpclib.MatchLineupChangeMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.teamPosition_ = teamPosition_;
+      }
     }
 
     @java.lang.Override
@@ -787,7 +760,7 @@ private static final long serialVersionUID = 0L;
         if (!other.starting_.isEmpty()) {
           if (starting_.isEmpty()) {
             starting_ = other.starting_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureStartingIsMutable();
             starting_.addAll(other.starting_);
@@ -800,7 +773,7 @@ private static final long serialVersionUID = 0L;
             startingBuilder_.dispose();
             startingBuilder_ = null;
             starting_ = other.starting_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             startingBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getStartingFieldBuilder() : null;
@@ -813,7 +786,7 @@ private static final long serialVersionUID = 0L;
         if (!other.substitute_.isEmpty()) {
           if (substitute_.isEmpty()) {
             substitute_ = other.substitute_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSubstituteIsMutable();
             substitute_.addAll(other.substitute_);
@@ -826,7 +799,7 @@ private static final long serialVersionUID = 0L;
             substituteBuilder_.dispose();
             substituteBuilder_ = null;
             substitute_ = other.substitute_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             substituteBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSubstituteFieldBuilder() : null;
@@ -839,7 +812,7 @@ private static final long serialVersionUID = 0L;
         if (!other.injured_.isEmpty()) {
           if (injured_.isEmpty()) {
             injured_ = other.injured_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureInjuredIsMutable();
             injured_.addAll(other.injured_);
@@ -852,7 +825,7 @@ private static final long serialVersionUID = 0L;
             injuredBuilder_.dispose();
             injuredBuilder_ = null;
             injured_ = other.injured_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             injuredBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getInjuredFieldBuilder() : null;
@@ -865,7 +838,7 @@ private static final long serialVersionUID = 0L;
         if (!other.suspended_.isEmpty()) {
           if (suspended_.isEmpty()) {
             suspended_ = other.suspended_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureSuspendedIsMutable();
             suspended_.addAll(other.suspended_);
@@ -878,7 +851,7 @@ private static final long serialVersionUID = 0L;
             suspendedBuilder_.dispose();
             suspendedBuilder_ = null;
             suspended_ = other.suspended_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
             suspendedBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSuspendedFieldBuilder() : null;
@@ -891,7 +864,7 @@ private static final long serialVersionUID = 0L;
         if (!other.coaches_.isEmpty()) {
           if (coaches_.isEmpty()) {
             coaches_ = other.coaches_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureCoachesIsMutable();
             coaches_.addAll(other.coaches_);
@@ -904,7 +877,7 @@ private static final long serialVersionUID = 0L;
             coachesBuilder_.dispose();
             coachesBuilder_ = null;
             coaches_ = other.coaches_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             coachesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCoachesFieldBuilder() : null;
@@ -913,7 +886,33 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      if (squadBuilder_ == null) {
+        if (!other.squad_.isEmpty()) {
+          if (squad_.isEmpty()) {
+            squad_ = other.squad_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureSquadIsMutable();
+            squad_.addAll(other.squad_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.squad_.isEmpty()) {
+          if (squadBuilder_.isEmpty()) {
+            squadBuilder_.dispose();
+            squadBuilder_ = null;
+            squad_ = other.squad_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            squadBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getSquadFieldBuilder() : null;
+          } else {
+            squadBuilder_.addAllMessages(other.squad_);
+          }
+        }
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -928,17 +927,113 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.MatchLineupChangeMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              teamPosition_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              com.sts.rpclib.LineupEntryMessage m =
+                  input.readMessage(
+                      com.sts.rpclib.LineupEntryMessage.parser(),
+                      extensionRegistry);
+              if (startingBuilder_ == null) {
+                ensureStartingIsMutable();
+                starting_.add(m);
+              } else {
+                startingBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              com.sts.rpclib.LineupEntryMessage m =
+                  input.readMessage(
+                      com.sts.rpclib.LineupEntryMessage.parser(),
+                      extensionRegistry);
+              if (substituteBuilder_ == null) {
+                ensureSubstituteIsMutable();
+                substitute_.add(m);
+              } else {
+                substituteBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            case 34: {
+              com.sts.rpclib.LineupEntryMessage m =
+                  input.readMessage(
+                      com.sts.rpclib.LineupEntryMessage.parser(),
+                      extensionRegistry);
+              if (injuredBuilder_ == null) {
+                ensureInjuredIsMutable();
+                injured_.add(m);
+              } else {
+                injuredBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              com.sts.rpclib.LineupEntryMessage m =
+                  input.readMessage(
+                      com.sts.rpclib.LineupEntryMessage.parser(),
+                      extensionRegistry);
+              if (suspendedBuilder_ == null) {
+                ensureSuspendedIsMutable();
+                suspended_.add(m);
+              } else {
+                suspendedBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 50: {
+              com.sts.rpclib.LineupEntryMessage m =
+                  input.readMessage(
+                      com.sts.rpclib.LineupEntryMessage.parser(),
+                      extensionRegistry);
+              if (coachesBuilder_ == null) {
+                ensureCoachesIsMutable();
+                coaches_.add(m);
+              } else {
+                coachesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            case 58: {
+              com.sts.rpclib.LineupEntryMessage m =
+                  input.readMessage(
+                      com.sts.rpclib.LineupEntryMessage.parser(),
+                      extensionRegistry);
+              if (squadBuilder_ == null) {
+                ensureSquadIsMutable();
+                squad_.add(m);
+              } else {
+                squadBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.MatchLineupChangeMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -958,8 +1053,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTeamPosition(int value) {
-      
+
       teamPosition_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -968,7 +1064,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTeamPosition() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       teamPosition_ = 0;
       onChanged();
       return this;
@@ -977,9 +1073,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.LineupEntryMessage> starting_ =
       java.util.Collections.emptyList();
     private void ensureStartingIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         starting_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>(starting_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1129,7 +1225,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearStarting() {
       if (startingBuilder_ == null) {
         starting_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         startingBuilder_.clear();
@@ -1206,7 +1302,7 @@ private static final long serialVersionUID = 0L;
         startingBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.LineupEntryMessage, com.sts.rpclib.LineupEntryMessage.Builder, com.sts.rpclib.LineupEntryMessageOrBuilder>(
                 starting_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         starting_ = null;
@@ -1217,9 +1313,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.LineupEntryMessage> substitute_ =
       java.util.Collections.emptyList();
     private void ensureSubstituteIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         substitute_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>(substitute_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1369,7 +1465,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSubstitute() {
       if (substituteBuilder_ == null) {
         substitute_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         substituteBuilder_.clear();
@@ -1446,7 +1542,7 @@ private static final long serialVersionUID = 0L;
         substituteBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.LineupEntryMessage, com.sts.rpclib.LineupEntryMessage.Builder, com.sts.rpclib.LineupEntryMessageOrBuilder>(
                 substitute_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         substitute_ = null;
@@ -1457,9 +1553,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.LineupEntryMessage> injured_ =
       java.util.Collections.emptyList();
     private void ensureInjuredIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         injured_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>(injured_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1609,7 +1705,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearInjured() {
       if (injuredBuilder_ == null) {
         injured_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         injuredBuilder_.clear();
@@ -1686,7 +1782,7 @@ private static final long serialVersionUID = 0L;
         injuredBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.LineupEntryMessage, com.sts.rpclib.LineupEntryMessage.Builder, com.sts.rpclib.LineupEntryMessageOrBuilder>(
                 injured_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         injured_ = null;
@@ -1697,9 +1793,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.LineupEntryMessage> suspended_ =
       java.util.Collections.emptyList();
     private void ensureSuspendedIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         suspended_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>(suspended_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1849,7 +1945,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSuspended() {
       if (suspendedBuilder_ == null) {
         suspended_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         suspendedBuilder_.clear();
@@ -1926,7 +2022,7 @@ private static final long serialVersionUID = 0L;
         suspendedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.LineupEntryMessage, com.sts.rpclib.LineupEntryMessage.Builder, com.sts.rpclib.LineupEntryMessageOrBuilder>(
                 suspended_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         suspended_ = null;
@@ -1937,9 +2033,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.LineupEntryMessage> coaches_ =
       java.util.Collections.emptyList();
     private void ensureCoachesIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         coaches_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>(coaches_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -2089,7 +2185,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCoaches() {
       if (coachesBuilder_ == null) {
         coaches_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         coachesBuilder_.clear();
@@ -2166,12 +2262,252 @@ private static final long serialVersionUID = 0L;
         coachesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.LineupEntryMessage, com.sts.rpclib.LineupEntryMessage.Builder, com.sts.rpclib.LineupEntryMessageOrBuilder>(
                 coaches_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         coaches_ = null;
       }
       return coachesBuilder_;
+    }
+
+    private java.util.List<com.sts.rpclib.LineupEntryMessage> squad_ =
+      java.util.Collections.emptyList();
+    private void ensureSquadIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        squad_ = new java.util.ArrayList<com.sts.rpclib.LineupEntryMessage>(squad_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.sts.rpclib.LineupEntryMessage, com.sts.rpclib.LineupEntryMessage.Builder, com.sts.rpclib.LineupEntryMessageOrBuilder> squadBuilder_;
+
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public java.util.List<com.sts.rpclib.LineupEntryMessage> getSquadList() {
+      if (squadBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(squad_);
+      } else {
+        return squadBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public int getSquadCount() {
+      if (squadBuilder_ == null) {
+        return squad_.size();
+      } else {
+        return squadBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public com.sts.rpclib.LineupEntryMessage getSquad(int index) {
+      if (squadBuilder_ == null) {
+        return squad_.get(index);
+      } else {
+        return squadBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder setSquad(
+        int index, com.sts.rpclib.LineupEntryMessage value) {
+      if (squadBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSquadIsMutable();
+        squad_.set(index, value);
+        onChanged();
+      } else {
+        squadBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder setSquad(
+        int index, com.sts.rpclib.LineupEntryMessage.Builder builderForValue) {
+      if (squadBuilder_ == null) {
+        ensureSquadIsMutable();
+        squad_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        squadBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder addSquad(com.sts.rpclib.LineupEntryMessage value) {
+      if (squadBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSquadIsMutable();
+        squad_.add(value);
+        onChanged();
+      } else {
+        squadBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder addSquad(
+        int index, com.sts.rpclib.LineupEntryMessage value) {
+      if (squadBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSquadIsMutable();
+        squad_.add(index, value);
+        onChanged();
+      } else {
+        squadBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder addSquad(
+        com.sts.rpclib.LineupEntryMessage.Builder builderForValue) {
+      if (squadBuilder_ == null) {
+        ensureSquadIsMutable();
+        squad_.add(builderForValue.build());
+        onChanged();
+      } else {
+        squadBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder addSquad(
+        int index, com.sts.rpclib.LineupEntryMessage.Builder builderForValue) {
+      if (squadBuilder_ == null) {
+        ensureSquadIsMutable();
+        squad_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        squadBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder addAllSquad(
+        java.lang.Iterable<? extends com.sts.rpclib.LineupEntryMessage> values) {
+      if (squadBuilder_ == null) {
+        ensureSquadIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, squad_);
+        onChanged();
+      } else {
+        squadBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder clearSquad() {
+      if (squadBuilder_ == null) {
+        squad_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        squadBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public Builder removeSquad(int index) {
+      if (squadBuilder_ == null) {
+        ensureSquadIsMutable();
+        squad_.remove(index);
+        onChanged();
+      } else {
+        squadBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public com.sts.rpclib.LineupEntryMessage.Builder getSquadBuilder(
+        int index) {
+      return getSquadFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public com.sts.rpclib.LineupEntryMessageOrBuilder getSquadOrBuilder(
+        int index) {
+      if (squadBuilder_ == null) {
+        return squad_.get(index);  } else {
+        return squadBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public java.util.List<? extends com.sts.rpclib.LineupEntryMessageOrBuilder> 
+         getSquadOrBuilderList() {
+      if (squadBuilder_ != null) {
+        return squadBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(squad_);
+      }
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public com.sts.rpclib.LineupEntryMessage.Builder addSquadBuilder() {
+      return getSquadFieldBuilder().addBuilder(
+          com.sts.rpclib.LineupEntryMessage.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public com.sts.rpclib.LineupEntryMessage.Builder addSquadBuilder(
+        int index) {
+      return getSquadFieldBuilder().addBuilder(
+          index, com.sts.rpclib.LineupEntryMessage.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+     */
+    public java.util.List<com.sts.rpclib.LineupEntryMessage.Builder> 
+         getSquadBuilderList() {
+      return getSquadFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.sts.rpclib.LineupEntryMessage, com.sts.rpclib.LineupEntryMessage.Builder, com.sts.rpclib.LineupEntryMessageOrBuilder> 
+        getSquadFieldBuilder() {
+      if (squadBuilder_ == null) {
+        squadBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.sts.rpclib.LineupEntryMessage, com.sts.rpclib.LineupEntryMessage.Builder, com.sts.rpclib.LineupEntryMessageOrBuilder>(
+                squad_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        squad_ = null;
+      }
+      return squadBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -2206,7 +2542,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MatchLineupChangeMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

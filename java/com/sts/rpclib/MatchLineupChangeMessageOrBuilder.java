@@ -132,4 +132,28 @@ public interface MatchLineupChangeMessageOrBuilder extends
    */
   com.sts.rpclib.LineupEntryMessageOrBuilder getCoachesOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  java.util.List<com.sts.rpclib.LineupEntryMessage> 
+      getSquadList();
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  com.sts.rpclib.LineupEntryMessage getSquad(int index);
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  int getSquadCount();
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  java.util.List<? extends com.sts.rpclib.LineupEntryMessageOrBuilder> 
+      getSquadOrBuilderList();
+  /**
+   * <code>repeated .com.sts.rpclib.LineupEntryMessage squad = 7;</code>
+   */
+  com.sts.rpclib.LineupEntryMessageOrBuilder getSquadOrBuilder(
+      int index);
 }

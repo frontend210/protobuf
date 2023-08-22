@@ -32,111 +32,6 @@ private static final long serialVersionUID = 0L;
     return new TopScorerMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private TopScorerMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            categoryId_ = s;
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              categoryName_ = new java.util.ArrayList<com.sts.rpclib.LocalizedName>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            categoryName_.add(
-                input.readMessage(com.sts.rpclib.LocalizedName.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            stageId_ = s;
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              stageName_ = new java.util.ArrayList<com.sts.rpclib.LocalizedName>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            stageName_.add(
-                input.readMessage(com.sts.rpclib.LocalizedName.parser(), extensionRegistry));
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              entries_ = new java.util.ArrayList<com.sts.rpclib.TopScorerEntry>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            entries_.add(
-                input.readMessage(com.sts.rpclib.TopScorerEntry.parser(), extensionRegistry));
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            sport_ = rawValue;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            season_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        categoryName_ = java.util.Collections.unmodifiableList(categoryName_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        stageName_ = java.util.Collections.unmodifiableList(stageName_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        entries_ = java.util.Collections.unmodifiableList(entries_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.TopScorer.internal_static_com_sts_rpclib_TopScorerMessage_descriptor;
@@ -151,7 +46,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORYID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object categoryId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object categoryId_ = "";
   /**
    * <code>string categoryId = 1;</code>
    * @return The categoryId.
@@ -189,6 +85,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORYNAME_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LocalizedName> categoryName_;
   /**
    * <code>repeated .com.sts.rpclib.LocalizedName categoryName = 2;</code>
@@ -229,7 +126,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STAGEID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object stageId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object stageId_ = "";
   /**
    * <code>string stageId = 3;</code>
    * @return The stageId.
@@ -267,6 +165,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STAGENAME_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LocalizedName> stageName_;
   /**
    * <code>repeated .com.sts.rpclib.LocalizedName stageName = 4;</code>
@@ -307,6 +206,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENTRIES_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.TopScorerEntry> entries_;
   /**
    * <code>repeated .com.sts.rpclib.TopScorerEntry entries = 5;</code>
@@ -347,7 +247,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SPORT_FIELD_NUMBER = 6;
-  private int sport_;
+  private int sport_ = 0;
   /**
    * <code>.com.sts.rpclib.Sport sport = 6;</code>
    * @return The enum numeric value on the wire for sport.
@@ -360,13 +260,13 @@ private static final long serialVersionUID = 0L;
    * @return The sport.
    */
   @java.lang.Override public com.sts.rpclib.Sport getSport() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.Sport result = com.sts.rpclib.Sport.valueOf(sport_);
+    com.sts.rpclib.Sport result = com.sts.rpclib.Sport.forNumber(sport_);
     return result == null ? com.sts.rpclib.Sport.UNRECOGNIZED : result;
   }
 
   public static final int SEASON_FIELD_NUMBER = 7;
-  private volatile java.lang.Object season_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object season_ = "";
   /**
    * <code>string season = 7;</code>
    * @return The season.
@@ -438,7 +338,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(season_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, season_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -472,7 +372,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(season_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, season_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -500,7 +400,7 @@ private static final long serialVersionUID = 0L;
     if (sport_ != other.sport_) return false;
     if (!getSeason()
         .equals(other.getSeason())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -531,7 +431,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + sport_;
     hash = (37 * hash) + SEASON_FIELD_NUMBER;
     hash = (53 * hash) + getSeason().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -580,11 +480,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.TopScorerMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.TopScorerMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -648,51 +550,43 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.TopScorerMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCategoryNameFieldBuilder();
-        getStageNameFieldBuilder();
-        getEntriesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       categoryId_ = "";
-
       if (categoryNameBuilder_ == null) {
         categoryName_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        categoryName_ = null;
         categoryNameBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       stageId_ = "";
-
       if (stageNameBuilder_ == null) {
         stageName_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        stageName_ = null;
         stageNameBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       if (entriesBuilder_ == null) {
         entries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        entries_ = null;
         entriesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       sport_ = 0;
-
       season_ = "";
-
       return this;
     }
 
@@ -719,40 +613,56 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.TopScorerMessage buildPartial() {
       com.sts.rpclib.TopScorerMessage result = new com.sts.rpclib.TopScorerMessage(this);
-      int from_bitField0_ = bitField0_;
-      result.categoryId_ = categoryId_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.sts.rpclib.TopScorerMessage result) {
       if (categoryNameBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           categoryName_ = java.util.Collections.unmodifiableList(categoryName_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.categoryName_ = categoryName_;
       } else {
         result.categoryName_ = categoryNameBuilder_.build();
       }
-      result.stageId_ = stageId_;
       if (stageNameBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           stageName_ = java.util.Collections.unmodifiableList(stageName_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.stageName_ = stageName_;
       } else {
         result.stageName_ = stageNameBuilder_.build();
       }
       if (entriesBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           entries_ = java.util.Collections.unmodifiableList(entries_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.entries_ = entries_;
       } else {
         result.entries_ = entriesBuilder_.build();
       }
-      result.sport_ = sport_;
-      result.season_ = season_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.TopScorerMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.categoryId_ = categoryId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.stageId_ = stageId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.sport_ = sport_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.season_ = season_;
+      }
     }
 
     @java.lang.Override
@@ -801,13 +711,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.sts.rpclib.TopScorerMessage.getDefaultInstance()) return this;
       if (!other.getCategoryId().isEmpty()) {
         categoryId_ = other.categoryId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (categoryNameBuilder_ == null) {
         if (!other.categoryName_.isEmpty()) {
           if (categoryName_.isEmpty()) {
             categoryName_ = other.categoryName_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureCategoryNameIsMutable();
             categoryName_.addAll(other.categoryName_);
@@ -820,7 +731,7 @@ private static final long serialVersionUID = 0L;
             categoryNameBuilder_.dispose();
             categoryNameBuilder_ = null;
             categoryName_ = other.categoryName_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             categoryNameBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCategoryNameFieldBuilder() : null;
@@ -831,13 +742,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getStageId().isEmpty()) {
         stageId_ = other.stageId_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (stageNameBuilder_ == null) {
         if (!other.stageName_.isEmpty()) {
           if (stageName_.isEmpty()) {
             stageName_ = other.stageName_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureStageNameIsMutable();
             stageName_.addAll(other.stageName_);
@@ -850,7 +762,7 @@ private static final long serialVersionUID = 0L;
             stageNameBuilder_.dispose();
             stageNameBuilder_ = null;
             stageName_ = other.stageName_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
             stageNameBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getStageNameFieldBuilder() : null;
@@ -863,7 +775,7 @@ private static final long serialVersionUID = 0L;
         if (!other.entries_.isEmpty()) {
           if (entries_.isEmpty()) {
             entries_ = other.entries_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureEntriesIsMutable();
             entries_.addAll(other.entries_);
@@ -876,7 +788,7 @@ private static final long serialVersionUID = 0L;
             entriesBuilder_.dispose();
             entriesBuilder_ = null;
             entries_ = other.entries_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
             entriesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEntriesFieldBuilder() : null;
@@ -890,9 +802,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getSeason().isEmpty()) {
         season_ = other.season_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -907,17 +820,89 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.TopScorerMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              categoryId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.sts.rpclib.LocalizedName m =
+                  input.readMessage(
+                      com.sts.rpclib.LocalizedName.parser(),
+                      extensionRegistry);
+              if (categoryNameBuilder_ == null) {
+                ensureCategoryNameIsMutable();
+                categoryName_.add(m);
+              } else {
+                categoryNameBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              stageId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              com.sts.rpclib.LocalizedName m =
+                  input.readMessage(
+                      com.sts.rpclib.LocalizedName.parser(),
+                      extensionRegistry);
+              if (stageNameBuilder_ == null) {
+                ensureStageNameIsMutable();
+                stageName_.add(m);
+              } else {
+                stageNameBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              com.sts.rpclib.TopScorerEntry m =
+                  input.readMessage(
+                      com.sts.rpclib.TopScorerEntry.parser(),
+                      extensionRegistry);
+              if (entriesBuilder_ == null) {
+                ensureEntriesIsMutable();
+                entries_.add(m);
+              } else {
+                entriesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 48: {
+              sport_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 58: {
+              season_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.TopScorerMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -963,11 +948,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCategoryId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       categoryId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -976,8 +959,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCategoryId() {
-      
       categoryId_ = getDefaultInstance().getCategoryId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -988,12 +971,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCategoryIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       categoryId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1001,9 +982,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.LocalizedName> categoryName_ =
       java.util.Collections.emptyList();
     private void ensureCategoryNameIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         categoryName_ = new java.util.ArrayList<com.sts.rpclib.LocalizedName>(categoryName_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1153,7 +1134,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCategoryName() {
       if (categoryNameBuilder_ == null) {
         categoryName_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         categoryNameBuilder_.clear();
@@ -1230,7 +1211,7 @@ private static final long serialVersionUID = 0L;
         categoryNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.LocalizedName, com.sts.rpclib.LocalizedName.Builder, com.sts.rpclib.LocalizedNameOrBuilder>(
                 categoryName_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         categoryName_ = null;
@@ -1279,11 +1260,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStageId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       stageId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1292,8 +1271,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStageId() {
-      
       stageId_ = getDefaultInstance().getStageId();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1304,12 +1283,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStageIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       stageId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1317,9 +1294,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.LocalizedName> stageName_ =
       java.util.Collections.emptyList();
     private void ensureStageNameIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         stageName_ = new java.util.ArrayList<com.sts.rpclib.LocalizedName>(stageName_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1469,7 +1446,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearStageName() {
       if (stageNameBuilder_ == null) {
         stageName_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         stageNameBuilder_.clear();
@@ -1546,7 +1523,7 @@ private static final long serialVersionUID = 0L;
         stageNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.LocalizedName, com.sts.rpclib.LocalizedName.Builder, com.sts.rpclib.LocalizedNameOrBuilder>(
                 stageName_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         stageName_ = null;
@@ -1557,9 +1534,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.TopScorerEntry> entries_ =
       java.util.Collections.emptyList();
     private void ensureEntriesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         entries_ = new java.util.ArrayList<com.sts.rpclib.TopScorerEntry>(entries_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1709,7 +1686,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEntries() {
       if (entriesBuilder_ == null) {
         entries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         entriesBuilder_.clear();
@@ -1786,7 +1763,7 @@ private static final long serialVersionUID = 0L;
         entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.TopScorerEntry, com.sts.rpclib.TopScorerEntry.Builder, com.sts.rpclib.TopScorerEntryOrBuilder>(
                 entries_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         entries_ = null;
@@ -1808,8 +1785,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSportValue(int value) {
-      
       sport_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1819,8 +1796,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.Sport getSport() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.Sport result = com.sts.rpclib.Sport.valueOf(sport_);
+      com.sts.rpclib.Sport result = com.sts.rpclib.Sport.forNumber(sport_);
       return result == null ? com.sts.rpclib.Sport.UNRECOGNIZED : result;
     }
     /**
@@ -1832,7 +1808,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       sport_ = value.getNumber();
       onChanged();
       return this;
@@ -1842,7 +1818,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSport() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       sport_ = 0;
       onChanged();
       return this;
@@ -1889,11 +1865,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSeason(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       season_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1902,8 +1876,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSeason() {
-      
       season_ = getDefaultInstance().getSeason();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1914,12 +1888,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSeasonBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       season_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1956,7 +1928,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new TopScorerMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

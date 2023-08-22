@@ -33,7 +33,8 @@ public final class WidgetEvent {
       " \001(\t\0222\n\teventType\030\002 \001(\0162\037.com.sts.rpclib" +
       ".WidgetEventType\022\022\n\nrefEventId\030\003 \001(\t\022\'\n\004" +
       "zone\030\004 \001(\0162\031.com.sts.rpclib.PitchZone\022\021\n" +
-      "\ttimestamp\030\005 \001(\003B\rP\001Z\t/gorpclibb\006proto3"
+      "\ttimestamp\030\005 \001(\003B/P\001Z+github.com/snapsco" +
+      "regroup/protobuf/gorpclibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

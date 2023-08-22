@@ -256,6 +256,46 @@ public enum ParticipantPosition
    * <code>RESERVE = 61;</code>
    */
   RESERVE(61),
+  /**
+   * <code>ALL_ROUNDER = 62;</code>
+   */
+  ALL_ROUNDER(62),
+  /**
+   * <code>BATSMAN = 63;</code>
+   */
+  BATSMAN(63),
+  /**
+   * <code>BOWLER = 64;</code>
+   */
+  BOWLER(64),
+  /**
+   * <code>CAPTAIN_AND_WICKET_KEEPER = 65;</code>
+   */
+  CAPTAIN_AND_WICKET_KEEPER(65),
+  /**
+   * <code>CAPTAIN_AND_ALL_ROUNDER = 66;</code>
+   */
+  CAPTAIN_AND_ALL_ROUNDER(66),
+  /**
+   * <code>CAPTAIN_AND_BATSMAN = 67;</code>
+   */
+  CAPTAIN_AND_BATSMAN(67),
+  /**
+   * <code>CAPTAIN_AND_BOWLER = 68;</code>
+   */
+  CAPTAIN_AND_BOWLER(68),
+  /**
+   * <code>INFIELD = 69;</code>
+   */
+  INFIELD(69),
+  /**
+   * <code>PINCH_HITTER = 70;</code>
+   */
+  PINCH_HITTER(70),
+  /**
+   * <code>PINCH_RUNNER = 71;</code>
+   */
+  PINCH_RUNNER(71),
   UNRECOGNIZED(-1),
   ;
 
@@ -507,6 +547,46 @@ public enum ParticipantPosition
    * <code>RESERVE = 61;</code>
    */
   public static final int RESERVE_VALUE = 61;
+  /**
+   * <code>ALL_ROUNDER = 62;</code>
+   */
+  public static final int ALL_ROUNDER_VALUE = 62;
+  /**
+   * <code>BATSMAN = 63;</code>
+   */
+  public static final int BATSMAN_VALUE = 63;
+  /**
+   * <code>BOWLER = 64;</code>
+   */
+  public static final int BOWLER_VALUE = 64;
+  /**
+   * <code>CAPTAIN_AND_WICKET_KEEPER = 65;</code>
+   */
+  public static final int CAPTAIN_AND_WICKET_KEEPER_VALUE = 65;
+  /**
+   * <code>CAPTAIN_AND_ALL_ROUNDER = 66;</code>
+   */
+  public static final int CAPTAIN_AND_ALL_ROUNDER_VALUE = 66;
+  /**
+   * <code>CAPTAIN_AND_BATSMAN = 67;</code>
+   */
+  public static final int CAPTAIN_AND_BATSMAN_VALUE = 67;
+  /**
+   * <code>CAPTAIN_AND_BOWLER = 68;</code>
+   */
+  public static final int CAPTAIN_AND_BOWLER_VALUE = 68;
+  /**
+   * <code>INFIELD = 69;</code>
+   */
+  public static final int INFIELD_VALUE = 69;
+  /**
+   * <code>PINCH_HITTER = 70;</code>
+   */
+  public static final int PINCH_HITTER_VALUE = 70;
+  /**
+   * <code>PINCH_RUNNER = 71;</code>
+   */
+  public static final int PINCH_RUNNER_VALUE = 71;
 
 
   public final int getNumber() {
@@ -595,6 +675,16 @@ public enum ParticipantPosition
       case 59: return WICKET_KEEPER;
       case 60: return CAPTAIN_WICKET_KEEPER;
       case 61: return RESERVE;
+      case 62: return ALL_ROUNDER;
+      case 63: return BATSMAN;
+      case 64: return BOWLER;
+      case 65: return CAPTAIN_AND_WICKET_KEEPER;
+      case 66: return CAPTAIN_AND_ALL_ROUNDER;
+      case 67: return CAPTAIN_AND_BATSMAN;
+      case 68: return CAPTAIN_AND_BOWLER;
+      case 69: return INFIELD;
+      case 70: return PINCH_HITTER;
+      case 71: return PINCH_RUNNER;
       default: return null;
     }
   }

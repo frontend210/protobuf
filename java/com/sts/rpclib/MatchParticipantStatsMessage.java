@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MatchParticipantStatsMessage() {
+    teamFK_ = "";
   }
 
   @java.lang.Override
@@ -25,710 +26,6 @@ private static final long serialVersionUID = 0L;
     return new MatchParticipantStatsMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private MatchParticipantStatsMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            goals_ = input.readInt32();
-            break;
-          }
-          case 16: {
-
-            ownGoals_ = input.readInt32();
-            break;
-          }
-          case 24: {
-
-            yellowCards_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            secondYellowCards_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            redCards_ = input.readInt32();
-            break;
-          }
-          case 48: {
-
-            assists_ = input.readInt32();
-            break;
-          }
-          case 56: {
-
-            teamPosition_ = input.readInt32();
-            break;
-          }
-          case 64: {
-
-            totalGames_ = input.readInt32();
-            break;
-          }
-          case 72: {
-
-            totalGoals_ = input.readInt32();
-            break;
-          }
-          case 80: {
-
-            totalCleanSheets_ = input.readInt32();
-            break;
-          }
-          case 88: {
-
-            totalGamesWithoutGoal_ = input.readInt32();
-            break;
-          }
-          case 96: {
-
-            wonFirstHalf_ = input.readInt32();
-            break;
-          }
-          case 104: {
-
-            wonSecondHalf_ = input.readInt32();
-            break;
-          }
-          case 112: {
-
-            wonFirstHalfPercentage_ = input.readInt32();
-            break;
-          }
-          case 120: {
-
-            wonSecondHalfPercentage_ = input.readInt32();
-            break;
-          }
-          case 128: {
-
-            matchesWonHomePercentage_ = input.readInt32();
-            break;
-          }
-          case 136: {
-
-            matchesWonAwayPercentage_ = input.readInt32();
-            break;
-          }
-          case 144: {
-
-            boreDraws_ = input.readInt32();
-            break;
-          }
-          case 152: {
-
-            boreDrawsPercentage_ = input.readInt32();
-            break;
-          }
-          case 161: {
-
-            goalsRatio_ = input.readDouble();
-            break;
-          }
-          case 169: {
-
-            yellowCardsPerGame_ = input.readDouble();
-            break;
-          }
-          case 176: {
-
-            penaltyGoals_ = input.readInt32();
-            break;
-          }
-          case 184: {
-
-            totalGoalsFirstHalf_ = input.readInt32();
-            break;
-          }
-          case 192: {
-
-            totalGoalsSecondHalf_ = input.readInt32();
-            break;
-          }
-          case 200: {
-
-            totalGoalsFirstHalfPercentage_ = input.readInt32();
-            break;
-          }
-          case 208: {
-
-            totalGoalsSecondHalfPercentage_ = input.readInt32();
-            break;
-          }
-          case 216: {
-
-            firstGoal_ = input.readInt32();
-            break;
-          }
-          case 224: {
-
-            lastGoal_ = input.readInt32();
-            break;
-          }
-          case 232: {
-
-            firstGoalPercentage_ = input.readInt32();
-            break;
-          }
-          case 240: {
-
-            lastGoalPercentage_ = input.readInt32();
-            break;
-          }
-          case 248: {
-
-            goalRatioMinute1X15_ = input.readInt32();
-            break;
-          }
-          case 256: {
-
-            goalRatioMinute16X30_ = input.readInt32();
-            break;
-          }
-          case 264: {
-
-            goalRatioMinute31X45_ = input.readInt32();
-            break;
-          }
-          case 272: {
-
-            goalRatioMinute46X60_ = input.readInt32();
-            break;
-          }
-          case 280: {
-
-            goalRatioMinute61X75_ = input.readInt32();
-            break;
-          }
-          case 288: {
-
-            goalRatioMinute76X90_ = input.readInt32();
-            break;
-          }
-          case 296: {
-
-            goalInBothHalves_ = input.readInt32();
-            break;
-          }
-          case 304: {
-
-            goalInBothHalvesPercentage_ = input.readInt32();
-            break;
-          }
-          case 312: {
-
-            concededOneOrMoreGoals_ = input.readInt32();
-            break;
-          }
-          case 320: {
-
-            concededOneOrMoreGoalsPercentage_ = input.readInt32();
-            break;
-          }
-          case 328: {
-
-            wonToNil_ = input.readInt32();
-            break;
-          }
-          case 336: {
-
-            wonToNilPercentage_ = input.readInt32();
-            break;
-          }
-          case 344: {
-
-            timeBetweenGoalsScored_ = input.readInt32();
-            break;
-          }
-          case 352: {
-
-            timeBetweenGoalsScoredConceded_ = input.readInt32();
-            break;
-          }
-          case 360: {
-
-            conceded_ = input.readInt32();
-            break;
-          }
-          case 368: {
-
-            wonWhen1X0Up_ = input.readInt32();
-            break;
-          }
-          case 376: {
-
-            wonWhen1X0Down_ = input.readInt32();
-            break;
-          }
-          case 384: {
-
-            wonWhen2X0Up_ = input.readInt32();
-            break;
-          }
-          case 392: {
-
-            wonWhen1X0UpPercentage_ = input.readInt32();
-            break;
-          }
-          case 400: {
-
-            wonWhen1X0DownPercentage_ = input.readInt32();
-            break;
-          }
-          case 408: {
-
-            wonWhen2X0UpPercentage_ = input.readInt32();
-            break;
-          }
-          case 416: {
-
-            when1X0UpPoints_ = input.readInt32();
-            break;
-          }
-          case 424: {
-
-            when2X0UpPoints_ = input.readInt32();
-            break;
-          }
-          case 432: {
-
-            when1X0DownPoints_ = input.readInt32();
-            break;
-          }
-          case 440: {
-
-            when2X0DownPoints_ = input.readInt32();
-            break;
-          }
-          case 448: {
-
-            when1X0UpPointsPercentage_ = input.readInt32();
-            break;
-          }
-          case 456: {
-
-            when2X0UpPointsPercentage_ = input.readInt32();
-            break;
-          }
-          case 464: {
-
-            when1X0DownPointsPercentage_ = input.readInt32();
-            break;
-          }
-          case 472: {
-
-            when2X0DownPointsPercentage_ = input.readInt32();
-            break;
-          }
-          case 480: {
-
-            earlyGoalsTeam_ = input.readInt32();
-            break;
-          }
-          case 488: {
-
-            lastGaspGoalsTeam_ = input.readInt32();
-            break;
-          }
-          case 496: {
-
-            totalGoalsStartingPlayers_ = input.readInt32();
-            break;
-          }
-          case 504: {
-
-            totalGoalsSubbedPlayers_ = input.readInt32();
-            break;
-          }
-          case 512: {
-
-            totalGoalsStartingPlayersPercentage_ = input.readInt32();
-            break;
-          }
-          case 520: {
-
-            totalGoalsSubbedPlayersPercentage_ = input.readInt32();
-            break;
-          }
-          case 528: {
-
-            equaliserGoals_ = input.readInt32();
-            break;
-          }
-          case 536: {
-
-            bothToScore_ = input.readInt32();
-            break;
-          }
-          case 544: {
-
-            bothToScorePercentage_ = input.readInt32();
-            break;
-          }
-          case 552: {
-
-            comebacks_ = input.readInt32();
-            break;
-          }
-          case 560: {
-
-            lostLeadToLose_ = input.readInt32();
-            break;
-          }
-          case 568: {
-
-            lostInRow_ = input.readInt32();
-            break;
-          }
-          case 576: {
-
-            gamesWithoutGoals_ = input.readInt32();
-            break;
-          }
-          case 584: {
-
-            wonAtHome_ = input.readInt32();
-            break;
-          }
-          case 592: {
-
-            wonAtAway_ = input.readInt32();
-            break;
-          }
-          case 600: {
-
-            awayWithoutWin_ = input.readInt32();
-            break;
-          }
-          case 608: {
-
-            totalCardsYellowRed_ = input.readInt32();
-            break;
-          }
-          case 617: {
-
-            totalCardsYellowRedPerGamePercentage_ = input.readDouble();
-            break;
-          }
-          case 624: {
-
-            headGoal_ = input.readInt32();
-            break;
-          }
-          case 632: {
-
-            strikeGoal_ = input.readInt32();
-            break;
-          }
-          case 640: {
-
-            headGoalPercentage_ = input.readInt32();
-            break;
-          }
-          case 648: {
-
-            strikeGoalPercentage_ = input.readInt32();
-            break;
-          }
-          case 656: {
-
-            foulCommit_ = input.readInt32();
-            break;
-          }
-          case 665: {
-
-            foulCommitPerGame_ = input.readDouble();
-            break;
-          }
-          case 672: {
-
-            shoton_ = input.readInt32();
-            break;
-          }
-          case 681: {
-
-            shotonPerGame_ = input.readDouble();
-            break;
-          }
-          case 688: {
-
-            shotoff_ = input.readInt32();
-            break;
-          }
-          case 697: {
-
-            shotoffPerGame_ = input.readDouble();
-            break;
-          }
-          case 705: {
-
-            shotsonPerGoal_ = input.readDouble();
-            break;
-          }
-          case 712: {
-
-            offside_ = input.readInt32();
-            break;
-          }
-          case 721: {
-
-            offsidePerGame_ = input.readDouble();
-            break;
-          }
-          case 728: {
-
-            cornerTaken_ = input.readInt32();
-            break;
-          }
-          case 737: {
-
-            cornerTakenPerGame_ = input.readDouble();
-            break;
-          }
-          case 744: {
-
-            penaltyMissed_ = input.readInt32();
-            break;
-          }
-          case 752: {
-
-            penaltyMissedPercentage_ = input.readInt32();
-            break;
-          }
-          case 761: {
-
-            elapsedPlusPerGame_ = input.readDouble();
-            break;
-          }
-          case 768: {
-
-            woodwork_ = input.readInt32();
-            break;
-          }
-          case 776: {
-
-            penaltyCommit_ = input.readInt32();
-            break;
-          }
-          case 784: {
-
-            penaltyCommitPercentage_ = input.readInt32();
-            break;
-          }
-          case 792: {
-
-            foulsuffered_ = input.readInt32();
-            break;
-          }
-          case 800: {
-
-            totalShots_ = input.readInt32();
-            break;
-          }
-          case 808: {
-
-            penaltySaves_ = input.readInt32();
-            break;
-          }
-          case 816: {
-
-            defensiveError_ = input.readInt32();
-            break;
-          }
-          case 824: {
-
-            averagePossession_ = input.readInt32();
-            break;
-          }
-          case 832: {
-
-            penaltiesAwarded_ = input.readInt32();
-            break;
-          }
-          case 840: {
-
-            goalOutsideBox_ = input.readInt32();
-            break;
-          }
-          case 848: {
-
-            goalOutsideBoxPercentage_ = input.readInt32();
-            break;
-          }
-          case 856: {
-
-            directFreekick_ = input.readInt32();
-            break;
-          }
-          case 864: {
-
-            directFreekickPercentage_ = input.readInt32();
-            break;
-          }
-          case 872: {
-
-            scoredInRow_ = input.readInt32();
-            break;
-          }
-          case 880: {
-
-            wonInRow_ = input.readInt32();
-            break;
-          }
-          case 888: {
-
-            noconcedingInRow_ = input.readInt32();
-            break;
-          }
-          case 896: {
-
-            homeWithoutWin_ = input.readInt32();
-            break;
-          }
-          case 904: {
-
-            won2Down_ = input.readInt32();
-            break;
-          }
-          case 912: {
-
-            won2DownPercentage_ = input.readInt32();
-            break;
-          }
-          case 920: {
-
-            firstReturnPointsWon_ = input.readInt32();
-            break;
-          }
-          case 929: {
-
-            firstServePercentage_ = input.readDouble();
-            break;
-          }
-          case 936: {
-
-            firstServePointsWon_ = input.readInt32();
-            break;
-          }
-          case 944: {
-
-            secondReturnPointsWon_ = input.readInt32();
-            break;
-          }
-          case 952: {
-
-            secondServePointsWon_ = input.readInt32();
-            break;
-          }
-          case 960: {
-
-            aces_ = input.readInt32();
-            break;
-          }
-          case 968: {
-
-            breakPointsSaved_ = input.readInt32();
-            break;
-          }
-          case 976: {
-
-            breakPointsWon_ = input.readInt32();
-            break;
-          }
-          case 984: {
-
-            doubleFaults_ = input.readInt32();
-            break;
-          }
-          case 993: {
-
-            returnPointsWonPercentage_ = input.readDouble();
-            break;
-          }
-          case 1000: {
-
-            serviceGames_ = input.readInt32();
-            break;
-          }
-          case 1009: {
-
-            servicePointsWonPercentage_ = input.readDouble();
-            break;
-          }
-          case 1016: {
-
-            firstServePointsAll_ = input.readInt32();
-            break;
-          }
-          case 1024: {
-
-            secondServePointsAll_ = input.readInt32();
-            break;
-          }
-          case 1032: {
-
-            totalPointsWon_ = input.readInt32();
-            break;
-          }
-          case 1041: {
-
-            totalPointsWonPercentage_ = input.readDouble();
-            break;
-          }
-          case 1048: {
-
-            unforcedErrors_ = input.readInt32();
-            break;
-          }
-          case 1056: {
-
-            winners_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Match.internal_static_com_sts_rpclib_MatchParticipantStatsMessage_descriptor;
@@ -743,7 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALS_FIELD_NUMBER = 1;
-  private int goals_;
+  private int goals_ = 0;
   /**
    * <code>int32 goals = 1;</code>
    * @return The goals.
@@ -754,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OWNGOALS_FIELD_NUMBER = 2;
-  private int ownGoals_;
+  private int ownGoals_ = 0;
   /**
    * <code>int32 ownGoals = 2;</code>
    * @return The ownGoals.
@@ -765,7 +62,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int YELLOWCARDS_FIELD_NUMBER = 3;
-  private int yellowCards_;
+  private int yellowCards_ = 0;
   /**
    * <code>int32 yellowCards = 3;</code>
    * @return The yellowCards.
@@ -776,7 +73,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECONDYELLOWCARDS_FIELD_NUMBER = 4;
-  private int secondYellowCards_;
+  private int secondYellowCards_ = 0;
   /**
    * <code>int32 secondYellowCards = 4;</code>
    * @return The secondYellowCards.
@@ -787,7 +84,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REDCARDS_FIELD_NUMBER = 5;
-  private int redCards_;
+  private int redCards_ = 0;
   /**
    * <code>int32 redCards = 5;</code>
    * @return The redCards.
@@ -798,7 +95,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSISTS_FIELD_NUMBER = 6;
-  private int assists_;
+  private int assists_ = 0;
   /**
    * <code>int32 assists = 6;</code>
    * @return The assists.
@@ -809,7 +106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEAMPOSITION_FIELD_NUMBER = 7;
-  private int teamPosition_;
+  private int teamPosition_ = 0;
   /**
    * <code>int32 teamPosition = 7;</code>
    * @return The teamPosition.
@@ -820,7 +117,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGAMES_FIELD_NUMBER = 8;
-  private int totalGames_;
+  private int totalGames_ = 0;
   /**
    * <code>int32 totalGames = 8;</code>
    * @return The totalGames.
@@ -831,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALS_FIELD_NUMBER = 9;
-  private int totalGoals_;
+  private int totalGoals_ = 0;
   /**
    * <code>int32 totalGoals = 9;</code>
    * @return The totalGoals.
@@ -842,7 +139,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALCLEANSHEETS_FIELD_NUMBER = 10;
-  private int totalCleanSheets_;
+  private int totalCleanSheets_ = 0;
   /**
    * <code>int32 totalCleanSheets = 10;</code>
    * @return The totalCleanSheets.
@@ -853,7 +150,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGAMESWITHOUTGOAL_FIELD_NUMBER = 11;
-  private int totalGamesWithoutGoal_;
+  private int totalGamesWithoutGoal_ = 0;
   /**
    * <code>int32 totalGamesWithoutGoal = 11;</code>
    * @return The totalGamesWithoutGoal.
@@ -864,7 +161,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONFIRSTHALF_FIELD_NUMBER = 12;
-  private int wonFirstHalf_;
+  private int wonFirstHalf_ = 0;
   /**
    * <code>int32 wonFirstHalf = 12;</code>
    * @return The wonFirstHalf.
@@ -875,7 +172,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONSECONDHALF_FIELD_NUMBER = 13;
-  private int wonSecondHalf_;
+  private int wonSecondHalf_ = 0;
   /**
    * <code>int32 wonSecondHalf = 13;</code>
    * @return The wonSecondHalf.
@@ -886,7 +183,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONFIRSTHALFPERCENTAGE_FIELD_NUMBER = 14;
-  private int wonFirstHalfPercentage_;
+  private int wonFirstHalfPercentage_ = 0;
   /**
    * <code>int32 wonFirstHalfPercentage = 14;</code>
    * @return The wonFirstHalfPercentage.
@@ -897,7 +194,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONSECONDHALFPERCENTAGE_FIELD_NUMBER = 15;
-  private int wonSecondHalfPercentage_;
+  private int wonSecondHalfPercentage_ = 0;
   /**
    * <code>int32 wonSecondHalfPercentage = 15;</code>
    * @return The wonSecondHalfPercentage.
@@ -908,7 +205,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MATCHESWONHOMEPERCENTAGE_FIELD_NUMBER = 16;
-  private int matchesWonHomePercentage_;
+  private int matchesWonHomePercentage_ = 0;
   /**
    * <code>int32 matchesWonHomePercentage = 16;</code>
    * @return The matchesWonHomePercentage.
@@ -919,7 +216,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MATCHESWONAWAYPERCENTAGE_FIELD_NUMBER = 17;
-  private int matchesWonAwayPercentage_;
+  private int matchesWonAwayPercentage_ = 0;
   /**
    * <code>int32 matchesWonAwayPercentage = 17;</code>
    * @return The matchesWonAwayPercentage.
@@ -930,7 +227,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BOREDRAWS_FIELD_NUMBER = 18;
-  private int boreDraws_;
+  private int boreDraws_ = 0;
   /**
    * <code>int32 boreDraws = 18;</code>
    * @return The boreDraws.
@@ -941,7 +238,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BOREDRAWSPERCENTAGE_FIELD_NUMBER = 19;
-  private int boreDrawsPercentage_;
+  private int boreDrawsPercentage_ = 0;
   /**
    * <code>int32 boreDrawsPercentage = 19;</code>
    * @return The boreDrawsPercentage.
@@ -952,7 +249,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALSRATIO_FIELD_NUMBER = 20;
-  private double goalsRatio_;
+  private double goalsRatio_ = 0D;
   /**
    * <code>double goalsRatio = 20;</code>
    * @return The goalsRatio.
@@ -963,7 +260,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int YELLOWCARDSPERGAME_FIELD_NUMBER = 21;
-  private double yellowCardsPerGame_;
+  private double yellowCardsPerGame_ = 0D;
   /**
    * <code>double yellowCardsPerGame = 21;</code>
    * @return The yellowCardsPerGame.
@@ -974,7 +271,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PENALTYGOALS_FIELD_NUMBER = 22;
-  private int penaltyGoals_;
+  private int penaltyGoals_ = 0;
   /**
    * <code>int32 penaltyGoals = 22;</code>
    * @return The penaltyGoals.
@@ -985,7 +282,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALSFIRSTHALF_FIELD_NUMBER = 23;
-  private int totalGoalsFirstHalf_;
+  private int totalGoalsFirstHalf_ = 0;
   /**
    * <code>int32 totalGoalsFirstHalf = 23;</code>
    * @return The totalGoalsFirstHalf.
@@ -996,7 +293,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALSSECONDHALF_FIELD_NUMBER = 24;
-  private int totalGoalsSecondHalf_;
+  private int totalGoalsSecondHalf_ = 0;
   /**
    * <code>int32 totalGoalsSecondHalf = 24;</code>
    * @return The totalGoalsSecondHalf.
@@ -1007,7 +304,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALSFIRSTHALFPERCENTAGE_FIELD_NUMBER = 25;
-  private int totalGoalsFirstHalfPercentage_;
+  private int totalGoalsFirstHalfPercentage_ = 0;
   /**
    * <code>int32 totalGoalsFirstHalfPercentage = 25;</code>
    * @return The totalGoalsFirstHalfPercentage.
@@ -1018,7 +315,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALSSECONDHALFPERCENTAGE_FIELD_NUMBER = 26;
-  private int totalGoalsSecondHalfPercentage_;
+  private int totalGoalsSecondHalfPercentage_ = 0;
   /**
    * <code>int32 totalGoalsSecondHalfPercentage = 26;</code>
    * @return The totalGoalsSecondHalfPercentage.
@@ -1029,7 +326,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIRSTGOAL_FIELD_NUMBER = 27;
-  private int firstGoal_;
+  private int firstGoal_ = 0;
   /**
    * <code>int32 firstGoal = 27;</code>
    * @return The firstGoal.
@@ -1040,7 +337,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LASTGOAL_FIELD_NUMBER = 28;
-  private int lastGoal_;
+  private int lastGoal_ = 0;
   /**
    * <code>int32 lastGoal = 28;</code>
    * @return The lastGoal.
@@ -1051,7 +348,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIRSTGOALPERCENTAGE_FIELD_NUMBER = 29;
-  private int firstGoalPercentage_;
+  private int firstGoalPercentage_ = 0;
   /**
    * <code>int32 firstGoalPercentage = 29;</code>
    * @return The firstGoalPercentage.
@@ -1062,7 +359,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LASTGOALPERCENTAGE_FIELD_NUMBER = 30;
-  private int lastGoalPercentage_;
+  private int lastGoalPercentage_ = 0;
   /**
    * <code>int32 lastGoalPercentage = 30;</code>
    * @return The lastGoalPercentage.
@@ -1073,7 +370,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALRATIOMINUTE1X15_FIELD_NUMBER = 31;
-  private int goalRatioMinute1X15_;
+  private int goalRatioMinute1X15_ = 0;
   /**
    * <code>int32 goalRatioMinute1x15 = 31;</code>
    * @return The goalRatioMinute1x15.
@@ -1084,7 +381,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALRATIOMINUTE16X30_FIELD_NUMBER = 32;
-  private int goalRatioMinute16X30_;
+  private int goalRatioMinute16X30_ = 0;
   /**
    * <code>int32 goalRatioMinute16x30 = 32;</code>
    * @return The goalRatioMinute16x30.
@@ -1095,7 +392,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALRATIOMINUTE31X45_FIELD_NUMBER = 33;
-  private int goalRatioMinute31X45_;
+  private int goalRatioMinute31X45_ = 0;
   /**
    * <code>int32 goalRatioMinute31x45 = 33;</code>
    * @return The goalRatioMinute31x45.
@@ -1106,7 +403,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALRATIOMINUTE46X60_FIELD_NUMBER = 34;
-  private int goalRatioMinute46X60_;
+  private int goalRatioMinute46X60_ = 0;
   /**
    * <code>int32 goalRatioMinute46x60 = 34;</code>
    * @return The goalRatioMinute46x60.
@@ -1117,7 +414,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALRATIOMINUTE61X75_FIELD_NUMBER = 35;
-  private int goalRatioMinute61X75_;
+  private int goalRatioMinute61X75_ = 0;
   /**
    * <code>int32 goalRatioMinute61x75 = 35;</code>
    * @return The goalRatioMinute61x75.
@@ -1128,7 +425,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALRATIOMINUTE76X90_FIELD_NUMBER = 36;
-  private int goalRatioMinute76X90_;
+  private int goalRatioMinute76X90_ = 0;
   /**
    * <code>int32 goalRatioMinute76x90 = 36;</code>
    * @return The goalRatioMinute76x90.
@@ -1139,7 +436,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALINBOTHHALVES_FIELD_NUMBER = 37;
-  private int goalInBothHalves_;
+  private int goalInBothHalves_ = 0;
   /**
    * <code>int32 goalInBothHalves = 37;</code>
    * @return The goalInBothHalves.
@@ -1150,7 +447,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALINBOTHHALVESPERCENTAGE_FIELD_NUMBER = 38;
-  private int goalInBothHalvesPercentage_;
+  private int goalInBothHalvesPercentage_ = 0;
   /**
    * <code>int32 goalInBothHalvesPercentage = 38;</code>
    * @return The goalInBothHalvesPercentage.
@@ -1161,7 +458,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONCEDEDONEORMOREGOALS_FIELD_NUMBER = 39;
-  private int concededOneOrMoreGoals_;
+  private int concededOneOrMoreGoals_ = 0;
   /**
    * <code>int32 concededOneOrMoreGoals = 39;</code>
    * @return The concededOneOrMoreGoals.
@@ -1172,7 +469,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONCEDEDONEORMOREGOALSPERCENTAGE_FIELD_NUMBER = 40;
-  private int concededOneOrMoreGoalsPercentage_;
+  private int concededOneOrMoreGoalsPercentage_ = 0;
   /**
    * <code>int32 concededOneOrMoreGoalsPercentage = 40;</code>
    * @return The concededOneOrMoreGoalsPercentage.
@@ -1183,7 +480,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONTONIL_FIELD_NUMBER = 41;
-  private int wonToNil_;
+  private int wonToNil_ = 0;
   /**
    * <code>int32 wonToNil = 41;</code>
    * @return The wonToNil.
@@ -1194,7 +491,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONTONILPERCENTAGE_FIELD_NUMBER = 42;
-  private int wonToNilPercentage_;
+  private int wonToNilPercentage_ = 0;
   /**
    * <code>int32 wonToNilPercentage = 42;</code>
    * @return The wonToNilPercentage.
@@ -1205,7 +502,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIMEBETWEENGOALSSCORED_FIELD_NUMBER = 43;
-  private int timeBetweenGoalsScored_;
+  private int timeBetweenGoalsScored_ = 0;
   /**
    * <code>int32 timeBetweenGoalsScored = 43;</code>
    * @return The timeBetweenGoalsScored.
@@ -1216,7 +513,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIMEBETWEENGOALSSCOREDCONCEDED_FIELD_NUMBER = 44;
-  private int timeBetweenGoalsScoredConceded_;
+  private int timeBetweenGoalsScoredConceded_ = 0;
   /**
    * <code>int32 timeBetweenGoalsScoredConceded = 44;</code>
    * @return The timeBetweenGoalsScoredConceded.
@@ -1227,7 +524,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONCEDED_FIELD_NUMBER = 45;
-  private int conceded_;
+  private int conceded_ = 0;
   /**
    * <code>int32 conceded = 45;</code>
    * @return The conceded.
@@ -1238,7 +535,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONWHEN1X0UP_FIELD_NUMBER = 46;
-  private int wonWhen1X0Up_;
+  private int wonWhen1X0Up_ = 0;
   /**
    * <code>int32 wonWhen1x0Up = 46;</code>
    * @return The wonWhen1x0Up.
@@ -1249,7 +546,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONWHEN1X0DOWN_FIELD_NUMBER = 47;
-  private int wonWhen1X0Down_;
+  private int wonWhen1X0Down_ = 0;
   /**
    * <code>int32 wonWhen1x0Down = 47;</code>
    * @return The wonWhen1x0Down.
@@ -1260,7 +557,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONWHEN2X0UP_FIELD_NUMBER = 48;
-  private int wonWhen2X0Up_;
+  private int wonWhen2X0Up_ = 0;
   /**
    * <code>int32 wonWhen2x0Up = 48;</code>
    * @return The wonWhen2x0Up.
@@ -1271,7 +568,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONWHEN1X0UPPERCENTAGE_FIELD_NUMBER = 49;
-  private int wonWhen1X0UpPercentage_;
+  private int wonWhen1X0UpPercentage_ = 0;
   /**
    * <code>int32 wonWhen1x0UpPercentage = 49;</code>
    * @return The wonWhen1x0UpPercentage.
@@ -1282,7 +579,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONWHEN1X0DOWNPERCENTAGE_FIELD_NUMBER = 50;
-  private int wonWhen1X0DownPercentage_;
+  private int wonWhen1X0DownPercentage_ = 0;
   /**
    * <code>int32 wonWhen1x0DownPercentage = 50;</code>
    * @return The wonWhen1x0DownPercentage.
@@ -1293,7 +590,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONWHEN2X0UPPERCENTAGE_FIELD_NUMBER = 51;
-  private int wonWhen2X0UpPercentage_;
+  private int wonWhen2X0UpPercentage_ = 0;
   /**
    * <code>int32 wonWhen2x0UpPercentage = 51;</code>
    * @return The wonWhen2x0UpPercentage.
@@ -1304,7 +601,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHEN1X0UPPOINTS_FIELD_NUMBER = 52;
-  private int when1X0UpPoints_;
+  private int when1X0UpPoints_ = 0;
   /**
    * <code>int32 when1x0UpPoints = 52;</code>
    * @return The when1x0UpPoints.
@@ -1315,7 +612,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHEN2X0UPPOINTS_FIELD_NUMBER = 53;
-  private int when2X0UpPoints_;
+  private int when2X0UpPoints_ = 0;
   /**
    * <code>int32 when2x0UpPoints = 53;</code>
    * @return The when2x0UpPoints.
@@ -1326,7 +623,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHEN1X0DOWNPOINTS_FIELD_NUMBER = 54;
-  private int when1X0DownPoints_;
+  private int when1X0DownPoints_ = 0;
   /**
    * <code>int32 when1x0DownPoints = 54;</code>
    * @return The when1x0DownPoints.
@@ -1337,7 +634,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHEN2X0DOWNPOINTS_FIELD_NUMBER = 55;
-  private int when2X0DownPoints_;
+  private int when2X0DownPoints_ = 0;
   /**
    * <code>int32 when2x0DownPoints = 55;</code>
    * @return The when2x0DownPoints.
@@ -1348,7 +645,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHEN1X0UPPOINTSPERCENTAGE_FIELD_NUMBER = 56;
-  private int when1X0UpPointsPercentage_;
+  private int when1X0UpPointsPercentage_ = 0;
   /**
    * <code>int32 when1x0UpPointsPercentage = 56;</code>
    * @return The when1x0UpPointsPercentage.
@@ -1359,7 +656,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHEN2X0UPPOINTSPERCENTAGE_FIELD_NUMBER = 57;
-  private int when2X0UpPointsPercentage_;
+  private int when2X0UpPointsPercentage_ = 0;
   /**
    * <code>int32 when2x0UpPointsPercentage = 57;</code>
    * @return The when2x0UpPointsPercentage.
@@ -1370,7 +667,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHEN1X0DOWNPOINTSPERCENTAGE_FIELD_NUMBER = 58;
-  private int when1X0DownPointsPercentage_;
+  private int when1X0DownPointsPercentage_ = 0;
   /**
    * <code>int32 when1x0DownPointsPercentage = 58;</code>
    * @return The when1x0DownPointsPercentage.
@@ -1381,7 +678,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHEN2X0DOWNPOINTSPERCENTAGE_FIELD_NUMBER = 59;
-  private int when2X0DownPointsPercentage_;
+  private int when2X0DownPointsPercentage_ = 0;
   /**
    * <code>int32 when2x0DownPointsPercentage = 59;</code>
    * @return The when2x0DownPointsPercentage.
@@ -1392,7 +689,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EARLYGOALSTEAM_FIELD_NUMBER = 60;
-  private int earlyGoalsTeam_;
+  private int earlyGoalsTeam_ = 0;
   /**
    * <code>int32 earlyGoalsTeam = 60;</code>
    * @return The earlyGoalsTeam.
@@ -1403,7 +700,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LASTGASPGOALSTEAM_FIELD_NUMBER = 61;
-  private int lastGaspGoalsTeam_;
+  private int lastGaspGoalsTeam_ = 0;
   /**
    * <code>int32 lastGaspGoalsTeam = 61;</code>
    * @return The lastGaspGoalsTeam.
@@ -1414,7 +711,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALSSTARTINGPLAYERS_FIELD_NUMBER = 62;
-  private int totalGoalsStartingPlayers_;
+  private int totalGoalsStartingPlayers_ = 0;
   /**
    * <code>int32 totalGoalsStartingPlayers = 62;</code>
    * @return The totalGoalsStartingPlayers.
@@ -1425,7 +722,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALSSUBBEDPLAYERS_FIELD_NUMBER = 63;
-  private int totalGoalsSubbedPlayers_;
+  private int totalGoalsSubbedPlayers_ = 0;
   /**
    * <code>int32 totalGoalsSubbedPlayers = 63;</code>
    * @return The totalGoalsSubbedPlayers.
@@ -1436,7 +733,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALSSTARTINGPLAYERSPERCENTAGE_FIELD_NUMBER = 64;
-  private int totalGoalsStartingPlayersPercentage_;
+  private int totalGoalsStartingPlayersPercentage_ = 0;
   /**
    * <code>int32 totalGoalsStartingPlayersPercentage = 64;</code>
    * @return The totalGoalsStartingPlayersPercentage.
@@ -1447,7 +744,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALGOALSSUBBEDPLAYERSPERCENTAGE_FIELD_NUMBER = 65;
-  private int totalGoalsSubbedPlayersPercentage_;
+  private int totalGoalsSubbedPlayersPercentage_ = 0;
   /**
    * <code>int32 totalGoalsSubbedPlayersPercentage = 65;</code>
    * @return The totalGoalsSubbedPlayersPercentage.
@@ -1458,7 +755,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EQUALISERGOALS_FIELD_NUMBER = 66;
-  private int equaliserGoals_;
+  private int equaliserGoals_ = 0;
   /**
    * <code>int32 equaliserGoals = 66;</code>
    * @return The equaliserGoals.
@@ -1469,7 +766,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BOTHTOSCORE_FIELD_NUMBER = 67;
-  private int bothToScore_;
+  private int bothToScore_ = 0;
   /**
    * <code>int32 bothToScore = 67;</code>
    * @return The bothToScore.
@@ -1480,7 +777,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BOTHTOSCOREPERCENTAGE_FIELD_NUMBER = 68;
-  private int bothToScorePercentage_;
+  private int bothToScorePercentage_ = 0;
   /**
    * <code>int32 bothToScorePercentage = 68;</code>
    * @return The bothToScorePercentage.
@@ -1491,7 +788,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COMEBACKS_FIELD_NUMBER = 69;
-  private int comebacks_;
+  private int comebacks_ = 0;
   /**
    * <code>int32 comebacks = 69;</code>
    * @return The comebacks.
@@ -1502,7 +799,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOSTLEADTOLOSE_FIELD_NUMBER = 70;
-  private int lostLeadToLose_;
+  private int lostLeadToLose_ = 0;
   /**
    * <code>int32 lostLeadToLose = 70;</code>
    * @return The lostLeadToLose.
@@ -1513,7 +810,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOSTINROW_FIELD_NUMBER = 71;
-  private int lostInRow_;
+  private int lostInRow_ = 0;
   /**
    * <code>int32 lostInRow = 71;</code>
    * @return The lostInRow.
@@ -1524,7 +821,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GAMESWITHOUTGOALS_FIELD_NUMBER = 72;
-  private int gamesWithoutGoals_;
+  private int gamesWithoutGoals_ = 0;
   /**
    * <code>int32 gamesWithoutGoals = 72;</code>
    * @return The gamesWithoutGoals.
@@ -1535,7 +832,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONATHOME_FIELD_NUMBER = 73;
-  private int wonAtHome_;
+  private int wonAtHome_ = 0;
   /**
    * <code>int32 wonAtHome = 73;</code>
    * @return The wonAtHome.
@@ -1546,7 +843,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONATAWAY_FIELD_NUMBER = 74;
-  private int wonAtAway_;
+  private int wonAtAway_ = 0;
   /**
    * <code>int32 wonAtAway = 74;</code>
    * @return The wonAtAway.
@@ -1557,7 +854,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AWAYWITHOUTWIN_FIELD_NUMBER = 75;
-  private int awayWithoutWin_;
+  private int awayWithoutWin_ = 0;
   /**
    * <code>int32 awayWithoutWin = 75;</code>
    * @return The awayWithoutWin.
@@ -1568,7 +865,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALCARDSYELLOWRED_FIELD_NUMBER = 76;
-  private int totalCardsYellowRed_;
+  private int totalCardsYellowRed_ = 0;
   /**
    * <code>int32 totalCardsYellowRed = 76;</code>
    * @return The totalCardsYellowRed.
@@ -1579,7 +876,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALCARDSYELLOWREDPERGAMEPERCENTAGE_FIELD_NUMBER = 77;
-  private double totalCardsYellowRedPerGamePercentage_;
+  private double totalCardsYellowRedPerGamePercentage_ = 0D;
   /**
    * <code>double totalCardsYellowRedPerGamePercentage = 77;</code>
    * @return The totalCardsYellowRedPerGamePercentage.
@@ -1590,7 +887,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADGOAL_FIELD_NUMBER = 78;
-  private int headGoal_;
+  private int headGoal_ = 0;
   /**
    * <pre>
    * statistics type 5
@@ -1605,7 +902,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STRIKEGOAL_FIELD_NUMBER = 79;
-  private int strikeGoal_;
+  private int strikeGoal_ = 0;
   /**
    * <code>int32 strikeGoal = 79;</code>
    * @return The strikeGoal.
@@ -1616,7 +913,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADGOALPERCENTAGE_FIELD_NUMBER = 80;
-  private int headGoalPercentage_;
+  private int headGoalPercentage_ = 0;
   /**
    * <code>int32 headGoalPercentage = 80;</code>
    * @return The headGoalPercentage.
@@ -1627,7 +924,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STRIKEGOALPERCENTAGE_FIELD_NUMBER = 81;
-  private int strikeGoalPercentage_;
+  private int strikeGoalPercentage_ = 0;
   /**
    * <code>int32 strikeGoalPercentage = 81;</code>
    * @return The strikeGoalPercentage.
@@ -1638,7 +935,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FOULCOMMIT_FIELD_NUMBER = 82;
-  private int foulCommit_;
+  private int foulCommit_ = 0;
   /**
    * <code>int32 foulCommit = 82;</code>
    * @return The foulCommit.
@@ -1649,7 +946,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FOULCOMMITPERGAME_FIELD_NUMBER = 83;
-  private double foulCommitPerGame_;
+  private double foulCommitPerGame_ = 0D;
   /**
    * <code>double foulCommitPerGame = 83;</code>
    * @return The foulCommitPerGame.
@@ -1660,7 +957,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOTON_FIELD_NUMBER = 84;
-  private int shoton_;
+  private int shoton_ = 0;
   /**
    * <code>int32 shoton = 84;</code>
    * @return The shoton.
@@ -1671,7 +968,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOTONPERGAME_FIELD_NUMBER = 85;
-  private double shotonPerGame_;
+  private double shotonPerGame_ = 0D;
   /**
    * <code>double shotonPerGame = 85;</code>
    * @return The shotonPerGame.
@@ -1682,7 +979,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOTOFF_FIELD_NUMBER = 86;
-  private int shotoff_;
+  private int shotoff_ = 0;
   /**
    * <code>int32 shotoff = 86;</code>
    * @return The shotoff.
@@ -1693,7 +990,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOTOFFPERGAME_FIELD_NUMBER = 87;
-  private double shotoffPerGame_;
+  private double shotoffPerGame_ = 0D;
   /**
    * <code>double shotoffPerGame = 87;</code>
    * @return The shotoffPerGame.
@@ -1704,7 +1001,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOTSONPERGOAL_FIELD_NUMBER = 88;
-  private double shotsonPerGoal_;
+  private double shotsonPerGoal_ = 0D;
   /**
    * <code>double shotsonPerGoal = 88;</code>
    * @return The shotsonPerGoal.
@@ -1715,7 +1012,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OFFSIDE_FIELD_NUMBER = 89;
-  private int offside_;
+  private int offside_ = 0;
   /**
    * <code>int32 offside = 89;</code>
    * @return The offside.
@@ -1726,7 +1023,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OFFSIDEPERGAME_FIELD_NUMBER = 90;
-  private double offsidePerGame_;
+  private double offsidePerGame_ = 0D;
   /**
    * <code>double offsidePerGame = 90;</code>
    * @return The offsidePerGame.
@@ -1737,7 +1034,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CORNERTAKEN_FIELD_NUMBER = 91;
-  private int cornerTaken_;
+  private int cornerTaken_ = 0;
   /**
    * <code>int32 cornerTaken = 91;</code>
    * @return The cornerTaken.
@@ -1748,7 +1045,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CORNERTAKENPERGAME_FIELD_NUMBER = 92;
-  private double cornerTakenPerGame_;
+  private double cornerTakenPerGame_ = 0D;
   /**
    * <code>double cornerTakenPerGame = 92;</code>
    * @return The cornerTakenPerGame.
@@ -1759,7 +1056,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PENALTYMISSED_FIELD_NUMBER = 93;
-  private int penaltyMissed_;
+  private int penaltyMissed_ = 0;
   /**
    * <code>int32 penaltyMissed = 93;</code>
    * @return The penaltyMissed.
@@ -1770,7 +1067,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PENALTYMISSEDPERCENTAGE_FIELD_NUMBER = 94;
-  private int penaltyMissedPercentage_;
+  private int penaltyMissedPercentage_ = 0;
   /**
    * <code>int32 penaltyMissedPercentage = 94;</code>
    * @return The penaltyMissedPercentage.
@@ -1781,7 +1078,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ELAPSEDPLUSPERGAME_FIELD_NUMBER = 95;
-  private double elapsedPlusPerGame_;
+  private double elapsedPlusPerGame_ = 0D;
   /**
    * <code>double elapsedPlusPerGame = 95;</code>
    * @return The elapsedPlusPerGame.
@@ -1792,7 +1089,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WOODWORK_FIELD_NUMBER = 96;
-  private int woodwork_;
+  private int woodwork_ = 0;
   /**
    * <code>int32 woodwork = 96;</code>
    * @return The woodwork.
@@ -1803,7 +1100,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PENALTYCOMMIT_FIELD_NUMBER = 97;
-  private int penaltyCommit_;
+  private int penaltyCommit_ = 0;
   /**
    * <code>int32 penaltyCommit = 97;</code>
    * @return The penaltyCommit.
@@ -1814,7 +1111,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PENALTYCOMMITPERCENTAGE_FIELD_NUMBER = 98;
-  private int penaltyCommitPercentage_;
+  private int penaltyCommitPercentage_ = 0;
   /**
    * <code>int32 penaltyCommitPercentage = 98;</code>
    * @return The penaltyCommitPercentage.
@@ -1825,7 +1122,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FOULSUFFERED_FIELD_NUMBER = 99;
-  private int foulsuffered_;
+  private int foulsuffered_ = 0;
   /**
    * <code>int32 foulsuffered = 99;</code>
    * @return The foulsuffered.
@@ -1836,7 +1133,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALSHOTS_FIELD_NUMBER = 100;
-  private int totalShots_;
+  private int totalShots_ = 0;
   /**
    * <code>int32 totalShots = 100;</code>
    * @return The totalShots.
@@ -1847,7 +1144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PENALTYSAVES_FIELD_NUMBER = 101;
-  private int penaltySaves_;
+  private int penaltySaves_ = 0;
   /**
    * <code>int32 penaltySaves = 101;</code>
    * @return The penaltySaves.
@@ -1858,7 +1155,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFENSIVEERROR_FIELD_NUMBER = 102;
-  private int defensiveError_;
+  private int defensiveError_ = 0;
   /**
    * <code>int32 defensiveError = 102;</code>
    * @return The defensiveError.
@@ -1869,7 +1166,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGEPOSSESSION_FIELD_NUMBER = 103;
-  private int averagePossession_;
+  private int averagePossession_ = 0;
   /**
    * <code>int32 averagePossession = 103;</code>
    * @return The averagePossession.
@@ -1880,7 +1177,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PENALTIESAWARDED_FIELD_NUMBER = 104;
-  private int penaltiesAwarded_;
+  private int penaltiesAwarded_ = 0;
   /**
    * <code>int32 penaltiesAwarded = 104;</code>
    * @return The penaltiesAwarded.
@@ -1891,7 +1188,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALOUTSIDEBOX_FIELD_NUMBER = 105;
-  private int goalOutsideBox_;
+  private int goalOutsideBox_ = 0;
   /**
    * <code>int32 goalOutsideBox = 105;</code>
    * @return The goalOutsideBox.
@@ -1902,7 +1199,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOALOUTSIDEBOXPERCENTAGE_FIELD_NUMBER = 106;
-  private int goalOutsideBoxPercentage_;
+  private int goalOutsideBoxPercentage_ = 0;
   /**
    * <code>int32 goalOutsideBoxPercentage = 106;</code>
    * @return The goalOutsideBoxPercentage.
@@ -1913,7 +1210,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIRECTFREEKICK_FIELD_NUMBER = 107;
-  private int directFreekick_;
+  private int directFreekick_ = 0;
   /**
    * <code>int32 directFreekick = 107;</code>
    * @return The directFreekick.
@@ -1924,7 +1221,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIRECTFREEKICKPERCENTAGE_FIELD_NUMBER = 108;
-  private int directFreekickPercentage_;
+  private int directFreekickPercentage_ = 0;
   /**
    * <code>int32 directFreekickPercentage = 108;</code>
    * @return The directFreekickPercentage.
@@ -1935,7 +1232,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCOREDINROW_FIELD_NUMBER = 109;
-  private int scoredInRow_;
+  private int scoredInRow_ = 0;
   /**
    * <pre>
    * statistics type 3 other
@@ -1950,7 +1247,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WONINROW_FIELD_NUMBER = 110;
-  private int wonInRow_;
+  private int wonInRow_ = 0;
   /**
    * <code>int32 wonInRow = 110;</code>
    * @return The wonInRow.
@@ -1961,7 +1258,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NOCONCEDINGINROW_FIELD_NUMBER = 111;
-  private int noconcedingInRow_;
+  private int noconcedingInRow_ = 0;
   /**
    * <code>int32 noconcedingInRow = 111;</code>
    * @return The noconcedingInRow.
@@ -1972,7 +1269,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HOMEWITHOUTWIN_FIELD_NUMBER = 112;
-  private int homeWithoutWin_;
+  private int homeWithoutWin_ = 0;
   /**
    * <code>int32 homeWithoutWin = 112;</code>
    * @return The homeWithoutWin.
@@ -1983,7 +1280,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WON2DOWN_FIELD_NUMBER = 113;
-  private int won2Down_;
+  private int won2Down_ = 0;
   /**
    * <code>int32 won2Down = 113;</code>
    * @return The won2Down.
@@ -1994,7 +1291,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WON2DOWNPERCENTAGE_FIELD_NUMBER = 114;
-  private int won2DownPercentage_;
+  private int won2DownPercentage_ = 0;
   /**
    * <code>int32 won2DownPercentage = 114;</code>
    * @return The won2DownPercentage.
@@ -2005,7 +1302,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIRSTRETURNPOINTSWON_FIELD_NUMBER = 115;
-  private int firstReturnPointsWon_;
+  private int firstReturnPointsWon_ = 0;
   /**
    * <pre>
    * statistics type 8 tennis
@@ -2020,7 +1317,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIRSTSERVEPERCENTAGE_FIELD_NUMBER = 116;
-  private double firstServePercentage_;
+  private double firstServePercentage_ = 0D;
   /**
    * <code>double firstServePercentage = 116;</code>
    * @return The firstServePercentage.
@@ -2031,7 +1328,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIRSTSERVEPOINTSWON_FIELD_NUMBER = 117;
-  private int firstServePointsWon_;
+  private int firstServePointsWon_ = 0;
   /**
    * <code>int32 firstServePointsWon = 117;</code>
    * @return The firstServePointsWon.
@@ -2042,7 +1339,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECONDRETURNPOINTSWON_FIELD_NUMBER = 118;
-  private int secondReturnPointsWon_;
+  private int secondReturnPointsWon_ = 0;
   /**
    * <code>int32 secondReturnPointsWon = 118;</code>
    * @return The secondReturnPointsWon.
@@ -2053,7 +1350,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECONDSERVEPOINTSWON_FIELD_NUMBER = 119;
-  private int secondServePointsWon_;
+  private int secondServePointsWon_ = 0;
   /**
    * <code>int32 secondServePointsWon = 119;</code>
    * @return The secondServePointsWon.
@@ -2064,7 +1361,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACES_FIELD_NUMBER = 120;
-  private int aces_;
+  private int aces_ = 0;
   /**
    * <code>int32 aces = 120;</code>
    * @return The aces.
@@ -2075,7 +1372,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BREAKPOINTSSAVED_FIELD_NUMBER = 121;
-  private int breakPointsSaved_;
+  private int breakPointsSaved_ = 0;
   /**
    * <code>int32 breakPointsSaved = 121;</code>
    * @return The breakPointsSaved.
@@ -2086,7 +1383,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BREAKPOINTSWON_FIELD_NUMBER = 122;
-  private int breakPointsWon_;
+  private int breakPointsWon_ = 0;
   /**
    * <code>int32 breakPointsWon = 122;</code>
    * @return The breakPointsWon.
@@ -2097,7 +1394,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DOUBLEFAULTS_FIELD_NUMBER = 123;
-  private int doubleFaults_;
+  private int doubleFaults_ = 0;
   /**
    * <code>int32 doubleFaults = 123;</code>
    * @return The doubleFaults.
@@ -2108,7 +1405,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RETURNPOINTSWONPERCENTAGE_FIELD_NUMBER = 124;
-  private double returnPointsWonPercentage_;
+  private double returnPointsWonPercentage_ = 0D;
   /**
    * <code>double returnPointsWonPercentage = 124;</code>
    * @return The returnPointsWonPercentage.
@@ -2119,7 +1416,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SERVICEGAMES_FIELD_NUMBER = 125;
-  private int serviceGames_;
+  private int serviceGames_ = 0;
   /**
    * <code>int32 serviceGames = 125;</code>
    * @return The serviceGames.
@@ -2130,7 +1427,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SERVICEPOINTSWONPERCENTAGE_FIELD_NUMBER = 126;
-  private double servicePointsWonPercentage_;
+  private double servicePointsWonPercentage_ = 0D;
   /**
    * <code>double servicePointsWonPercentage = 126;</code>
    * @return The servicePointsWonPercentage.
@@ -2141,7 +1438,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIRSTSERVEPOINTSALL_FIELD_NUMBER = 127;
-  private int firstServePointsAll_;
+  private int firstServePointsAll_ = 0;
   /**
    * <code>int32 firstServePointsAll = 127;</code>
    * @return The firstServePointsAll.
@@ -2152,7 +1449,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECONDSERVEPOINTSALL_FIELD_NUMBER = 128;
-  private int secondServePointsAll_;
+  private int secondServePointsAll_ = 0;
   /**
    * <code>int32 secondServePointsAll = 128;</code>
    * @return The secondServePointsAll.
@@ -2163,7 +1460,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALPOINTSWON_FIELD_NUMBER = 129;
-  private int totalPointsWon_;
+  private int totalPointsWon_ = 0;
   /**
    * <code>int32 totalPointsWon = 129;</code>
    * @return The totalPointsWon.
@@ -2174,7 +1471,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTALPOINTSWONPERCENTAGE_FIELD_NUMBER = 130;
-  private double totalPointsWonPercentage_;
+  private double totalPointsWonPercentage_ = 0D;
   /**
    * <code>double totalPointsWonPercentage = 130;</code>
    * @return The totalPointsWonPercentage.
@@ -2185,7 +1482,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int UNFORCEDERRORS_FIELD_NUMBER = 131;
-  private int unforcedErrors_;
+  private int unforcedErrors_ = 0;
   /**
    * <code>int32 unforcedErrors = 131;</code>
    * @return The unforcedErrors.
@@ -2196,7 +1493,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WINNERS_FIELD_NUMBER = 132;
-  private int winners_;
+  private int winners_ = 0;
   /**
    * <code>int32 winners = 132;</code>
    * @return The winners.
@@ -2204,6 +1501,592 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getWinners() {
     return winners_;
+  }
+
+  public static final int TOTALASSISTS_FIELD_NUMBER = 133;
+  private int totalAssists_ = 0;
+  /**
+   * <code>int32 totalAssists = 133;</code>
+   * @return The totalAssists.
+   */
+  @java.lang.Override
+  public int getTotalAssists() {
+    return totalAssists_;
+  }
+
+  public static final int TOTALCROSSES_FIELD_NUMBER = 134;
+  private int totalCrosses_ = 0;
+  /**
+   * <code>int32 totalCrosses = 134;</code>
+   * @return The totalCrosses.
+   */
+  @java.lang.Override
+  public int getTotalCrosses() {
+    return totalCrosses_;
+  }
+
+  public static final int GOALSINSIDEBOX_FIELD_NUMBER = 135;
+  private int goalsInsideBox_ = 0;
+  /**
+   * <code>int32 goalsInsideBox = 135;</code>
+   * @return The goalsInsideBox.
+   */
+  @java.lang.Override
+  public int getGoalsInsideBox() {
+    return goalsInsideBox_;
+  }
+
+  public static final int TOTALBLOCKEDSHOTS_FIELD_NUMBER = 136;
+  private int totalBlockedShots_ = 0;
+  /**
+   * <code>int32 totalBlockedShots = 136;</code>
+   * @return The totalBlockedShots.
+   */
+  @java.lang.Override
+  public int getTotalBlockedShots() {
+    return totalBlockedShots_;
+  }
+
+  public static final int KEYPASSES_FIELD_NUMBER = 137;
+  private int keyPasses_ = 0;
+  /**
+   * <code>int32 keyPasses = 137;</code>
+   * @return The keyPasses.
+   */
+  @java.lang.Override
+  public int getKeyPasses() {
+    return keyPasses_;
+  }
+
+  public static final int TOTALCLEARANCES_FIELD_NUMBER = 138;
+  private int totalClearances_ = 0;
+  /**
+   * <code>int32 totalClearances = 138;</code>
+   * @return The totalClearances.
+   */
+  @java.lang.Override
+  public int getTotalClearances() {
+    return totalClearances_;
+  }
+
+  public static final int TOTALAIRCHALLENGESWON_FIELD_NUMBER = 139;
+  private int totalAirChallengesWon_ = 0;
+  /**
+   * <code>int32 totalAirChallengesWon = 139;</code>
+   * @return The totalAirChallengesWon.
+   */
+  @java.lang.Override
+  public int getTotalAirChallengesWon() {
+    return totalAirChallengesWon_;
+  }
+
+  public static final int TOTALAIRCHALLENGESLOST_FIELD_NUMBER = 140;
+  private int totalAirChallengesLost_ = 0;
+  /**
+   * <code>int32 totalAirChallengesLost = 140;</code>
+   * @return The totalAirChallengesLost.
+   */
+  @java.lang.Override
+  public int getTotalAirChallengesLost() {
+    return totalAirChallengesLost_;
+  }
+
+  public static final int TOTALTACKLES_FIELD_NUMBER = 141;
+  private int totalTackles_ = 0;
+  /**
+   * <code>int32 totalTackles = 141;</code>
+   * @return The totalTackles.
+   */
+  @java.lang.Override
+  public int getTotalTackles() {
+    return totalTackles_;
+  }
+
+  public static final int TOTALINTERCEPTEDCROSSES_FIELD_NUMBER = 142;
+  private int totalInterceptedCrosses_ = 0;
+  /**
+   * <code>int32 totalInterceptedCrosses = 142;</code>
+   * @return The totalInterceptedCrosses.
+   */
+  @java.lang.Override
+  public int getTotalInterceptedCrosses() {
+    return totalInterceptedCrosses_;
+  }
+
+  public static final int TOTALGOALATTEMPTS_FIELD_NUMBER = 143;
+  private int totalGoalAttempts_ = 0;
+  /**
+   * <code>int32 totalGoalAttempts = 143;</code>
+   * @return The totalGoalAttempts.
+   */
+  @java.lang.Override
+  public int getTotalGoalAttempts() {
+    return totalGoalAttempts_;
+  }
+
+  public static final int TOTALSUCCESSFULCROSSES_FIELD_NUMBER = 144;
+  private int totalSuccessfulCrosses_ = 0;
+  /**
+   * <code>int32 totalSuccessfulCrosses = 144;</code>
+   * @return The totalSuccessfulCrosses.
+   */
+  @java.lang.Override
+  public int getTotalSuccessfulCrosses() {
+    return totalSuccessfulCrosses_;
+  }
+
+  public static final int FIRSTSCORER_FIELD_NUMBER = 145;
+  private double firstScorer_ = 0D;
+  /**
+   * <pre>
+   * statistics type 1 player
+   * </pre>
+   *
+   * <code>double firstScorer = 145;</code>
+   * @return The firstScorer.
+   */
+  @java.lang.Override
+  public double getFirstScorer() {
+    return firstScorer_;
+  }
+
+  public static final int FIRSTSCORERPERCENTAGE_FIELD_NUMBER = 146;
+  private double firstScorerPercentage_ = 0D;
+  /**
+   * <code>double firstScorerPercentage = 146;</code>
+   * @return The firstScorerPercentage.
+   */
+  @java.lang.Override
+  public double getFirstScorerPercentage() {
+    return firstScorerPercentage_;
+  }
+
+  public static final int NOSCOREDINROW_FIELD_NUMBER = 147;
+  private double noScoredInRow_ = 0D;
+  /**
+   * <code>double noScoredInRow = 147;</code>
+   * @return The noScoredInRow.
+   */
+  @java.lang.Override
+  public double getNoScoredInRow() {
+    return noScoredInRow_;
+  }
+
+  public static final int GOALCONCEDED_FIELD_NUMBER = 148;
+  private double goalConceded_ = 0D;
+  /**
+   * <code>double goalConceded = 148;</code>
+   * @return The goalConceded.
+   */
+  @java.lang.Override
+  public double getGoalConceded() {
+    return goalConceded_;
+  }
+
+  public static final int GOALRATIOMINUTE1X15PERCENTAGE_FIELD_NUMBER = 149;
+  private double goalRatioMinute1X15Percentage_ = 0D;
+  /**
+   * <code>double goalRatioMinute1x15Percentage = 149;</code>
+   * @return The goalRatioMinute1x15Percentage.
+   */
+  @java.lang.Override
+  public double getGoalRatioMinute1X15Percentage() {
+    return goalRatioMinute1X15Percentage_;
+  }
+
+  public static final int GOALRATIOMINUTE16X30PERCENTAGE_FIELD_NUMBER = 150;
+  private double goalRatioMinute16X30Percentage_ = 0D;
+  /**
+   * <code>double goalRatioMinute16x30Percentage = 150;</code>
+   * @return The goalRatioMinute16x30Percentage.
+   */
+  @java.lang.Override
+  public double getGoalRatioMinute16X30Percentage() {
+    return goalRatioMinute16X30Percentage_;
+  }
+
+  public static final int GOALRATIOMINUTE31X45PERCENTAGE_FIELD_NUMBER = 151;
+  private double goalRatioMinute31X45Percentage_ = 0D;
+  /**
+   * <code>double goalRatioMinute31x45Percentage = 151;</code>
+   * @return The goalRatioMinute31x45Percentage.
+   */
+  @java.lang.Override
+  public double getGoalRatioMinute31X45Percentage() {
+    return goalRatioMinute31X45Percentage_;
+  }
+
+  public static final int GOALRATIOMINUTE46X60PERCENTAGE_FIELD_NUMBER = 152;
+  private double goalRatioMinute46X60Percentage_ = 0D;
+  /**
+   * <code>double goalRatioMinute46x60Percentage = 152;</code>
+   * @return The goalRatioMinute46x60Percentage.
+   */
+  @java.lang.Override
+  public double getGoalRatioMinute46X60Percentage() {
+    return goalRatioMinute46X60Percentage_;
+  }
+
+  public static final int GOALRATIOMINUTE61X75PERCENTAGE_FIELD_NUMBER = 153;
+  private double goalRatioMinute61X75Percentage_ = 0D;
+  /**
+   * <code>double goalRatioMinute61x75Percentage = 153;</code>
+   * @return The goalRatioMinute61x75Percentage.
+   */
+  @java.lang.Override
+  public double getGoalRatioMinute61X75Percentage() {
+    return goalRatioMinute61X75Percentage_;
+  }
+
+  public static final int GOALRATIOMINUTE76X90PERCENTAGE_FIELD_NUMBER = 154;
+  private double goalRatioMinute76X90Percentage_ = 0D;
+  /**
+   * <code>double goalRatioMinute76x90Percentage = 154;</code>
+   * @return The goalRatioMinute76x90Percentage.
+   */
+  @java.lang.Override
+  public double getGoalRatioMinute76X90Percentage() {
+    return goalRatioMinute76X90Percentage_;
+  }
+
+  public static final int LASTGASPGOAL_FIELD_NUMBER = 155;
+  private double lastGaspGoal_ = 0D;
+  /**
+   * <code>double lastGaspGoal = 155;</code>
+   * @return The lastGaspGoal.
+   */
+  @java.lang.Override
+  public double getLastGaspGoal() {
+    return lastGaspGoal_;
+  }
+
+  public static final int LASTGASPGOALPERCENTAGE_FIELD_NUMBER = 156;
+  private double lastGaspGoalPercentage_ = 0D;
+  /**
+   * <code>double lastGaspGoalPercentage = 156;</code>
+   * @return The lastGaspGoalPercentage.
+   */
+  @java.lang.Override
+  public double getLastGaspGoalPercentage() {
+    return lastGaspGoalPercentage_;
+  }
+
+  public static final int LASTTOSCORE_FIELD_NUMBER = 157;
+  private double lastToScore_ = 0D;
+  /**
+   * <code>double lastToScore = 157;</code>
+   * @return The lastToScore.
+   */
+  @java.lang.Override
+  public double getLastToScore() {
+    return lastToScore_;
+  }
+
+  public static final int LASTTOSCOREPERCENTAGE_FIELD_NUMBER = 158;
+  private double lastToScorePercentage_ = 0D;
+  /**
+   * <code>double lastToScorePercentage = 158;</code>
+   * @return The lastToScorePercentage.
+   */
+  @java.lang.Override
+  public double getLastToScorePercentage() {
+    return lastToScorePercentage_;
+  }
+
+  public static final int MINUTESPERGOAL_FIELD_NUMBER = 159;
+  private double minutesPerGoal_ = 0D;
+  /**
+   * <code>double minutesPerGoal = 159;</code>
+   * @return The minutesPerGoal.
+   */
+  @java.lang.Override
+  public double getMinutesPerGoal() {
+    return minutesPerGoal_;
+  }
+
+  public static final int MIN_FIELD_NUMBER = 160;
+  private double min_ = 0D;
+  /**
+   * <code>double min = 160;</code>
+   * @return The min.
+   */
+  @java.lang.Override
+  public double getMin() {
+    return min_;
+  }
+
+  public static final int TEAMCONTRIBUTION_FIELD_NUMBER = 161;
+  private double teamContribution_ = 0D;
+  /**
+   * <code>double teamContribution = 161;</code>
+   * @return The teamContribution.
+   */
+  @java.lang.Override
+  public double getTeamContribution() {
+    return teamContribution_;
+  }
+
+  public static final int TEAMFK_FIELD_NUMBER = 162;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object teamFK_ = "";
+  /**
+   * <code>string teamFK = 162;</code>
+   * @return The teamFK.
+   */
+  @java.lang.Override
+  public java.lang.String getTeamFK() {
+    java.lang.Object ref = teamFK_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      teamFK_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string teamFK = 162;</code>
+   * @return The bytes for teamFK.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTeamFKBytes() {
+    java.lang.Object ref = teamFK_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      teamFK_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TOTALCARDS_FIELD_NUMBER = 163;
+  private double totalCards_ = 0D;
+  /**
+   * <code>double totalCards = 163;</code>
+   * @return The totalCards.
+   */
+  @java.lang.Override
+  public double getTotalCards() {
+    return totalCards_;
+  }
+
+  public static final int TOTALCARDSPERGAME_FIELD_NUMBER = 164;
+  private double totalCardsPerGame_ = 0D;
+  /**
+   * <code>double totalCardsPerGame = 164;</code>
+   * @return The totalCardsPerGame.
+   */
+  @java.lang.Override
+  public double getTotalCardsPerGame() {
+    return totalCardsPerGame_;
+  }
+
+  public static final int SHEETSPERCENTAGE_FIELD_NUMBER = 165;
+  private double sheetsPercentage_ = 0D;
+  /**
+   * <code>double sheetsPercentage = 165;</code>
+   * @return The sheetsPercentage.
+   */
+  @java.lang.Override
+  public double getSheetsPercentage() {
+    return sheetsPercentage_;
+  }
+
+  public static final int PLAYED_FIELD_NUMBER = 166;
+  private double played_ = 0D;
+  /**
+   * <code>double played = 166;</code>
+   * @return The played.
+   */
+  @java.lang.Override
+  public double getPlayed() {
+    return played_;
+  }
+
+  public static final int NOSCORINGGAMES_FIELD_NUMBER = 167;
+  private double noScoringGames_ = 0D;
+  /**
+   * <code>double noScoringGames = 167;</code>
+   * @return The noScoringGames.
+   */
+  @java.lang.Override
+  public double getNoScoringGames() {
+    return noScoringGames_;
+  }
+
+  public static final int GOALSBENCH_FIELD_NUMBER = 168;
+  private double goalsBench_ = 0D;
+  /**
+   * <code>double goalsBench = 168;</code>
+   * @return The goalsBench.
+   */
+  @java.lang.Override
+  public double getGoalsBench() {
+    return goalsBench_;
+  }
+
+  public static final int GOALSBENCHPERCENTAGE_FIELD_NUMBER = 169;
+  private double goalsBenchPercentage_ = 0D;
+  /**
+   * <code>double goalsBenchPercentage = 169;</code>
+   * @return The goalsBenchPercentage.
+   */
+  @java.lang.Override
+  public double getGoalsBenchPercentage() {
+    return goalsBenchPercentage_;
+  }
+
+  public static final int PLAYEDLINEUP_FIELD_NUMBER = 170;
+  private double playedLineup_ = 0D;
+  /**
+   * <code>double playedLineup = 170;</code>
+   * @return The playedLineup.
+   */
+  @java.lang.Override
+  public double getPlayedLineup() {
+    return playedLineup_;
+  }
+
+  public static final int PLAYEDLINEUPPERCENTAGE_FIELD_NUMBER = 171;
+  private double playedLineupPercentage_ = 0D;
+  /**
+   * <code>double playedLineupPercentage = 171;</code>
+   * @return The playedLineupPercentage.
+   */
+  @java.lang.Override
+  public double getPlayedLineupPercentage() {
+    return playedLineupPercentage_;
+  }
+
+  public static final int SUBSTIN_FIELD_NUMBER = 172;
+  private double substIn_ = 0D;
+  /**
+   * <code>double substIn = 172;</code>
+   * @return The substIn.
+   */
+  @java.lang.Override
+  public double getSubstIn() {
+    return substIn_;
+  }
+
+  public static final int SUBSTINPERCENTAGE_FIELD_NUMBER = 173;
+  private double substInPercentage_ = 0D;
+  /**
+   * <code>double substInPercentage = 173;</code>
+   * @return The substInPercentage.
+   */
+  @java.lang.Override
+  public double getSubstInPercentage() {
+    return substInPercentage_;
+  }
+
+  public static final int SUBSTOUT_FIELD_NUMBER = 174;
+  private double substOut_ = 0D;
+  /**
+   * <code>double substOut = 174;</code>
+   * @return The substOut.
+   */
+  @java.lang.Override
+  public double getSubstOut() {
+    return substOut_;
+  }
+
+  public static final int SUBSTOUTPERCENTAGE_FIELD_NUMBER = 175;
+  private double substOutPercentage_ = 0D;
+  /**
+   * <code>double substOutPercentage = 175;</code>
+   * @return The substOutPercentage.
+   */
+  @java.lang.Override
+  public double getSubstOutPercentage() {
+    return substOutPercentage_;
+  }
+
+  public static final int FOULSPERGAME_FIELD_NUMBER = 176;
+  private double foulsPerGame_ = 0D;
+  /**
+   * <pre>
+   * statistics type 4 player
+   * </pre>
+   *
+   * <code>double foulsPerGame = 176;</code>
+   * @return The foulsPerGame.
+   */
+  @java.lang.Override
+  public double getFoulsPerGame() {
+    return foulsPerGame_;
+  }
+
+  public static final int SAVES_FIELD_NUMBER = 177;
+  private double saves_ = 0D;
+  /**
+   * <code>double saves = 177;</code>
+   * @return The saves.
+   */
+  @java.lang.Override
+  public double getSaves() {
+    return saves_;
+  }
+
+  public static final int SAVESPERGAME_FIELD_NUMBER = 178;
+  private double savesPerGame_ = 0D;
+  /**
+   * <code>double savesPerGame = 178;</code>
+   * @return The savesPerGame.
+   */
+  @java.lang.Override
+  public double getSavesPerGame() {
+    return savesPerGame_;
+  }
+
+  public static final int SAVESPERCENTAGE_FIELD_NUMBER = 179;
+  private double savesPercentage_ = 0D;
+  /**
+   * <code>double savesPercentage = 179;</code>
+   * @return The savesPercentage.
+   */
+  @java.lang.Override
+  public double getSavesPercentage() {
+    return savesPercentage_;
+  }
+
+  public static final int GOALSLEFTFOOT_FIELD_NUMBER = 180;
+  private double goalsLeftFoot_ = 0D;
+  /**
+   * <code>double goalsLeftFoot = 180;</code>
+   * @return The goalsLeftFoot.
+   */
+  @java.lang.Override
+  public double getGoalsLeftFoot() {
+    return goalsLeftFoot_;
+  }
+
+  public static final int GOALSRIGHTFOOT_FIELD_NUMBER = 181;
+  private double goalsRightFoot_ = 0D;
+  /**
+   * <code>double goalsRightFoot = 181;</code>
+   * @return The goalsRightFoot.
+   */
+  @java.lang.Override
+  public double getGoalsRightFoot() {
+    return goalsRightFoot_;
+  }
+
+  public static final int TOTALSHOTSALLOWED_FIELD_NUMBER = 182;
+  private double totalShotsAllowed_ = 0D;
+  /**
+   * <code>double totalShotsAllowed = 182;</code>
+   * @return The totalShotsAllowed.
+   */
+  @java.lang.Override
+  public double getTotalShotsAllowed() {
+    return totalShotsAllowed_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -2616,7 +2499,157 @@ private static final long serialVersionUID = 0L;
     if (winners_ != 0) {
       output.writeInt32(132, winners_);
     }
-    unknownFields.writeTo(output);
+    if (totalAssists_ != 0) {
+      output.writeInt32(133, totalAssists_);
+    }
+    if (totalCrosses_ != 0) {
+      output.writeInt32(134, totalCrosses_);
+    }
+    if (goalsInsideBox_ != 0) {
+      output.writeInt32(135, goalsInsideBox_);
+    }
+    if (totalBlockedShots_ != 0) {
+      output.writeInt32(136, totalBlockedShots_);
+    }
+    if (keyPasses_ != 0) {
+      output.writeInt32(137, keyPasses_);
+    }
+    if (totalClearances_ != 0) {
+      output.writeInt32(138, totalClearances_);
+    }
+    if (totalAirChallengesWon_ != 0) {
+      output.writeInt32(139, totalAirChallengesWon_);
+    }
+    if (totalAirChallengesLost_ != 0) {
+      output.writeInt32(140, totalAirChallengesLost_);
+    }
+    if (totalTackles_ != 0) {
+      output.writeInt32(141, totalTackles_);
+    }
+    if (totalInterceptedCrosses_ != 0) {
+      output.writeInt32(142, totalInterceptedCrosses_);
+    }
+    if (totalGoalAttempts_ != 0) {
+      output.writeInt32(143, totalGoalAttempts_);
+    }
+    if (totalSuccessfulCrosses_ != 0) {
+      output.writeInt32(144, totalSuccessfulCrosses_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(firstScorer_) != 0) {
+      output.writeDouble(145, firstScorer_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(firstScorerPercentage_) != 0) {
+      output.writeDouble(146, firstScorerPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(noScoredInRow_) != 0) {
+      output.writeDouble(147, noScoredInRow_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalConceded_) != 0) {
+      output.writeDouble(148, goalConceded_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute1X15Percentage_) != 0) {
+      output.writeDouble(149, goalRatioMinute1X15Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute16X30Percentage_) != 0) {
+      output.writeDouble(150, goalRatioMinute16X30Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute31X45Percentage_) != 0) {
+      output.writeDouble(151, goalRatioMinute31X45Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute46X60Percentage_) != 0) {
+      output.writeDouble(152, goalRatioMinute46X60Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute61X75Percentage_) != 0) {
+      output.writeDouble(153, goalRatioMinute61X75Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute76X90Percentage_) != 0) {
+      output.writeDouble(154, goalRatioMinute76X90Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(lastGaspGoal_) != 0) {
+      output.writeDouble(155, lastGaspGoal_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(lastGaspGoalPercentage_) != 0) {
+      output.writeDouble(156, lastGaspGoalPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(lastToScore_) != 0) {
+      output.writeDouble(157, lastToScore_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(lastToScorePercentage_) != 0) {
+      output.writeDouble(158, lastToScorePercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(minutesPerGoal_) != 0) {
+      output.writeDouble(159, minutesPerGoal_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(min_) != 0) {
+      output.writeDouble(160, min_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(teamContribution_) != 0) {
+      output.writeDouble(161, teamContribution_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamFK_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 162, teamFK_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(totalCards_) != 0) {
+      output.writeDouble(163, totalCards_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(totalCardsPerGame_) != 0) {
+      output.writeDouble(164, totalCardsPerGame_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(sheetsPercentage_) != 0) {
+      output.writeDouble(165, sheetsPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(played_) != 0) {
+      output.writeDouble(166, played_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(noScoringGames_) != 0) {
+      output.writeDouble(167, noScoringGames_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalsBench_) != 0) {
+      output.writeDouble(168, goalsBench_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalsBenchPercentage_) != 0) {
+      output.writeDouble(169, goalsBenchPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(playedLineup_) != 0) {
+      output.writeDouble(170, playedLineup_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(playedLineupPercentage_) != 0) {
+      output.writeDouble(171, playedLineupPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(substIn_) != 0) {
+      output.writeDouble(172, substIn_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(substInPercentage_) != 0) {
+      output.writeDouble(173, substInPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(substOut_) != 0) {
+      output.writeDouble(174, substOut_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(substOutPercentage_) != 0) {
+      output.writeDouble(175, substOutPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(foulsPerGame_) != 0) {
+      output.writeDouble(176, foulsPerGame_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(saves_) != 0) {
+      output.writeDouble(177, saves_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(savesPerGame_) != 0) {
+      output.writeDouble(178, savesPerGame_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(savesPercentage_) != 0) {
+      output.writeDouble(179, savesPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalsLeftFoot_) != 0) {
+      output.writeDouble(180, goalsLeftFoot_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalsRightFoot_) != 0) {
+      output.writeDouble(181, goalsRightFoot_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(totalShotsAllowed_) != 0) {
+      output.writeDouble(182, totalShotsAllowed_);
+    }
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -3153,7 +3186,206 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(132, winners_);
     }
-    size += unknownFields.getSerializedSize();
+    if (totalAssists_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(133, totalAssists_);
+    }
+    if (totalCrosses_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(134, totalCrosses_);
+    }
+    if (goalsInsideBox_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(135, goalsInsideBox_);
+    }
+    if (totalBlockedShots_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(136, totalBlockedShots_);
+    }
+    if (keyPasses_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(137, keyPasses_);
+    }
+    if (totalClearances_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(138, totalClearances_);
+    }
+    if (totalAirChallengesWon_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(139, totalAirChallengesWon_);
+    }
+    if (totalAirChallengesLost_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(140, totalAirChallengesLost_);
+    }
+    if (totalTackles_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(141, totalTackles_);
+    }
+    if (totalInterceptedCrosses_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(142, totalInterceptedCrosses_);
+    }
+    if (totalGoalAttempts_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(143, totalGoalAttempts_);
+    }
+    if (totalSuccessfulCrosses_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(144, totalSuccessfulCrosses_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(firstScorer_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(145, firstScorer_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(firstScorerPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(146, firstScorerPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(noScoredInRow_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(147, noScoredInRow_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalConceded_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(148, goalConceded_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute1X15Percentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(149, goalRatioMinute1X15Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute16X30Percentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(150, goalRatioMinute16X30Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute31X45Percentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(151, goalRatioMinute31X45Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute46X60Percentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(152, goalRatioMinute46X60Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute61X75Percentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(153, goalRatioMinute61X75Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalRatioMinute76X90Percentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(154, goalRatioMinute76X90Percentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(lastGaspGoal_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(155, lastGaspGoal_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(lastGaspGoalPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(156, lastGaspGoalPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(lastToScore_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(157, lastToScore_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(lastToScorePercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(158, lastToScorePercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(minutesPerGoal_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(159, minutesPerGoal_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(min_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(160, min_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(teamContribution_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(161, teamContribution_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamFK_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(162, teamFK_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(totalCards_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(163, totalCards_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(totalCardsPerGame_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(164, totalCardsPerGame_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(sheetsPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(165, sheetsPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(played_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(166, played_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(noScoringGames_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(167, noScoringGames_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalsBench_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(168, goalsBench_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalsBenchPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(169, goalsBenchPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(playedLineup_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(170, playedLineup_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(playedLineupPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(171, playedLineupPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(substIn_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(172, substIn_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(substInPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(173, substInPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(substOut_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(174, substOut_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(substOutPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(175, substOutPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(foulsPerGame_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(176, foulsPerGame_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(saves_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(177, saves_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(savesPerGame_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(178, savesPerGame_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(savesPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(179, savesPercentage_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalsLeftFoot_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(180, goalsLeftFoot_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(goalsRightFoot_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(181, goalsRightFoot_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(totalShotsAllowed_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(182, totalShotsAllowed_);
+    }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -3446,7 +3678,144 @@ private static final long serialVersionUID = 0L;
         != other.getUnforcedErrors()) return false;
     if (getWinners()
         != other.getWinners()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (getTotalAssists()
+        != other.getTotalAssists()) return false;
+    if (getTotalCrosses()
+        != other.getTotalCrosses()) return false;
+    if (getGoalsInsideBox()
+        != other.getGoalsInsideBox()) return false;
+    if (getTotalBlockedShots()
+        != other.getTotalBlockedShots()) return false;
+    if (getKeyPasses()
+        != other.getKeyPasses()) return false;
+    if (getTotalClearances()
+        != other.getTotalClearances()) return false;
+    if (getTotalAirChallengesWon()
+        != other.getTotalAirChallengesWon()) return false;
+    if (getTotalAirChallengesLost()
+        != other.getTotalAirChallengesLost()) return false;
+    if (getTotalTackles()
+        != other.getTotalTackles()) return false;
+    if (getTotalInterceptedCrosses()
+        != other.getTotalInterceptedCrosses()) return false;
+    if (getTotalGoalAttempts()
+        != other.getTotalGoalAttempts()) return false;
+    if (getTotalSuccessfulCrosses()
+        != other.getTotalSuccessfulCrosses()) return false;
+    if (java.lang.Double.doubleToLongBits(getFirstScorer())
+        != java.lang.Double.doubleToLongBits(
+            other.getFirstScorer())) return false;
+    if (java.lang.Double.doubleToLongBits(getFirstScorerPercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getFirstScorerPercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getNoScoredInRow())
+        != java.lang.Double.doubleToLongBits(
+            other.getNoScoredInRow())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalConceded())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalConceded())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalRatioMinute1X15Percentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalRatioMinute1X15Percentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalRatioMinute16X30Percentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalRatioMinute16X30Percentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalRatioMinute31X45Percentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalRatioMinute31X45Percentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalRatioMinute46X60Percentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalRatioMinute46X60Percentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalRatioMinute61X75Percentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalRatioMinute61X75Percentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalRatioMinute76X90Percentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalRatioMinute76X90Percentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getLastGaspGoal())
+        != java.lang.Double.doubleToLongBits(
+            other.getLastGaspGoal())) return false;
+    if (java.lang.Double.doubleToLongBits(getLastGaspGoalPercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getLastGaspGoalPercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getLastToScore())
+        != java.lang.Double.doubleToLongBits(
+            other.getLastToScore())) return false;
+    if (java.lang.Double.doubleToLongBits(getLastToScorePercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getLastToScorePercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getMinutesPerGoal())
+        != java.lang.Double.doubleToLongBits(
+            other.getMinutesPerGoal())) return false;
+    if (java.lang.Double.doubleToLongBits(getMin())
+        != java.lang.Double.doubleToLongBits(
+            other.getMin())) return false;
+    if (java.lang.Double.doubleToLongBits(getTeamContribution())
+        != java.lang.Double.doubleToLongBits(
+            other.getTeamContribution())) return false;
+    if (!getTeamFK()
+        .equals(other.getTeamFK())) return false;
+    if (java.lang.Double.doubleToLongBits(getTotalCards())
+        != java.lang.Double.doubleToLongBits(
+            other.getTotalCards())) return false;
+    if (java.lang.Double.doubleToLongBits(getTotalCardsPerGame())
+        != java.lang.Double.doubleToLongBits(
+            other.getTotalCardsPerGame())) return false;
+    if (java.lang.Double.doubleToLongBits(getSheetsPercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getSheetsPercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getPlayed())
+        != java.lang.Double.doubleToLongBits(
+            other.getPlayed())) return false;
+    if (java.lang.Double.doubleToLongBits(getNoScoringGames())
+        != java.lang.Double.doubleToLongBits(
+            other.getNoScoringGames())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalsBench())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalsBench())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalsBenchPercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalsBenchPercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getPlayedLineup())
+        != java.lang.Double.doubleToLongBits(
+            other.getPlayedLineup())) return false;
+    if (java.lang.Double.doubleToLongBits(getPlayedLineupPercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getPlayedLineupPercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getSubstIn())
+        != java.lang.Double.doubleToLongBits(
+            other.getSubstIn())) return false;
+    if (java.lang.Double.doubleToLongBits(getSubstInPercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getSubstInPercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getSubstOut())
+        != java.lang.Double.doubleToLongBits(
+            other.getSubstOut())) return false;
+    if (java.lang.Double.doubleToLongBits(getSubstOutPercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getSubstOutPercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getFoulsPerGame())
+        != java.lang.Double.doubleToLongBits(
+            other.getFoulsPerGame())) return false;
+    if (java.lang.Double.doubleToLongBits(getSaves())
+        != java.lang.Double.doubleToLongBits(
+            other.getSaves())) return false;
+    if (java.lang.Double.doubleToLongBits(getSavesPerGame())
+        != java.lang.Double.doubleToLongBits(
+            other.getSavesPerGame())) return false;
+    if (java.lang.Double.doubleToLongBits(getSavesPercentage())
+        != java.lang.Double.doubleToLongBits(
+            other.getSavesPercentage())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalsLeftFoot())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalsLeftFoot())) return false;
+    if (java.lang.Double.doubleToLongBits(getGoalsRightFoot())
+        != java.lang.Double.doubleToLongBits(
+            other.getGoalsRightFoot())) return false;
+    if (java.lang.Double.doubleToLongBits(getTotalShotsAllowed())
+        != java.lang.Double.doubleToLongBits(
+            other.getTotalShotsAllowed())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -3735,7 +4104,144 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUnforcedErrors();
     hash = (37 * hash) + WINNERS_FIELD_NUMBER;
     hash = (53 * hash) + getWinners();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (37 * hash) + TOTALASSISTS_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalAssists();
+    hash = (37 * hash) + TOTALCROSSES_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalCrosses();
+    hash = (37 * hash) + GOALSINSIDEBOX_FIELD_NUMBER;
+    hash = (53 * hash) + getGoalsInsideBox();
+    hash = (37 * hash) + TOTALBLOCKEDSHOTS_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalBlockedShots();
+    hash = (37 * hash) + KEYPASSES_FIELD_NUMBER;
+    hash = (53 * hash) + getKeyPasses();
+    hash = (37 * hash) + TOTALCLEARANCES_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalClearances();
+    hash = (37 * hash) + TOTALAIRCHALLENGESWON_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalAirChallengesWon();
+    hash = (37 * hash) + TOTALAIRCHALLENGESLOST_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalAirChallengesLost();
+    hash = (37 * hash) + TOTALTACKLES_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalTackles();
+    hash = (37 * hash) + TOTALINTERCEPTEDCROSSES_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalInterceptedCrosses();
+    hash = (37 * hash) + TOTALGOALATTEMPTS_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalGoalAttempts();
+    hash = (37 * hash) + TOTALSUCCESSFULCROSSES_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalSuccessfulCrosses();
+    hash = (37 * hash) + FIRSTSCORER_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getFirstScorer()));
+    hash = (37 * hash) + FIRSTSCORERPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getFirstScorerPercentage()));
+    hash = (37 * hash) + NOSCOREDINROW_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getNoScoredInRow()));
+    hash = (37 * hash) + GOALCONCEDED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalConceded()));
+    hash = (37 * hash) + GOALRATIOMINUTE1X15PERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalRatioMinute1X15Percentage()));
+    hash = (37 * hash) + GOALRATIOMINUTE16X30PERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalRatioMinute16X30Percentage()));
+    hash = (37 * hash) + GOALRATIOMINUTE31X45PERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalRatioMinute31X45Percentage()));
+    hash = (37 * hash) + GOALRATIOMINUTE46X60PERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalRatioMinute46X60Percentage()));
+    hash = (37 * hash) + GOALRATIOMINUTE61X75PERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalRatioMinute61X75Percentage()));
+    hash = (37 * hash) + GOALRATIOMINUTE76X90PERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalRatioMinute76X90Percentage()));
+    hash = (37 * hash) + LASTGASPGOAL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getLastGaspGoal()));
+    hash = (37 * hash) + LASTGASPGOALPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getLastGaspGoalPercentage()));
+    hash = (37 * hash) + LASTTOSCORE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getLastToScore()));
+    hash = (37 * hash) + LASTTOSCOREPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getLastToScorePercentage()));
+    hash = (37 * hash) + MINUTESPERGOAL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getMinutesPerGoal()));
+    hash = (37 * hash) + MIN_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getMin()));
+    hash = (37 * hash) + TEAMCONTRIBUTION_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getTeamContribution()));
+    hash = (37 * hash) + TEAMFK_FIELD_NUMBER;
+    hash = (53 * hash) + getTeamFK().hashCode();
+    hash = (37 * hash) + TOTALCARDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getTotalCards()));
+    hash = (37 * hash) + TOTALCARDSPERGAME_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getTotalCardsPerGame()));
+    hash = (37 * hash) + SHEETSPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSheetsPercentage()));
+    hash = (37 * hash) + PLAYED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getPlayed()));
+    hash = (37 * hash) + NOSCORINGGAMES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getNoScoringGames()));
+    hash = (37 * hash) + GOALSBENCH_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalsBench()));
+    hash = (37 * hash) + GOALSBENCHPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalsBenchPercentage()));
+    hash = (37 * hash) + PLAYEDLINEUP_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getPlayedLineup()));
+    hash = (37 * hash) + PLAYEDLINEUPPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getPlayedLineupPercentage()));
+    hash = (37 * hash) + SUBSTIN_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSubstIn()));
+    hash = (37 * hash) + SUBSTINPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSubstInPercentage()));
+    hash = (37 * hash) + SUBSTOUT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSubstOut()));
+    hash = (37 * hash) + SUBSTOUTPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSubstOutPercentage()));
+    hash = (37 * hash) + FOULSPERGAME_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getFoulsPerGame()));
+    hash = (37 * hash) + SAVES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSaves()));
+    hash = (37 * hash) + SAVESPERGAME_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSavesPerGame()));
+    hash = (37 * hash) + SAVESPERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSavesPercentage()));
+    hash = (37 * hash) + GOALSLEFTFOOT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalsLeftFoot()));
+    hash = (37 * hash) + GOALSRIGHTFOOT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getGoalsRightFoot()));
+    hash = (37 * hash) + TOTALSHOTSALLOWED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getTotalShotsAllowed()));
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -3784,11 +4290,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.MatchParticipantStatsMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.MatchParticipantStatsMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3852,286 +4360,205 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.MatchParticipantStatsMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      bitField1_ = 0;
+      bitField2_ = 0;
+      bitField3_ = 0;
+      bitField4_ = 0;
+      bitField5_ = 0;
       goals_ = 0;
-
       ownGoals_ = 0;
-
       yellowCards_ = 0;
-
       secondYellowCards_ = 0;
-
       redCards_ = 0;
-
       assists_ = 0;
-
       teamPosition_ = 0;
-
       totalGames_ = 0;
-
       totalGoals_ = 0;
-
       totalCleanSheets_ = 0;
-
       totalGamesWithoutGoal_ = 0;
-
       wonFirstHalf_ = 0;
-
       wonSecondHalf_ = 0;
-
       wonFirstHalfPercentage_ = 0;
-
       wonSecondHalfPercentage_ = 0;
-
       matchesWonHomePercentage_ = 0;
-
       matchesWonAwayPercentage_ = 0;
-
       boreDraws_ = 0;
-
       boreDrawsPercentage_ = 0;
-
       goalsRatio_ = 0D;
-
       yellowCardsPerGame_ = 0D;
-
       penaltyGoals_ = 0;
-
       totalGoalsFirstHalf_ = 0;
-
       totalGoalsSecondHalf_ = 0;
-
       totalGoalsFirstHalfPercentage_ = 0;
-
       totalGoalsSecondHalfPercentage_ = 0;
-
       firstGoal_ = 0;
-
       lastGoal_ = 0;
-
       firstGoalPercentage_ = 0;
-
       lastGoalPercentage_ = 0;
-
       goalRatioMinute1X15_ = 0;
-
       goalRatioMinute16X30_ = 0;
-
       goalRatioMinute31X45_ = 0;
-
       goalRatioMinute46X60_ = 0;
-
       goalRatioMinute61X75_ = 0;
-
       goalRatioMinute76X90_ = 0;
-
       goalInBothHalves_ = 0;
-
       goalInBothHalvesPercentage_ = 0;
-
       concededOneOrMoreGoals_ = 0;
-
       concededOneOrMoreGoalsPercentage_ = 0;
-
       wonToNil_ = 0;
-
       wonToNilPercentage_ = 0;
-
       timeBetweenGoalsScored_ = 0;
-
       timeBetweenGoalsScoredConceded_ = 0;
-
       conceded_ = 0;
-
       wonWhen1X0Up_ = 0;
-
       wonWhen1X0Down_ = 0;
-
       wonWhen2X0Up_ = 0;
-
       wonWhen1X0UpPercentage_ = 0;
-
       wonWhen1X0DownPercentage_ = 0;
-
       wonWhen2X0UpPercentage_ = 0;
-
       when1X0UpPoints_ = 0;
-
       when2X0UpPoints_ = 0;
-
       when1X0DownPoints_ = 0;
-
       when2X0DownPoints_ = 0;
-
       when1X0UpPointsPercentage_ = 0;
-
       when2X0UpPointsPercentage_ = 0;
-
       when1X0DownPointsPercentage_ = 0;
-
       when2X0DownPointsPercentage_ = 0;
-
       earlyGoalsTeam_ = 0;
-
       lastGaspGoalsTeam_ = 0;
-
       totalGoalsStartingPlayers_ = 0;
-
       totalGoalsSubbedPlayers_ = 0;
-
       totalGoalsStartingPlayersPercentage_ = 0;
-
       totalGoalsSubbedPlayersPercentage_ = 0;
-
       equaliserGoals_ = 0;
-
       bothToScore_ = 0;
-
       bothToScorePercentage_ = 0;
-
       comebacks_ = 0;
-
       lostLeadToLose_ = 0;
-
       lostInRow_ = 0;
-
       gamesWithoutGoals_ = 0;
-
       wonAtHome_ = 0;
-
       wonAtAway_ = 0;
-
       awayWithoutWin_ = 0;
-
       totalCardsYellowRed_ = 0;
-
       totalCardsYellowRedPerGamePercentage_ = 0D;
-
       headGoal_ = 0;
-
       strikeGoal_ = 0;
-
       headGoalPercentage_ = 0;
-
       strikeGoalPercentage_ = 0;
-
       foulCommit_ = 0;
-
       foulCommitPerGame_ = 0D;
-
       shoton_ = 0;
-
       shotonPerGame_ = 0D;
-
       shotoff_ = 0;
-
       shotoffPerGame_ = 0D;
-
       shotsonPerGoal_ = 0D;
-
       offside_ = 0;
-
       offsidePerGame_ = 0D;
-
       cornerTaken_ = 0;
-
       cornerTakenPerGame_ = 0D;
-
       penaltyMissed_ = 0;
-
       penaltyMissedPercentage_ = 0;
-
       elapsedPlusPerGame_ = 0D;
-
       woodwork_ = 0;
-
       penaltyCommit_ = 0;
-
       penaltyCommitPercentage_ = 0;
-
       foulsuffered_ = 0;
-
       totalShots_ = 0;
-
       penaltySaves_ = 0;
-
       defensiveError_ = 0;
-
       averagePossession_ = 0;
-
       penaltiesAwarded_ = 0;
-
       goalOutsideBox_ = 0;
-
       goalOutsideBoxPercentage_ = 0;
-
       directFreekick_ = 0;
-
       directFreekickPercentage_ = 0;
-
       scoredInRow_ = 0;
-
       wonInRow_ = 0;
-
       noconcedingInRow_ = 0;
-
       homeWithoutWin_ = 0;
-
       won2Down_ = 0;
-
       won2DownPercentage_ = 0;
-
       firstReturnPointsWon_ = 0;
-
       firstServePercentage_ = 0D;
-
       firstServePointsWon_ = 0;
-
       secondReturnPointsWon_ = 0;
-
       secondServePointsWon_ = 0;
-
       aces_ = 0;
-
       breakPointsSaved_ = 0;
-
       breakPointsWon_ = 0;
-
       doubleFaults_ = 0;
-
       returnPointsWonPercentage_ = 0D;
-
       serviceGames_ = 0;
-
       servicePointsWonPercentage_ = 0D;
-
       firstServePointsAll_ = 0;
-
       secondServePointsAll_ = 0;
-
       totalPointsWon_ = 0;
-
       totalPointsWonPercentage_ = 0D;
-
       unforcedErrors_ = 0;
-
       winners_ = 0;
-
+      totalAssists_ = 0;
+      totalCrosses_ = 0;
+      goalsInsideBox_ = 0;
+      totalBlockedShots_ = 0;
+      keyPasses_ = 0;
+      totalClearances_ = 0;
+      totalAirChallengesWon_ = 0;
+      totalAirChallengesLost_ = 0;
+      totalTackles_ = 0;
+      totalInterceptedCrosses_ = 0;
+      totalGoalAttempts_ = 0;
+      totalSuccessfulCrosses_ = 0;
+      firstScorer_ = 0D;
+      firstScorerPercentage_ = 0D;
+      noScoredInRow_ = 0D;
+      goalConceded_ = 0D;
+      goalRatioMinute1X15Percentage_ = 0D;
+      goalRatioMinute16X30Percentage_ = 0D;
+      goalRatioMinute31X45Percentage_ = 0D;
+      goalRatioMinute46X60Percentage_ = 0D;
+      goalRatioMinute61X75Percentage_ = 0D;
+      goalRatioMinute76X90Percentage_ = 0D;
+      lastGaspGoal_ = 0D;
+      lastGaspGoalPercentage_ = 0D;
+      lastToScore_ = 0D;
+      lastToScorePercentage_ = 0D;
+      minutesPerGoal_ = 0D;
+      min_ = 0D;
+      teamContribution_ = 0D;
+      teamFK_ = "";
+      totalCards_ = 0D;
+      totalCardsPerGame_ = 0D;
+      sheetsPercentage_ = 0D;
+      played_ = 0D;
+      noScoringGames_ = 0D;
+      goalsBench_ = 0D;
+      goalsBenchPercentage_ = 0D;
+      playedLineup_ = 0D;
+      playedLineupPercentage_ = 0D;
+      substIn_ = 0D;
+      substInPercentage_ = 0D;
+      substOut_ = 0D;
+      substOutPercentage_ = 0D;
+      foulsPerGame_ = 0D;
+      saves_ = 0D;
+      savesPerGame_ = 0D;
+      savesPercentage_ = 0D;
+      goalsLeftFoot_ = 0D;
+      goalsRightFoot_ = 0D;
+      totalShotsAllowed_ = 0D;
       return this;
     }
 
@@ -4158,140 +4585,584 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.MatchParticipantStatsMessage buildPartial() {
       com.sts.rpclib.MatchParticipantStatsMessage result = new com.sts.rpclib.MatchParticipantStatsMessage(this);
-      result.goals_ = goals_;
-      result.ownGoals_ = ownGoals_;
-      result.yellowCards_ = yellowCards_;
-      result.secondYellowCards_ = secondYellowCards_;
-      result.redCards_ = redCards_;
-      result.assists_ = assists_;
-      result.teamPosition_ = teamPosition_;
-      result.totalGames_ = totalGames_;
-      result.totalGoals_ = totalGoals_;
-      result.totalCleanSheets_ = totalCleanSheets_;
-      result.totalGamesWithoutGoal_ = totalGamesWithoutGoal_;
-      result.wonFirstHalf_ = wonFirstHalf_;
-      result.wonSecondHalf_ = wonSecondHalf_;
-      result.wonFirstHalfPercentage_ = wonFirstHalfPercentage_;
-      result.wonSecondHalfPercentage_ = wonSecondHalfPercentage_;
-      result.matchesWonHomePercentage_ = matchesWonHomePercentage_;
-      result.matchesWonAwayPercentage_ = matchesWonAwayPercentage_;
-      result.boreDraws_ = boreDraws_;
-      result.boreDrawsPercentage_ = boreDrawsPercentage_;
-      result.goalsRatio_ = goalsRatio_;
-      result.yellowCardsPerGame_ = yellowCardsPerGame_;
-      result.penaltyGoals_ = penaltyGoals_;
-      result.totalGoalsFirstHalf_ = totalGoalsFirstHalf_;
-      result.totalGoalsSecondHalf_ = totalGoalsSecondHalf_;
-      result.totalGoalsFirstHalfPercentage_ = totalGoalsFirstHalfPercentage_;
-      result.totalGoalsSecondHalfPercentage_ = totalGoalsSecondHalfPercentage_;
-      result.firstGoal_ = firstGoal_;
-      result.lastGoal_ = lastGoal_;
-      result.firstGoalPercentage_ = firstGoalPercentage_;
-      result.lastGoalPercentage_ = lastGoalPercentage_;
-      result.goalRatioMinute1X15_ = goalRatioMinute1X15_;
-      result.goalRatioMinute16X30_ = goalRatioMinute16X30_;
-      result.goalRatioMinute31X45_ = goalRatioMinute31X45_;
-      result.goalRatioMinute46X60_ = goalRatioMinute46X60_;
-      result.goalRatioMinute61X75_ = goalRatioMinute61X75_;
-      result.goalRatioMinute76X90_ = goalRatioMinute76X90_;
-      result.goalInBothHalves_ = goalInBothHalves_;
-      result.goalInBothHalvesPercentage_ = goalInBothHalvesPercentage_;
-      result.concededOneOrMoreGoals_ = concededOneOrMoreGoals_;
-      result.concededOneOrMoreGoalsPercentage_ = concededOneOrMoreGoalsPercentage_;
-      result.wonToNil_ = wonToNil_;
-      result.wonToNilPercentage_ = wonToNilPercentage_;
-      result.timeBetweenGoalsScored_ = timeBetweenGoalsScored_;
-      result.timeBetweenGoalsScoredConceded_ = timeBetweenGoalsScoredConceded_;
-      result.conceded_ = conceded_;
-      result.wonWhen1X0Up_ = wonWhen1X0Up_;
-      result.wonWhen1X0Down_ = wonWhen1X0Down_;
-      result.wonWhen2X0Up_ = wonWhen2X0Up_;
-      result.wonWhen1X0UpPercentage_ = wonWhen1X0UpPercentage_;
-      result.wonWhen1X0DownPercentage_ = wonWhen1X0DownPercentage_;
-      result.wonWhen2X0UpPercentage_ = wonWhen2X0UpPercentage_;
-      result.when1X0UpPoints_ = when1X0UpPoints_;
-      result.when2X0UpPoints_ = when2X0UpPoints_;
-      result.when1X0DownPoints_ = when1X0DownPoints_;
-      result.when2X0DownPoints_ = when2X0DownPoints_;
-      result.when1X0UpPointsPercentage_ = when1X0UpPointsPercentage_;
-      result.when2X0UpPointsPercentage_ = when2X0UpPointsPercentage_;
-      result.when1X0DownPointsPercentage_ = when1X0DownPointsPercentage_;
-      result.when2X0DownPointsPercentage_ = when2X0DownPointsPercentage_;
-      result.earlyGoalsTeam_ = earlyGoalsTeam_;
-      result.lastGaspGoalsTeam_ = lastGaspGoalsTeam_;
-      result.totalGoalsStartingPlayers_ = totalGoalsStartingPlayers_;
-      result.totalGoalsSubbedPlayers_ = totalGoalsSubbedPlayers_;
-      result.totalGoalsStartingPlayersPercentage_ = totalGoalsStartingPlayersPercentage_;
-      result.totalGoalsSubbedPlayersPercentage_ = totalGoalsSubbedPlayersPercentage_;
-      result.equaliserGoals_ = equaliserGoals_;
-      result.bothToScore_ = bothToScore_;
-      result.bothToScorePercentage_ = bothToScorePercentage_;
-      result.comebacks_ = comebacks_;
-      result.lostLeadToLose_ = lostLeadToLose_;
-      result.lostInRow_ = lostInRow_;
-      result.gamesWithoutGoals_ = gamesWithoutGoals_;
-      result.wonAtHome_ = wonAtHome_;
-      result.wonAtAway_ = wonAtAway_;
-      result.awayWithoutWin_ = awayWithoutWin_;
-      result.totalCardsYellowRed_ = totalCardsYellowRed_;
-      result.totalCardsYellowRedPerGamePercentage_ = totalCardsYellowRedPerGamePercentage_;
-      result.headGoal_ = headGoal_;
-      result.strikeGoal_ = strikeGoal_;
-      result.headGoalPercentage_ = headGoalPercentage_;
-      result.strikeGoalPercentage_ = strikeGoalPercentage_;
-      result.foulCommit_ = foulCommit_;
-      result.foulCommitPerGame_ = foulCommitPerGame_;
-      result.shoton_ = shoton_;
-      result.shotonPerGame_ = shotonPerGame_;
-      result.shotoff_ = shotoff_;
-      result.shotoffPerGame_ = shotoffPerGame_;
-      result.shotsonPerGoal_ = shotsonPerGoal_;
-      result.offside_ = offside_;
-      result.offsidePerGame_ = offsidePerGame_;
-      result.cornerTaken_ = cornerTaken_;
-      result.cornerTakenPerGame_ = cornerTakenPerGame_;
-      result.penaltyMissed_ = penaltyMissed_;
-      result.penaltyMissedPercentage_ = penaltyMissedPercentage_;
-      result.elapsedPlusPerGame_ = elapsedPlusPerGame_;
-      result.woodwork_ = woodwork_;
-      result.penaltyCommit_ = penaltyCommit_;
-      result.penaltyCommitPercentage_ = penaltyCommitPercentage_;
-      result.foulsuffered_ = foulsuffered_;
-      result.totalShots_ = totalShots_;
-      result.penaltySaves_ = penaltySaves_;
-      result.defensiveError_ = defensiveError_;
-      result.averagePossession_ = averagePossession_;
-      result.penaltiesAwarded_ = penaltiesAwarded_;
-      result.goalOutsideBox_ = goalOutsideBox_;
-      result.goalOutsideBoxPercentage_ = goalOutsideBoxPercentage_;
-      result.directFreekick_ = directFreekick_;
-      result.directFreekickPercentage_ = directFreekickPercentage_;
-      result.scoredInRow_ = scoredInRow_;
-      result.wonInRow_ = wonInRow_;
-      result.noconcedingInRow_ = noconcedingInRow_;
-      result.homeWithoutWin_ = homeWithoutWin_;
-      result.won2Down_ = won2Down_;
-      result.won2DownPercentage_ = won2DownPercentage_;
-      result.firstReturnPointsWon_ = firstReturnPointsWon_;
-      result.firstServePercentage_ = firstServePercentage_;
-      result.firstServePointsWon_ = firstServePointsWon_;
-      result.secondReturnPointsWon_ = secondReturnPointsWon_;
-      result.secondServePointsWon_ = secondServePointsWon_;
-      result.aces_ = aces_;
-      result.breakPointsSaved_ = breakPointsSaved_;
-      result.breakPointsWon_ = breakPointsWon_;
-      result.doubleFaults_ = doubleFaults_;
-      result.returnPointsWonPercentage_ = returnPointsWonPercentage_;
-      result.serviceGames_ = serviceGames_;
-      result.servicePointsWonPercentage_ = servicePointsWonPercentage_;
-      result.firstServePointsAll_ = firstServePointsAll_;
-      result.secondServePointsAll_ = secondServePointsAll_;
-      result.totalPointsWon_ = totalPointsWon_;
-      result.totalPointsWonPercentage_ = totalPointsWonPercentage_;
-      result.unforcedErrors_ = unforcedErrors_;
-      result.winners_ = winners_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      if (bitField2_ != 0) { buildPartial2(result); }
+      if (bitField3_ != 0) { buildPartial3(result); }
+      if (bitField4_ != 0) { buildPartial4(result); }
+      if (bitField5_ != 0) { buildPartial5(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.MatchParticipantStatsMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.goals_ = goals_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.ownGoals_ = ownGoals_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.yellowCards_ = yellowCards_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.secondYellowCards_ = secondYellowCards_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.redCards_ = redCards_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.assists_ = assists_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.teamPosition_ = teamPosition_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.totalGames_ = totalGames_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.totalGoals_ = totalGoals_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.totalCleanSheets_ = totalCleanSheets_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.totalGamesWithoutGoal_ = totalGamesWithoutGoal_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.wonFirstHalf_ = wonFirstHalf_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.wonSecondHalf_ = wonSecondHalf_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.wonFirstHalfPercentage_ = wonFirstHalfPercentage_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.wonSecondHalfPercentage_ = wonSecondHalfPercentage_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.matchesWonHomePercentage_ = matchesWonHomePercentage_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.matchesWonAwayPercentage_ = matchesWonAwayPercentage_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.boreDraws_ = boreDraws_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.boreDrawsPercentage_ = boreDrawsPercentage_;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.goalsRatio_ = goalsRatio_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.yellowCardsPerGame_ = yellowCardsPerGame_;
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.penaltyGoals_ = penaltyGoals_;
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.totalGoalsFirstHalf_ = totalGoalsFirstHalf_;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.totalGoalsSecondHalf_ = totalGoalsSecondHalf_;
+      }
+      if (((from_bitField0_ & 0x01000000) != 0)) {
+        result.totalGoalsFirstHalfPercentage_ = totalGoalsFirstHalfPercentage_;
+      }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        result.totalGoalsSecondHalfPercentage_ = totalGoalsSecondHalfPercentage_;
+      }
+      if (((from_bitField0_ & 0x04000000) != 0)) {
+        result.firstGoal_ = firstGoal_;
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
+        result.lastGoal_ = lastGoal_;
+      }
+      if (((from_bitField0_ & 0x10000000) != 0)) {
+        result.firstGoalPercentage_ = firstGoalPercentage_;
+      }
+      if (((from_bitField0_ & 0x20000000) != 0)) {
+        result.lastGoalPercentage_ = lastGoalPercentage_;
+      }
+      if (((from_bitField0_ & 0x40000000) != 0)) {
+        result.goalRatioMinute1X15_ = goalRatioMinute1X15_;
+      }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.goalRatioMinute16X30_ = goalRatioMinute16X30_;
+      }
+    }
+
+    private void buildPartial1(com.sts.rpclib.MatchParticipantStatsMessage result) {
+      int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
+        result.goalRatioMinute31X45_ = goalRatioMinute31X45_;
+      }
+      if (((from_bitField1_ & 0x00000002) != 0)) {
+        result.goalRatioMinute46X60_ = goalRatioMinute46X60_;
+      }
+      if (((from_bitField1_ & 0x00000004) != 0)) {
+        result.goalRatioMinute61X75_ = goalRatioMinute61X75_;
+      }
+      if (((from_bitField1_ & 0x00000008) != 0)) {
+        result.goalRatioMinute76X90_ = goalRatioMinute76X90_;
+      }
+      if (((from_bitField1_ & 0x00000010) != 0)) {
+        result.goalInBothHalves_ = goalInBothHalves_;
+      }
+      if (((from_bitField1_ & 0x00000020) != 0)) {
+        result.goalInBothHalvesPercentage_ = goalInBothHalvesPercentage_;
+      }
+      if (((from_bitField1_ & 0x00000040) != 0)) {
+        result.concededOneOrMoreGoals_ = concededOneOrMoreGoals_;
+      }
+      if (((from_bitField1_ & 0x00000080) != 0)) {
+        result.concededOneOrMoreGoalsPercentage_ = concededOneOrMoreGoalsPercentage_;
+      }
+      if (((from_bitField1_ & 0x00000100) != 0)) {
+        result.wonToNil_ = wonToNil_;
+      }
+      if (((from_bitField1_ & 0x00000200) != 0)) {
+        result.wonToNilPercentage_ = wonToNilPercentage_;
+      }
+      if (((from_bitField1_ & 0x00000400) != 0)) {
+        result.timeBetweenGoalsScored_ = timeBetweenGoalsScored_;
+      }
+      if (((from_bitField1_ & 0x00000800) != 0)) {
+        result.timeBetweenGoalsScoredConceded_ = timeBetweenGoalsScoredConceded_;
+      }
+      if (((from_bitField1_ & 0x00001000) != 0)) {
+        result.conceded_ = conceded_;
+      }
+      if (((from_bitField1_ & 0x00002000) != 0)) {
+        result.wonWhen1X0Up_ = wonWhen1X0Up_;
+      }
+      if (((from_bitField1_ & 0x00004000) != 0)) {
+        result.wonWhen1X0Down_ = wonWhen1X0Down_;
+      }
+      if (((from_bitField1_ & 0x00008000) != 0)) {
+        result.wonWhen2X0Up_ = wonWhen2X0Up_;
+      }
+      if (((from_bitField1_ & 0x00010000) != 0)) {
+        result.wonWhen1X0UpPercentage_ = wonWhen1X0UpPercentage_;
+      }
+      if (((from_bitField1_ & 0x00020000) != 0)) {
+        result.wonWhen1X0DownPercentage_ = wonWhen1X0DownPercentage_;
+      }
+      if (((from_bitField1_ & 0x00040000) != 0)) {
+        result.wonWhen2X0UpPercentage_ = wonWhen2X0UpPercentage_;
+      }
+      if (((from_bitField1_ & 0x00080000) != 0)) {
+        result.when1X0UpPoints_ = when1X0UpPoints_;
+      }
+      if (((from_bitField1_ & 0x00100000) != 0)) {
+        result.when2X0UpPoints_ = when2X0UpPoints_;
+      }
+      if (((from_bitField1_ & 0x00200000) != 0)) {
+        result.when1X0DownPoints_ = when1X0DownPoints_;
+      }
+      if (((from_bitField1_ & 0x00400000) != 0)) {
+        result.when2X0DownPoints_ = when2X0DownPoints_;
+      }
+      if (((from_bitField1_ & 0x00800000) != 0)) {
+        result.when1X0UpPointsPercentage_ = when1X0UpPointsPercentage_;
+      }
+      if (((from_bitField1_ & 0x01000000) != 0)) {
+        result.when2X0UpPointsPercentage_ = when2X0UpPointsPercentage_;
+      }
+      if (((from_bitField1_ & 0x02000000) != 0)) {
+        result.when1X0DownPointsPercentage_ = when1X0DownPointsPercentage_;
+      }
+      if (((from_bitField1_ & 0x04000000) != 0)) {
+        result.when2X0DownPointsPercentage_ = when2X0DownPointsPercentage_;
+      }
+      if (((from_bitField1_ & 0x08000000) != 0)) {
+        result.earlyGoalsTeam_ = earlyGoalsTeam_;
+      }
+      if (((from_bitField1_ & 0x10000000) != 0)) {
+        result.lastGaspGoalsTeam_ = lastGaspGoalsTeam_;
+      }
+      if (((from_bitField1_ & 0x20000000) != 0)) {
+        result.totalGoalsStartingPlayers_ = totalGoalsStartingPlayers_;
+      }
+      if (((from_bitField1_ & 0x40000000) != 0)) {
+        result.totalGoalsSubbedPlayers_ = totalGoalsSubbedPlayers_;
+      }
+      if (((from_bitField1_ & 0x80000000) != 0)) {
+        result.totalGoalsStartingPlayersPercentage_ = totalGoalsStartingPlayersPercentage_;
+      }
+    }
+
+    private void buildPartial2(com.sts.rpclib.MatchParticipantStatsMessage result) {
+      int from_bitField2_ = bitField2_;
+      if (((from_bitField2_ & 0x00000001) != 0)) {
+        result.totalGoalsSubbedPlayersPercentage_ = totalGoalsSubbedPlayersPercentage_;
+      }
+      if (((from_bitField2_ & 0x00000002) != 0)) {
+        result.equaliserGoals_ = equaliserGoals_;
+      }
+      if (((from_bitField2_ & 0x00000004) != 0)) {
+        result.bothToScore_ = bothToScore_;
+      }
+      if (((from_bitField2_ & 0x00000008) != 0)) {
+        result.bothToScorePercentage_ = bothToScorePercentage_;
+      }
+      if (((from_bitField2_ & 0x00000010) != 0)) {
+        result.comebacks_ = comebacks_;
+      }
+      if (((from_bitField2_ & 0x00000020) != 0)) {
+        result.lostLeadToLose_ = lostLeadToLose_;
+      }
+      if (((from_bitField2_ & 0x00000040) != 0)) {
+        result.lostInRow_ = lostInRow_;
+      }
+      if (((from_bitField2_ & 0x00000080) != 0)) {
+        result.gamesWithoutGoals_ = gamesWithoutGoals_;
+      }
+      if (((from_bitField2_ & 0x00000100) != 0)) {
+        result.wonAtHome_ = wonAtHome_;
+      }
+      if (((from_bitField2_ & 0x00000200) != 0)) {
+        result.wonAtAway_ = wonAtAway_;
+      }
+      if (((from_bitField2_ & 0x00000400) != 0)) {
+        result.awayWithoutWin_ = awayWithoutWin_;
+      }
+      if (((from_bitField2_ & 0x00000800) != 0)) {
+        result.totalCardsYellowRed_ = totalCardsYellowRed_;
+      }
+      if (((from_bitField2_ & 0x00001000) != 0)) {
+        result.totalCardsYellowRedPerGamePercentage_ = totalCardsYellowRedPerGamePercentage_;
+      }
+      if (((from_bitField2_ & 0x00002000) != 0)) {
+        result.headGoal_ = headGoal_;
+      }
+      if (((from_bitField2_ & 0x00004000) != 0)) {
+        result.strikeGoal_ = strikeGoal_;
+      }
+      if (((from_bitField2_ & 0x00008000) != 0)) {
+        result.headGoalPercentage_ = headGoalPercentage_;
+      }
+      if (((from_bitField2_ & 0x00010000) != 0)) {
+        result.strikeGoalPercentage_ = strikeGoalPercentage_;
+      }
+      if (((from_bitField2_ & 0x00020000) != 0)) {
+        result.foulCommit_ = foulCommit_;
+      }
+      if (((from_bitField2_ & 0x00040000) != 0)) {
+        result.foulCommitPerGame_ = foulCommitPerGame_;
+      }
+      if (((from_bitField2_ & 0x00080000) != 0)) {
+        result.shoton_ = shoton_;
+      }
+      if (((from_bitField2_ & 0x00100000) != 0)) {
+        result.shotonPerGame_ = shotonPerGame_;
+      }
+      if (((from_bitField2_ & 0x00200000) != 0)) {
+        result.shotoff_ = shotoff_;
+      }
+      if (((from_bitField2_ & 0x00400000) != 0)) {
+        result.shotoffPerGame_ = shotoffPerGame_;
+      }
+      if (((from_bitField2_ & 0x00800000) != 0)) {
+        result.shotsonPerGoal_ = shotsonPerGoal_;
+      }
+      if (((from_bitField2_ & 0x01000000) != 0)) {
+        result.offside_ = offside_;
+      }
+      if (((from_bitField2_ & 0x02000000) != 0)) {
+        result.offsidePerGame_ = offsidePerGame_;
+      }
+      if (((from_bitField2_ & 0x04000000) != 0)) {
+        result.cornerTaken_ = cornerTaken_;
+      }
+      if (((from_bitField2_ & 0x08000000) != 0)) {
+        result.cornerTakenPerGame_ = cornerTakenPerGame_;
+      }
+      if (((from_bitField2_ & 0x10000000) != 0)) {
+        result.penaltyMissed_ = penaltyMissed_;
+      }
+      if (((from_bitField2_ & 0x20000000) != 0)) {
+        result.penaltyMissedPercentage_ = penaltyMissedPercentage_;
+      }
+      if (((from_bitField2_ & 0x40000000) != 0)) {
+        result.elapsedPlusPerGame_ = elapsedPlusPerGame_;
+      }
+      if (((from_bitField2_ & 0x80000000) != 0)) {
+        result.woodwork_ = woodwork_;
+      }
+    }
+
+    private void buildPartial3(com.sts.rpclib.MatchParticipantStatsMessage result) {
+      int from_bitField3_ = bitField3_;
+      if (((from_bitField3_ & 0x00000001) != 0)) {
+        result.penaltyCommit_ = penaltyCommit_;
+      }
+      if (((from_bitField3_ & 0x00000002) != 0)) {
+        result.penaltyCommitPercentage_ = penaltyCommitPercentage_;
+      }
+      if (((from_bitField3_ & 0x00000004) != 0)) {
+        result.foulsuffered_ = foulsuffered_;
+      }
+      if (((from_bitField3_ & 0x00000008) != 0)) {
+        result.totalShots_ = totalShots_;
+      }
+      if (((from_bitField3_ & 0x00000010) != 0)) {
+        result.penaltySaves_ = penaltySaves_;
+      }
+      if (((from_bitField3_ & 0x00000020) != 0)) {
+        result.defensiveError_ = defensiveError_;
+      }
+      if (((from_bitField3_ & 0x00000040) != 0)) {
+        result.averagePossession_ = averagePossession_;
+      }
+      if (((from_bitField3_ & 0x00000080) != 0)) {
+        result.penaltiesAwarded_ = penaltiesAwarded_;
+      }
+      if (((from_bitField3_ & 0x00000100) != 0)) {
+        result.goalOutsideBox_ = goalOutsideBox_;
+      }
+      if (((from_bitField3_ & 0x00000200) != 0)) {
+        result.goalOutsideBoxPercentage_ = goalOutsideBoxPercentage_;
+      }
+      if (((from_bitField3_ & 0x00000400) != 0)) {
+        result.directFreekick_ = directFreekick_;
+      }
+      if (((from_bitField3_ & 0x00000800) != 0)) {
+        result.directFreekickPercentage_ = directFreekickPercentage_;
+      }
+      if (((from_bitField3_ & 0x00001000) != 0)) {
+        result.scoredInRow_ = scoredInRow_;
+      }
+      if (((from_bitField3_ & 0x00002000) != 0)) {
+        result.wonInRow_ = wonInRow_;
+      }
+      if (((from_bitField3_ & 0x00004000) != 0)) {
+        result.noconcedingInRow_ = noconcedingInRow_;
+      }
+      if (((from_bitField3_ & 0x00008000) != 0)) {
+        result.homeWithoutWin_ = homeWithoutWin_;
+      }
+      if (((from_bitField3_ & 0x00010000) != 0)) {
+        result.won2Down_ = won2Down_;
+      }
+      if (((from_bitField3_ & 0x00020000) != 0)) {
+        result.won2DownPercentage_ = won2DownPercentage_;
+      }
+      if (((from_bitField3_ & 0x00040000) != 0)) {
+        result.firstReturnPointsWon_ = firstReturnPointsWon_;
+      }
+      if (((from_bitField3_ & 0x00080000) != 0)) {
+        result.firstServePercentage_ = firstServePercentage_;
+      }
+      if (((from_bitField3_ & 0x00100000) != 0)) {
+        result.firstServePointsWon_ = firstServePointsWon_;
+      }
+      if (((from_bitField3_ & 0x00200000) != 0)) {
+        result.secondReturnPointsWon_ = secondReturnPointsWon_;
+      }
+      if (((from_bitField3_ & 0x00400000) != 0)) {
+        result.secondServePointsWon_ = secondServePointsWon_;
+      }
+      if (((from_bitField3_ & 0x00800000) != 0)) {
+        result.aces_ = aces_;
+      }
+      if (((from_bitField3_ & 0x01000000) != 0)) {
+        result.breakPointsSaved_ = breakPointsSaved_;
+      }
+      if (((from_bitField3_ & 0x02000000) != 0)) {
+        result.breakPointsWon_ = breakPointsWon_;
+      }
+      if (((from_bitField3_ & 0x04000000) != 0)) {
+        result.doubleFaults_ = doubleFaults_;
+      }
+      if (((from_bitField3_ & 0x08000000) != 0)) {
+        result.returnPointsWonPercentage_ = returnPointsWonPercentage_;
+      }
+      if (((from_bitField3_ & 0x10000000) != 0)) {
+        result.serviceGames_ = serviceGames_;
+      }
+      if (((from_bitField3_ & 0x20000000) != 0)) {
+        result.servicePointsWonPercentage_ = servicePointsWonPercentage_;
+      }
+      if (((from_bitField3_ & 0x40000000) != 0)) {
+        result.firstServePointsAll_ = firstServePointsAll_;
+      }
+      if (((from_bitField3_ & 0x80000000) != 0)) {
+        result.secondServePointsAll_ = secondServePointsAll_;
+      }
+    }
+
+    private void buildPartial4(com.sts.rpclib.MatchParticipantStatsMessage result) {
+      int from_bitField4_ = bitField4_;
+      if (((from_bitField4_ & 0x00000001) != 0)) {
+        result.totalPointsWon_ = totalPointsWon_;
+      }
+      if (((from_bitField4_ & 0x00000002) != 0)) {
+        result.totalPointsWonPercentage_ = totalPointsWonPercentage_;
+      }
+      if (((from_bitField4_ & 0x00000004) != 0)) {
+        result.unforcedErrors_ = unforcedErrors_;
+      }
+      if (((from_bitField4_ & 0x00000008) != 0)) {
+        result.winners_ = winners_;
+      }
+      if (((from_bitField4_ & 0x00000010) != 0)) {
+        result.totalAssists_ = totalAssists_;
+      }
+      if (((from_bitField4_ & 0x00000020) != 0)) {
+        result.totalCrosses_ = totalCrosses_;
+      }
+      if (((from_bitField4_ & 0x00000040) != 0)) {
+        result.goalsInsideBox_ = goalsInsideBox_;
+      }
+      if (((from_bitField4_ & 0x00000080) != 0)) {
+        result.totalBlockedShots_ = totalBlockedShots_;
+      }
+      if (((from_bitField4_ & 0x00000100) != 0)) {
+        result.keyPasses_ = keyPasses_;
+      }
+      if (((from_bitField4_ & 0x00000200) != 0)) {
+        result.totalClearances_ = totalClearances_;
+      }
+      if (((from_bitField4_ & 0x00000400) != 0)) {
+        result.totalAirChallengesWon_ = totalAirChallengesWon_;
+      }
+      if (((from_bitField4_ & 0x00000800) != 0)) {
+        result.totalAirChallengesLost_ = totalAirChallengesLost_;
+      }
+      if (((from_bitField4_ & 0x00001000) != 0)) {
+        result.totalTackles_ = totalTackles_;
+      }
+      if (((from_bitField4_ & 0x00002000) != 0)) {
+        result.totalInterceptedCrosses_ = totalInterceptedCrosses_;
+      }
+      if (((from_bitField4_ & 0x00004000) != 0)) {
+        result.totalGoalAttempts_ = totalGoalAttempts_;
+      }
+      if (((from_bitField4_ & 0x00008000) != 0)) {
+        result.totalSuccessfulCrosses_ = totalSuccessfulCrosses_;
+      }
+      if (((from_bitField4_ & 0x00010000) != 0)) {
+        result.firstScorer_ = firstScorer_;
+      }
+      if (((from_bitField4_ & 0x00020000) != 0)) {
+        result.firstScorerPercentage_ = firstScorerPercentage_;
+      }
+      if (((from_bitField4_ & 0x00040000) != 0)) {
+        result.noScoredInRow_ = noScoredInRow_;
+      }
+      if (((from_bitField4_ & 0x00080000) != 0)) {
+        result.goalConceded_ = goalConceded_;
+      }
+      if (((from_bitField4_ & 0x00100000) != 0)) {
+        result.goalRatioMinute1X15Percentage_ = goalRatioMinute1X15Percentage_;
+      }
+      if (((from_bitField4_ & 0x00200000) != 0)) {
+        result.goalRatioMinute16X30Percentage_ = goalRatioMinute16X30Percentage_;
+      }
+      if (((from_bitField4_ & 0x00400000) != 0)) {
+        result.goalRatioMinute31X45Percentage_ = goalRatioMinute31X45Percentage_;
+      }
+      if (((from_bitField4_ & 0x00800000) != 0)) {
+        result.goalRatioMinute46X60Percentage_ = goalRatioMinute46X60Percentage_;
+      }
+      if (((from_bitField4_ & 0x01000000) != 0)) {
+        result.goalRatioMinute61X75Percentage_ = goalRatioMinute61X75Percentage_;
+      }
+      if (((from_bitField4_ & 0x02000000) != 0)) {
+        result.goalRatioMinute76X90Percentage_ = goalRatioMinute76X90Percentage_;
+      }
+      if (((from_bitField4_ & 0x04000000) != 0)) {
+        result.lastGaspGoal_ = lastGaspGoal_;
+      }
+      if (((from_bitField4_ & 0x08000000) != 0)) {
+        result.lastGaspGoalPercentage_ = lastGaspGoalPercentage_;
+      }
+      if (((from_bitField4_ & 0x10000000) != 0)) {
+        result.lastToScore_ = lastToScore_;
+      }
+      if (((from_bitField4_ & 0x20000000) != 0)) {
+        result.lastToScorePercentage_ = lastToScorePercentage_;
+      }
+      if (((from_bitField4_ & 0x40000000) != 0)) {
+        result.minutesPerGoal_ = minutesPerGoal_;
+      }
+      if (((from_bitField4_ & 0x80000000) != 0)) {
+        result.min_ = min_;
+      }
+    }
+
+    private void buildPartial5(com.sts.rpclib.MatchParticipantStatsMessage result) {
+      int from_bitField5_ = bitField5_;
+      if (((from_bitField5_ & 0x00000001) != 0)) {
+        result.teamContribution_ = teamContribution_;
+      }
+      if (((from_bitField5_ & 0x00000002) != 0)) {
+        result.teamFK_ = teamFK_;
+      }
+      if (((from_bitField5_ & 0x00000004) != 0)) {
+        result.totalCards_ = totalCards_;
+      }
+      if (((from_bitField5_ & 0x00000008) != 0)) {
+        result.totalCardsPerGame_ = totalCardsPerGame_;
+      }
+      if (((from_bitField5_ & 0x00000010) != 0)) {
+        result.sheetsPercentage_ = sheetsPercentage_;
+      }
+      if (((from_bitField5_ & 0x00000020) != 0)) {
+        result.played_ = played_;
+      }
+      if (((from_bitField5_ & 0x00000040) != 0)) {
+        result.noScoringGames_ = noScoringGames_;
+      }
+      if (((from_bitField5_ & 0x00000080) != 0)) {
+        result.goalsBench_ = goalsBench_;
+      }
+      if (((from_bitField5_ & 0x00000100) != 0)) {
+        result.goalsBenchPercentage_ = goalsBenchPercentage_;
+      }
+      if (((from_bitField5_ & 0x00000200) != 0)) {
+        result.playedLineup_ = playedLineup_;
+      }
+      if (((from_bitField5_ & 0x00000400) != 0)) {
+        result.playedLineupPercentage_ = playedLineupPercentage_;
+      }
+      if (((from_bitField5_ & 0x00000800) != 0)) {
+        result.substIn_ = substIn_;
+      }
+      if (((from_bitField5_ & 0x00001000) != 0)) {
+        result.substInPercentage_ = substInPercentage_;
+      }
+      if (((from_bitField5_ & 0x00002000) != 0)) {
+        result.substOut_ = substOut_;
+      }
+      if (((from_bitField5_ & 0x00004000) != 0)) {
+        result.substOutPercentage_ = substOutPercentage_;
+      }
+      if (((from_bitField5_ & 0x00008000) != 0)) {
+        result.foulsPerGame_ = foulsPerGame_;
+      }
+      if (((from_bitField5_ & 0x00010000) != 0)) {
+        result.saves_ = saves_;
+      }
+      if (((from_bitField5_ & 0x00020000) != 0)) {
+        result.savesPerGame_ = savesPerGame_;
+      }
+      if (((from_bitField5_ & 0x00040000) != 0)) {
+        result.savesPercentage_ = savesPercentage_;
+      }
+      if (((from_bitField5_ & 0x00080000) != 0)) {
+        result.goalsLeftFoot_ = goalsLeftFoot_;
+      }
+      if (((from_bitField5_ & 0x00100000) != 0)) {
+        result.goalsRightFoot_ = goalsRightFoot_;
+      }
+      if (((from_bitField5_ & 0x00200000) != 0)) {
+        result.totalShotsAllowed_ = totalShotsAllowed_;
+      }
     }
 
     @java.lang.Override
@@ -4734,7 +5605,159 @@ private static final long serialVersionUID = 0L;
       if (other.getWinners() != 0) {
         setWinners(other.getWinners());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      if (other.getTotalAssists() != 0) {
+        setTotalAssists(other.getTotalAssists());
+      }
+      if (other.getTotalCrosses() != 0) {
+        setTotalCrosses(other.getTotalCrosses());
+      }
+      if (other.getGoalsInsideBox() != 0) {
+        setGoalsInsideBox(other.getGoalsInsideBox());
+      }
+      if (other.getTotalBlockedShots() != 0) {
+        setTotalBlockedShots(other.getTotalBlockedShots());
+      }
+      if (other.getKeyPasses() != 0) {
+        setKeyPasses(other.getKeyPasses());
+      }
+      if (other.getTotalClearances() != 0) {
+        setTotalClearances(other.getTotalClearances());
+      }
+      if (other.getTotalAirChallengesWon() != 0) {
+        setTotalAirChallengesWon(other.getTotalAirChallengesWon());
+      }
+      if (other.getTotalAirChallengesLost() != 0) {
+        setTotalAirChallengesLost(other.getTotalAirChallengesLost());
+      }
+      if (other.getTotalTackles() != 0) {
+        setTotalTackles(other.getTotalTackles());
+      }
+      if (other.getTotalInterceptedCrosses() != 0) {
+        setTotalInterceptedCrosses(other.getTotalInterceptedCrosses());
+      }
+      if (other.getTotalGoalAttempts() != 0) {
+        setTotalGoalAttempts(other.getTotalGoalAttempts());
+      }
+      if (other.getTotalSuccessfulCrosses() != 0) {
+        setTotalSuccessfulCrosses(other.getTotalSuccessfulCrosses());
+      }
+      if (other.getFirstScorer() != 0D) {
+        setFirstScorer(other.getFirstScorer());
+      }
+      if (other.getFirstScorerPercentage() != 0D) {
+        setFirstScorerPercentage(other.getFirstScorerPercentage());
+      }
+      if (other.getNoScoredInRow() != 0D) {
+        setNoScoredInRow(other.getNoScoredInRow());
+      }
+      if (other.getGoalConceded() != 0D) {
+        setGoalConceded(other.getGoalConceded());
+      }
+      if (other.getGoalRatioMinute1X15Percentage() != 0D) {
+        setGoalRatioMinute1X15Percentage(other.getGoalRatioMinute1X15Percentage());
+      }
+      if (other.getGoalRatioMinute16X30Percentage() != 0D) {
+        setGoalRatioMinute16X30Percentage(other.getGoalRatioMinute16X30Percentage());
+      }
+      if (other.getGoalRatioMinute31X45Percentage() != 0D) {
+        setGoalRatioMinute31X45Percentage(other.getGoalRatioMinute31X45Percentage());
+      }
+      if (other.getGoalRatioMinute46X60Percentage() != 0D) {
+        setGoalRatioMinute46X60Percentage(other.getGoalRatioMinute46X60Percentage());
+      }
+      if (other.getGoalRatioMinute61X75Percentage() != 0D) {
+        setGoalRatioMinute61X75Percentage(other.getGoalRatioMinute61X75Percentage());
+      }
+      if (other.getGoalRatioMinute76X90Percentage() != 0D) {
+        setGoalRatioMinute76X90Percentage(other.getGoalRatioMinute76X90Percentage());
+      }
+      if (other.getLastGaspGoal() != 0D) {
+        setLastGaspGoal(other.getLastGaspGoal());
+      }
+      if (other.getLastGaspGoalPercentage() != 0D) {
+        setLastGaspGoalPercentage(other.getLastGaspGoalPercentage());
+      }
+      if (other.getLastToScore() != 0D) {
+        setLastToScore(other.getLastToScore());
+      }
+      if (other.getLastToScorePercentage() != 0D) {
+        setLastToScorePercentage(other.getLastToScorePercentage());
+      }
+      if (other.getMinutesPerGoal() != 0D) {
+        setMinutesPerGoal(other.getMinutesPerGoal());
+      }
+      if (other.getMin() != 0D) {
+        setMin(other.getMin());
+      }
+      if (other.getTeamContribution() != 0D) {
+        setTeamContribution(other.getTeamContribution());
+      }
+      if (!other.getTeamFK().isEmpty()) {
+        teamFK_ = other.teamFK_;
+        bitField5_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.getTotalCards() != 0D) {
+        setTotalCards(other.getTotalCards());
+      }
+      if (other.getTotalCardsPerGame() != 0D) {
+        setTotalCardsPerGame(other.getTotalCardsPerGame());
+      }
+      if (other.getSheetsPercentage() != 0D) {
+        setSheetsPercentage(other.getSheetsPercentage());
+      }
+      if (other.getPlayed() != 0D) {
+        setPlayed(other.getPlayed());
+      }
+      if (other.getNoScoringGames() != 0D) {
+        setNoScoringGames(other.getNoScoringGames());
+      }
+      if (other.getGoalsBench() != 0D) {
+        setGoalsBench(other.getGoalsBench());
+      }
+      if (other.getGoalsBenchPercentage() != 0D) {
+        setGoalsBenchPercentage(other.getGoalsBenchPercentage());
+      }
+      if (other.getPlayedLineup() != 0D) {
+        setPlayedLineup(other.getPlayedLineup());
+      }
+      if (other.getPlayedLineupPercentage() != 0D) {
+        setPlayedLineupPercentage(other.getPlayedLineupPercentage());
+      }
+      if (other.getSubstIn() != 0D) {
+        setSubstIn(other.getSubstIn());
+      }
+      if (other.getSubstInPercentage() != 0D) {
+        setSubstInPercentage(other.getSubstInPercentage());
+      }
+      if (other.getSubstOut() != 0D) {
+        setSubstOut(other.getSubstOut());
+      }
+      if (other.getSubstOutPercentage() != 0D) {
+        setSubstOutPercentage(other.getSubstOutPercentage());
+      }
+      if (other.getFoulsPerGame() != 0D) {
+        setFoulsPerGame(other.getFoulsPerGame());
+      }
+      if (other.getSaves() != 0D) {
+        setSaves(other.getSaves());
+      }
+      if (other.getSavesPerGame() != 0D) {
+        setSavesPerGame(other.getSavesPerGame());
+      }
+      if (other.getSavesPercentage() != 0D) {
+        setSavesPercentage(other.getSavesPercentage());
+      }
+      if (other.getGoalsLeftFoot() != 0D) {
+        setGoalsLeftFoot(other.getGoalsLeftFoot());
+      }
+      if (other.getGoalsRightFoot() != 0D) {
+        setGoalsRightFoot(other.getGoalsRightFoot());
+      }
+      if (other.getTotalShotsAllowed() != 0D) {
+        setTotalShotsAllowed(other.getTotalShotsAllowed());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -4749,19 +5772,948 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.MatchParticipantStatsMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              goals_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              ownGoals_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              yellowCards_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              secondYellowCards_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              redCards_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              assists_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              teamPosition_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              totalGames_ = input.readInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              totalGoals_ = input.readInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              totalCleanSheets_ = input.readInt32();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 88: {
+              totalGamesWithoutGoal_ = input.readInt32();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 96: {
+              wonFirstHalf_ = input.readInt32();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
+            case 104: {
+              wonSecondHalf_ = input.readInt32();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 112: {
+              wonFirstHalfPercentage_ = input.readInt32();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 112
+            case 120: {
+              wonSecondHalfPercentage_ = input.readInt32();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 120
+            case 128: {
+              matchesWonHomePercentage_ = input.readInt32();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 128
+            case 136: {
+              matchesWonAwayPercentage_ = input.readInt32();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 136
+            case 144: {
+              boreDraws_ = input.readInt32();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 144
+            case 152: {
+              boreDrawsPercentage_ = input.readInt32();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 152
+            case 161: {
+              goalsRatio_ = input.readDouble();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 161
+            case 169: {
+              yellowCardsPerGame_ = input.readDouble();
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 169
+            case 176: {
+              penaltyGoals_ = input.readInt32();
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 176
+            case 184: {
+              totalGoalsFirstHalf_ = input.readInt32();
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 184
+            case 192: {
+              totalGoalsSecondHalf_ = input.readInt32();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 192
+            case 200: {
+              totalGoalsFirstHalfPercentage_ = input.readInt32();
+              bitField0_ |= 0x01000000;
+              break;
+            } // case 200
+            case 208: {
+              totalGoalsSecondHalfPercentage_ = input.readInt32();
+              bitField0_ |= 0x02000000;
+              break;
+            } // case 208
+            case 216: {
+              firstGoal_ = input.readInt32();
+              bitField0_ |= 0x04000000;
+              break;
+            } // case 216
+            case 224: {
+              lastGoal_ = input.readInt32();
+              bitField0_ |= 0x08000000;
+              break;
+            } // case 224
+            case 232: {
+              firstGoalPercentage_ = input.readInt32();
+              bitField0_ |= 0x10000000;
+              break;
+            } // case 232
+            case 240: {
+              lastGoalPercentage_ = input.readInt32();
+              bitField0_ |= 0x20000000;
+              break;
+            } // case 240
+            case 248: {
+              goalRatioMinute1X15_ = input.readInt32();
+              bitField0_ |= 0x40000000;
+              break;
+            } // case 248
+            case 256: {
+              goalRatioMinute16X30_ = input.readInt32();
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 256
+            case 264: {
+              goalRatioMinute31X45_ = input.readInt32();
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 264
+            case 272: {
+              goalRatioMinute46X60_ = input.readInt32();
+              bitField1_ |= 0x00000002;
+              break;
+            } // case 272
+            case 280: {
+              goalRatioMinute61X75_ = input.readInt32();
+              bitField1_ |= 0x00000004;
+              break;
+            } // case 280
+            case 288: {
+              goalRatioMinute76X90_ = input.readInt32();
+              bitField1_ |= 0x00000008;
+              break;
+            } // case 288
+            case 296: {
+              goalInBothHalves_ = input.readInt32();
+              bitField1_ |= 0x00000010;
+              break;
+            } // case 296
+            case 304: {
+              goalInBothHalvesPercentage_ = input.readInt32();
+              bitField1_ |= 0x00000020;
+              break;
+            } // case 304
+            case 312: {
+              concededOneOrMoreGoals_ = input.readInt32();
+              bitField1_ |= 0x00000040;
+              break;
+            } // case 312
+            case 320: {
+              concededOneOrMoreGoalsPercentage_ = input.readInt32();
+              bitField1_ |= 0x00000080;
+              break;
+            } // case 320
+            case 328: {
+              wonToNil_ = input.readInt32();
+              bitField1_ |= 0x00000100;
+              break;
+            } // case 328
+            case 336: {
+              wonToNilPercentage_ = input.readInt32();
+              bitField1_ |= 0x00000200;
+              break;
+            } // case 336
+            case 344: {
+              timeBetweenGoalsScored_ = input.readInt32();
+              bitField1_ |= 0x00000400;
+              break;
+            } // case 344
+            case 352: {
+              timeBetweenGoalsScoredConceded_ = input.readInt32();
+              bitField1_ |= 0x00000800;
+              break;
+            } // case 352
+            case 360: {
+              conceded_ = input.readInt32();
+              bitField1_ |= 0x00001000;
+              break;
+            } // case 360
+            case 368: {
+              wonWhen1X0Up_ = input.readInt32();
+              bitField1_ |= 0x00002000;
+              break;
+            } // case 368
+            case 376: {
+              wonWhen1X0Down_ = input.readInt32();
+              bitField1_ |= 0x00004000;
+              break;
+            } // case 376
+            case 384: {
+              wonWhen2X0Up_ = input.readInt32();
+              bitField1_ |= 0x00008000;
+              break;
+            } // case 384
+            case 392: {
+              wonWhen1X0UpPercentage_ = input.readInt32();
+              bitField1_ |= 0x00010000;
+              break;
+            } // case 392
+            case 400: {
+              wonWhen1X0DownPercentage_ = input.readInt32();
+              bitField1_ |= 0x00020000;
+              break;
+            } // case 400
+            case 408: {
+              wonWhen2X0UpPercentage_ = input.readInt32();
+              bitField1_ |= 0x00040000;
+              break;
+            } // case 408
+            case 416: {
+              when1X0UpPoints_ = input.readInt32();
+              bitField1_ |= 0x00080000;
+              break;
+            } // case 416
+            case 424: {
+              when2X0UpPoints_ = input.readInt32();
+              bitField1_ |= 0x00100000;
+              break;
+            } // case 424
+            case 432: {
+              when1X0DownPoints_ = input.readInt32();
+              bitField1_ |= 0x00200000;
+              break;
+            } // case 432
+            case 440: {
+              when2X0DownPoints_ = input.readInt32();
+              bitField1_ |= 0x00400000;
+              break;
+            } // case 440
+            case 448: {
+              when1X0UpPointsPercentage_ = input.readInt32();
+              bitField1_ |= 0x00800000;
+              break;
+            } // case 448
+            case 456: {
+              when2X0UpPointsPercentage_ = input.readInt32();
+              bitField1_ |= 0x01000000;
+              break;
+            } // case 456
+            case 464: {
+              when1X0DownPointsPercentage_ = input.readInt32();
+              bitField1_ |= 0x02000000;
+              break;
+            } // case 464
+            case 472: {
+              when2X0DownPointsPercentage_ = input.readInt32();
+              bitField1_ |= 0x04000000;
+              break;
+            } // case 472
+            case 480: {
+              earlyGoalsTeam_ = input.readInt32();
+              bitField1_ |= 0x08000000;
+              break;
+            } // case 480
+            case 488: {
+              lastGaspGoalsTeam_ = input.readInt32();
+              bitField1_ |= 0x10000000;
+              break;
+            } // case 488
+            case 496: {
+              totalGoalsStartingPlayers_ = input.readInt32();
+              bitField1_ |= 0x20000000;
+              break;
+            } // case 496
+            case 504: {
+              totalGoalsSubbedPlayers_ = input.readInt32();
+              bitField1_ |= 0x40000000;
+              break;
+            } // case 504
+            case 512: {
+              totalGoalsStartingPlayersPercentage_ = input.readInt32();
+              bitField1_ |= 0x80000000;
+              break;
+            } // case 512
+            case 520: {
+              totalGoalsSubbedPlayersPercentage_ = input.readInt32();
+              bitField2_ |= 0x00000001;
+              break;
+            } // case 520
+            case 528: {
+              equaliserGoals_ = input.readInt32();
+              bitField2_ |= 0x00000002;
+              break;
+            } // case 528
+            case 536: {
+              bothToScore_ = input.readInt32();
+              bitField2_ |= 0x00000004;
+              break;
+            } // case 536
+            case 544: {
+              bothToScorePercentage_ = input.readInt32();
+              bitField2_ |= 0x00000008;
+              break;
+            } // case 544
+            case 552: {
+              comebacks_ = input.readInt32();
+              bitField2_ |= 0x00000010;
+              break;
+            } // case 552
+            case 560: {
+              lostLeadToLose_ = input.readInt32();
+              bitField2_ |= 0x00000020;
+              break;
+            } // case 560
+            case 568: {
+              lostInRow_ = input.readInt32();
+              bitField2_ |= 0x00000040;
+              break;
+            } // case 568
+            case 576: {
+              gamesWithoutGoals_ = input.readInt32();
+              bitField2_ |= 0x00000080;
+              break;
+            } // case 576
+            case 584: {
+              wonAtHome_ = input.readInt32();
+              bitField2_ |= 0x00000100;
+              break;
+            } // case 584
+            case 592: {
+              wonAtAway_ = input.readInt32();
+              bitField2_ |= 0x00000200;
+              break;
+            } // case 592
+            case 600: {
+              awayWithoutWin_ = input.readInt32();
+              bitField2_ |= 0x00000400;
+              break;
+            } // case 600
+            case 608: {
+              totalCardsYellowRed_ = input.readInt32();
+              bitField2_ |= 0x00000800;
+              break;
+            } // case 608
+            case 617: {
+              totalCardsYellowRedPerGamePercentage_ = input.readDouble();
+              bitField2_ |= 0x00001000;
+              break;
+            } // case 617
+            case 624: {
+              headGoal_ = input.readInt32();
+              bitField2_ |= 0x00002000;
+              break;
+            } // case 624
+            case 632: {
+              strikeGoal_ = input.readInt32();
+              bitField2_ |= 0x00004000;
+              break;
+            } // case 632
+            case 640: {
+              headGoalPercentage_ = input.readInt32();
+              bitField2_ |= 0x00008000;
+              break;
+            } // case 640
+            case 648: {
+              strikeGoalPercentage_ = input.readInt32();
+              bitField2_ |= 0x00010000;
+              break;
+            } // case 648
+            case 656: {
+              foulCommit_ = input.readInt32();
+              bitField2_ |= 0x00020000;
+              break;
+            } // case 656
+            case 665: {
+              foulCommitPerGame_ = input.readDouble();
+              bitField2_ |= 0x00040000;
+              break;
+            } // case 665
+            case 672: {
+              shoton_ = input.readInt32();
+              bitField2_ |= 0x00080000;
+              break;
+            } // case 672
+            case 681: {
+              shotonPerGame_ = input.readDouble();
+              bitField2_ |= 0x00100000;
+              break;
+            } // case 681
+            case 688: {
+              shotoff_ = input.readInt32();
+              bitField2_ |= 0x00200000;
+              break;
+            } // case 688
+            case 697: {
+              shotoffPerGame_ = input.readDouble();
+              bitField2_ |= 0x00400000;
+              break;
+            } // case 697
+            case 705: {
+              shotsonPerGoal_ = input.readDouble();
+              bitField2_ |= 0x00800000;
+              break;
+            } // case 705
+            case 712: {
+              offside_ = input.readInt32();
+              bitField2_ |= 0x01000000;
+              break;
+            } // case 712
+            case 721: {
+              offsidePerGame_ = input.readDouble();
+              bitField2_ |= 0x02000000;
+              break;
+            } // case 721
+            case 728: {
+              cornerTaken_ = input.readInt32();
+              bitField2_ |= 0x04000000;
+              break;
+            } // case 728
+            case 737: {
+              cornerTakenPerGame_ = input.readDouble();
+              bitField2_ |= 0x08000000;
+              break;
+            } // case 737
+            case 744: {
+              penaltyMissed_ = input.readInt32();
+              bitField2_ |= 0x10000000;
+              break;
+            } // case 744
+            case 752: {
+              penaltyMissedPercentage_ = input.readInt32();
+              bitField2_ |= 0x20000000;
+              break;
+            } // case 752
+            case 761: {
+              elapsedPlusPerGame_ = input.readDouble();
+              bitField2_ |= 0x40000000;
+              break;
+            } // case 761
+            case 768: {
+              woodwork_ = input.readInt32();
+              bitField2_ |= 0x80000000;
+              break;
+            } // case 768
+            case 776: {
+              penaltyCommit_ = input.readInt32();
+              bitField3_ |= 0x00000001;
+              break;
+            } // case 776
+            case 784: {
+              penaltyCommitPercentage_ = input.readInt32();
+              bitField3_ |= 0x00000002;
+              break;
+            } // case 784
+            case 792: {
+              foulsuffered_ = input.readInt32();
+              bitField3_ |= 0x00000004;
+              break;
+            } // case 792
+            case 800: {
+              totalShots_ = input.readInt32();
+              bitField3_ |= 0x00000008;
+              break;
+            } // case 800
+            case 808: {
+              penaltySaves_ = input.readInt32();
+              bitField3_ |= 0x00000010;
+              break;
+            } // case 808
+            case 816: {
+              defensiveError_ = input.readInt32();
+              bitField3_ |= 0x00000020;
+              break;
+            } // case 816
+            case 824: {
+              averagePossession_ = input.readInt32();
+              bitField3_ |= 0x00000040;
+              break;
+            } // case 824
+            case 832: {
+              penaltiesAwarded_ = input.readInt32();
+              bitField3_ |= 0x00000080;
+              break;
+            } // case 832
+            case 840: {
+              goalOutsideBox_ = input.readInt32();
+              bitField3_ |= 0x00000100;
+              break;
+            } // case 840
+            case 848: {
+              goalOutsideBoxPercentage_ = input.readInt32();
+              bitField3_ |= 0x00000200;
+              break;
+            } // case 848
+            case 856: {
+              directFreekick_ = input.readInt32();
+              bitField3_ |= 0x00000400;
+              break;
+            } // case 856
+            case 864: {
+              directFreekickPercentage_ = input.readInt32();
+              bitField3_ |= 0x00000800;
+              break;
+            } // case 864
+            case 872: {
+              scoredInRow_ = input.readInt32();
+              bitField3_ |= 0x00001000;
+              break;
+            } // case 872
+            case 880: {
+              wonInRow_ = input.readInt32();
+              bitField3_ |= 0x00002000;
+              break;
+            } // case 880
+            case 888: {
+              noconcedingInRow_ = input.readInt32();
+              bitField3_ |= 0x00004000;
+              break;
+            } // case 888
+            case 896: {
+              homeWithoutWin_ = input.readInt32();
+              bitField3_ |= 0x00008000;
+              break;
+            } // case 896
+            case 904: {
+              won2Down_ = input.readInt32();
+              bitField3_ |= 0x00010000;
+              break;
+            } // case 904
+            case 912: {
+              won2DownPercentage_ = input.readInt32();
+              bitField3_ |= 0x00020000;
+              break;
+            } // case 912
+            case 920: {
+              firstReturnPointsWon_ = input.readInt32();
+              bitField3_ |= 0x00040000;
+              break;
+            } // case 920
+            case 929: {
+              firstServePercentage_ = input.readDouble();
+              bitField3_ |= 0x00080000;
+              break;
+            } // case 929
+            case 936: {
+              firstServePointsWon_ = input.readInt32();
+              bitField3_ |= 0x00100000;
+              break;
+            } // case 936
+            case 944: {
+              secondReturnPointsWon_ = input.readInt32();
+              bitField3_ |= 0x00200000;
+              break;
+            } // case 944
+            case 952: {
+              secondServePointsWon_ = input.readInt32();
+              bitField3_ |= 0x00400000;
+              break;
+            } // case 952
+            case 960: {
+              aces_ = input.readInt32();
+              bitField3_ |= 0x00800000;
+              break;
+            } // case 960
+            case 968: {
+              breakPointsSaved_ = input.readInt32();
+              bitField3_ |= 0x01000000;
+              break;
+            } // case 968
+            case 976: {
+              breakPointsWon_ = input.readInt32();
+              bitField3_ |= 0x02000000;
+              break;
+            } // case 976
+            case 984: {
+              doubleFaults_ = input.readInt32();
+              bitField3_ |= 0x04000000;
+              break;
+            } // case 984
+            case 993: {
+              returnPointsWonPercentage_ = input.readDouble();
+              bitField3_ |= 0x08000000;
+              break;
+            } // case 993
+            case 1000: {
+              serviceGames_ = input.readInt32();
+              bitField3_ |= 0x10000000;
+              break;
+            } // case 1000
+            case 1009: {
+              servicePointsWonPercentage_ = input.readDouble();
+              bitField3_ |= 0x20000000;
+              break;
+            } // case 1009
+            case 1016: {
+              firstServePointsAll_ = input.readInt32();
+              bitField3_ |= 0x40000000;
+              break;
+            } // case 1016
+            case 1024: {
+              secondServePointsAll_ = input.readInt32();
+              bitField3_ |= 0x80000000;
+              break;
+            } // case 1024
+            case 1032: {
+              totalPointsWon_ = input.readInt32();
+              bitField4_ |= 0x00000001;
+              break;
+            } // case 1032
+            case 1041: {
+              totalPointsWonPercentage_ = input.readDouble();
+              bitField4_ |= 0x00000002;
+              break;
+            } // case 1041
+            case 1048: {
+              unforcedErrors_ = input.readInt32();
+              bitField4_ |= 0x00000004;
+              break;
+            } // case 1048
+            case 1056: {
+              winners_ = input.readInt32();
+              bitField4_ |= 0x00000008;
+              break;
+            } // case 1056
+            case 1064: {
+              totalAssists_ = input.readInt32();
+              bitField4_ |= 0x00000010;
+              break;
+            } // case 1064
+            case 1072: {
+              totalCrosses_ = input.readInt32();
+              bitField4_ |= 0x00000020;
+              break;
+            } // case 1072
+            case 1080: {
+              goalsInsideBox_ = input.readInt32();
+              bitField4_ |= 0x00000040;
+              break;
+            } // case 1080
+            case 1088: {
+              totalBlockedShots_ = input.readInt32();
+              bitField4_ |= 0x00000080;
+              break;
+            } // case 1088
+            case 1096: {
+              keyPasses_ = input.readInt32();
+              bitField4_ |= 0x00000100;
+              break;
+            } // case 1096
+            case 1104: {
+              totalClearances_ = input.readInt32();
+              bitField4_ |= 0x00000200;
+              break;
+            } // case 1104
+            case 1112: {
+              totalAirChallengesWon_ = input.readInt32();
+              bitField4_ |= 0x00000400;
+              break;
+            } // case 1112
+            case 1120: {
+              totalAirChallengesLost_ = input.readInt32();
+              bitField4_ |= 0x00000800;
+              break;
+            } // case 1120
+            case 1128: {
+              totalTackles_ = input.readInt32();
+              bitField4_ |= 0x00001000;
+              break;
+            } // case 1128
+            case 1136: {
+              totalInterceptedCrosses_ = input.readInt32();
+              bitField4_ |= 0x00002000;
+              break;
+            } // case 1136
+            case 1144: {
+              totalGoalAttempts_ = input.readInt32();
+              bitField4_ |= 0x00004000;
+              break;
+            } // case 1144
+            case 1152: {
+              totalSuccessfulCrosses_ = input.readInt32();
+              bitField4_ |= 0x00008000;
+              break;
+            } // case 1152
+            case 1161: {
+              firstScorer_ = input.readDouble();
+              bitField4_ |= 0x00010000;
+              break;
+            } // case 1161
+            case 1169: {
+              firstScorerPercentage_ = input.readDouble();
+              bitField4_ |= 0x00020000;
+              break;
+            } // case 1169
+            case 1177: {
+              noScoredInRow_ = input.readDouble();
+              bitField4_ |= 0x00040000;
+              break;
+            } // case 1177
+            case 1185: {
+              goalConceded_ = input.readDouble();
+              bitField4_ |= 0x00080000;
+              break;
+            } // case 1185
+            case 1193: {
+              goalRatioMinute1X15Percentage_ = input.readDouble();
+              bitField4_ |= 0x00100000;
+              break;
+            } // case 1193
+            case 1201: {
+              goalRatioMinute16X30Percentage_ = input.readDouble();
+              bitField4_ |= 0x00200000;
+              break;
+            } // case 1201
+            case 1209: {
+              goalRatioMinute31X45Percentage_ = input.readDouble();
+              bitField4_ |= 0x00400000;
+              break;
+            } // case 1209
+            case 1217: {
+              goalRatioMinute46X60Percentage_ = input.readDouble();
+              bitField4_ |= 0x00800000;
+              break;
+            } // case 1217
+            case 1225: {
+              goalRatioMinute61X75Percentage_ = input.readDouble();
+              bitField4_ |= 0x01000000;
+              break;
+            } // case 1225
+            case 1233: {
+              goalRatioMinute76X90Percentage_ = input.readDouble();
+              bitField4_ |= 0x02000000;
+              break;
+            } // case 1233
+            case 1241: {
+              lastGaspGoal_ = input.readDouble();
+              bitField4_ |= 0x04000000;
+              break;
+            } // case 1241
+            case 1249: {
+              lastGaspGoalPercentage_ = input.readDouble();
+              bitField4_ |= 0x08000000;
+              break;
+            } // case 1249
+            case 1257: {
+              lastToScore_ = input.readDouble();
+              bitField4_ |= 0x10000000;
+              break;
+            } // case 1257
+            case 1265: {
+              lastToScorePercentage_ = input.readDouble();
+              bitField4_ |= 0x20000000;
+              break;
+            } // case 1265
+            case 1273: {
+              minutesPerGoal_ = input.readDouble();
+              bitField4_ |= 0x40000000;
+              break;
+            } // case 1273
+            case 1281: {
+              min_ = input.readDouble();
+              bitField4_ |= 0x80000000;
+              break;
+            } // case 1281
+            case 1289: {
+              teamContribution_ = input.readDouble();
+              bitField5_ |= 0x00000001;
+              break;
+            } // case 1289
+            case 1298: {
+              teamFK_ = input.readStringRequireUtf8();
+              bitField5_ |= 0x00000002;
+              break;
+            } // case 1298
+            case 1305: {
+              totalCards_ = input.readDouble();
+              bitField5_ |= 0x00000004;
+              break;
+            } // case 1305
+            case 1313: {
+              totalCardsPerGame_ = input.readDouble();
+              bitField5_ |= 0x00000008;
+              break;
+            } // case 1313
+            case 1321: {
+              sheetsPercentage_ = input.readDouble();
+              bitField5_ |= 0x00000010;
+              break;
+            } // case 1321
+            case 1329: {
+              played_ = input.readDouble();
+              bitField5_ |= 0x00000020;
+              break;
+            } // case 1329
+            case 1337: {
+              noScoringGames_ = input.readDouble();
+              bitField5_ |= 0x00000040;
+              break;
+            } // case 1337
+            case 1345: {
+              goalsBench_ = input.readDouble();
+              bitField5_ |= 0x00000080;
+              break;
+            } // case 1345
+            case 1353: {
+              goalsBenchPercentage_ = input.readDouble();
+              bitField5_ |= 0x00000100;
+              break;
+            } // case 1353
+            case 1361: {
+              playedLineup_ = input.readDouble();
+              bitField5_ |= 0x00000200;
+              break;
+            } // case 1361
+            case 1369: {
+              playedLineupPercentage_ = input.readDouble();
+              bitField5_ |= 0x00000400;
+              break;
+            } // case 1369
+            case 1377: {
+              substIn_ = input.readDouble();
+              bitField5_ |= 0x00000800;
+              break;
+            } // case 1377
+            case 1385: {
+              substInPercentage_ = input.readDouble();
+              bitField5_ |= 0x00001000;
+              break;
+            } // case 1385
+            case 1393: {
+              substOut_ = input.readDouble();
+              bitField5_ |= 0x00002000;
+              break;
+            } // case 1393
+            case 1401: {
+              substOutPercentage_ = input.readDouble();
+              bitField5_ |= 0x00004000;
+              break;
+            } // case 1401
+            case 1409: {
+              foulsPerGame_ = input.readDouble();
+              bitField5_ |= 0x00008000;
+              break;
+            } // case 1409
+            case 1417: {
+              saves_ = input.readDouble();
+              bitField5_ |= 0x00010000;
+              break;
+            } // case 1417
+            case 1425: {
+              savesPerGame_ = input.readDouble();
+              bitField5_ |= 0x00020000;
+              break;
+            } // case 1425
+            case 1433: {
+              savesPercentage_ = input.readDouble();
+              bitField5_ |= 0x00040000;
+              break;
+            } // case 1433
+            case 1441: {
+              goalsLeftFoot_ = input.readDouble();
+              bitField5_ |= 0x00080000;
+              break;
+            } // case 1441
+            case 1449: {
+              goalsRightFoot_ = input.readDouble();
+              bitField5_ |= 0x00100000;
+              break;
+            } // case 1449
+            case 1457: {
+              totalShotsAllowed_ = input.readDouble();
+              bitField5_ |= 0x00200000;
+              break;
+            } // case 1457
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.MatchParticipantStatsMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
+    private int bitField1_;
+    private int bitField2_;
+    private int bitField3_;
+    private int bitField4_;
+    private int bitField5_;
 
     private int goals_ ;
     /**
@@ -4778,8 +6730,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoals(int value) {
-      
+
       goals_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -4788,7 +6741,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoals() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       goals_ = 0;
       onChanged();
       return this;
@@ -4809,8 +6762,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOwnGoals(int value) {
-      
+
       ownGoals_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4819,7 +6773,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOwnGoals() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       ownGoals_ = 0;
       onChanged();
       return this;
@@ -4840,8 +6794,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setYellowCards(int value) {
-      
+
       yellowCards_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -4850,7 +6805,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYellowCards() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       yellowCards_ = 0;
       onChanged();
       return this;
@@ -4871,8 +6826,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSecondYellowCards(int value) {
-      
+
       secondYellowCards_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -4881,7 +6837,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSecondYellowCards() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       secondYellowCards_ = 0;
       onChanged();
       return this;
@@ -4902,8 +6858,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRedCards(int value) {
-      
+
       redCards_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -4912,7 +6869,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRedCards() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       redCards_ = 0;
       onChanged();
       return this;
@@ -4933,8 +6890,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAssists(int value) {
-      
+
       assists_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -4943,7 +6901,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssists() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       assists_ = 0;
       onChanged();
       return this;
@@ -4964,8 +6922,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTeamPosition(int value) {
-      
+
       teamPosition_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -4974,7 +6933,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTeamPosition() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       teamPosition_ = 0;
       onChanged();
       return this;
@@ -4995,8 +6954,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGames(int value) {
-      
+
       totalGames_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -5005,7 +6965,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGames() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       totalGames_ = 0;
       onChanged();
       return this;
@@ -5026,8 +6986,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoals(int value) {
-      
+
       totalGoals_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -5036,7 +6997,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoals() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       totalGoals_ = 0;
       onChanged();
       return this;
@@ -5057,8 +7018,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCleanSheets(int value) {
-      
+
       totalCleanSheets_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -5067,7 +7029,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCleanSheets() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       totalCleanSheets_ = 0;
       onChanged();
       return this;
@@ -5088,8 +7050,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGamesWithoutGoal(int value) {
-      
+
       totalGamesWithoutGoal_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -5098,7 +7061,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGamesWithoutGoal() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       totalGamesWithoutGoal_ = 0;
       onChanged();
       return this;
@@ -5119,8 +7082,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonFirstHalf(int value) {
-      
+
       wonFirstHalf_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -5129,7 +7093,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonFirstHalf() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       wonFirstHalf_ = 0;
       onChanged();
       return this;
@@ -5150,8 +7114,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonSecondHalf(int value) {
-      
+
       wonSecondHalf_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -5160,7 +7125,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonSecondHalf() {
-      
+      bitField0_ = (bitField0_ & ~0x00001000);
       wonSecondHalf_ = 0;
       onChanged();
       return this;
@@ -5181,8 +7146,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonFirstHalfPercentage(int value) {
-      
+
       wonFirstHalfPercentage_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -5191,7 +7157,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonFirstHalfPercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x00002000);
       wonFirstHalfPercentage_ = 0;
       onChanged();
       return this;
@@ -5212,8 +7178,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonSecondHalfPercentage(int value) {
-      
+
       wonSecondHalfPercentage_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -5222,7 +7189,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonSecondHalfPercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x00004000);
       wonSecondHalfPercentage_ = 0;
       onChanged();
       return this;
@@ -5243,8 +7210,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMatchesWonHomePercentage(int value) {
-      
+
       matchesWonHomePercentage_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -5253,7 +7221,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMatchesWonHomePercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x00008000);
       matchesWonHomePercentage_ = 0;
       onChanged();
       return this;
@@ -5274,8 +7242,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMatchesWonAwayPercentage(int value) {
-      
+
       matchesWonAwayPercentage_ = value;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -5284,7 +7253,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMatchesWonAwayPercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x00010000);
       matchesWonAwayPercentage_ = 0;
       onChanged();
       return this;
@@ -5305,8 +7274,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBoreDraws(int value) {
-      
+
       boreDraws_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -5315,7 +7285,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBoreDraws() {
-      
+      bitField0_ = (bitField0_ & ~0x00020000);
       boreDraws_ = 0;
       onChanged();
       return this;
@@ -5336,8 +7306,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBoreDrawsPercentage(int value) {
-      
+
       boreDrawsPercentage_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -5346,7 +7317,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBoreDrawsPercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x00040000);
       boreDrawsPercentage_ = 0;
       onChanged();
       return this;
@@ -5367,8 +7338,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalsRatio(double value) {
-      
+
       goalsRatio_ = value;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -5377,7 +7349,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalsRatio() {
-      
+      bitField0_ = (bitField0_ & ~0x00080000);
       goalsRatio_ = 0D;
       onChanged();
       return this;
@@ -5398,8 +7370,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setYellowCardsPerGame(double value) {
-      
+
       yellowCardsPerGame_ = value;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -5408,7 +7381,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYellowCardsPerGame() {
-      
+      bitField0_ = (bitField0_ & ~0x00100000);
       yellowCardsPerGame_ = 0D;
       onChanged();
       return this;
@@ -5429,8 +7402,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPenaltyGoals(int value) {
-      
+
       penaltyGoals_ = value;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -5439,7 +7413,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPenaltyGoals() {
-      
+      bitField0_ = (bitField0_ & ~0x00200000);
       penaltyGoals_ = 0;
       onChanged();
       return this;
@@ -5460,8 +7434,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoalsFirstHalf(int value) {
-      
+
       totalGoalsFirstHalf_ = value;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -5470,7 +7445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoalsFirstHalf() {
-      
+      bitField0_ = (bitField0_ & ~0x00400000);
       totalGoalsFirstHalf_ = 0;
       onChanged();
       return this;
@@ -5491,8 +7466,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoalsSecondHalf(int value) {
-      
+
       totalGoalsSecondHalf_ = value;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -5501,7 +7477,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoalsSecondHalf() {
-      
+      bitField0_ = (bitField0_ & ~0x00800000);
       totalGoalsSecondHalf_ = 0;
       onChanged();
       return this;
@@ -5522,8 +7498,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoalsFirstHalfPercentage(int value) {
-      
+
       totalGoalsFirstHalfPercentage_ = value;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -5532,7 +7509,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoalsFirstHalfPercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x01000000);
       totalGoalsFirstHalfPercentage_ = 0;
       onChanged();
       return this;
@@ -5553,8 +7530,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoalsSecondHalfPercentage(int value) {
-      
+
       totalGoalsSecondHalfPercentage_ = value;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -5563,7 +7541,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoalsSecondHalfPercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x02000000);
       totalGoalsSecondHalfPercentage_ = 0;
       onChanged();
       return this;
@@ -5584,8 +7562,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFirstGoal(int value) {
-      
+
       firstGoal_ = value;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -5594,7 +7573,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFirstGoal() {
-      
+      bitField0_ = (bitField0_ & ~0x04000000);
       firstGoal_ = 0;
       onChanged();
       return this;
@@ -5615,8 +7594,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLastGoal(int value) {
-      
+
       lastGoal_ = value;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -5625,7 +7605,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLastGoal() {
-      
+      bitField0_ = (bitField0_ & ~0x08000000);
       lastGoal_ = 0;
       onChanged();
       return this;
@@ -5646,8 +7626,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFirstGoalPercentage(int value) {
-      
+
       firstGoalPercentage_ = value;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -5656,7 +7637,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFirstGoalPercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x10000000);
       firstGoalPercentage_ = 0;
       onChanged();
       return this;
@@ -5677,8 +7658,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLastGoalPercentage(int value) {
-      
+
       lastGoalPercentage_ = value;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -5687,7 +7669,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLastGoalPercentage() {
-      
+      bitField0_ = (bitField0_ & ~0x20000000);
       lastGoalPercentage_ = 0;
       onChanged();
       return this;
@@ -5708,8 +7690,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalRatioMinute1X15(int value) {
-      
+
       goalRatioMinute1X15_ = value;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -5718,7 +7701,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalRatioMinute1X15() {
-      
+      bitField0_ = (bitField0_ & ~0x40000000);
       goalRatioMinute1X15_ = 0;
       onChanged();
       return this;
@@ -5739,8 +7722,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalRatioMinute16X30(int value) {
-      
+
       goalRatioMinute16X30_ = value;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -5749,7 +7733,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalRatioMinute16X30() {
-      
+      bitField0_ = (bitField0_ & ~0x80000000);
       goalRatioMinute16X30_ = 0;
       onChanged();
       return this;
@@ -5770,8 +7754,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalRatioMinute31X45(int value) {
-      
+
       goalRatioMinute31X45_ = value;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5780,7 +7765,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalRatioMinute31X45() {
-      
+      bitField1_ = (bitField1_ & ~0x00000001);
       goalRatioMinute31X45_ = 0;
       onChanged();
       return this;
@@ -5801,8 +7786,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalRatioMinute46X60(int value) {
-      
+
       goalRatioMinute46X60_ = value;
+      bitField1_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5811,7 +7797,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalRatioMinute46X60() {
-      
+      bitField1_ = (bitField1_ & ~0x00000002);
       goalRatioMinute46X60_ = 0;
       onChanged();
       return this;
@@ -5832,8 +7818,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalRatioMinute61X75(int value) {
-      
+
       goalRatioMinute61X75_ = value;
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -5842,7 +7829,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalRatioMinute61X75() {
-      
+      bitField1_ = (bitField1_ & ~0x00000004);
       goalRatioMinute61X75_ = 0;
       onChanged();
       return this;
@@ -5863,8 +7850,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalRatioMinute76X90(int value) {
-      
+
       goalRatioMinute76X90_ = value;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -5873,7 +7861,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalRatioMinute76X90() {
-      
+      bitField1_ = (bitField1_ & ~0x00000008);
       goalRatioMinute76X90_ = 0;
       onChanged();
       return this;
@@ -5894,8 +7882,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalInBothHalves(int value) {
-      
+
       goalInBothHalves_ = value;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -5904,7 +7893,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalInBothHalves() {
-      
+      bitField1_ = (bitField1_ & ~0x00000010);
       goalInBothHalves_ = 0;
       onChanged();
       return this;
@@ -5925,8 +7914,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalInBothHalvesPercentage(int value) {
-      
+
       goalInBothHalvesPercentage_ = value;
+      bitField1_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -5935,7 +7925,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalInBothHalvesPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x00000020);
       goalInBothHalvesPercentage_ = 0;
       onChanged();
       return this;
@@ -5956,8 +7946,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConcededOneOrMoreGoals(int value) {
-      
+
       concededOneOrMoreGoals_ = value;
+      bitField1_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -5966,7 +7957,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConcededOneOrMoreGoals() {
-      
+      bitField1_ = (bitField1_ & ~0x00000040);
       concededOneOrMoreGoals_ = 0;
       onChanged();
       return this;
@@ -5987,8 +7978,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConcededOneOrMoreGoalsPercentage(int value) {
-      
+
       concededOneOrMoreGoalsPercentage_ = value;
+      bitField1_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -5997,7 +7989,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConcededOneOrMoreGoalsPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x00000080);
       concededOneOrMoreGoalsPercentage_ = 0;
       onChanged();
       return this;
@@ -6018,8 +8010,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonToNil(int value) {
-      
+
       wonToNil_ = value;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -6028,7 +8021,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonToNil() {
-      
+      bitField1_ = (bitField1_ & ~0x00000100);
       wonToNil_ = 0;
       onChanged();
       return this;
@@ -6049,8 +8042,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonToNilPercentage(int value) {
-      
+
       wonToNilPercentage_ = value;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -6059,7 +8053,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonToNilPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x00000200);
       wonToNilPercentage_ = 0;
       onChanged();
       return this;
@@ -6080,8 +8074,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeBetweenGoalsScored(int value) {
-      
+
       timeBetweenGoalsScored_ = value;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -6090,7 +8085,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeBetweenGoalsScored() {
-      
+      bitField1_ = (bitField1_ & ~0x00000400);
       timeBetweenGoalsScored_ = 0;
       onChanged();
       return this;
@@ -6111,8 +8106,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeBetweenGoalsScoredConceded(int value) {
-      
+
       timeBetweenGoalsScoredConceded_ = value;
+      bitField1_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -6121,7 +8117,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeBetweenGoalsScoredConceded() {
-      
+      bitField1_ = (bitField1_ & ~0x00000800);
       timeBetweenGoalsScoredConceded_ = 0;
       onChanged();
       return this;
@@ -6142,8 +8138,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConceded(int value) {
-      
+
       conceded_ = value;
+      bitField1_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -6152,7 +8149,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConceded() {
-      
+      bitField1_ = (bitField1_ & ~0x00001000);
       conceded_ = 0;
       onChanged();
       return this;
@@ -6173,8 +8170,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonWhen1X0Up(int value) {
-      
+
       wonWhen1X0Up_ = value;
+      bitField1_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -6183,7 +8181,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonWhen1X0Up() {
-      
+      bitField1_ = (bitField1_ & ~0x00002000);
       wonWhen1X0Up_ = 0;
       onChanged();
       return this;
@@ -6204,8 +8202,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonWhen1X0Down(int value) {
-      
+
       wonWhen1X0Down_ = value;
+      bitField1_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -6214,7 +8213,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonWhen1X0Down() {
-      
+      bitField1_ = (bitField1_ & ~0x00004000);
       wonWhen1X0Down_ = 0;
       onChanged();
       return this;
@@ -6235,8 +8234,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonWhen2X0Up(int value) {
-      
+
       wonWhen2X0Up_ = value;
+      bitField1_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -6245,7 +8245,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonWhen2X0Up() {
-      
+      bitField1_ = (bitField1_ & ~0x00008000);
       wonWhen2X0Up_ = 0;
       onChanged();
       return this;
@@ -6266,8 +8266,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonWhen1X0UpPercentage(int value) {
-      
+
       wonWhen1X0UpPercentage_ = value;
+      bitField1_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -6276,7 +8277,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonWhen1X0UpPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x00010000);
       wonWhen1X0UpPercentage_ = 0;
       onChanged();
       return this;
@@ -6297,8 +8298,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonWhen1X0DownPercentage(int value) {
-      
+
       wonWhen1X0DownPercentage_ = value;
+      bitField1_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -6307,7 +8309,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonWhen1X0DownPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x00020000);
       wonWhen1X0DownPercentage_ = 0;
       onChanged();
       return this;
@@ -6328,8 +8330,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonWhen2X0UpPercentage(int value) {
-      
+
       wonWhen2X0UpPercentage_ = value;
+      bitField1_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -6338,7 +8341,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonWhen2X0UpPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x00040000);
       wonWhen2X0UpPercentage_ = 0;
       onChanged();
       return this;
@@ -6359,8 +8362,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWhen1X0UpPoints(int value) {
-      
+
       when1X0UpPoints_ = value;
+      bitField1_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -6369,7 +8373,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhen1X0UpPoints() {
-      
+      bitField1_ = (bitField1_ & ~0x00080000);
       when1X0UpPoints_ = 0;
       onChanged();
       return this;
@@ -6390,8 +8394,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWhen2X0UpPoints(int value) {
-      
+
       when2X0UpPoints_ = value;
+      bitField1_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -6400,7 +8405,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhen2X0UpPoints() {
-      
+      bitField1_ = (bitField1_ & ~0x00100000);
       when2X0UpPoints_ = 0;
       onChanged();
       return this;
@@ -6421,8 +8426,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWhen1X0DownPoints(int value) {
-      
+
       when1X0DownPoints_ = value;
+      bitField1_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -6431,7 +8437,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhen1X0DownPoints() {
-      
+      bitField1_ = (bitField1_ & ~0x00200000);
       when1X0DownPoints_ = 0;
       onChanged();
       return this;
@@ -6452,8 +8458,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWhen2X0DownPoints(int value) {
-      
+
       when2X0DownPoints_ = value;
+      bitField1_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -6462,7 +8469,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhen2X0DownPoints() {
-      
+      bitField1_ = (bitField1_ & ~0x00400000);
       when2X0DownPoints_ = 0;
       onChanged();
       return this;
@@ -6483,8 +8490,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWhen1X0UpPointsPercentage(int value) {
-      
+
       when1X0UpPointsPercentage_ = value;
+      bitField1_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -6493,7 +8501,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhen1X0UpPointsPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x00800000);
       when1X0UpPointsPercentage_ = 0;
       onChanged();
       return this;
@@ -6514,8 +8522,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWhen2X0UpPointsPercentage(int value) {
-      
+
       when2X0UpPointsPercentage_ = value;
+      bitField1_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -6524,7 +8533,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhen2X0UpPointsPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x01000000);
       when2X0UpPointsPercentage_ = 0;
       onChanged();
       return this;
@@ -6545,8 +8554,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWhen1X0DownPointsPercentage(int value) {
-      
+
       when1X0DownPointsPercentage_ = value;
+      bitField1_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -6555,7 +8565,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhen1X0DownPointsPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x02000000);
       when1X0DownPointsPercentage_ = 0;
       onChanged();
       return this;
@@ -6576,8 +8586,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWhen2X0DownPointsPercentage(int value) {
-      
+
       when2X0DownPointsPercentage_ = value;
+      bitField1_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -6586,7 +8597,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhen2X0DownPointsPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x04000000);
       when2X0DownPointsPercentage_ = 0;
       onChanged();
       return this;
@@ -6607,8 +8618,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEarlyGoalsTeam(int value) {
-      
+
       earlyGoalsTeam_ = value;
+      bitField1_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -6617,7 +8629,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEarlyGoalsTeam() {
-      
+      bitField1_ = (bitField1_ & ~0x08000000);
       earlyGoalsTeam_ = 0;
       onChanged();
       return this;
@@ -6638,8 +8650,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLastGaspGoalsTeam(int value) {
-      
+
       lastGaspGoalsTeam_ = value;
+      bitField1_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -6648,7 +8661,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLastGaspGoalsTeam() {
-      
+      bitField1_ = (bitField1_ & ~0x10000000);
       lastGaspGoalsTeam_ = 0;
       onChanged();
       return this;
@@ -6669,8 +8682,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoalsStartingPlayers(int value) {
-      
+
       totalGoalsStartingPlayers_ = value;
+      bitField1_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -6679,7 +8693,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoalsStartingPlayers() {
-      
+      bitField1_ = (bitField1_ & ~0x20000000);
       totalGoalsStartingPlayers_ = 0;
       onChanged();
       return this;
@@ -6700,8 +8714,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoalsSubbedPlayers(int value) {
-      
+
       totalGoalsSubbedPlayers_ = value;
+      bitField1_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -6710,7 +8725,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoalsSubbedPlayers() {
-      
+      bitField1_ = (bitField1_ & ~0x40000000);
       totalGoalsSubbedPlayers_ = 0;
       onChanged();
       return this;
@@ -6731,8 +8746,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoalsStartingPlayersPercentage(int value) {
-      
+
       totalGoalsStartingPlayersPercentage_ = value;
+      bitField1_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -6741,7 +8757,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoalsStartingPlayersPercentage() {
-      
+      bitField1_ = (bitField1_ & ~0x80000000);
       totalGoalsStartingPlayersPercentage_ = 0;
       onChanged();
       return this;
@@ -6762,8 +8778,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalGoalsSubbedPlayersPercentage(int value) {
-      
+
       totalGoalsSubbedPlayersPercentage_ = value;
+      bitField2_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -6772,7 +8789,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalGoalsSubbedPlayersPercentage() {
-      
+      bitField2_ = (bitField2_ & ~0x00000001);
       totalGoalsSubbedPlayersPercentage_ = 0;
       onChanged();
       return this;
@@ -6793,8 +8810,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEqualiserGoals(int value) {
-      
+
       equaliserGoals_ = value;
+      bitField2_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -6803,7 +8821,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEqualiserGoals() {
-      
+      bitField2_ = (bitField2_ & ~0x00000002);
       equaliserGoals_ = 0;
       onChanged();
       return this;
@@ -6824,8 +8842,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBothToScore(int value) {
-      
+
       bothToScore_ = value;
+      bitField2_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -6834,7 +8853,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBothToScore() {
-      
+      bitField2_ = (bitField2_ & ~0x00000004);
       bothToScore_ = 0;
       onChanged();
       return this;
@@ -6855,8 +8874,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBothToScorePercentage(int value) {
-      
+
       bothToScorePercentage_ = value;
+      bitField2_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -6865,7 +8885,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBothToScorePercentage() {
-      
+      bitField2_ = (bitField2_ & ~0x00000008);
       bothToScorePercentage_ = 0;
       onChanged();
       return this;
@@ -6886,8 +8906,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setComebacks(int value) {
-      
+
       comebacks_ = value;
+      bitField2_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -6896,7 +8917,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearComebacks() {
-      
+      bitField2_ = (bitField2_ & ~0x00000010);
       comebacks_ = 0;
       onChanged();
       return this;
@@ -6917,8 +8938,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLostLeadToLose(int value) {
-      
+
       lostLeadToLose_ = value;
+      bitField2_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -6927,7 +8949,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLostLeadToLose() {
-      
+      bitField2_ = (bitField2_ & ~0x00000020);
       lostLeadToLose_ = 0;
       onChanged();
       return this;
@@ -6948,8 +8970,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLostInRow(int value) {
-      
+
       lostInRow_ = value;
+      bitField2_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6958,7 +8981,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLostInRow() {
-      
+      bitField2_ = (bitField2_ & ~0x00000040);
       lostInRow_ = 0;
       onChanged();
       return this;
@@ -6979,8 +9002,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGamesWithoutGoals(int value) {
-      
+
       gamesWithoutGoals_ = value;
+      bitField2_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -6989,7 +9013,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGamesWithoutGoals() {
-      
+      bitField2_ = (bitField2_ & ~0x00000080);
       gamesWithoutGoals_ = 0;
       onChanged();
       return this;
@@ -7010,8 +9034,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonAtHome(int value) {
-      
+
       wonAtHome_ = value;
+      bitField2_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -7020,7 +9045,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonAtHome() {
-      
+      bitField2_ = (bitField2_ & ~0x00000100);
       wonAtHome_ = 0;
       onChanged();
       return this;
@@ -7041,8 +9066,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonAtAway(int value) {
-      
+
       wonAtAway_ = value;
+      bitField2_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -7051,7 +9077,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonAtAway() {
-      
+      bitField2_ = (bitField2_ & ~0x00000200);
       wonAtAway_ = 0;
       onChanged();
       return this;
@@ -7072,8 +9098,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAwayWithoutWin(int value) {
-      
+
       awayWithoutWin_ = value;
+      bitField2_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -7082,7 +9109,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAwayWithoutWin() {
-      
+      bitField2_ = (bitField2_ & ~0x00000400);
       awayWithoutWin_ = 0;
       onChanged();
       return this;
@@ -7103,8 +9130,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCardsYellowRed(int value) {
-      
+
       totalCardsYellowRed_ = value;
+      bitField2_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -7113,7 +9141,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCardsYellowRed() {
-      
+      bitField2_ = (bitField2_ & ~0x00000800);
       totalCardsYellowRed_ = 0;
       onChanged();
       return this;
@@ -7134,8 +9162,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCardsYellowRedPerGamePercentage(double value) {
-      
+
       totalCardsYellowRedPerGamePercentage_ = value;
+      bitField2_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -7144,7 +9173,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCardsYellowRedPerGamePercentage() {
-      
+      bitField2_ = (bitField2_ & ~0x00001000);
       totalCardsYellowRedPerGamePercentage_ = 0D;
       onChanged();
       return this;
@@ -7173,8 +9202,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHeadGoal(int value) {
-      
+
       headGoal_ = value;
+      bitField2_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -7187,7 +9217,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeadGoal() {
-      
+      bitField2_ = (bitField2_ & ~0x00002000);
       headGoal_ = 0;
       onChanged();
       return this;
@@ -7208,8 +9238,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStrikeGoal(int value) {
-      
+
       strikeGoal_ = value;
+      bitField2_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -7218,7 +9249,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStrikeGoal() {
-      
+      bitField2_ = (bitField2_ & ~0x00004000);
       strikeGoal_ = 0;
       onChanged();
       return this;
@@ -7239,8 +9270,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHeadGoalPercentage(int value) {
-      
+
       headGoalPercentage_ = value;
+      bitField2_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -7249,7 +9281,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeadGoalPercentage() {
-      
+      bitField2_ = (bitField2_ & ~0x00008000);
       headGoalPercentage_ = 0;
       onChanged();
       return this;
@@ -7270,8 +9302,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStrikeGoalPercentage(int value) {
-      
+
       strikeGoalPercentage_ = value;
+      bitField2_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -7280,7 +9313,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStrikeGoalPercentage() {
-      
+      bitField2_ = (bitField2_ & ~0x00010000);
       strikeGoalPercentage_ = 0;
       onChanged();
       return this;
@@ -7301,8 +9334,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFoulCommit(int value) {
-      
+
       foulCommit_ = value;
+      bitField2_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -7311,7 +9345,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFoulCommit() {
-      
+      bitField2_ = (bitField2_ & ~0x00020000);
       foulCommit_ = 0;
       onChanged();
       return this;
@@ -7332,8 +9366,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFoulCommitPerGame(double value) {
-      
+
       foulCommitPerGame_ = value;
+      bitField2_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -7342,7 +9377,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFoulCommitPerGame() {
-      
+      bitField2_ = (bitField2_ & ~0x00040000);
       foulCommitPerGame_ = 0D;
       onChanged();
       return this;
@@ -7363,8 +9398,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShoton(int value) {
-      
+
       shoton_ = value;
+      bitField2_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -7373,7 +9409,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShoton() {
-      
+      bitField2_ = (bitField2_ & ~0x00080000);
       shoton_ = 0;
       onChanged();
       return this;
@@ -7394,8 +9430,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShotonPerGame(double value) {
-      
+
       shotonPerGame_ = value;
+      bitField2_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -7404,7 +9441,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShotonPerGame() {
-      
+      bitField2_ = (bitField2_ & ~0x00100000);
       shotonPerGame_ = 0D;
       onChanged();
       return this;
@@ -7425,8 +9462,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShotoff(int value) {
-      
+
       shotoff_ = value;
+      bitField2_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -7435,7 +9473,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShotoff() {
-      
+      bitField2_ = (bitField2_ & ~0x00200000);
       shotoff_ = 0;
       onChanged();
       return this;
@@ -7456,8 +9494,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShotoffPerGame(double value) {
-      
+
       shotoffPerGame_ = value;
+      bitField2_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -7466,7 +9505,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShotoffPerGame() {
-      
+      bitField2_ = (bitField2_ & ~0x00400000);
       shotoffPerGame_ = 0D;
       onChanged();
       return this;
@@ -7487,8 +9526,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShotsonPerGoal(double value) {
-      
+
       shotsonPerGoal_ = value;
+      bitField2_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -7497,7 +9537,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShotsonPerGoal() {
-      
+      bitField2_ = (bitField2_ & ~0x00800000);
       shotsonPerGoal_ = 0D;
       onChanged();
       return this;
@@ -7518,8 +9558,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOffside(int value) {
-      
+
       offside_ = value;
+      bitField2_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -7528,7 +9569,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOffside() {
-      
+      bitField2_ = (bitField2_ & ~0x01000000);
       offside_ = 0;
       onChanged();
       return this;
@@ -7549,8 +9590,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOffsidePerGame(double value) {
-      
+
       offsidePerGame_ = value;
+      bitField2_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -7559,7 +9601,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOffsidePerGame() {
-      
+      bitField2_ = (bitField2_ & ~0x02000000);
       offsidePerGame_ = 0D;
       onChanged();
       return this;
@@ -7580,8 +9622,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCornerTaken(int value) {
-      
+
       cornerTaken_ = value;
+      bitField2_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -7590,7 +9633,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCornerTaken() {
-      
+      bitField2_ = (bitField2_ & ~0x04000000);
       cornerTaken_ = 0;
       onChanged();
       return this;
@@ -7611,8 +9654,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCornerTakenPerGame(double value) {
-      
+
       cornerTakenPerGame_ = value;
+      bitField2_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -7621,7 +9665,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCornerTakenPerGame() {
-      
+      bitField2_ = (bitField2_ & ~0x08000000);
       cornerTakenPerGame_ = 0D;
       onChanged();
       return this;
@@ -7642,8 +9686,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPenaltyMissed(int value) {
-      
+
       penaltyMissed_ = value;
+      bitField2_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -7652,7 +9697,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPenaltyMissed() {
-      
+      bitField2_ = (bitField2_ & ~0x10000000);
       penaltyMissed_ = 0;
       onChanged();
       return this;
@@ -7673,8 +9718,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPenaltyMissedPercentage(int value) {
-      
+
       penaltyMissedPercentage_ = value;
+      bitField2_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -7683,7 +9729,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPenaltyMissedPercentage() {
-      
+      bitField2_ = (bitField2_ & ~0x20000000);
       penaltyMissedPercentage_ = 0;
       onChanged();
       return this;
@@ -7704,8 +9750,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setElapsedPlusPerGame(double value) {
-      
+
       elapsedPlusPerGame_ = value;
+      bitField2_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -7714,7 +9761,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearElapsedPlusPerGame() {
-      
+      bitField2_ = (bitField2_ & ~0x40000000);
       elapsedPlusPerGame_ = 0D;
       onChanged();
       return this;
@@ -7735,8 +9782,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWoodwork(int value) {
-      
+
       woodwork_ = value;
+      bitField2_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -7745,7 +9793,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWoodwork() {
-      
+      bitField2_ = (bitField2_ & ~0x80000000);
       woodwork_ = 0;
       onChanged();
       return this;
@@ -7766,8 +9814,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPenaltyCommit(int value) {
-      
+
       penaltyCommit_ = value;
+      bitField3_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -7776,7 +9825,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPenaltyCommit() {
-      
+      bitField3_ = (bitField3_ & ~0x00000001);
       penaltyCommit_ = 0;
       onChanged();
       return this;
@@ -7797,8 +9846,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPenaltyCommitPercentage(int value) {
-      
+
       penaltyCommitPercentage_ = value;
+      bitField3_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -7807,7 +9857,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPenaltyCommitPercentage() {
-      
+      bitField3_ = (bitField3_ & ~0x00000002);
       penaltyCommitPercentage_ = 0;
       onChanged();
       return this;
@@ -7828,8 +9878,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFoulsuffered(int value) {
-      
+
       foulsuffered_ = value;
+      bitField3_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -7838,7 +9889,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFoulsuffered() {
-      
+      bitField3_ = (bitField3_ & ~0x00000004);
       foulsuffered_ = 0;
       onChanged();
       return this;
@@ -7859,8 +9910,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalShots(int value) {
-      
+
       totalShots_ = value;
+      bitField3_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -7869,7 +9921,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalShots() {
-      
+      bitField3_ = (bitField3_ & ~0x00000008);
       totalShots_ = 0;
       onChanged();
       return this;
@@ -7890,8 +9942,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPenaltySaves(int value) {
-      
+
       penaltySaves_ = value;
+      bitField3_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -7900,7 +9953,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPenaltySaves() {
-      
+      bitField3_ = (bitField3_ & ~0x00000010);
       penaltySaves_ = 0;
       onChanged();
       return this;
@@ -7921,8 +9974,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefensiveError(int value) {
-      
+
       defensiveError_ = value;
+      bitField3_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -7931,7 +9985,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefensiveError() {
-      
+      bitField3_ = (bitField3_ & ~0x00000020);
       defensiveError_ = 0;
       onChanged();
       return this;
@@ -7952,8 +10006,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAveragePossession(int value) {
-      
+
       averagePossession_ = value;
+      bitField3_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -7962,7 +10017,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAveragePossession() {
-      
+      bitField3_ = (bitField3_ & ~0x00000040);
       averagePossession_ = 0;
       onChanged();
       return this;
@@ -7983,8 +10038,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPenaltiesAwarded(int value) {
-      
+
       penaltiesAwarded_ = value;
+      bitField3_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -7993,7 +10049,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPenaltiesAwarded() {
-      
+      bitField3_ = (bitField3_ & ~0x00000080);
       penaltiesAwarded_ = 0;
       onChanged();
       return this;
@@ -8014,8 +10070,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalOutsideBox(int value) {
-      
+
       goalOutsideBox_ = value;
+      bitField3_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -8024,7 +10081,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalOutsideBox() {
-      
+      bitField3_ = (bitField3_ & ~0x00000100);
       goalOutsideBox_ = 0;
       onChanged();
       return this;
@@ -8045,8 +10102,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGoalOutsideBoxPercentage(int value) {
-      
+
       goalOutsideBoxPercentage_ = value;
+      bitField3_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -8055,7 +10113,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalOutsideBoxPercentage() {
-      
+      bitField3_ = (bitField3_ & ~0x00000200);
       goalOutsideBoxPercentage_ = 0;
       onChanged();
       return this;
@@ -8076,8 +10134,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDirectFreekick(int value) {
-      
+
       directFreekick_ = value;
+      bitField3_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -8086,7 +10145,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDirectFreekick() {
-      
+      bitField3_ = (bitField3_ & ~0x00000400);
       directFreekick_ = 0;
       onChanged();
       return this;
@@ -8107,8 +10166,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDirectFreekickPercentage(int value) {
-      
+
       directFreekickPercentage_ = value;
+      bitField3_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -8117,7 +10177,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDirectFreekickPercentage() {
-      
+      bitField3_ = (bitField3_ & ~0x00000800);
       directFreekickPercentage_ = 0;
       onChanged();
       return this;
@@ -8146,8 +10206,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScoredInRow(int value) {
-      
+
       scoredInRow_ = value;
+      bitField3_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -8160,7 +10221,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScoredInRow() {
-      
+      bitField3_ = (bitField3_ & ~0x00001000);
       scoredInRow_ = 0;
       onChanged();
       return this;
@@ -8181,8 +10242,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWonInRow(int value) {
-      
+
       wonInRow_ = value;
+      bitField3_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -8191,7 +10253,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWonInRow() {
-      
+      bitField3_ = (bitField3_ & ~0x00002000);
       wonInRow_ = 0;
       onChanged();
       return this;
@@ -8212,8 +10274,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNoconcedingInRow(int value) {
-      
+
       noconcedingInRow_ = value;
+      bitField3_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -8222,7 +10285,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNoconcedingInRow() {
-      
+      bitField3_ = (bitField3_ & ~0x00004000);
       noconcedingInRow_ = 0;
       onChanged();
       return this;
@@ -8243,8 +10306,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHomeWithoutWin(int value) {
-      
+
       homeWithoutWin_ = value;
+      bitField3_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -8253,7 +10317,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHomeWithoutWin() {
-      
+      bitField3_ = (bitField3_ & ~0x00008000);
       homeWithoutWin_ = 0;
       onChanged();
       return this;
@@ -8274,8 +10338,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWon2Down(int value) {
-      
+
       won2Down_ = value;
+      bitField3_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -8284,7 +10349,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWon2Down() {
-      
+      bitField3_ = (bitField3_ & ~0x00010000);
       won2Down_ = 0;
       onChanged();
       return this;
@@ -8305,8 +10370,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWon2DownPercentage(int value) {
-      
+
       won2DownPercentage_ = value;
+      bitField3_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -8315,7 +10381,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWon2DownPercentage() {
-      
+      bitField3_ = (bitField3_ & ~0x00020000);
       won2DownPercentage_ = 0;
       onChanged();
       return this;
@@ -8344,8 +10410,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFirstReturnPointsWon(int value) {
-      
+
       firstReturnPointsWon_ = value;
+      bitField3_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -8358,7 +10425,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFirstReturnPointsWon() {
-      
+      bitField3_ = (bitField3_ & ~0x00040000);
       firstReturnPointsWon_ = 0;
       onChanged();
       return this;
@@ -8379,8 +10446,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFirstServePercentage(double value) {
-      
+
       firstServePercentage_ = value;
+      bitField3_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -8389,7 +10457,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFirstServePercentage() {
-      
+      bitField3_ = (bitField3_ & ~0x00080000);
       firstServePercentage_ = 0D;
       onChanged();
       return this;
@@ -8410,8 +10478,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFirstServePointsWon(int value) {
-      
+
       firstServePointsWon_ = value;
+      bitField3_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -8420,7 +10489,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFirstServePointsWon() {
-      
+      bitField3_ = (bitField3_ & ~0x00100000);
       firstServePointsWon_ = 0;
       onChanged();
       return this;
@@ -8441,8 +10510,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSecondReturnPointsWon(int value) {
-      
+
       secondReturnPointsWon_ = value;
+      bitField3_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -8451,7 +10521,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSecondReturnPointsWon() {
-      
+      bitField3_ = (bitField3_ & ~0x00200000);
       secondReturnPointsWon_ = 0;
       onChanged();
       return this;
@@ -8472,8 +10542,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSecondServePointsWon(int value) {
-      
+
       secondServePointsWon_ = value;
+      bitField3_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -8482,7 +10553,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSecondServePointsWon() {
-      
+      bitField3_ = (bitField3_ & ~0x00400000);
       secondServePointsWon_ = 0;
       onChanged();
       return this;
@@ -8503,8 +10574,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAces(int value) {
-      
+
       aces_ = value;
+      bitField3_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -8513,7 +10585,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAces() {
-      
+      bitField3_ = (bitField3_ & ~0x00800000);
       aces_ = 0;
       onChanged();
       return this;
@@ -8534,8 +10606,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBreakPointsSaved(int value) {
-      
+
       breakPointsSaved_ = value;
+      bitField3_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -8544,7 +10617,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBreakPointsSaved() {
-      
+      bitField3_ = (bitField3_ & ~0x01000000);
       breakPointsSaved_ = 0;
       onChanged();
       return this;
@@ -8565,8 +10638,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBreakPointsWon(int value) {
-      
+
       breakPointsWon_ = value;
+      bitField3_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -8575,7 +10649,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBreakPointsWon() {
-      
+      bitField3_ = (bitField3_ & ~0x02000000);
       breakPointsWon_ = 0;
       onChanged();
       return this;
@@ -8596,8 +10670,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDoubleFaults(int value) {
-      
+
       doubleFaults_ = value;
+      bitField3_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -8606,7 +10681,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDoubleFaults() {
-      
+      bitField3_ = (bitField3_ & ~0x04000000);
       doubleFaults_ = 0;
       onChanged();
       return this;
@@ -8627,8 +10702,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReturnPointsWonPercentage(double value) {
-      
+
       returnPointsWonPercentage_ = value;
+      bitField3_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -8637,7 +10713,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReturnPointsWonPercentage() {
-      
+      bitField3_ = (bitField3_ & ~0x08000000);
       returnPointsWonPercentage_ = 0D;
       onChanged();
       return this;
@@ -8658,8 +10734,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setServiceGames(int value) {
-      
+
       serviceGames_ = value;
+      bitField3_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -8668,7 +10745,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearServiceGames() {
-      
+      bitField3_ = (bitField3_ & ~0x10000000);
       serviceGames_ = 0;
       onChanged();
       return this;
@@ -8689,8 +10766,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setServicePointsWonPercentage(double value) {
-      
+
       servicePointsWonPercentage_ = value;
+      bitField3_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -8699,7 +10777,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearServicePointsWonPercentage() {
-      
+      bitField3_ = (bitField3_ & ~0x20000000);
       servicePointsWonPercentage_ = 0D;
       onChanged();
       return this;
@@ -8720,8 +10798,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFirstServePointsAll(int value) {
-      
+
       firstServePointsAll_ = value;
+      bitField3_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -8730,7 +10809,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFirstServePointsAll() {
-      
+      bitField3_ = (bitField3_ & ~0x40000000);
       firstServePointsAll_ = 0;
       onChanged();
       return this;
@@ -8751,8 +10830,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSecondServePointsAll(int value) {
-      
+
       secondServePointsAll_ = value;
+      bitField3_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -8761,7 +10841,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSecondServePointsAll() {
-      
+      bitField3_ = (bitField3_ & ~0x80000000);
       secondServePointsAll_ = 0;
       onChanged();
       return this;
@@ -8782,8 +10862,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalPointsWon(int value) {
-      
+
       totalPointsWon_ = value;
+      bitField4_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -8792,7 +10873,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalPointsWon() {
-      
+      bitField4_ = (bitField4_ & ~0x00000001);
       totalPointsWon_ = 0;
       onChanged();
       return this;
@@ -8813,8 +10894,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalPointsWonPercentage(double value) {
-      
+
       totalPointsWonPercentage_ = value;
+      bitField4_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -8823,7 +10905,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalPointsWonPercentage() {
-      
+      bitField4_ = (bitField4_ & ~0x00000002);
       totalPointsWonPercentage_ = 0D;
       onChanged();
       return this;
@@ -8844,8 +10926,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUnforcedErrors(int value) {
-      
+
       unforcedErrors_ = value;
+      bitField4_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -8854,7 +10937,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUnforcedErrors() {
-      
+      bitField4_ = (bitField4_ & ~0x00000004);
       unforcedErrors_ = 0;
       onChanged();
       return this;
@@ -8875,8 +10958,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWinners(int value) {
-      
+
       winners_ = value;
+      bitField4_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -8885,8 +10969,1672 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWinners() {
-      
+      bitField4_ = (bitField4_ & ~0x00000008);
       winners_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalAssists_ ;
+    /**
+     * <code>int32 totalAssists = 133;</code>
+     * @return The totalAssists.
+     */
+    @java.lang.Override
+    public int getTotalAssists() {
+      return totalAssists_;
+    }
+    /**
+     * <code>int32 totalAssists = 133;</code>
+     * @param value The totalAssists to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalAssists(int value) {
+
+      totalAssists_ = value;
+      bitField4_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalAssists = 133;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalAssists() {
+      bitField4_ = (bitField4_ & ~0x00000010);
+      totalAssists_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalCrosses_ ;
+    /**
+     * <code>int32 totalCrosses = 134;</code>
+     * @return The totalCrosses.
+     */
+    @java.lang.Override
+    public int getTotalCrosses() {
+      return totalCrosses_;
+    }
+    /**
+     * <code>int32 totalCrosses = 134;</code>
+     * @param value The totalCrosses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalCrosses(int value) {
+
+      totalCrosses_ = value;
+      bitField4_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalCrosses = 134;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalCrosses() {
+      bitField4_ = (bitField4_ & ~0x00000020);
+      totalCrosses_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int goalsInsideBox_ ;
+    /**
+     * <code>int32 goalsInsideBox = 135;</code>
+     * @return The goalsInsideBox.
+     */
+    @java.lang.Override
+    public int getGoalsInsideBox() {
+      return goalsInsideBox_;
+    }
+    /**
+     * <code>int32 goalsInsideBox = 135;</code>
+     * @param value The goalsInsideBox to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalsInsideBox(int value) {
+
+      goalsInsideBox_ = value;
+      bitField4_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 goalsInsideBox = 135;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalsInsideBox() {
+      bitField4_ = (bitField4_ & ~0x00000040);
+      goalsInsideBox_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalBlockedShots_ ;
+    /**
+     * <code>int32 totalBlockedShots = 136;</code>
+     * @return The totalBlockedShots.
+     */
+    @java.lang.Override
+    public int getTotalBlockedShots() {
+      return totalBlockedShots_;
+    }
+    /**
+     * <code>int32 totalBlockedShots = 136;</code>
+     * @param value The totalBlockedShots to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalBlockedShots(int value) {
+
+      totalBlockedShots_ = value;
+      bitField4_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalBlockedShots = 136;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalBlockedShots() {
+      bitField4_ = (bitField4_ & ~0x00000080);
+      totalBlockedShots_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int keyPasses_ ;
+    /**
+     * <code>int32 keyPasses = 137;</code>
+     * @return The keyPasses.
+     */
+    @java.lang.Override
+    public int getKeyPasses() {
+      return keyPasses_;
+    }
+    /**
+     * <code>int32 keyPasses = 137;</code>
+     * @param value The keyPasses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setKeyPasses(int value) {
+
+      keyPasses_ = value;
+      bitField4_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 keyPasses = 137;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearKeyPasses() {
+      bitField4_ = (bitField4_ & ~0x00000100);
+      keyPasses_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalClearances_ ;
+    /**
+     * <code>int32 totalClearances = 138;</code>
+     * @return The totalClearances.
+     */
+    @java.lang.Override
+    public int getTotalClearances() {
+      return totalClearances_;
+    }
+    /**
+     * <code>int32 totalClearances = 138;</code>
+     * @param value The totalClearances to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalClearances(int value) {
+
+      totalClearances_ = value;
+      bitField4_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalClearances = 138;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalClearances() {
+      bitField4_ = (bitField4_ & ~0x00000200);
+      totalClearances_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalAirChallengesWon_ ;
+    /**
+     * <code>int32 totalAirChallengesWon = 139;</code>
+     * @return The totalAirChallengesWon.
+     */
+    @java.lang.Override
+    public int getTotalAirChallengesWon() {
+      return totalAirChallengesWon_;
+    }
+    /**
+     * <code>int32 totalAirChallengesWon = 139;</code>
+     * @param value The totalAirChallengesWon to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalAirChallengesWon(int value) {
+
+      totalAirChallengesWon_ = value;
+      bitField4_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalAirChallengesWon = 139;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalAirChallengesWon() {
+      bitField4_ = (bitField4_ & ~0x00000400);
+      totalAirChallengesWon_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalAirChallengesLost_ ;
+    /**
+     * <code>int32 totalAirChallengesLost = 140;</code>
+     * @return The totalAirChallengesLost.
+     */
+    @java.lang.Override
+    public int getTotalAirChallengesLost() {
+      return totalAirChallengesLost_;
+    }
+    /**
+     * <code>int32 totalAirChallengesLost = 140;</code>
+     * @param value The totalAirChallengesLost to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalAirChallengesLost(int value) {
+
+      totalAirChallengesLost_ = value;
+      bitField4_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalAirChallengesLost = 140;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalAirChallengesLost() {
+      bitField4_ = (bitField4_ & ~0x00000800);
+      totalAirChallengesLost_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalTackles_ ;
+    /**
+     * <code>int32 totalTackles = 141;</code>
+     * @return The totalTackles.
+     */
+    @java.lang.Override
+    public int getTotalTackles() {
+      return totalTackles_;
+    }
+    /**
+     * <code>int32 totalTackles = 141;</code>
+     * @param value The totalTackles to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalTackles(int value) {
+
+      totalTackles_ = value;
+      bitField4_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalTackles = 141;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalTackles() {
+      bitField4_ = (bitField4_ & ~0x00001000);
+      totalTackles_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalInterceptedCrosses_ ;
+    /**
+     * <code>int32 totalInterceptedCrosses = 142;</code>
+     * @return The totalInterceptedCrosses.
+     */
+    @java.lang.Override
+    public int getTotalInterceptedCrosses() {
+      return totalInterceptedCrosses_;
+    }
+    /**
+     * <code>int32 totalInterceptedCrosses = 142;</code>
+     * @param value The totalInterceptedCrosses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalInterceptedCrosses(int value) {
+
+      totalInterceptedCrosses_ = value;
+      bitField4_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalInterceptedCrosses = 142;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalInterceptedCrosses() {
+      bitField4_ = (bitField4_ & ~0x00002000);
+      totalInterceptedCrosses_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalGoalAttempts_ ;
+    /**
+     * <code>int32 totalGoalAttempts = 143;</code>
+     * @return The totalGoalAttempts.
+     */
+    @java.lang.Override
+    public int getTotalGoalAttempts() {
+      return totalGoalAttempts_;
+    }
+    /**
+     * <code>int32 totalGoalAttempts = 143;</code>
+     * @param value The totalGoalAttempts to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalGoalAttempts(int value) {
+
+      totalGoalAttempts_ = value;
+      bitField4_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalGoalAttempts = 143;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalGoalAttempts() {
+      bitField4_ = (bitField4_ & ~0x00004000);
+      totalGoalAttempts_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int totalSuccessfulCrosses_ ;
+    /**
+     * <code>int32 totalSuccessfulCrosses = 144;</code>
+     * @return The totalSuccessfulCrosses.
+     */
+    @java.lang.Override
+    public int getTotalSuccessfulCrosses() {
+      return totalSuccessfulCrosses_;
+    }
+    /**
+     * <code>int32 totalSuccessfulCrosses = 144;</code>
+     * @param value The totalSuccessfulCrosses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalSuccessfulCrosses(int value) {
+
+      totalSuccessfulCrosses_ = value;
+      bitField4_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 totalSuccessfulCrosses = 144;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalSuccessfulCrosses() {
+      bitField4_ = (bitField4_ & ~0x00008000);
+      totalSuccessfulCrosses_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private double firstScorer_ ;
+    /**
+     * <pre>
+     * statistics type 1 player
+     * </pre>
+     *
+     * <code>double firstScorer = 145;</code>
+     * @return The firstScorer.
+     */
+    @java.lang.Override
+    public double getFirstScorer() {
+      return firstScorer_;
+    }
+    /**
+     * <pre>
+     * statistics type 1 player
+     * </pre>
+     *
+     * <code>double firstScorer = 145;</code>
+     * @param value The firstScorer to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFirstScorer(double value) {
+
+      firstScorer_ = value;
+      bitField4_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * statistics type 1 player
+     * </pre>
+     *
+     * <code>double firstScorer = 145;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFirstScorer() {
+      bitField4_ = (bitField4_ & ~0x00010000);
+      firstScorer_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double firstScorerPercentage_ ;
+    /**
+     * <code>double firstScorerPercentage = 146;</code>
+     * @return The firstScorerPercentage.
+     */
+    @java.lang.Override
+    public double getFirstScorerPercentage() {
+      return firstScorerPercentage_;
+    }
+    /**
+     * <code>double firstScorerPercentage = 146;</code>
+     * @param value The firstScorerPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFirstScorerPercentage(double value) {
+
+      firstScorerPercentage_ = value;
+      bitField4_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double firstScorerPercentage = 146;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFirstScorerPercentage() {
+      bitField4_ = (bitField4_ & ~0x00020000);
+      firstScorerPercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double noScoredInRow_ ;
+    /**
+     * <code>double noScoredInRow = 147;</code>
+     * @return The noScoredInRow.
+     */
+    @java.lang.Override
+    public double getNoScoredInRow() {
+      return noScoredInRow_;
+    }
+    /**
+     * <code>double noScoredInRow = 147;</code>
+     * @param value The noScoredInRow to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNoScoredInRow(double value) {
+
+      noScoredInRow_ = value;
+      bitField4_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double noScoredInRow = 147;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNoScoredInRow() {
+      bitField4_ = (bitField4_ & ~0x00040000);
+      noScoredInRow_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalConceded_ ;
+    /**
+     * <code>double goalConceded = 148;</code>
+     * @return The goalConceded.
+     */
+    @java.lang.Override
+    public double getGoalConceded() {
+      return goalConceded_;
+    }
+    /**
+     * <code>double goalConceded = 148;</code>
+     * @param value The goalConceded to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalConceded(double value) {
+
+      goalConceded_ = value;
+      bitField4_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalConceded = 148;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalConceded() {
+      bitField4_ = (bitField4_ & ~0x00080000);
+      goalConceded_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalRatioMinute1X15Percentage_ ;
+    /**
+     * <code>double goalRatioMinute1x15Percentage = 149;</code>
+     * @return The goalRatioMinute1x15Percentage.
+     */
+    @java.lang.Override
+    public double getGoalRatioMinute1X15Percentage() {
+      return goalRatioMinute1X15Percentage_;
+    }
+    /**
+     * <code>double goalRatioMinute1x15Percentage = 149;</code>
+     * @param value The goalRatioMinute1x15Percentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalRatioMinute1X15Percentage(double value) {
+
+      goalRatioMinute1X15Percentage_ = value;
+      bitField4_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalRatioMinute1x15Percentage = 149;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalRatioMinute1X15Percentage() {
+      bitField4_ = (bitField4_ & ~0x00100000);
+      goalRatioMinute1X15Percentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalRatioMinute16X30Percentage_ ;
+    /**
+     * <code>double goalRatioMinute16x30Percentage = 150;</code>
+     * @return The goalRatioMinute16x30Percentage.
+     */
+    @java.lang.Override
+    public double getGoalRatioMinute16X30Percentage() {
+      return goalRatioMinute16X30Percentage_;
+    }
+    /**
+     * <code>double goalRatioMinute16x30Percentage = 150;</code>
+     * @param value The goalRatioMinute16x30Percentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalRatioMinute16X30Percentage(double value) {
+
+      goalRatioMinute16X30Percentage_ = value;
+      bitField4_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalRatioMinute16x30Percentage = 150;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalRatioMinute16X30Percentage() {
+      bitField4_ = (bitField4_ & ~0x00200000);
+      goalRatioMinute16X30Percentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalRatioMinute31X45Percentage_ ;
+    /**
+     * <code>double goalRatioMinute31x45Percentage = 151;</code>
+     * @return The goalRatioMinute31x45Percentage.
+     */
+    @java.lang.Override
+    public double getGoalRatioMinute31X45Percentage() {
+      return goalRatioMinute31X45Percentage_;
+    }
+    /**
+     * <code>double goalRatioMinute31x45Percentage = 151;</code>
+     * @param value The goalRatioMinute31x45Percentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalRatioMinute31X45Percentage(double value) {
+
+      goalRatioMinute31X45Percentage_ = value;
+      bitField4_ |= 0x00400000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalRatioMinute31x45Percentage = 151;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalRatioMinute31X45Percentage() {
+      bitField4_ = (bitField4_ & ~0x00400000);
+      goalRatioMinute31X45Percentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalRatioMinute46X60Percentage_ ;
+    /**
+     * <code>double goalRatioMinute46x60Percentage = 152;</code>
+     * @return The goalRatioMinute46x60Percentage.
+     */
+    @java.lang.Override
+    public double getGoalRatioMinute46X60Percentage() {
+      return goalRatioMinute46X60Percentage_;
+    }
+    /**
+     * <code>double goalRatioMinute46x60Percentage = 152;</code>
+     * @param value The goalRatioMinute46x60Percentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalRatioMinute46X60Percentage(double value) {
+
+      goalRatioMinute46X60Percentage_ = value;
+      bitField4_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalRatioMinute46x60Percentage = 152;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalRatioMinute46X60Percentage() {
+      bitField4_ = (bitField4_ & ~0x00800000);
+      goalRatioMinute46X60Percentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalRatioMinute61X75Percentage_ ;
+    /**
+     * <code>double goalRatioMinute61x75Percentage = 153;</code>
+     * @return The goalRatioMinute61x75Percentage.
+     */
+    @java.lang.Override
+    public double getGoalRatioMinute61X75Percentage() {
+      return goalRatioMinute61X75Percentage_;
+    }
+    /**
+     * <code>double goalRatioMinute61x75Percentage = 153;</code>
+     * @param value The goalRatioMinute61x75Percentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalRatioMinute61X75Percentage(double value) {
+
+      goalRatioMinute61X75Percentage_ = value;
+      bitField4_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalRatioMinute61x75Percentage = 153;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalRatioMinute61X75Percentage() {
+      bitField4_ = (bitField4_ & ~0x01000000);
+      goalRatioMinute61X75Percentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalRatioMinute76X90Percentage_ ;
+    /**
+     * <code>double goalRatioMinute76x90Percentage = 154;</code>
+     * @return The goalRatioMinute76x90Percentage.
+     */
+    @java.lang.Override
+    public double getGoalRatioMinute76X90Percentage() {
+      return goalRatioMinute76X90Percentage_;
+    }
+    /**
+     * <code>double goalRatioMinute76x90Percentage = 154;</code>
+     * @param value The goalRatioMinute76x90Percentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalRatioMinute76X90Percentage(double value) {
+
+      goalRatioMinute76X90Percentage_ = value;
+      bitField4_ |= 0x02000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalRatioMinute76x90Percentage = 154;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalRatioMinute76X90Percentage() {
+      bitField4_ = (bitField4_ & ~0x02000000);
+      goalRatioMinute76X90Percentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double lastGaspGoal_ ;
+    /**
+     * <code>double lastGaspGoal = 155;</code>
+     * @return The lastGaspGoal.
+     */
+    @java.lang.Override
+    public double getLastGaspGoal() {
+      return lastGaspGoal_;
+    }
+    /**
+     * <code>double lastGaspGoal = 155;</code>
+     * @param value The lastGaspGoal to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastGaspGoal(double value) {
+
+      lastGaspGoal_ = value;
+      bitField4_ |= 0x04000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double lastGaspGoal = 155;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLastGaspGoal() {
+      bitField4_ = (bitField4_ & ~0x04000000);
+      lastGaspGoal_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double lastGaspGoalPercentage_ ;
+    /**
+     * <code>double lastGaspGoalPercentage = 156;</code>
+     * @return The lastGaspGoalPercentage.
+     */
+    @java.lang.Override
+    public double getLastGaspGoalPercentage() {
+      return lastGaspGoalPercentage_;
+    }
+    /**
+     * <code>double lastGaspGoalPercentage = 156;</code>
+     * @param value The lastGaspGoalPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastGaspGoalPercentage(double value) {
+
+      lastGaspGoalPercentage_ = value;
+      bitField4_ |= 0x08000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double lastGaspGoalPercentage = 156;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLastGaspGoalPercentage() {
+      bitField4_ = (bitField4_ & ~0x08000000);
+      lastGaspGoalPercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double lastToScore_ ;
+    /**
+     * <code>double lastToScore = 157;</code>
+     * @return The lastToScore.
+     */
+    @java.lang.Override
+    public double getLastToScore() {
+      return lastToScore_;
+    }
+    /**
+     * <code>double lastToScore = 157;</code>
+     * @param value The lastToScore to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastToScore(double value) {
+
+      lastToScore_ = value;
+      bitField4_ |= 0x10000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double lastToScore = 157;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLastToScore() {
+      bitField4_ = (bitField4_ & ~0x10000000);
+      lastToScore_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double lastToScorePercentage_ ;
+    /**
+     * <code>double lastToScorePercentage = 158;</code>
+     * @return The lastToScorePercentage.
+     */
+    @java.lang.Override
+    public double getLastToScorePercentage() {
+      return lastToScorePercentage_;
+    }
+    /**
+     * <code>double lastToScorePercentage = 158;</code>
+     * @param value The lastToScorePercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastToScorePercentage(double value) {
+
+      lastToScorePercentage_ = value;
+      bitField4_ |= 0x20000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double lastToScorePercentage = 158;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLastToScorePercentage() {
+      bitField4_ = (bitField4_ & ~0x20000000);
+      lastToScorePercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double minutesPerGoal_ ;
+    /**
+     * <code>double minutesPerGoal = 159;</code>
+     * @return The minutesPerGoal.
+     */
+    @java.lang.Override
+    public double getMinutesPerGoal() {
+      return minutesPerGoal_;
+    }
+    /**
+     * <code>double minutesPerGoal = 159;</code>
+     * @param value The minutesPerGoal to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMinutesPerGoal(double value) {
+
+      minutesPerGoal_ = value;
+      bitField4_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double minutesPerGoal = 159;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMinutesPerGoal() {
+      bitField4_ = (bitField4_ & ~0x40000000);
+      minutesPerGoal_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double min_ ;
+    /**
+     * <code>double min = 160;</code>
+     * @return The min.
+     */
+    @java.lang.Override
+    public double getMin() {
+      return min_;
+    }
+    /**
+     * <code>double min = 160;</code>
+     * @param value The min to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMin(double value) {
+
+      min_ = value;
+      bitField4_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double min = 160;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMin() {
+      bitField4_ = (bitField4_ & ~0x80000000);
+      min_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double teamContribution_ ;
+    /**
+     * <code>double teamContribution = 161;</code>
+     * @return The teamContribution.
+     */
+    @java.lang.Override
+    public double getTeamContribution() {
+      return teamContribution_;
+    }
+    /**
+     * <code>double teamContribution = 161;</code>
+     * @param value The teamContribution to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTeamContribution(double value) {
+
+      teamContribution_ = value;
+      bitField5_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double teamContribution = 161;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTeamContribution() {
+      bitField5_ = (bitField5_ & ~0x00000001);
+      teamContribution_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object teamFK_ = "";
+    /**
+     * <code>string teamFK = 162;</code>
+     * @return The teamFK.
+     */
+    public java.lang.String getTeamFK() {
+      java.lang.Object ref = teamFK_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        teamFK_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string teamFK = 162;</code>
+     * @return The bytes for teamFK.
+     */
+    public com.google.protobuf.ByteString
+        getTeamFKBytes() {
+      java.lang.Object ref = teamFK_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        teamFK_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string teamFK = 162;</code>
+     * @param value The teamFK to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTeamFK(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      teamFK_ = value;
+      bitField5_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string teamFK = 162;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTeamFK() {
+      teamFK_ = getDefaultInstance().getTeamFK();
+      bitField5_ = (bitField5_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string teamFK = 162;</code>
+     * @param value The bytes for teamFK to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTeamFKBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      teamFK_ = value;
+      bitField5_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private double totalCards_ ;
+    /**
+     * <code>double totalCards = 163;</code>
+     * @return The totalCards.
+     */
+    @java.lang.Override
+    public double getTotalCards() {
+      return totalCards_;
+    }
+    /**
+     * <code>double totalCards = 163;</code>
+     * @param value The totalCards to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalCards(double value) {
+
+      totalCards_ = value;
+      bitField5_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double totalCards = 163;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalCards() {
+      bitField5_ = (bitField5_ & ~0x00000004);
+      totalCards_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double totalCardsPerGame_ ;
+    /**
+     * <code>double totalCardsPerGame = 164;</code>
+     * @return The totalCardsPerGame.
+     */
+    @java.lang.Override
+    public double getTotalCardsPerGame() {
+      return totalCardsPerGame_;
+    }
+    /**
+     * <code>double totalCardsPerGame = 164;</code>
+     * @param value The totalCardsPerGame to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalCardsPerGame(double value) {
+
+      totalCardsPerGame_ = value;
+      bitField5_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double totalCardsPerGame = 164;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalCardsPerGame() {
+      bitField5_ = (bitField5_ & ~0x00000008);
+      totalCardsPerGame_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double sheetsPercentage_ ;
+    /**
+     * <code>double sheetsPercentage = 165;</code>
+     * @return The sheetsPercentage.
+     */
+    @java.lang.Override
+    public double getSheetsPercentage() {
+      return sheetsPercentage_;
+    }
+    /**
+     * <code>double sheetsPercentage = 165;</code>
+     * @param value The sheetsPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSheetsPercentage(double value) {
+
+      sheetsPercentage_ = value;
+      bitField5_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double sheetsPercentage = 165;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSheetsPercentage() {
+      bitField5_ = (bitField5_ & ~0x00000010);
+      sheetsPercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double played_ ;
+    /**
+     * <code>double played = 166;</code>
+     * @return The played.
+     */
+    @java.lang.Override
+    public double getPlayed() {
+      return played_;
+    }
+    /**
+     * <code>double played = 166;</code>
+     * @param value The played to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlayed(double value) {
+
+      played_ = value;
+      bitField5_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double played = 166;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlayed() {
+      bitField5_ = (bitField5_ & ~0x00000020);
+      played_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double noScoringGames_ ;
+    /**
+     * <code>double noScoringGames = 167;</code>
+     * @return The noScoringGames.
+     */
+    @java.lang.Override
+    public double getNoScoringGames() {
+      return noScoringGames_;
+    }
+    /**
+     * <code>double noScoringGames = 167;</code>
+     * @param value The noScoringGames to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNoScoringGames(double value) {
+
+      noScoringGames_ = value;
+      bitField5_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double noScoringGames = 167;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNoScoringGames() {
+      bitField5_ = (bitField5_ & ~0x00000040);
+      noScoringGames_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalsBench_ ;
+    /**
+     * <code>double goalsBench = 168;</code>
+     * @return The goalsBench.
+     */
+    @java.lang.Override
+    public double getGoalsBench() {
+      return goalsBench_;
+    }
+    /**
+     * <code>double goalsBench = 168;</code>
+     * @param value The goalsBench to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalsBench(double value) {
+
+      goalsBench_ = value;
+      bitField5_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalsBench = 168;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalsBench() {
+      bitField5_ = (bitField5_ & ~0x00000080);
+      goalsBench_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalsBenchPercentage_ ;
+    /**
+     * <code>double goalsBenchPercentage = 169;</code>
+     * @return The goalsBenchPercentage.
+     */
+    @java.lang.Override
+    public double getGoalsBenchPercentage() {
+      return goalsBenchPercentage_;
+    }
+    /**
+     * <code>double goalsBenchPercentage = 169;</code>
+     * @param value The goalsBenchPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalsBenchPercentage(double value) {
+
+      goalsBenchPercentage_ = value;
+      bitField5_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalsBenchPercentage = 169;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalsBenchPercentage() {
+      bitField5_ = (bitField5_ & ~0x00000100);
+      goalsBenchPercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double playedLineup_ ;
+    /**
+     * <code>double playedLineup = 170;</code>
+     * @return The playedLineup.
+     */
+    @java.lang.Override
+    public double getPlayedLineup() {
+      return playedLineup_;
+    }
+    /**
+     * <code>double playedLineup = 170;</code>
+     * @param value The playedLineup to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlayedLineup(double value) {
+
+      playedLineup_ = value;
+      bitField5_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double playedLineup = 170;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlayedLineup() {
+      bitField5_ = (bitField5_ & ~0x00000200);
+      playedLineup_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double playedLineupPercentage_ ;
+    /**
+     * <code>double playedLineupPercentage = 171;</code>
+     * @return The playedLineupPercentage.
+     */
+    @java.lang.Override
+    public double getPlayedLineupPercentage() {
+      return playedLineupPercentage_;
+    }
+    /**
+     * <code>double playedLineupPercentage = 171;</code>
+     * @param value The playedLineupPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlayedLineupPercentage(double value) {
+
+      playedLineupPercentage_ = value;
+      bitField5_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double playedLineupPercentage = 171;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlayedLineupPercentage() {
+      bitField5_ = (bitField5_ & ~0x00000400);
+      playedLineupPercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double substIn_ ;
+    /**
+     * <code>double substIn = 172;</code>
+     * @return The substIn.
+     */
+    @java.lang.Override
+    public double getSubstIn() {
+      return substIn_;
+    }
+    /**
+     * <code>double substIn = 172;</code>
+     * @param value The substIn to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubstIn(double value) {
+
+      substIn_ = value;
+      bitField5_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double substIn = 172;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSubstIn() {
+      bitField5_ = (bitField5_ & ~0x00000800);
+      substIn_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double substInPercentage_ ;
+    /**
+     * <code>double substInPercentage = 173;</code>
+     * @return The substInPercentage.
+     */
+    @java.lang.Override
+    public double getSubstInPercentage() {
+      return substInPercentage_;
+    }
+    /**
+     * <code>double substInPercentage = 173;</code>
+     * @param value The substInPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubstInPercentage(double value) {
+
+      substInPercentage_ = value;
+      bitField5_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double substInPercentage = 173;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSubstInPercentage() {
+      bitField5_ = (bitField5_ & ~0x00001000);
+      substInPercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double substOut_ ;
+    /**
+     * <code>double substOut = 174;</code>
+     * @return The substOut.
+     */
+    @java.lang.Override
+    public double getSubstOut() {
+      return substOut_;
+    }
+    /**
+     * <code>double substOut = 174;</code>
+     * @param value The substOut to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubstOut(double value) {
+
+      substOut_ = value;
+      bitField5_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double substOut = 174;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSubstOut() {
+      bitField5_ = (bitField5_ & ~0x00002000);
+      substOut_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double substOutPercentage_ ;
+    /**
+     * <code>double substOutPercentage = 175;</code>
+     * @return The substOutPercentage.
+     */
+    @java.lang.Override
+    public double getSubstOutPercentage() {
+      return substOutPercentage_;
+    }
+    /**
+     * <code>double substOutPercentage = 175;</code>
+     * @param value The substOutPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubstOutPercentage(double value) {
+
+      substOutPercentage_ = value;
+      bitField5_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double substOutPercentage = 175;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSubstOutPercentage() {
+      bitField5_ = (bitField5_ & ~0x00004000);
+      substOutPercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double foulsPerGame_ ;
+    /**
+     * <pre>
+     * statistics type 4 player
+     * </pre>
+     *
+     * <code>double foulsPerGame = 176;</code>
+     * @return The foulsPerGame.
+     */
+    @java.lang.Override
+    public double getFoulsPerGame() {
+      return foulsPerGame_;
+    }
+    /**
+     * <pre>
+     * statistics type 4 player
+     * </pre>
+     *
+     * <code>double foulsPerGame = 176;</code>
+     * @param value The foulsPerGame to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFoulsPerGame(double value) {
+
+      foulsPerGame_ = value;
+      bitField5_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * statistics type 4 player
+     * </pre>
+     *
+     * <code>double foulsPerGame = 176;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFoulsPerGame() {
+      bitField5_ = (bitField5_ & ~0x00008000);
+      foulsPerGame_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double saves_ ;
+    /**
+     * <code>double saves = 177;</code>
+     * @return The saves.
+     */
+    @java.lang.Override
+    public double getSaves() {
+      return saves_;
+    }
+    /**
+     * <code>double saves = 177;</code>
+     * @param value The saves to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSaves(double value) {
+
+      saves_ = value;
+      bitField5_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double saves = 177;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSaves() {
+      bitField5_ = (bitField5_ & ~0x00010000);
+      saves_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double savesPerGame_ ;
+    /**
+     * <code>double savesPerGame = 178;</code>
+     * @return The savesPerGame.
+     */
+    @java.lang.Override
+    public double getSavesPerGame() {
+      return savesPerGame_;
+    }
+    /**
+     * <code>double savesPerGame = 178;</code>
+     * @param value The savesPerGame to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSavesPerGame(double value) {
+
+      savesPerGame_ = value;
+      bitField5_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double savesPerGame = 178;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSavesPerGame() {
+      bitField5_ = (bitField5_ & ~0x00020000);
+      savesPerGame_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double savesPercentage_ ;
+    /**
+     * <code>double savesPercentage = 179;</code>
+     * @return The savesPercentage.
+     */
+    @java.lang.Override
+    public double getSavesPercentage() {
+      return savesPercentage_;
+    }
+    /**
+     * <code>double savesPercentage = 179;</code>
+     * @param value The savesPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSavesPercentage(double value) {
+
+      savesPercentage_ = value;
+      bitField5_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double savesPercentage = 179;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSavesPercentage() {
+      bitField5_ = (bitField5_ & ~0x00040000);
+      savesPercentage_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalsLeftFoot_ ;
+    /**
+     * <code>double goalsLeftFoot = 180;</code>
+     * @return The goalsLeftFoot.
+     */
+    @java.lang.Override
+    public double getGoalsLeftFoot() {
+      return goalsLeftFoot_;
+    }
+    /**
+     * <code>double goalsLeftFoot = 180;</code>
+     * @param value The goalsLeftFoot to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalsLeftFoot(double value) {
+
+      goalsLeftFoot_ = value;
+      bitField5_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalsLeftFoot = 180;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalsLeftFoot() {
+      bitField5_ = (bitField5_ & ~0x00080000);
+      goalsLeftFoot_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double goalsRightFoot_ ;
+    /**
+     * <code>double goalsRightFoot = 181;</code>
+     * @return The goalsRightFoot.
+     */
+    @java.lang.Override
+    public double getGoalsRightFoot() {
+      return goalsRightFoot_;
+    }
+    /**
+     * <code>double goalsRightFoot = 181;</code>
+     * @param value The goalsRightFoot to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoalsRightFoot(double value) {
+
+      goalsRightFoot_ = value;
+      bitField5_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double goalsRightFoot = 181;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoalsRightFoot() {
+      bitField5_ = (bitField5_ & ~0x00100000);
+      goalsRightFoot_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double totalShotsAllowed_ ;
+    /**
+     * <code>double totalShotsAllowed = 182;</code>
+     * @return The totalShotsAllowed.
+     */
+    @java.lang.Override
+    public double getTotalShotsAllowed() {
+      return totalShotsAllowed_;
+    }
+    /**
+     * <code>double totalShotsAllowed = 182;</code>
+     * @param value The totalShotsAllowed to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalShotsAllowed(double value) {
+
+      totalShotsAllowed_ = value;
+      bitField5_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double totalShotsAllowed = 182;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalShotsAllowed() {
+      bitField5_ = (bitField5_ & ~0x00200000);
+      totalShotsAllowed_ = 0D;
       onChanged();
       return this;
     }
@@ -8923,7 +12671,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MatchParticipantStatsMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

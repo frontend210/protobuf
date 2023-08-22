@@ -36,14 +36,12 @@ public interface MatchStatsMessageOrBuilder extends
   /**
    * <code>map&lt;int32, int32&gt; stats = 15;</code>
    */
-
   int getStatsOrDefault(
       int key,
       int defaultValue);
   /**
    * <code>map&lt;int32, int32&gt; stats = 15;</code>
    */
-
   int getStatsOrThrow(
       int key);
 }

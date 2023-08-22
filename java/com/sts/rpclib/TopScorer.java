@@ -53,8 +53,9 @@ public final class TopScorer {
       "dName\022/\n\007entries\030\005 \003(\0132\036.com.sts.rpclib." +
       "TopScorerEntry\022$\n\005sport\030\006 \001(\0162\025.com.sts." +
       "rpclib.Sport\022\016\n\006season\030\007 \001(\t\"$\n\024TopScore" +
-      "rFullMessage\022\014\n\004data\030\001 \001(\014B\rP\001Z\t/gorpcli" +
-      "bb\006proto3"
+      "rFullMessage\022\014\n\004data\030\001 \001(\014B/P\001Z+github.c" +
+      "om/frontend210/protobuf/gorpclibb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

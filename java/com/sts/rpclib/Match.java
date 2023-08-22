@@ -165,7 +165,7 @@ public final class Match {
       "atchDeletedMessage\022\017\n\007stageId\030\001 \001(\t\022\017\n\007m" +
       "atchId\030\002 \001(\t\"M\n\026ScoutConnectionMessage\0223" +
       "\n\nconnection\030\001 \001(\0162\037.com.sts.rpclib.Scou" +
-      "tConnection\"\263\003\n\030MatchStatusChangeMessage" +
+      "tConnection\"\336\003\n\030MatchStatusChangeMessage" +
       "\022+\n\006status\030\001 \001(\0162\033.com.sts.rpclib.MatchS" +
       "tatus\0223\n\007overall\030\002 \001(\0162\".com.sts.rpclib." +
       "MatchOverallStatus\022\021\n\tstartTime\030\003 \001(\003\022\027\n" +
@@ -174,168 +174,209 @@ public final class Match {
       "pclib.MatchStatusChangeMessage.InjuryTim" +
       "eEntry\022\020\n\010playTime\030\007 \001(\005\022\017\n\007elapsed\030\010 \001(" +
       "\005\022\031\n\021elapsedInjuryTime\030\t \001(\005\0220\n\013elapsedT" +
-      "ype\030\n \001(\0162\033.com.sts.rpclib.ElapsedType\0321" +
-      "\n\017InjuryTimeEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030" +
-      "\002 \001(\005:\0028\001\"\276\003\n\027MatchScoreChangeMessage\022+\n" +
-      "\006status\030\001 \001(\0162\033.com.sts.rpclib.MatchStat" +
-      "us\022\r\n\005isSum\030\002 \001(\010\022,\n\tscoreType\030\003 \001(\0162\031.c" +
-      "om.sts.rpclib.ScoreType\022M\n\013scoreValues\030\004" +
-      " \003(\01328.com.sts.rpclib.MatchScoreChangeMe" +
-      "ssage.ScoreValuesEntry\022W\n\020scoreValuesFlo" +
-      "at\030\005 \003(\0132=.com.sts.rpclib.MatchScoreChan" +
-      "geMessage.ScoreValuesFloatEntry\022$\n\005sport" +
-      "\030\006 \001(\0162\025.com.sts.rpclib.Sport\0322\n\020ScoreVa" +
-      "luesEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\005:\0028" +
-      "\001\0327\n\025ScoreValuesFloatEntry\022\013\n\003key\030\001 \001(\005\022" +
-      "\r\n\005value\030\002 \001(\002:\0028\001\"\364\005\n\032MatchIncidentChan" +
-      "geMessage\022\016\n\006minute\030\001 \001(\005\022\016\n\006second\030\002 \001(" +
-      "\005\022\022\n\nteamNumber\030\003 \001(\005\022\020\n\010playerId\030\004 \001(\t\022" +
-      "\021\n\tplayerNum\030\005 \001(\005\022\022\n\nplayerName\030\006 \001(\t\022\027" +
-      "\n\017playerShortName\030\007 \001(\t\022\023\n\013playerIdOut\030\010" +
-      " \001(\t\022\024\n\014playerNumOut\030\t \001(\005\022\025\n\rplayerName" +
-      "Out\030\n \001(\t\022\032\n\022playerShortNameOut\030\013 \001(\t\022\025\n" +
-      "\rrefIncidentId\030\014 \001(\t\022\014\n\004type\030\r \001(\005\022\n\n\002id" +
-      "\030\016 \001(\t\022D\n\005score\030\017 \003(\01325.com.sts.rpclib.M" +
-      "atchIncidentChangeMessage.ScoreEntry\022N\n\n" +
-      "scoreFloat\030\020 \003(\0132:.com.sts.rpclib.MatchI" +
-      "ncidentChangeMessage.ScoreFloatEntry\022\021\n\t" +
-      "extraInfo\030\021 \001(\t\022\021\n\tsortOrder\030\022 \001(\005\022&\n\006pe" +
-      "riod\030\023 \001(\0162\026.com.sts.rpclib.Period\022\035\n\025is" +
-      "PlayerDataConfirmed\030\024 \001(\010\022.\n\007assists\030\025 \003" +
-      "(\0132\035.com.sts.rpclib.AssistMessage\022\032\n\022isP" +
-      "eriodCalculated\030\026 \001(\010\022\021\n\tconfirmed\030\027 \001(\010" +
-      "\032,\n\nScoreEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001" +
-      "(\005:\0028\001\0321\n\017ScoreFloatEntry\022\013\n\003key\030\001 \001(\005\022\r" +
-      "\n\005value\030\002 \001(\003:\0028\001\"0\n\030MatchWinnerChangeMe" +
-      "ssage\022\024\n\014teamPosition\030\001 \001(\005\"Z\n\036MatchPart" +
-      "icipantsChangeMessage\0228\n\014participants\030\001 " +
-      "\003(\0132\".com.sts.rpclib.ParticipantMessage\"" +
-      "\332\033\n\034MatchParticipantStatsMessage\022\r\n\005goal" +
-      "s\030\001 \001(\005\022\020\n\010ownGoals\030\002 \001(\005\022\023\n\013yellowCards" +
-      "\030\003 \001(\005\022\031\n\021secondYellowCards\030\004 \001(\005\022\020\n\010red" +
-      "Cards\030\005 \001(\005\022\017\n\007assists\030\006 \001(\005\022\024\n\014teamPosi" +
-      "tion\030\007 \001(\005\022\022\n\ntotalGames\030\010 \001(\005\022\022\n\ntotalG" +
-      "oals\030\t \001(\005\022\030\n\020totalCleanSheets\030\n \001(\005\022\035\n\025" +
-      "totalGamesWithoutGoal\030\013 \001(\005\022\024\n\014wonFirstH" +
-      "alf\030\014 \001(\005\022\025\n\rwonSecondHalf\030\r \001(\005\022\036\n\026wonF" +
-      "irstHalfPercentage\030\016 \001(\005\022\037\n\027wonSecondHal" +
-      "fPercentage\030\017 \001(\005\022 \n\030matchesWonHomePerce" +
-      "ntage\030\020 \001(\005\022 \n\030matchesWonAwayPercentage\030" +
-      "\021 \001(\005\022\021\n\tboreDraws\030\022 \001(\005\022\033\n\023boreDrawsPer" +
-      "centage\030\023 \001(\005\022\022\n\ngoalsRatio\030\024 \001(\001\022\032\n\022yel" +
-      "lowCardsPerGame\030\025 \001(\001\022\024\n\014penaltyGoals\030\026 " +
-      "\001(\005\022\033\n\023totalGoalsFirstHalf\030\027 \001(\005\022\034\n\024tota" +
-      "lGoalsSecondHalf\030\030 \001(\005\022%\n\035totalGoalsFirs" +
-      "tHalfPercentage\030\031 \001(\005\022&\n\036totalGoalsSecon" +
-      "dHalfPercentage\030\032 \001(\005\022\021\n\tfirstGoal\030\033 \001(\005" +
-      "\022\020\n\010lastGoal\030\034 \001(\005\022\033\n\023firstGoalPercentag" +
-      "e\030\035 \001(\005\022\032\n\022lastGoalPercentage\030\036 \001(\005\022\033\n\023g" +
-      "oalRatioMinute1x15\030\037 \001(\005\022\034\n\024goalRatioMin" +
-      "ute16x30\030  \001(\005\022\034\n\024goalRatioMinute31x45\030!" +
-      " \001(\005\022\034\n\024goalRatioMinute46x60\030\" \001(\005\022\034\n\024go" +
-      "alRatioMinute61x75\030# \001(\005\022\034\n\024goalRatioMin" +
-      "ute76x90\030$ \001(\005\022\030\n\020goalInBothHalves\030% \001(\005" +
-      "\022\"\n\032goalInBothHalvesPercentage\030& \001(\005\022\036\n\026" +
-      "concededOneOrMoreGoals\030\' \001(\005\022(\n conceded" +
-      "OneOrMoreGoalsPercentage\030( \001(\005\022\020\n\010wonToN" +
-      "il\030) \001(\005\022\032\n\022wonToNilPercentage\030* \001(\005\022\036\n\026" +
-      "timeBetweenGoalsScored\030+ \001(\005\022&\n\036timeBetw" +
-      "eenGoalsScoredConceded\030, \001(\005\022\020\n\010conceded" +
-      "\030- \001(\005\022\024\n\014wonWhen1x0Up\030. \001(\005\022\026\n\016wonWhen1" +
-      "x0Down\030/ \001(\005\022\024\n\014wonWhen2x0Up\0300 \001(\005\022\036\n\026wo" +
-      "nWhen1x0UpPercentage\0301 \001(\005\022 \n\030wonWhen1x0" +
-      "DownPercentage\0302 \001(\005\022\036\n\026wonWhen2x0UpPerc" +
-      "entage\0303 \001(\005\022\027\n\017when1x0UpPoints\0304 \001(\005\022\027\n" +
-      "\017when2x0UpPoints\0305 \001(\005\022\031\n\021when1x0DownPoi" +
-      "nts\0306 \001(\005\022\031\n\021when2x0DownPoints\0307 \001(\005\022!\n\031" +
-      "when1x0UpPointsPercentage\0308 \001(\005\022!\n\031when2" +
-      "x0UpPointsPercentage\0309 \001(\005\022#\n\033when1x0Dow" +
-      "nPointsPercentage\030: \001(\005\022#\n\033when2x0DownPo" +
-      "intsPercentage\030; \001(\005\022\026\n\016earlyGoalsTeam\030<" +
-      " \001(\005\022\031\n\021lastGaspGoalsTeam\030= \001(\005\022!\n\031total" +
-      "GoalsStartingPlayers\030> \001(\005\022\037\n\027totalGoals" +
-      "SubbedPlayers\030? \001(\005\022+\n#totalGoalsStartin" +
-      "gPlayersPercentage\030@ \001(\005\022)\n!totalGoalsSu" +
-      "bbedPlayersPercentage\030A \001(\005\022\026\n\016equaliser" +
-      "Goals\030B \001(\005\022\023\n\013bothToScore\030C \001(\005\022\035\n\025both" +
-      "ToScorePercentage\030D \001(\005\022\021\n\tcomebacks\030E \001" +
-      "(\005\022\026\n\016lostLeadToLose\030F \001(\005\022\021\n\tlostInRow\030" +
-      "G \001(\005\022\031\n\021gamesWithoutGoals\030H \001(\005\022\021\n\twonA" +
-      "tHome\030I \001(\005\022\021\n\twonAtAway\030J \001(\005\022\026\n\016awayWi" +
-      "thoutWin\030K \001(\005\022\033\n\023totalCardsYellowRed\030L " +
-      "\001(\005\022,\n$totalCardsYellowRedPerGamePercent" +
-      "age\030M \001(\001\022\020\n\010headGoal\030N \001(\005\022\022\n\nstrikeGoa" +
-      "l\030O \001(\005\022\032\n\022headGoalPercentage\030P \001(\005\022\034\n\024s" +
-      "trikeGoalPercentage\030Q \001(\005\022\022\n\nfoulCommit\030" +
-      "R \001(\005\022\031\n\021foulCommitPerGame\030S \001(\001\022\016\n\006shot" +
-      "on\030T \001(\005\022\025\n\rshotonPerGame\030U \001(\001\022\017\n\007shoto" +
-      "ff\030V \001(\005\022\026\n\016shotoffPerGame\030W \001(\001\022\026\n\016shot" +
-      "sonPerGoal\030X \001(\001\022\017\n\007offside\030Y \001(\005\022\026\n\016off" +
-      "sidePerGame\030Z \001(\001\022\023\n\013cornerTaken\030[ \001(\005\022\032" +
-      "\n\022cornerTakenPerGame\030\\ \001(\001\022\025\n\rpenaltyMis" +
-      "sed\030] \001(\005\022\037\n\027penaltyMissedPercentage\030^ \001" +
-      "(\005\022\032\n\022elapsedPlusPerGame\030_ \001(\001\022\020\n\010woodwo" +
-      "rk\030` \001(\005\022\025\n\rpenaltyCommit\030a \001(\005\022\037\n\027penal" +
-      "tyCommitPercentage\030b \001(\005\022\024\n\014foulsuffered" +
-      "\030c \001(\005\022\022\n\ntotalShots\030d \001(\005\022\024\n\014penaltySav" +
-      "es\030e \001(\005\022\026\n\016defensiveError\030f \001(\005\022\031\n\021aver" +
-      "agePossession\030g \001(\005\022\030\n\020penaltiesAwarded\030" +
-      "h \001(\005\022\026\n\016goalOutsideBox\030i \001(\005\022 \n\030goalOut" +
-      "sideBoxPercentage\030j \001(\005\022\026\n\016directFreekic" +
-      "k\030k \001(\005\022 \n\030directFreekickPercentage\030l \001(" +
-      "\005\022\023\n\013scoredInRow\030m \001(\005\022\020\n\010wonInRow\030n \001(\005" +
-      "\022\030\n\020noconcedingInRow\030o \001(\005\022\026\n\016homeWithou" +
-      "tWin\030p \001(\005\022\020\n\010won2Down\030q \001(\005\022\032\n\022won2Down" +
-      "Percentage\030r \001(\005\022\034\n\024firstReturnPointsWon" +
-      "\030s \001(\005\022\034\n\024firstServePercentage\030t \001(\001\022\033\n\023" +
-      "firstServePointsWon\030u \001(\005\022\035\n\025secondRetur" +
-      "nPointsWon\030v \001(\005\022\034\n\024secondServePointsWon" +
-      "\030w \001(\005\022\014\n\004aces\030x \001(\005\022\030\n\020breakPointsSaved" +
-      "\030y \001(\005\022\026\n\016breakPointsWon\030z \001(\005\022\024\n\014double" +
-      "Faults\030{ \001(\005\022!\n\031returnPointsWonPercentag" +
-      "e\030| \001(\001\022\024\n\014serviceGames\030} \001(\005\022\"\n\032service" +
-      "PointsWonPercentage\030~ \001(\001\022\033\n\023firstServeP" +
-      "ointsAll\030\177 \001(\005\022\035\n\024secondServePointsAll\030\200" +
-      "\001 \001(\005\022\027\n\016totalPointsWon\030\201\001 \001(\005\022!\n\030totalP" +
-      "ointsWonPercentage\030\202\001 \001(\001\022\027\n\016unforcedErr" +
-      "ors\030\203\001 \001(\005\022\020\n\007winners\030\204\001 \001(\005\"\321\001\n\035MatchPa" +
-      "rticipantJerseyMessage\022\023\n\013shirtColor1\030\001 " +
-      "\001(\t\022\023\n\013shirtColor2\030\002 \001(\t\022\022\n\npantsColor\030\003" +
-      " \001(\t\022\022\n\nsocksColor\030\004 \001(\t\0222\n\014jerseyDesign" +
-      "\030\005 \001(\0162\034.com.sts.rpclib.JerseyDesign\022\024\n\014" +
-      "teamPosition\030\006 \001(\005\022\024\n\014jerseyNumber\030\007 \001(\t" +
-      "\"\277\002\n\030MatchLineupChangeMessage\022\024\n\014teamPos" +
-      "ition\030\001 \001(\005\0224\n\010starting\030\002 \003(\0132\".com.sts." +
-      "rpclib.LineupEntryMessage\0226\n\nsubstitute\030" +
-      "\003 \003(\0132\".com.sts.rpclib.LineupEntryMessag" +
-      "e\0223\n\007injured\030\004 \003(\0132\".com.sts.rpclib.Line" +
-      "upEntryMessage\0225\n\tsuspended\030\005 \003(\0132\".com." +
-      "sts.rpclib.LineupEntryMessage\0223\n\007coaches" +
-      "\030\006 \003(\0132\".com.sts.rpclib.LineupEntryMessa" +
-      "ge\"\365\001\n\022LineupEntryMessage\022\n\n\002id\030\001 \001(\t\022\022\n" +
-      "\njerseyName\030\002 \001(\t\022\021\n\tfirstName\030\003 \001(\t\022\020\n\010" +
-      "lastName\030\004 \001(\t\022\024\n\014jerseyNumber\030\005 \001(\005\0225\n\010" +
-      "position\030\006 \001(\0162#.com.sts.rpclib.Particip" +
-      "antPosition\022\025\n\rfieldPosition\030\007 \001(\005\022\021\n\tel" +
-      "apsedIn\030\010 \001(\005\022\022\n\nelapsedOut\030\t \001(\005\022\017\n\007cap" +
-      "tain\030\n \001(\010\"\353\002\n\022ParticipantMessage\022+\n\004nam" +
-      "e\030\001 \003(\0132\035.com.sts.rpclib.LocalizedName\022\n" +
-      "\n\002id\030\002 \001(\t\022+\n\002kn\030\003 \001(\0162\037.com.sts.rpclib." +
-      "ParticipantKind\022/\n\007country\030\004 \001(\0132\036.com.s" +
-      "ts.rpclib.CountryMessage\022\020\n\010position\030\005 \001" +
-      "(\005\022\016\n\006gender\030\006 \001(\005\022\r\n\005index\030\007 \001(\005\022\021\n\tsho" +
-      "rtName\030\010 \001(\t\022;\n\005stats\030\t \001(\0132,.com.sts.rp" +
-      "clib.MatchParticipantStatsMessage\022=\n\006jer" +
-      "sey\030\n \001(\0132-.com.sts.rpclib.MatchParticip" +
-      "antJerseyMessage\"I\n\016CountryMessage\022+\n\004na" +
-      "me\030\001 \003(\0132\035.com.sts.rpclib.LocalizedName\022" +
-      "\n\n\002id\030\002 \001(\t\"\224\001\n\021MatchStatsMessage\022\024\n\014tea" +
-      "mPosition\030\001 \001(\005\022;\n\005stats\030\017 \003(\0132,.com.sts" +
-      ".rpclib.MatchStatsMessage.StatsEntry\032,\n\n" +
-      "StatsEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\005:\002" +
-      "8\001\"P\n\027MatchStatsChangeMessage\0225\n\nstatist" +
-      "ics\030\001 \003(\0132!.com.sts.rpclib.MatchStatsMes" +
-      "sageB\rP\001Z\t/gorpclibb\006proto3"
+      "ype\030\n \001(\0162\033.com.sts.rpclib.ElapsedType\022\023" +
+      "\n\013description\030\013 \001(\t\022\024\n\014description2\030\014 \001(" +
+      "\t\0321\n\017InjuryTimeEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005val" +
+      "ue\030\002 \001(\005:\0028\001\"\276\003\n\027MatchScoreChangeMessage" +
+      "\022+\n\006status\030\001 \001(\0162\033.com.sts.rpclib.MatchS" +
+      "tatus\022\r\n\005isSum\030\002 \001(\010\022,\n\tscoreType\030\003 \001(\0162" +
+      "\031.com.sts.rpclib.ScoreType\022M\n\013scoreValue" +
+      "s\030\004 \003(\01328.com.sts.rpclib.MatchScoreChang" +
+      "eMessage.ScoreValuesEntry\022W\n\020scoreValues" +
+      "Float\030\005 \003(\0132=.com.sts.rpclib.MatchScoreC" +
+      "hangeMessage.ScoreValuesFloatEntry\022$\n\005sp" +
+      "ort\030\006 \001(\0162\025.com.sts.rpclib.Sport\0322\n\020Scor" +
+      "eValuesEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\005" +
+      ":\0028\001\0327\n\025ScoreValuesFloatEntry\022\013\n\003key\030\001 \001" +
+      "(\005\022\r\n\005value\030\002 \001(\002:\0028\001\"\210\006\n\032MatchIncidentC" +
+      "hangeMessage\022\016\n\006minute\030\001 \001(\005\022\016\n\006second\030\002" +
+      " \001(\005\022\022\n\nteamNumber\030\003 \001(\005\022\020\n\010playerId\030\004 \001" +
+      "(\t\022\021\n\tplayerNum\030\005 \001(\005\022\022\n\nplayerName\030\006 \001(" +
+      "\t\022\027\n\017playerShortName\030\007 \001(\t\022\023\n\013playerIdOu" +
+      "t\030\010 \001(\t\022\024\n\014playerNumOut\030\t \001(\005\022\025\n\rplayerN" +
+      "ameOut\030\n \001(\t\022\032\n\022playerShortNameOut\030\013 \001(\t" +
+      "\022\025\n\rrefIncidentId\030\014 \001(\t\022\014\n\004type\030\r \001(\005\022\n\n" +
+      "\002id\030\016 \001(\t\022D\n\005score\030\017 \003(\01325.com.sts.rpcli" +
+      "b.MatchIncidentChangeMessage.ScoreEntry\022" +
+      "N\n\nscoreFloat\030\020 \003(\0132:.com.sts.rpclib.Mat" +
+      "chIncidentChangeMessage.ScoreFloatEntry\022" +
+      "\021\n\textraInfo\030\021 \001(\t\022\021\n\tsortOrder\030\022 \001(\005\022&\n" +
+      "\006period\030\023 \001(\0162\026.com.sts.rpclib.Period\022\035\n" +
+      "\025isPlayerDataConfirmed\030\024 \001(\010\022.\n\007assists\030" +
+      "\025 \003(\0132\035.com.sts.rpclib.AssistMessage\022\032\n\022" +
+      "isPeriodCalculated\030\026 \001(\010\022\021\n\tconfirmed\030\027 " +
+      "\001(\010\022\022\n\nminutePlus\030\030 \001(\005\032,\n\nScoreEntry\022\013\n" +
+      "\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\005:\0028\001\0321\n\017ScoreFl" +
+      "oatEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\003:\0028\001" +
+      "\"0\n\030MatchWinnerChangeMessage\022\024\n\014teamPosi" +
+      "tion\030\001 \001(\005\"Z\n\036MatchParticipantsChangeMes" +
+      "sage\0228\n\014participants\030\001 \003(\0132\".com.sts.rpc" +
+      "lib.ParticipantMessage\"\242&\n\034MatchParticip" +
+      "antStatsMessage\022\r\n\005goals\030\001 \001(\005\022\020\n\010ownGoa" +
+      "ls\030\002 \001(\005\022\023\n\013yellowCards\030\003 \001(\005\022\031\n\021secondY" +
+      "ellowCards\030\004 \001(\005\022\020\n\010redCards\030\005 \001(\005\022\017\n\007as" +
+      "sists\030\006 \001(\005\022\024\n\014teamPosition\030\007 \001(\005\022\022\n\ntot" +
+      "alGames\030\010 \001(\005\022\022\n\ntotalGoals\030\t \001(\005\022\030\n\020tot" +
+      "alCleanSheets\030\n \001(\005\022\035\n\025totalGamesWithout" +
+      "Goal\030\013 \001(\005\022\024\n\014wonFirstHalf\030\014 \001(\005\022\025\n\rwonS" +
+      "econdHalf\030\r \001(\005\022\036\n\026wonFirstHalfPercentag" +
+      "e\030\016 \001(\005\022\037\n\027wonSecondHalfPercentage\030\017 \001(\005" +
+      "\022 \n\030matchesWonHomePercentage\030\020 \001(\005\022 \n\030ma" +
+      "tchesWonAwayPercentage\030\021 \001(\005\022\021\n\tboreDraw" +
+      "s\030\022 \001(\005\022\033\n\023boreDrawsPercentage\030\023 \001(\005\022\022\n\n" +
+      "goalsRatio\030\024 \001(\001\022\032\n\022yellowCardsPerGame\030\025" +
+      " \001(\001\022\024\n\014penaltyGoals\030\026 \001(\005\022\033\n\023totalGoals" +
+      "FirstHalf\030\027 \001(\005\022\034\n\024totalGoalsSecondHalf\030" +
+      "\030 \001(\005\022%\n\035totalGoalsFirstHalfPercentage\030\031" +
+      " \001(\005\022&\n\036totalGoalsSecondHalfPercentage\030\032" +
+      " \001(\005\022\021\n\tfirstGoal\030\033 \001(\005\022\020\n\010lastGoal\030\034 \001(" +
+      "\005\022\033\n\023firstGoalPercentage\030\035 \001(\005\022\032\n\022lastGo" +
+      "alPercentage\030\036 \001(\005\022\033\n\023goalRatioMinute1x1" +
+      "5\030\037 \001(\005\022\034\n\024goalRatioMinute16x30\030  \001(\005\022\034\n" +
+      "\024goalRatioMinute31x45\030! \001(\005\022\034\n\024goalRatio" +
+      "Minute46x60\030\" \001(\005\022\034\n\024goalRatioMinute61x7" +
+      "5\030# \001(\005\022\034\n\024goalRatioMinute76x90\030$ \001(\005\022\030\n" +
+      "\020goalInBothHalves\030% \001(\005\022\"\n\032goalInBothHal" +
+      "vesPercentage\030& \001(\005\022\036\n\026concededOneOrMore" +
+      "Goals\030\' \001(\005\022(\n concededOneOrMoreGoalsPer" +
+      "centage\030( \001(\005\022\020\n\010wonToNil\030) \001(\005\022\032\n\022wonTo" +
+      "NilPercentage\030* \001(\005\022\036\n\026timeBetweenGoalsS" +
+      "cored\030+ \001(\005\022&\n\036timeBetweenGoalsScoredCon" +
+      "ceded\030, \001(\005\022\020\n\010conceded\030- \001(\005\022\024\n\014wonWhen" +
+      "1x0Up\030. \001(\005\022\026\n\016wonWhen1x0Down\030/ \001(\005\022\024\n\014w" +
+      "onWhen2x0Up\0300 \001(\005\022\036\n\026wonWhen1x0UpPercent" +
+      "age\0301 \001(\005\022 \n\030wonWhen1x0DownPercentage\0302 " +
+      "\001(\005\022\036\n\026wonWhen2x0UpPercentage\0303 \001(\005\022\027\n\017w" +
+      "hen1x0UpPoints\0304 \001(\005\022\027\n\017when2x0UpPoints\030" +
+      "5 \001(\005\022\031\n\021when1x0DownPoints\0306 \001(\005\022\031\n\021when" +
+      "2x0DownPoints\0307 \001(\005\022!\n\031when1x0UpPointsPe" +
+      "rcentage\0308 \001(\005\022!\n\031when2x0UpPointsPercent" +
+      "age\0309 \001(\005\022#\n\033when1x0DownPointsPercentage" +
+      "\030: \001(\005\022#\n\033when2x0DownPointsPercentage\030; " +
+      "\001(\005\022\026\n\016earlyGoalsTeam\030< \001(\005\022\031\n\021lastGaspG" +
+      "oalsTeam\030= \001(\005\022!\n\031totalGoalsStartingPlay" +
+      "ers\030> \001(\005\022\037\n\027totalGoalsSubbedPlayers\030? \001" +
+      "(\005\022+\n#totalGoalsStartingPlayersPercentag" +
+      "e\030@ \001(\005\022)\n!totalGoalsSubbedPlayersPercen" +
+      "tage\030A \001(\005\022\026\n\016equaliserGoals\030B \001(\005\022\023\n\013bo" +
+      "thToScore\030C \001(\005\022\035\n\025bothToScorePercentage" +
+      "\030D \001(\005\022\021\n\tcomebacks\030E \001(\005\022\026\n\016lostLeadToL" +
+      "ose\030F \001(\005\022\021\n\tlostInRow\030G \001(\005\022\031\n\021gamesWit" +
+      "houtGoals\030H \001(\005\022\021\n\twonAtHome\030I \001(\005\022\021\n\two" +
+      "nAtAway\030J \001(\005\022\026\n\016awayWithoutWin\030K \001(\005\022\033\n" +
+      "\023totalCardsYellowRed\030L \001(\005\022,\n$totalCards" +
+      "YellowRedPerGamePercentage\030M \001(\001\022\020\n\010head" +
+      "Goal\030N \001(\005\022\022\n\nstrikeGoal\030O \001(\005\022\032\n\022headGo" +
+      "alPercentage\030P \001(\005\022\034\n\024strikeGoalPercenta" +
+      "ge\030Q \001(\005\022\022\n\nfoulCommit\030R \001(\005\022\031\n\021foulComm" +
+      "itPerGame\030S \001(\001\022\016\n\006shoton\030T \001(\005\022\025\n\rshoto" +
+      "nPerGame\030U \001(\001\022\017\n\007shotoff\030V \001(\005\022\026\n\016shoto" +
+      "ffPerGame\030W \001(\001\022\026\n\016shotsonPerGoal\030X \001(\001\022" +
+      "\017\n\007offside\030Y \001(\005\022\026\n\016offsidePerGame\030Z \001(\001" +
+      "\022\023\n\013cornerTaken\030[ \001(\005\022\032\n\022cornerTakenPerG" +
+      "ame\030\\ \001(\001\022\025\n\rpenaltyMissed\030] \001(\005\022\037\n\027pena" +
+      "ltyMissedPercentage\030^ \001(\005\022\032\n\022elapsedPlus" +
+      "PerGame\030_ \001(\001\022\020\n\010woodwork\030` \001(\005\022\025\n\rpenal" +
+      "tyCommit\030a \001(\005\022\037\n\027penaltyCommitPercentag" +
+      "e\030b \001(\005\022\024\n\014foulsuffered\030c \001(\005\022\022\n\ntotalSh" +
+      "ots\030d \001(\005\022\024\n\014penaltySaves\030e \001(\005\022\026\n\016defen" +
+      "siveError\030f \001(\005\022\031\n\021averagePossession\030g \001" +
+      "(\005\022\030\n\020penaltiesAwarded\030h \001(\005\022\026\n\016goalOuts" +
+      "ideBox\030i \001(\005\022 \n\030goalOutsideBoxPercentage" +
+      "\030j \001(\005\022\026\n\016directFreekick\030k \001(\005\022 \n\030direct" +
+      "FreekickPercentage\030l \001(\005\022\023\n\013scoredInRow\030" +
+      "m \001(\005\022\020\n\010wonInRow\030n \001(\005\022\030\n\020noconcedingIn" +
+      "Row\030o \001(\005\022\026\n\016homeWithoutWin\030p \001(\005\022\020\n\010won" +
+      "2Down\030q \001(\005\022\032\n\022won2DownPercentage\030r \001(\005\022" +
+      "\034\n\024firstReturnPointsWon\030s \001(\005\022\034\n\024firstSe" +
+      "rvePercentage\030t \001(\001\022\033\n\023firstServePointsW" +
+      "on\030u \001(\005\022\035\n\025secondReturnPointsWon\030v \001(\005\022" +
+      "\034\n\024secondServePointsWon\030w \001(\005\022\014\n\004aces\030x " +
+      "\001(\005\022\030\n\020breakPointsSaved\030y \001(\005\022\026\n\016breakPo" +
+      "intsWon\030z \001(\005\022\024\n\014doubleFaults\030{ \001(\005\022!\n\031r" +
+      "eturnPointsWonPercentage\030| \001(\001\022\024\n\014servic" +
+      "eGames\030} \001(\005\022\"\n\032servicePointsWonPercenta" +
+      "ge\030~ \001(\001\022\033\n\023firstServePointsAll\030\177 \001(\005\022\035\n" +
+      "\024secondServePointsAll\030\200\001 \001(\005\022\027\n\016totalPoi" +
+      "ntsWon\030\201\001 \001(\005\022!\n\030totalPointsWonPercentag" +
+      "e\030\202\001 \001(\001\022\027\n\016unforcedErrors\030\203\001 \001(\005\022\020\n\007win" +
+      "ners\030\204\001 \001(\005\022\025\n\014totalAssists\030\205\001 \001(\005\022\025\n\014to" +
+      "talCrosses\030\206\001 \001(\005\022\027\n\016goalsInsideBox\030\207\001 \001" +
+      "(\005\022\032\n\021totalBlockedShots\030\210\001 \001(\005\022\022\n\tkeyPas" +
+      "ses\030\211\001 \001(\005\022\030\n\017totalClearances\030\212\001 \001(\005\022\036\n\025" +
+      "totalAirChallengesWon\030\213\001 \001(\005\022\037\n\026totalAir" +
+      "ChallengesLost\030\214\001 \001(\005\022\025\n\014totalTackles\030\215\001" +
+      " \001(\005\022 \n\027totalInterceptedCrosses\030\216\001 \001(\005\022\032" +
+      "\n\021totalGoalAttempts\030\217\001 \001(\005\022\037\n\026totalSucce" +
+      "ssfulCrosses\030\220\001 \001(\005\022\024\n\013firstScorer\030\221\001 \001(" +
+      "\001\022\036\n\025firstScorerPercentage\030\222\001 \001(\001\022\026\n\rnoS" +
+      "coredInRow\030\223\001 \001(\001\022\025\n\014goalConceded\030\224\001 \001(\001" +
+      "\022&\n\035goalRatioMinute1x15Percentage\030\225\001 \001(\001" +
+      "\022\'\n\036goalRatioMinute16x30Percentage\030\226\001 \001(" +
+      "\001\022\'\n\036goalRatioMinute31x45Percentage\030\227\001 \001" +
+      "(\001\022\'\n\036goalRatioMinute46x60Percentage\030\230\001 " +
+      "\001(\001\022\'\n\036goalRatioMinute61x75Percentage\030\231\001" +
+      " \001(\001\022\'\n\036goalRatioMinute76x90Percentage\030\232" +
+      "\001 \001(\001\022\025\n\014lastGaspGoal\030\233\001 \001(\001\022\037\n\026lastGasp" +
+      "GoalPercentage\030\234\001 \001(\001\022\024\n\013lastToScore\030\235\001 " +
+      "\001(\001\022\036\n\025lastToScorePercentage\030\236\001 \001(\001\022\027\n\016m" +
+      "inutesPerGoal\030\237\001 \001(\001\022\014\n\003min\030\240\001 \001(\001\022\031\n\020te" +
+      "amContribution\030\241\001 \001(\001\022\017\n\006teamFK\030\242\001 \001(\t\022\023" +
+      "\n\ntotalCards\030\243\001 \001(\001\022\032\n\021totalCardsPerGame" +
+      "\030\244\001 \001(\001\022\031\n\020sheetsPercentage\030\245\001 \001(\001\022\017\n\006pl" +
+      "ayed\030\246\001 \001(\001\022\027\n\016noScoringGames\030\247\001 \001(\001\022\023\n\n" +
+      "goalsBench\030\250\001 \001(\001\022\035\n\024goalsBenchPercentag" +
+      "e\030\251\001 \001(\001\022\025\n\014playedLineup\030\252\001 \001(\001\022\037\n\026playe" +
+      "dLineupPercentage\030\253\001 \001(\001\022\020\n\007substIn\030\254\001 \001" +
+      "(\001\022\032\n\021substInPercentage\030\255\001 \001(\001\022\021\n\010substO" +
+      "ut\030\256\001 \001(\001\022\033\n\022substOutPercentage\030\257\001 \001(\001\022\025" +
+      "\n\014foulsPerGame\030\260\001 \001(\001\022\016\n\005saves\030\261\001 \001(\001\022\025\n" +
+      "\014savesPerGame\030\262\001 \001(\001\022\030\n\017savesPercentage\030" +
+      "\263\001 \001(\001\022\026\n\rgoalsLeftFoot\030\264\001 \001(\001\022\027\n\016goalsR" +
+      "ightFoot\030\265\001 \001(\001\022\032\n\021totalShotsAllowed\030\266\001 " +
+      "\001(\001\"\321\001\n\035MatchParticipantJerseyMessage\022\023\n" +
+      "\013shirtColor1\030\001 \001(\t\022\023\n\013shirtColor2\030\002 \001(\t\022" +
+      "\022\n\npantsColor\030\003 \001(\t\022\022\n\nsocksColor\030\004 \001(\t\022" +
+      "2\n\014jerseyDesign\030\005 \001(\0162\034.com.sts.rpclib.J" +
+      "erseyDesign\022\024\n\014teamPosition\030\006 \001(\005\022\024\n\014jer" +
+      "seyNumber\030\007 \001(\t\"\362\002\n\030MatchLineupChangeMes" +
+      "sage\022\024\n\014teamPosition\030\001 \001(\005\0224\n\010starting\030\002" +
+      " \003(\0132\".com.sts.rpclib.LineupEntryMessage" +
+      "\0226\n\nsubstitute\030\003 \003(\0132\".com.sts.rpclib.Li" +
+      "neupEntryMessage\0223\n\007injured\030\004 \003(\0132\".com." +
+      "sts.rpclib.LineupEntryMessage\0225\n\tsuspend" +
+      "ed\030\005 \003(\0132\".com.sts.rpclib.LineupEntryMes" +
+      "sage\0223\n\007coaches\030\006 \003(\0132\".com.sts.rpclib.L" +
+      "ineupEntryMessage\0221\n\005squad\030\007 \003(\0132\".com.s" +
+      "ts.rpclib.LineupEntryMessage\"\365\001\n\022LineupE" +
+      "ntryMessage\022\n\n\002id\030\001 \001(\t\022\022\n\njerseyName\030\002 " +
+      "\001(\t\022\021\n\tfirstName\030\003 \001(\t\022\020\n\010lastName\030\004 \001(\t" +
+      "\022\024\n\014jerseyNumber\030\005 \001(\005\0225\n\010position\030\006 \001(\016" +
+      "2#.com.sts.rpclib.ParticipantPosition\022\025\n" +
+      "\rfieldPosition\030\007 \001(\005\022\021\n\telapsedIn\030\010 \001(\005\022" +
+      "\022\n\nelapsedOut\030\t \001(\005\022\017\n\007captain\030\n \001(\010\"\350\003\n" +
+      "\022ParticipantMessage\022+\n\004name\030\001 \003(\0132\035.com." +
+      "sts.rpclib.LocalizedName\022\n\n\002id\030\002 \001(\t\022+\n\002" +
+      "kn\030\003 \001(\0162\037.com.sts.rpclib.ParticipantKin" +
+      "d\022/\n\007country\030\004 \001(\0132\036.com.sts.rpclib.Coun" +
+      "tryMessage\022\020\n\010position\030\005 \001(\005\022\016\n\006gender\030\006" +
+      " \001(\005\022\r\n\005index\030\007 \001(\005\022\021\n\tshortName\030\010 \001(\t\022;" +
+      "\n\005stats\030\t \001(\0132,.com.sts.rpclib.MatchPart" +
+      "icipantStatsMessage\022=\n\006jersey\030\n \001(\0132-.co" +
+      "m.sts.rpclib.MatchParticipantJerseyMessa" +
+      "ge\022\024\n\014conferenceId\030\013 \001(\t\022\026\n\016conferenceNa" +
+      "me\030\014 \001(\t\022\022\n\ndivisionId\030\r \001(\t\022\024\n\014division" +
+      "Name\030\016 \001(\t\022\021\n\tfirstName\030\017 \001(\t\022\020\n\010lastNam" +
+      "e\030\020 \001(\t\"I\n\016CountryMessage\022+\n\004name\030\001 \003(\0132" +
+      "\035.com.sts.rpclib.LocalizedName\022\n\n\002id\030\002 \001" +
+      "(\t\"\224\001\n\021MatchStatsMessage\022\024\n\014teamPosition" +
+      "\030\001 \001(\005\022;\n\005stats\030\017 \003(\0132,.com.sts.rpclib.M" +
+      "atchStatsMessage.StatsEntry\032,\n\nStatsEntr" +
+      "y\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\005:\0028\001\"P\n\027Mat" +
+      "chStatsChangeMessage\0225\n\nstatistics\030\001 \003(\013" +
+      "2!.com.sts.rpclib.MatchStatsMessageB/P\001Z" +
+      "+github.com/frontend210/protobuf/gorp" +
+      "clibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -386,7 +427,7 @@ public final class Match {
     internal_static_com_sts_rpclib_MatchStatusChangeMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_MatchStatusChangeMessage_descriptor,
-        new java.lang.String[] { "Status", "Overall", "StartTime", "ProvidedEndTime", "ScheduledEndTime", "InjuryTime", "PlayTime", "Elapsed", "ElapsedInjuryTime", "ElapsedType", });
+        new java.lang.String[] { "Status", "Overall", "StartTime", "ProvidedEndTime", "ScheduledEndTime", "InjuryTime", "PlayTime", "Elapsed", "ElapsedInjuryTime", "ElapsedType", "Description", "Description2", });
     internal_static_com_sts_rpclib_MatchStatusChangeMessage_InjuryTimeEntry_descriptor =
       internal_static_com_sts_rpclib_MatchStatusChangeMessage_descriptor.getNestedTypes().get(0);
     internal_static_com_sts_rpclib_MatchStatusChangeMessage_InjuryTimeEntry_fieldAccessorTable = new
@@ -416,7 +457,7 @@ public final class Match {
     internal_static_com_sts_rpclib_MatchIncidentChangeMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_MatchIncidentChangeMessage_descriptor,
-        new java.lang.String[] { "Minute", "Second", "TeamNumber", "PlayerId", "PlayerNum", "PlayerName", "PlayerShortName", "PlayerIdOut", "PlayerNumOut", "PlayerNameOut", "PlayerShortNameOut", "RefIncidentId", "Type", "Id", "Score", "ScoreFloat", "ExtraInfo", "SortOrder", "Period", "IsPlayerDataConfirmed", "Assists", "IsPeriodCalculated", "Confirmed", });
+        new java.lang.String[] { "Minute", "Second", "TeamNumber", "PlayerId", "PlayerNum", "PlayerName", "PlayerShortName", "PlayerIdOut", "PlayerNumOut", "PlayerNameOut", "PlayerShortNameOut", "RefIncidentId", "Type", "Id", "Score", "ScoreFloat", "ExtraInfo", "SortOrder", "Period", "IsPlayerDataConfirmed", "Assists", "IsPeriodCalculated", "Confirmed", "MinutePlus", });
     internal_static_com_sts_rpclib_MatchIncidentChangeMessage_ScoreEntry_descriptor =
       internal_static_com_sts_rpclib_MatchIncidentChangeMessage_descriptor.getNestedTypes().get(0);
     internal_static_com_sts_rpclib_MatchIncidentChangeMessage_ScoreEntry_fieldAccessorTable = new
@@ -446,7 +487,7 @@ public final class Match {
     internal_static_com_sts_rpclib_MatchParticipantStatsMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_MatchParticipantStatsMessage_descriptor,
-        new java.lang.String[] { "Goals", "OwnGoals", "YellowCards", "SecondYellowCards", "RedCards", "Assists", "TeamPosition", "TotalGames", "TotalGoals", "TotalCleanSheets", "TotalGamesWithoutGoal", "WonFirstHalf", "WonSecondHalf", "WonFirstHalfPercentage", "WonSecondHalfPercentage", "MatchesWonHomePercentage", "MatchesWonAwayPercentage", "BoreDraws", "BoreDrawsPercentage", "GoalsRatio", "YellowCardsPerGame", "PenaltyGoals", "TotalGoalsFirstHalf", "TotalGoalsSecondHalf", "TotalGoalsFirstHalfPercentage", "TotalGoalsSecondHalfPercentage", "FirstGoal", "LastGoal", "FirstGoalPercentage", "LastGoalPercentage", "GoalRatioMinute1X15", "GoalRatioMinute16X30", "GoalRatioMinute31X45", "GoalRatioMinute46X60", "GoalRatioMinute61X75", "GoalRatioMinute76X90", "GoalInBothHalves", "GoalInBothHalvesPercentage", "ConcededOneOrMoreGoals", "ConcededOneOrMoreGoalsPercentage", "WonToNil", "WonToNilPercentage", "TimeBetweenGoalsScored", "TimeBetweenGoalsScoredConceded", "Conceded", "WonWhen1X0Up", "WonWhen1X0Down", "WonWhen2X0Up", "WonWhen1X0UpPercentage", "WonWhen1X0DownPercentage", "WonWhen2X0UpPercentage", "When1X0UpPoints", "When2X0UpPoints", "When1X0DownPoints", "When2X0DownPoints", "When1X0UpPointsPercentage", "When2X0UpPointsPercentage", "When1X0DownPointsPercentage", "When2X0DownPointsPercentage", "EarlyGoalsTeam", "LastGaspGoalsTeam", "TotalGoalsStartingPlayers", "TotalGoalsSubbedPlayers", "TotalGoalsStartingPlayersPercentage", "TotalGoalsSubbedPlayersPercentage", "EqualiserGoals", "BothToScore", "BothToScorePercentage", "Comebacks", "LostLeadToLose", "LostInRow", "GamesWithoutGoals", "WonAtHome", "WonAtAway", "AwayWithoutWin", "TotalCardsYellowRed", "TotalCardsYellowRedPerGamePercentage", "HeadGoal", "StrikeGoal", "HeadGoalPercentage", "StrikeGoalPercentage", "FoulCommit", "FoulCommitPerGame", "Shoton", "ShotonPerGame", "Shotoff", "ShotoffPerGame", "ShotsonPerGoal", "Offside", "OffsidePerGame", "CornerTaken", "CornerTakenPerGame", "PenaltyMissed", "PenaltyMissedPercentage", "ElapsedPlusPerGame", "Woodwork", "PenaltyCommit", "PenaltyCommitPercentage", "Foulsuffered", "TotalShots", "PenaltySaves", "DefensiveError", "AveragePossession", "PenaltiesAwarded", "GoalOutsideBox", "GoalOutsideBoxPercentage", "DirectFreekick", "DirectFreekickPercentage", "ScoredInRow", "WonInRow", "NoconcedingInRow", "HomeWithoutWin", "Won2Down", "Won2DownPercentage", "FirstReturnPointsWon", "FirstServePercentage", "FirstServePointsWon", "SecondReturnPointsWon", "SecondServePointsWon", "Aces", "BreakPointsSaved", "BreakPointsWon", "DoubleFaults", "ReturnPointsWonPercentage", "ServiceGames", "ServicePointsWonPercentage", "FirstServePointsAll", "SecondServePointsAll", "TotalPointsWon", "TotalPointsWonPercentage", "UnforcedErrors", "Winners", });
+        new java.lang.String[] { "Goals", "OwnGoals", "YellowCards", "SecondYellowCards", "RedCards", "Assists", "TeamPosition", "TotalGames", "TotalGoals", "TotalCleanSheets", "TotalGamesWithoutGoal", "WonFirstHalf", "WonSecondHalf", "WonFirstHalfPercentage", "WonSecondHalfPercentage", "MatchesWonHomePercentage", "MatchesWonAwayPercentage", "BoreDraws", "BoreDrawsPercentage", "GoalsRatio", "YellowCardsPerGame", "PenaltyGoals", "TotalGoalsFirstHalf", "TotalGoalsSecondHalf", "TotalGoalsFirstHalfPercentage", "TotalGoalsSecondHalfPercentage", "FirstGoal", "LastGoal", "FirstGoalPercentage", "LastGoalPercentage", "GoalRatioMinute1X15", "GoalRatioMinute16X30", "GoalRatioMinute31X45", "GoalRatioMinute46X60", "GoalRatioMinute61X75", "GoalRatioMinute76X90", "GoalInBothHalves", "GoalInBothHalvesPercentage", "ConcededOneOrMoreGoals", "ConcededOneOrMoreGoalsPercentage", "WonToNil", "WonToNilPercentage", "TimeBetweenGoalsScored", "TimeBetweenGoalsScoredConceded", "Conceded", "WonWhen1X0Up", "WonWhen1X0Down", "WonWhen2X0Up", "WonWhen1X0UpPercentage", "WonWhen1X0DownPercentage", "WonWhen2X0UpPercentage", "When1X0UpPoints", "When2X0UpPoints", "When1X0DownPoints", "When2X0DownPoints", "When1X0UpPointsPercentage", "When2X0UpPointsPercentage", "When1X0DownPointsPercentage", "When2X0DownPointsPercentage", "EarlyGoalsTeam", "LastGaspGoalsTeam", "TotalGoalsStartingPlayers", "TotalGoalsSubbedPlayers", "TotalGoalsStartingPlayersPercentage", "TotalGoalsSubbedPlayersPercentage", "EqualiserGoals", "BothToScore", "BothToScorePercentage", "Comebacks", "LostLeadToLose", "LostInRow", "GamesWithoutGoals", "WonAtHome", "WonAtAway", "AwayWithoutWin", "TotalCardsYellowRed", "TotalCardsYellowRedPerGamePercentage", "HeadGoal", "StrikeGoal", "HeadGoalPercentage", "StrikeGoalPercentage", "FoulCommit", "FoulCommitPerGame", "Shoton", "ShotonPerGame", "Shotoff", "ShotoffPerGame", "ShotsonPerGoal", "Offside", "OffsidePerGame", "CornerTaken", "CornerTakenPerGame", "PenaltyMissed", "PenaltyMissedPercentage", "ElapsedPlusPerGame", "Woodwork", "PenaltyCommit", "PenaltyCommitPercentage", "Foulsuffered", "TotalShots", "PenaltySaves", "DefensiveError", "AveragePossession", "PenaltiesAwarded", "GoalOutsideBox", "GoalOutsideBoxPercentage", "DirectFreekick", "DirectFreekickPercentage", "ScoredInRow", "WonInRow", "NoconcedingInRow", "HomeWithoutWin", "Won2Down", "Won2DownPercentage", "FirstReturnPointsWon", "FirstServePercentage", "FirstServePointsWon", "SecondReturnPointsWon", "SecondServePointsWon", "Aces", "BreakPointsSaved", "BreakPointsWon", "DoubleFaults", "ReturnPointsWonPercentage", "ServiceGames", "ServicePointsWonPercentage", "FirstServePointsAll", "SecondServePointsAll", "TotalPointsWon", "TotalPointsWonPercentage", "UnforcedErrors", "Winners", "TotalAssists", "TotalCrosses", "GoalsInsideBox", "TotalBlockedShots", "KeyPasses", "TotalClearances", "TotalAirChallengesWon", "TotalAirChallengesLost", "TotalTackles", "TotalInterceptedCrosses", "TotalGoalAttempts", "TotalSuccessfulCrosses", "FirstScorer", "FirstScorerPercentage", "NoScoredInRow", "GoalConceded", "GoalRatioMinute1X15Percentage", "GoalRatioMinute16X30Percentage", "GoalRatioMinute31X45Percentage", "GoalRatioMinute46X60Percentage", "GoalRatioMinute61X75Percentage", "GoalRatioMinute76X90Percentage", "LastGaspGoal", "LastGaspGoalPercentage", "LastToScore", "LastToScorePercentage", "MinutesPerGoal", "Min", "TeamContribution", "TeamFK", "TotalCards", "TotalCardsPerGame", "SheetsPercentage", "Played", "NoScoringGames", "GoalsBench", "GoalsBenchPercentage", "PlayedLineup", "PlayedLineupPercentage", "SubstIn", "SubstInPercentage", "SubstOut", "SubstOutPercentage", "FoulsPerGame", "Saves", "SavesPerGame", "SavesPercentage", "GoalsLeftFoot", "GoalsRightFoot", "TotalShotsAllowed", });
     internal_static_com_sts_rpclib_MatchParticipantJerseyMessage_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_com_sts_rpclib_MatchParticipantJerseyMessage_fieldAccessorTable = new
@@ -458,7 +499,7 @@ public final class Match {
     internal_static_com_sts_rpclib_MatchLineupChangeMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_MatchLineupChangeMessage_descriptor,
-        new java.lang.String[] { "TeamPosition", "Starting", "Substitute", "Injured", "Suspended", "Coaches", });
+        new java.lang.String[] { "TeamPosition", "Starting", "Substitute", "Injured", "Suspended", "Coaches", "Squad", });
     internal_static_com_sts_rpclib_LineupEntryMessage_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_com_sts_rpclib_LineupEntryMessage_fieldAccessorTable = new
@@ -470,7 +511,7 @@ public final class Match {
     internal_static_com_sts_rpclib_ParticipantMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_ParticipantMessage_descriptor,
-        new java.lang.String[] { "Name", "Id", "Kn", "Country", "Position", "Gender", "Index", "ShortName", "Stats", "Jersey", });
+        new java.lang.String[] { "Name", "Id", "Kn", "Country", "Position", "Gender", "Index", "ShortName", "Stats", "Jersey", "ConferenceId", "ConferenceName", "DivisionId", "DivisionName", "FirstName", "LastName", });
     internal_static_com_sts_rpclib_CountryMessage_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_com_sts_rpclib_CountryMessage_fieldAccessorTable = new

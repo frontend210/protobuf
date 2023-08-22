@@ -51,79 +51,87 @@ public final class Envelope {
       "\n\016envelope.proto\022\016com.sts.rpclib\032\013enums." +
       "proto\032\014sports.proto\032\013match.proto\032\016incide" +
       "nt.proto\032\017providers.proto\032\014stages.proto\032" +
-      "\020top_scorer.proto\032\023league_tables.proto\032\022" +
-      "widget_event.proto\032\tvar.proto\032\th2h.proto" +
-      "\032\013image.proto\032\nodds.proto\032\017team_page.pro" +
-      "to\032\ndraw.proto\"\323\001\n\007Headers\022*\n\010provider\030\001" +
-      " \001(\0162\030.com.sts.rpclib.Provider\022$\n\005sport\030" +
-      "\002 \001(\0162\025.com.sts.rpclib.Sport\022\017\n\007matchId\030" +
-      "\003 \001(\t\022\017\n\007stageId\030\004 \001(\t\022\016\n\006season\030\005 \001(\t\022\021" +
-      "\n\ttimestamp\030\006 \001(\003\0221\n\014message_type\030\007 \001(\0162" +
-      "\033.com.sts.rpclib.MessageType\"\233\001\n\017Respons" +
-      "eMessage\0221\n\006status\030\001 \001(\0162!.com.sts.rpcli" +
-      "b.RpcResponseStatus\022\023\n\013description\030\002 \001(\t" +
-      "\022\'\n\006header\030\003 \001(\0132\027.com.sts.rpclib.Header" +
-      "s\022\027\n\017serverStartedTs\030\004 \001(\003\"?\n\020HeartbeatM" +
-      "essage\022\022\n\nproviderId\030\001 \001(\005\022\027\n\017serverStar" +
-      "tedTs\030\002 \001(\003\"<\n\025CommandRequestMessage\022\022\n\n" +
-      "providerId\030\001 \001(\005\022\017\n\007counter\030\002 \001(\003\"\262\021\n\014Ev" +
-      "entMessage\022(\n\007headers\030\001 \001(\0132\027.com.sts.rp" +
-      "clib.Headers\022-\n\005stage\030\002 \001(\0132\034.com.sts.rp" +
-      "clib.StageMessageH\000\0227\n\ncommentary\030\003 \001(\0132" +
-      "!.com.sts.rpclib.CommentaryMessageH\000\022B\n\022" +
-      "matchCommentaryAdd\030\004 \001(\0132$.com.sts.rpcli" +
-      "b.AddCommentaryMessageH\000\022?\n\016providerStat" +
-      "us\030\005 \001(\0132%.com.sts.rpclib.ProviderStatus" +
-      "MessageH\000\0229\n\013leagueTable\030\006 \001(\0132\".com.sts" +
-      ".rpclib.LeagueTableMessageH\000\0225\n\ttopScore" +
-      "r\030\007 \001(\0132 .com.sts.rpclib.TopScorerMessag" +
-      "eH\000\022A\n\017scoutConnection\030\010 \001(\0132&.com.sts.r" +
-      "pclib.ScoutConnectionMessageH\000\0229\n\013widget" +
-      "Event\030\t \001(\0132\".com.sts.rpclib.WidgetEvent" +
-      "MessageH\000\0225\n\tvarStatus\030\n \001(\0132 .com.sts.r" +
-      "pclib.VarStatusMessageH\000\0225\n\tvarReason\030\013 " +
-      "\001(\0132 .com.sts.rpclib.VarReasonMessageH\000\022" +
-      "=\n\rfullMatchData\030\014 \001(\0132$.com.sts.rpclib." +
-      "FullMatchDataMessageH\000\022;\n\014matchDeleted\030\r" +
-      " \001(\0132#.com.sts.rpclib.MatchDeletedMessag" +
-      "eH\000\0223\n\010incident\030\016 \001(\0132\037.com.sts.rpclib.I" +
-      "ncidentMessageH\000\022E\n\021matchStatusChange\030\017 " +
-      "\001(\0132(.com.sts.rpclib.MatchStatusChangeMe" +
-      "ssageH\000\022C\n\020matchScoreChange\030\020 \001(\0132\'.com." +
-      "sts.rpclib.MatchScoreChangeMessageH\000\022I\n\023" +
-      "matchIncidentChange\030\021 \001(\0132*.com.sts.rpcl" +
-      "ib.MatchIncidentChangeMessageH\000\022E\n\021match" +
-      "WinnerChange\030\022 \001(\0132(.com.sts.rpclib.Matc" +
-      "hWinnerChangeMessageH\000\022Q\n\027matchParticipa" +
-      "ntsChange\030\023 \001(\0132..com.sts.rpclib.MatchPa" +
-      "rticipantsChangeMessageH\000\022E\n\021matchLineup" +
-      "Change\030\024 \001(\0132(.com.sts.rpclib.MatchLineu" +
-      "pChangeMessageH\000\022D\n\021matchStatsMessage\030\025 " +
-      "\001(\0132\'.com.sts.rpclib.MatchStatsChangeMes" +
-      "sageH\000\022G\n\026deletedIncidentMessage\030\026 \001(\0132%" +
-      ".com.sts.rpclib.DeleteIncidentMessageH\000\022" +
-      ":\n\017responseMessage\030\027 \001(\0132\037.com.sts.rpcli" +
-      "b.ResponseMessageH\000\022<\n\020heartbeatMessage\030" +
-      "\030 \001(\0132 .com.sts.rpclib.HeartbeatMessageH" +
-      "\000\022H\n\026leagueTableMessageFull\030\031 \001(\0132&.com." +
-      "sts.rpclib.LeagueTableFullMessageH\000\022D\n\024t" +
-      "opScorerFullMessage\030\032 \001(\0132$.com.sts.rpcl" +
-      "ib.TopScorerFullMessageH\000\022>\n\021H2HMatchesM" +
-      "essage\030\033 \001(\0132!.com.sts.rpclib.H2HMatches" +
-      "MessageH\000\0229\n\013base64image\030\034 \001(\0132\".com.sts" +
-      ".rpclib.Base64ImageMessageH\000\022<\n\020imageFul" +
-      "lMessage\030\035 \001(\0132 .com.sts.rpclib.ImageFul" +
-      "lMessageH\000\022h\n&stageParticipantsStatistic" +
-      "sFullMessage\030\036 \001(\01326.com.sts.rpclib.Stag" +
-      "eParticipantsStatisticsFullMessageH\000\022D\n\024" +
-      "matchOddsFullMessage\030\037 \001(\0132$.com.sts.rpc" +
-      "lib.MatchOddsFullMessageH\000\022:\n\017teamPageMe" +
-      "ssage\030  \001(\0132\037.com.sts.rpclib.TeamPageMes" +
-      "sageH\000\022B\n\023teamPageFullMessage\030! \001(\0132#.co" +
-      "m.sts.rpclib.TeamPageFullMessageH\000\022:\n\017dr" +
-      "awFullMessage\030\" \001(\0132\037.com.sts.rpclib.Dra" +
-      "wFullMessageH\000B\006\n\004bodyB\rP\001Z\t/gorpclibb\006p" +
-      "roto3"
+      "\020top_scorer.proto\032\023league_tables.proto\032\016" +
+      "rankings.proto\032\022widget_event.proto\032\tvar." +
+      "proto\032\th2h.proto\032\013image.proto\032\nodds.prot" +
+      "o\032\017team_page.proto\032\ndraw.proto\032\024player_p" +
+      "rofile.proto\"\323\001\n\007Headers\022*\n\010provider\030\001 \001" +
+      "(\0162\030.com.sts.rpclib.Provider\022$\n\005sport\030\002 " +
+      "\001(\0162\025.com.sts.rpclib.Sport\022\017\n\007matchId\030\003 " +
+      "\001(\t\022\017\n\007stageId\030\004 \001(\t\022\016\n\006season\030\005 \001(\t\022\021\n\t" +
+      "timestamp\030\006 \001(\003\0221\n\014message_type\030\007 \001(\0162\033." +
+      "com.sts.rpclib.MessageType\"\233\001\n\017ResponseM" +
+      "essage\0221\n\006status\030\001 \001(\0162!.com.sts.rpclib." +
+      "RpcResponseStatus\022\023\n\013description\030\002 \001(\t\022\'" +
+      "\n\006header\030\003 \001(\0132\027.com.sts.rpclib.Headers\022" +
+      "\027\n\017serverStartedTs\030\004 \001(\003\"?\n\020HeartbeatMes" +
+      "sage\022\022\n\nproviderId\030\001 \001(\005\022\027\n\017serverStarte" +
+      "dTs\030\002 \001(\003\"<\n\025CommandRequestMessage\022\022\n\npr" +
+      "oviderId\030\001 \001(\005\022\017\n\007counter\030\002 \001(\003\"\306\023\n\014Even" +
+      "tMessage\022(\n\007headers\030\001 \001(\0132\027.com.sts.rpcl" +
+      "ib.Headers\022-\n\005stage\030\002 \001(\0132\034.com.sts.rpcl" +
+      "ib.StageMessageH\000\0227\n\ncommentary\030\003 \001(\0132!." +
+      "com.sts.rpclib.CommentaryMessageH\000\022B\n\022ma" +
+      "tchCommentaryAdd\030\004 \001(\0132$.com.sts.rpclib." +
+      "AddCommentaryMessageH\000\022?\n\016providerStatus" +
+      "\030\005 \001(\0132%.com.sts.rpclib.ProviderStatusMe" +
+      "ssageH\000\0229\n\013leagueTable\030\006 \001(\0132\".com.sts.r" +
+      "pclib.LeagueTableMessageH\000\0225\n\ttopScorer\030" +
+      "\007 \001(\0132 .com.sts.rpclib.TopScorerMessageH" +
+      "\000\022A\n\017scoutConnection\030\010 \001(\0132&.com.sts.rpc" +
+      "lib.ScoutConnectionMessageH\000\0229\n\013widgetEv" +
+      "ent\030\t \001(\0132\".com.sts.rpclib.WidgetEventMe" +
+      "ssageH\000\0225\n\tvarStatus\030\n \001(\0132 .com.sts.rpc" +
+      "lib.VarStatusMessageH\000\0225\n\tvarReason\030\013 \001(" +
+      "\0132 .com.sts.rpclib.VarReasonMessageH\000\022=\n" +
+      "\rfullMatchData\030\014 \001(\0132$.com.sts.rpclib.Fu" +
+      "llMatchDataMessageH\000\022;\n\014matchDeleted\030\r \001" +
+      "(\0132#.com.sts.rpclib.MatchDeletedMessageH" +
+      "\000\0223\n\010incident\030\016 \001(\0132\037.com.sts.rpclib.Inc" +
+      "identMessageH\000\022E\n\021matchStatusChange\030\017 \001(" +
+      "\0132(.com.sts.rpclib.MatchStatusChangeMess" +
+      "ageH\000\022C\n\020matchScoreChange\030\020 \001(\0132\'.com.st" +
+      "s.rpclib.MatchScoreChangeMessageH\000\022I\n\023ma" +
+      "tchIncidentChange\030\021 \001(\0132*.com.sts.rpclib" +
+      ".MatchIncidentChangeMessageH\000\022E\n\021matchWi" +
+      "nnerChange\030\022 \001(\0132(.com.sts.rpclib.MatchW" +
+      "innerChangeMessageH\000\022Q\n\027matchParticipant" +
+      "sChange\030\023 \001(\0132..com.sts.rpclib.MatchPart" +
+      "icipantsChangeMessageH\000\022E\n\021matchLineupCh" +
+      "ange\030\024 \001(\0132(.com.sts.rpclib.MatchLineupC" +
+      "hangeMessageH\000\022D\n\021matchStatsMessage\030\025 \001(" +
+      "\0132\'.com.sts.rpclib.MatchStatsChangeMessa" +
+      "geH\000\022G\n\026deletedIncidentMessage\030\026 \001(\0132%.c" +
+      "om.sts.rpclib.DeleteIncidentMessageH\000\022:\n" +
+      "\017responseMessage\030\027 \001(\0132\037.com.sts.rpclib." +
+      "ResponseMessageH\000\022<\n\020heartbeatMessage\030\030 " +
+      "\001(\0132 .com.sts.rpclib.HeartbeatMessageH\000\022" +
+      "H\n\026leagueTableMessageFull\030\031 \001(\0132&.com.st" +
+      "s.rpclib.LeagueTableFullMessageH\000\022D\n\024top" +
+      "ScorerFullMessage\030\032 \001(\0132$.com.sts.rpclib" +
+      ".TopScorerFullMessageH\000\022>\n\021H2HMatchesMes" +
+      "sage\030\033 \001(\0132!.com.sts.rpclib.H2HMatchesMe" +
+      "ssageH\000\0229\n\013base64image\030\034 \001(\0132\".com.sts.r" +
+      "pclib.Base64ImageMessageH\000\022<\n\020imageFullM" +
+      "essage\030\035 \001(\0132 .com.sts.rpclib.ImageFullM" +
+      "essageH\000\022h\n&stageParticipantsStatisticsF" +
+      "ullMessage\030\036 \001(\01326.com.sts.rpclib.StageP" +
+      "articipantsStatisticsFullMessageH\000\022D\n\024ma" +
+      "tchOddsFullMessage\030\037 \001(\0132$.com.sts.rpcli" +
+      "b.MatchOddsFullMessageH\000\022:\n\017teamPageMess" +
+      "age\030  \001(\0132\037.com.sts.rpclib.TeamPageMessa" +
+      "geH\000\022B\n\023teamPageFullMessage\030! \001(\0132#.com." +
+      "sts.rpclib.TeamPageFullMessageH\000\022:\n\017draw" +
+      "FullMessage\030\" \001(\0132\037.com.sts.rpclib.DrawF" +
+      "ullMessageH\000\022:\n\017rankingsMessage\030# \001(\0132\037." +
+      "com.sts.rpclib.RankingsMessageH\000\022B\n\023rank" +
+      "ingsFullMessage\030$ \001(\0132#.com.sts.rpclib.R" +
+      "ankingsFullMessageH\000\022D\n\024playerProfileMes" +
+      "sage\030% \001(\0132$.com.sts.rpclib.PlayerProfil" +
+      "eMessageH\000\022L\n\030playerProfileFullMessage\030&" +
+      " \001(\0132(.com.sts.rpclib.PlayerProfileFullM" +
+      "essageH\000B\006\n\004bodyB/P\001Z+github.com/snapsco" +
+      "regroup/protobuf/gorpclibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -136,6 +144,7 @@ public final class Envelope {
           com.sts.rpclib.Stages.getDescriptor(),
           com.sts.rpclib.TopScorer.getDescriptor(),
           com.sts.rpclib.LeagueTables.getDescriptor(),
+          com.sts.rpclib.Rankings.getDescriptor(),
           com.sts.rpclib.WidgetEvent.getDescriptor(),
           com.sts.rpclib.Var.getDescriptor(),
           com.sts.rpclib.H2H.getDescriptor(),
@@ -143,6 +152,7 @@ public final class Envelope {
           com.sts.rpclib.Odds.getDescriptor(),
           com.sts.rpclib.TeamPage.getDescriptor(),
           com.sts.rpclib.Draw.getDescriptor(),
+          com.sts.rpclib.PlayerProfile.getDescriptor(),
         });
     internal_static_com_sts_rpclib_Headers_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -173,7 +183,7 @@ public final class Envelope {
     internal_static_com_sts_rpclib_EventMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_EventMessage_descriptor,
-        new java.lang.String[] { "Headers", "Stage", "Commentary", "MatchCommentaryAdd", "ProviderStatus", "LeagueTable", "TopScorer", "ScoutConnection", "WidgetEvent", "VarStatus", "VarReason", "FullMatchData", "MatchDeleted", "Incident", "MatchStatusChange", "MatchScoreChange", "MatchIncidentChange", "MatchWinnerChange", "MatchParticipantsChange", "MatchLineupChange", "MatchStatsMessage", "DeletedIncidentMessage", "ResponseMessage", "HeartbeatMessage", "LeagueTableMessageFull", "TopScorerFullMessage", "H2HMatchesMessage", "Base64Image", "ImageFullMessage", "StageParticipantsStatisticsFullMessage", "MatchOddsFullMessage", "TeamPageMessage", "TeamPageFullMessage", "DrawFullMessage", "Body", });
+        new java.lang.String[] { "Headers", "Stage", "Commentary", "MatchCommentaryAdd", "ProviderStatus", "LeagueTable", "TopScorer", "ScoutConnection", "WidgetEvent", "VarStatus", "VarReason", "FullMatchData", "MatchDeleted", "Incident", "MatchStatusChange", "MatchScoreChange", "MatchIncidentChange", "MatchWinnerChange", "MatchParticipantsChange", "MatchLineupChange", "MatchStatsMessage", "DeletedIncidentMessage", "ResponseMessage", "HeartbeatMessage", "LeagueTableMessageFull", "TopScorerFullMessage", "H2HMatchesMessage", "Base64Image", "ImageFullMessage", "StageParticipantsStatisticsFullMessage", "MatchOddsFullMessage", "TeamPageMessage", "TeamPageFullMessage", "DrawFullMessage", "RankingsMessage", "RankingsFullMessage", "PlayerProfileMessage", "PlayerProfileFullMessage", "Body", });
     com.sts.rpclib.Enums.getDescriptor();
     com.sts.rpclib.Sports.getDescriptor();
     com.sts.rpclib.Match.getDescriptor();
@@ -182,6 +192,7 @@ public final class Envelope {
     com.sts.rpclib.Stages.getDescriptor();
     com.sts.rpclib.TopScorer.getDescriptor();
     com.sts.rpclib.LeagueTables.getDescriptor();
+    com.sts.rpclib.Rankings.getDescriptor();
     com.sts.rpclib.WidgetEvent.getDescriptor();
     com.sts.rpclib.Var.getDescriptor();
     com.sts.rpclib.H2H.getDescriptor();
@@ -189,6 +200,7 @@ public final class Envelope {
     com.sts.rpclib.Odds.getDescriptor();
     com.sts.rpclib.TeamPage.getDescriptor();
     com.sts.rpclib.Draw.getDescriptor();
+    com.sts.rpclib.PlayerProfile.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

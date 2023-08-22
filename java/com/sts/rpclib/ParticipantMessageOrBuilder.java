@@ -128,4 +128,76 @@ public interface ParticipantMessageOrBuilder extends
    * <code>.com.sts.rpclib.MatchParticipantJerseyMessage jersey = 10;</code>
    */
   com.sts.rpclib.MatchParticipantJerseyMessageOrBuilder getJerseyOrBuilder();
+
+  /**
+   * <code>string conferenceId = 11;</code>
+   * @return The conferenceId.
+   */
+  java.lang.String getConferenceId();
+  /**
+   * <code>string conferenceId = 11;</code>
+   * @return The bytes for conferenceId.
+   */
+  com.google.protobuf.ByteString
+      getConferenceIdBytes();
+
+  /**
+   * <code>string conferenceName = 12;</code>
+   * @return The conferenceName.
+   */
+  java.lang.String getConferenceName();
+  /**
+   * <code>string conferenceName = 12;</code>
+   * @return The bytes for conferenceName.
+   */
+  com.google.protobuf.ByteString
+      getConferenceNameBytes();
+
+  /**
+   * <code>string divisionId = 13;</code>
+   * @return The divisionId.
+   */
+  java.lang.String getDivisionId();
+  /**
+   * <code>string divisionId = 13;</code>
+   * @return The bytes for divisionId.
+   */
+  com.google.protobuf.ByteString
+      getDivisionIdBytes();
+
+  /**
+   * <code>string divisionName = 14;</code>
+   * @return The divisionName.
+   */
+  java.lang.String getDivisionName();
+  /**
+   * <code>string divisionName = 14;</code>
+   * @return The bytes for divisionName.
+   */
+  com.google.protobuf.ByteString
+      getDivisionNameBytes();
+
+  /**
+   * <code>string firstName = 15;</code>
+   * @return The firstName.
+   */
+  java.lang.String getFirstName();
+  /**
+   * <code>string firstName = 15;</code>
+   * @return The bytes for firstName.
+   */
+  com.google.protobuf.ByteString
+      getFirstNameBytes();
+
+  /**
+   * <code>string lastName = 16;</code>
+   * @return The lastName.
+   */
+  java.lang.String getLastName();
+  /**
+   * <code>string lastName = 16;</code>
+   * @return The bytes for lastName.
+   */
+  com.google.protobuf.ByteString
+      getLastNameBytes();
 }

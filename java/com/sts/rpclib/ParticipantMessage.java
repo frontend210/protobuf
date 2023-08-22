@@ -24,6 +24,12 @@ private static final long serialVersionUID = 0L;
     id_ = "";
     kn_ = 0;
     shortName_ = "";
+    conferenceId_ = "";
+    conferenceName_ = "";
+    divisionId_ = "";
+    divisionName_ = "";
+    firstName_ = "";
+    lastName_ = "";
   }
 
   @java.lang.Override
@@ -33,135 +39,6 @@ private static final long serialVersionUID = 0L;
     return new ParticipantMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ParticipantMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              name_ = new java.util.ArrayList<com.sts.rpclib.LocalizedName>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            name_.add(
-                input.readMessage(com.sts.rpclib.LocalizedName.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            id_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            kn_ = rawValue;
-            break;
-          }
-          case 34: {
-            com.sts.rpclib.CountryMessage.Builder subBuilder = null;
-            if (country_ != null) {
-              subBuilder = country_.toBuilder();
-            }
-            country_ = input.readMessage(com.sts.rpclib.CountryMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(country_);
-              country_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 40: {
-
-            position_ = input.readInt32();
-            break;
-          }
-          case 48: {
-
-            gender_ = input.readInt32();
-            break;
-          }
-          case 56: {
-
-            index_ = input.readInt32();
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            shortName_ = s;
-            break;
-          }
-          case 74: {
-            com.sts.rpclib.MatchParticipantStatsMessage.Builder subBuilder = null;
-            if (stats_ != null) {
-              subBuilder = stats_.toBuilder();
-            }
-            stats_ = input.readMessage(com.sts.rpclib.MatchParticipantStatsMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(stats_);
-              stats_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 82: {
-            com.sts.rpclib.MatchParticipantJerseyMessage.Builder subBuilder = null;
-            if (jersey_ != null) {
-              subBuilder = jersey_.toBuilder();
-            }
-            jersey_ = input.readMessage(com.sts.rpclib.MatchParticipantJerseyMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(jersey_);
-              jersey_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        name_ = java.util.Collections.unmodifiableList(name_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Match.internal_static_com_sts_rpclib_ParticipantMessage_descriptor;
@@ -176,6 +53,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LocalizedName> name_;
   /**
    * <code>repeated .com.sts.rpclib.LocalizedName name = 1;</code>
@@ -216,7 +94,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object id_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object id_ = "";
   /**
    * <code>string id = 2;</code>
    * @return The id.
@@ -254,7 +133,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KN_FIELD_NUMBER = 3;
-  private int kn_;
+  private int kn_ = 0;
   /**
    * <code>.com.sts.rpclib.ParticipantKind kn = 3;</code>
    * @return The enum numeric value on the wire for kn.
@@ -267,8 +146,7 @@ private static final long serialVersionUID = 0L;
    * @return The kn.
    */
   @java.lang.Override public com.sts.rpclib.ParticipantKind getKn() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.ParticipantKind result = com.sts.rpclib.ParticipantKind.valueOf(kn_);
+    com.sts.rpclib.ParticipantKind result = com.sts.rpclib.ParticipantKind.forNumber(kn_);
     return result == null ? com.sts.rpclib.ParticipantKind.UNRECOGNIZED : result;
   }
 
@@ -295,11 +173,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.sts.rpclib.CountryMessageOrBuilder getCountryOrBuilder() {
-    return getCountry();
+    return country_ == null ? com.sts.rpclib.CountryMessage.getDefaultInstance() : country_;
   }
 
   public static final int POSITION_FIELD_NUMBER = 5;
-  private int position_;
+  private int position_ = 0;
   /**
    * <code>int32 position = 5;</code>
    * @return The position.
@@ -310,7 +188,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GENDER_FIELD_NUMBER = 6;
-  private int gender_;
+  private int gender_ = 0;
   /**
    * <code>int32 gender = 6;</code>
    * @return The gender.
@@ -321,7 +199,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INDEX_FIELD_NUMBER = 7;
-  private int index_;
+  private int index_ = 0;
   /**
    * <code>int32 index = 7;</code>
    * @return The index.
@@ -332,7 +210,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHORTNAME_FIELD_NUMBER = 8;
-  private volatile java.lang.Object shortName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object shortName_ = "";
   /**
    * <code>string shortName = 8;</code>
    * @return The shortName.
@@ -392,7 +271,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.sts.rpclib.MatchParticipantStatsMessageOrBuilder getStatsOrBuilder() {
-    return getStats();
+    return stats_ == null ? com.sts.rpclib.MatchParticipantStatsMessage.getDefaultInstance() : stats_;
   }
 
   public static final int JERSEY_FIELD_NUMBER = 10;
@@ -418,7 +297,241 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.sts.rpclib.MatchParticipantJerseyMessageOrBuilder getJerseyOrBuilder() {
-    return getJersey();
+    return jersey_ == null ? com.sts.rpclib.MatchParticipantJerseyMessage.getDefaultInstance() : jersey_;
+  }
+
+  public static final int CONFERENCEID_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conferenceId_ = "";
+  /**
+   * <code>string conferenceId = 11;</code>
+   * @return The conferenceId.
+   */
+  @java.lang.Override
+  public java.lang.String getConferenceId() {
+    java.lang.Object ref = conferenceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      conferenceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string conferenceId = 11;</code>
+   * @return The bytes for conferenceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getConferenceIdBytes() {
+    java.lang.Object ref = conferenceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      conferenceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CONFERENCENAME_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conferenceName_ = "";
+  /**
+   * <code>string conferenceName = 12;</code>
+   * @return The conferenceName.
+   */
+  @java.lang.Override
+  public java.lang.String getConferenceName() {
+    java.lang.Object ref = conferenceName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      conferenceName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string conferenceName = 12;</code>
+   * @return The bytes for conferenceName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getConferenceNameBytes() {
+    java.lang.Object ref = conferenceName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      conferenceName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DIVISIONID_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object divisionId_ = "";
+  /**
+   * <code>string divisionId = 13;</code>
+   * @return The divisionId.
+   */
+  @java.lang.Override
+  public java.lang.String getDivisionId() {
+    java.lang.Object ref = divisionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      divisionId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string divisionId = 13;</code>
+   * @return The bytes for divisionId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDivisionIdBytes() {
+    java.lang.Object ref = divisionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      divisionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DIVISIONNAME_FIELD_NUMBER = 14;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object divisionName_ = "";
+  /**
+   * <code>string divisionName = 14;</code>
+   * @return The divisionName.
+   */
+  @java.lang.Override
+  public java.lang.String getDivisionName() {
+    java.lang.Object ref = divisionName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      divisionName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string divisionName = 14;</code>
+   * @return The bytes for divisionName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDivisionNameBytes() {
+    java.lang.Object ref = divisionName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      divisionName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int FIRSTNAME_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object firstName_ = "";
+  /**
+   * <code>string firstName = 15;</code>
+   * @return The firstName.
+   */
+  @java.lang.Override
+  public java.lang.String getFirstName() {
+    java.lang.Object ref = firstName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      firstName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string firstName = 15;</code>
+   * @return The bytes for firstName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFirstNameBytes() {
+    java.lang.Object ref = firstName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      firstName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LASTNAME_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lastName_ = "";
+  /**
+   * <code>string lastName = 16;</code>
+   * @return The lastName.
+   */
+  @java.lang.Override
+  public java.lang.String getLastName() {
+    java.lang.Object ref = lastName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      lastName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string lastName = 16;</code>
+   * @return The bytes for lastName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLastNameBytes() {
+    java.lang.Object ref = lastName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      lastName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -465,7 +578,25 @@ private static final long serialVersionUID = 0L;
     if (jersey_ != null) {
       output.writeMessage(10, getJersey());
     }
-    unknownFields.writeTo(output);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conferenceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, conferenceId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conferenceName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, conferenceName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(divisionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, divisionId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(divisionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, divisionName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, firstName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, lastName_);
+    }
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -512,7 +643,25 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getJersey());
     }
-    size += unknownFields.getSerializedSize();
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conferenceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, conferenceId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conferenceName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, conferenceName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(divisionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, divisionId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(divisionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, divisionName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, firstName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, lastName_);
+    }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -555,7 +704,19 @@ private static final long serialVersionUID = 0L;
       if (!getJersey()
           .equals(other.getJersey())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getConferenceId()
+        .equals(other.getConferenceId())) return false;
+    if (!getConferenceName()
+        .equals(other.getConferenceName())) return false;
+    if (!getDivisionId()
+        .equals(other.getDivisionId())) return false;
+    if (!getDivisionName()
+        .equals(other.getDivisionName())) return false;
+    if (!getFirstName()
+        .equals(other.getFirstName())) return false;
+    if (!getLastName()
+        .equals(other.getLastName())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -594,7 +755,19 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + JERSEY_FIELD_NUMBER;
       hash = (53 * hash) + getJersey().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (37 * hash) + CONFERENCEID_FIELD_NUMBER;
+    hash = (53 * hash) + getConferenceId().hashCode();
+    hash = (37 * hash) + CONFERENCENAME_FIELD_NUMBER;
+    hash = (53 * hash) + getConferenceName().hashCode();
+    hash = (37 * hash) + DIVISIONID_FIELD_NUMBER;
+    hash = (53 * hash) + getDivisionId().hashCode();
+    hash = (37 * hash) + DIVISIONNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getDivisionName().hashCode();
+    hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getFirstName().hashCode();
+    hash = (37 * hash) + LASTNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getLastName().hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -643,11 +816,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.ParticipantMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.ParticipantMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -715,59 +890,52 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.ParticipantMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getNameFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (nameBuilder_ == null) {
         name_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        name_ = null;
         nameBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = "";
-
       kn_ = 0;
-
-      if (countryBuilder_ == null) {
-        country_ = null;
-      } else {
-        country_ = null;
+      country_ = null;
+      if (countryBuilder_ != null) {
+        countryBuilder_.dispose();
         countryBuilder_ = null;
       }
       position_ = 0;
-
       gender_ = 0;
-
       index_ = 0;
-
       shortName_ = "";
-
-      if (statsBuilder_ == null) {
-        stats_ = null;
-      } else {
-        stats_ = null;
+      stats_ = null;
+      if (statsBuilder_ != null) {
+        statsBuilder_.dispose();
         statsBuilder_ = null;
       }
-      if (jerseyBuilder_ == null) {
-        jersey_ = null;
-      } else {
-        jersey_ = null;
+      jersey_ = null;
+      if (jerseyBuilder_ != null) {
+        jerseyBuilder_.dispose();
         jerseyBuilder_ = null;
       }
+      conferenceId_ = "";
+      conferenceName_ = "";
+      divisionId_ = "";
+      divisionName_ = "";
+      firstName_ = "";
+      lastName_ = "";
       return this;
     }
 
@@ -794,7 +962,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.ParticipantMessage buildPartial() {
       com.sts.rpclib.ParticipantMessage result = new com.sts.rpclib.ParticipantMessage(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.sts.rpclib.ParticipantMessage result) {
       if (nameBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           name_ = java.util.Collections.unmodifiableList(name_);
@@ -804,29 +978,61 @@ private static final long serialVersionUID = 0L;
       } else {
         result.name_ = nameBuilder_.build();
       }
-      result.id_ = id_;
-      result.kn_ = kn_;
-      if (countryBuilder_ == null) {
-        result.country_ = country_;
-      } else {
-        result.country_ = countryBuilder_.build();
+    }
+
+    private void buildPartial0(com.sts.rpclib.ParticipantMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
       }
-      result.position_ = position_;
-      result.gender_ = gender_;
-      result.index_ = index_;
-      result.shortName_ = shortName_;
-      if (statsBuilder_ == null) {
-        result.stats_ = stats_;
-      } else {
-        result.stats_ = statsBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.kn_ = kn_;
       }
-      if (jerseyBuilder_ == null) {
-        result.jersey_ = jersey_;
-      } else {
-        result.jersey_ = jerseyBuilder_.build();
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.country_ = countryBuilder_ == null
+            ? country_
+            : countryBuilder_.build();
       }
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.position_ = position_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.gender_ = gender_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.index_ = index_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.shortName_ = shortName_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.stats_ = statsBuilder_ == null
+            ? stats_
+            : statsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.jersey_ = jerseyBuilder_ == null
+            ? jersey_
+            : jerseyBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.conferenceId_ = conferenceId_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.conferenceName_ = conferenceName_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.divisionId_ = divisionId_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.divisionName_ = divisionName_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.firstName_ = firstName_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.lastName_ = lastName_;
+      }
     }
 
     @java.lang.Override
@@ -901,6 +1107,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.kn_ != 0) {
@@ -920,6 +1127,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getShortName().isEmpty()) {
         shortName_ = other.shortName_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.hasStats()) {
@@ -928,7 +1136,37 @@ private static final long serialVersionUID = 0L;
       if (other.hasJersey()) {
         mergeJersey(other.getJersey());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      if (!other.getConferenceId().isEmpty()) {
+        conferenceId_ = other.conferenceId_;
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
+      if (!other.getConferenceName().isEmpty()) {
+        conferenceName_ = other.conferenceName_;
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      if (!other.getDivisionId().isEmpty()) {
+        divisionId_ = other.divisionId_;
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
+      if (!other.getDivisionName().isEmpty()) {
+        divisionName_ = other.divisionName_;
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
+      if (!other.getFirstName().isEmpty()) {
+        firstName_ = other.firstName_;
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
+      if (!other.getLastName().isEmpty()) {
+        lastName_ = other.lastName_;
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -943,17 +1181,124 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.ParticipantMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.sts.rpclib.LocalizedName m =
+                  input.readMessage(
+                      com.sts.rpclib.LocalizedName.parser(),
+                      extensionRegistry);
+              if (nameBuilder_ == null) {
+                ensureNameIsMutable();
+                name_.add(m);
+              } else {
+                nameBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              id_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              kn_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              input.readMessage(
+                  getCountryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              position_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              gender_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              index_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 66: {
+              shortName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getStatsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getJerseyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              conferenceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              conferenceName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              divisionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            case 114: {
+              divisionName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
+            case 122: {
+              firstName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
+            case 130: {
+              lastName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 130
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.ParticipantMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1239,11 +1584,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1252,8 +1595,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
       id_ = getDefaultInstance().getId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1264,12 +1607,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1288,8 +1629,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setKnValue(int value) {
-      
       kn_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1299,8 +1640,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.ParticipantKind getKn() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.ParticipantKind result = com.sts.rpclib.ParticipantKind.valueOf(kn_);
+      com.sts.rpclib.ParticipantKind result = com.sts.rpclib.ParticipantKind.forNumber(kn_);
       return result == null ? com.sts.rpclib.ParticipantKind.UNRECOGNIZED : result;
     }
     /**
@@ -1312,7 +1652,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       kn_ = value.getNumber();
       onChanged();
       return this;
@@ -1322,7 +1662,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKn() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       kn_ = 0;
       onChanged();
       return this;
@@ -1336,7 +1676,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the country field is set.
      */
     public boolean hasCountry() {
-      return countryBuilder_ != null || country_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.com.sts.rpclib.CountryMessage country = 4;</code>
@@ -1358,11 +1698,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         country_ = value;
-        onChanged();
       } else {
         countryBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1372,11 +1712,11 @@ private static final long serialVersionUID = 0L;
         com.sts.rpclib.CountryMessage.Builder builderForValue) {
       if (countryBuilder_ == null) {
         country_ = builderForValue.build();
-        onChanged();
       } else {
         countryBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1384,38 +1724,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCountry(com.sts.rpclib.CountryMessage value) {
       if (countryBuilder_ == null) {
-        if (country_ != null) {
-          country_ =
-            com.sts.rpclib.CountryMessage.newBuilder(country_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          country_ != null &&
+          country_ != com.sts.rpclib.CountryMessage.getDefaultInstance()) {
+          getCountryBuilder().mergeFrom(value);
         } else {
           country_ = value;
         }
-        onChanged();
       } else {
         countryBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.CountryMessage country = 4;</code>
      */
     public Builder clearCountry() {
-      if (countryBuilder_ == null) {
-        country_ = null;
-        onChanged();
-      } else {
-        country_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      country_ = null;
+      if (countryBuilder_ != null) {
+        countryBuilder_.dispose();
         countryBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.CountryMessage country = 4;</code>
      */
     public com.sts.rpclib.CountryMessage.Builder getCountryBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getCountryFieldBuilder().getBuilder();
     }
@@ -1462,8 +1802,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPosition(int value) {
-      
+
       position_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1472,7 +1813,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPosition() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       position_ = 0;
       onChanged();
       return this;
@@ -1493,8 +1834,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGender(int value) {
-      
+
       gender_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1503,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGender() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       gender_ = 0;
       onChanged();
       return this;
@@ -1524,8 +1866,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIndex(int value) {
-      
+
       index_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1534,7 +1877,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIndex() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       index_ = 0;
       onChanged();
       return this;
@@ -1581,11 +1924,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShortName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       shortName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1594,8 +1935,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShortName() {
-      
       shortName_ = getDefaultInstance().getShortName();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1606,12 +1947,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShortNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       shortName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1624,7 +1963,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the stats field is set.
      */
     public boolean hasStats() {
-      return statsBuilder_ != null || stats_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>.com.sts.rpclib.MatchParticipantStatsMessage stats = 9;</code>
@@ -1646,11 +1985,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         stats_ = value;
-        onChanged();
       } else {
         statsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1660,11 +1999,11 @@ private static final long serialVersionUID = 0L;
         com.sts.rpclib.MatchParticipantStatsMessage.Builder builderForValue) {
       if (statsBuilder_ == null) {
         stats_ = builderForValue.build();
-        onChanged();
       } else {
         statsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1672,38 +2011,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStats(com.sts.rpclib.MatchParticipantStatsMessage value) {
       if (statsBuilder_ == null) {
-        if (stats_ != null) {
-          stats_ =
-            com.sts.rpclib.MatchParticipantStatsMessage.newBuilder(stats_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000100) != 0) &&
+          stats_ != null &&
+          stats_ != com.sts.rpclib.MatchParticipantStatsMessage.getDefaultInstance()) {
+          getStatsBuilder().mergeFrom(value);
         } else {
           stats_ = value;
         }
-        onChanged();
       } else {
         statsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.MatchParticipantStatsMessage stats = 9;</code>
      */
     public Builder clearStats() {
-      if (statsBuilder_ == null) {
-        stats_ = null;
-        onChanged();
-      } else {
-        stats_ = null;
+      bitField0_ = (bitField0_ & ~0x00000100);
+      stats_ = null;
+      if (statsBuilder_ != null) {
+        statsBuilder_.dispose();
         statsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.MatchParticipantStatsMessage stats = 9;</code>
      */
     public com.sts.rpclib.MatchParticipantStatsMessage.Builder getStatsBuilder() {
-      
+      bitField0_ |= 0x00000100;
       onChanged();
       return getStatsFieldBuilder().getBuilder();
     }
@@ -1743,7 +2082,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the jersey field is set.
      */
     public boolean hasJersey() {
-      return jerseyBuilder_ != null || jersey_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>.com.sts.rpclib.MatchParticipantJerseyMessage jersey = 10;</code>
@@ -1765,11 +2104,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         jersey_ = value;
-        onChanged();
       } else {
         jerseyBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -1779,11 +2118,11 @@ private static final long serialVersionUID = 0L;
         com.sts.rpclib.MatchParticipantJerseyMessage.Builder builderForValue) {
       if (jerseyBuilder_ == null) {
         jersey_ = builderForValue.build();
-        onChanged();
       } else {
         jerseyBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -1791,38 +2130,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeJersey(com.sts.rpclib.MatchParticipantJerseyMessage value) {
       if (jerseyBuilder_ == null) {
-        if (jersey_ != null) {
-          jersey_ =
-            com.sts.rpclib.MatchParticipantJerseyMessage.newBuilder(jersey_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000200) != 0) &&
+          jersey_ != null &&
+          jersey_ != com.sts.rpclib.MatchParticipantJerseyMessage.getDefaultInstance()) {
+          getJerseyBuilder().mergeFrom(value);
         } else {
           jersey_ = value;
         }
-        onChanged();
       } else {
         jerseyBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.MatchParticipantJerseyMessage jersey = 10;</code>
      */
     public Builder clearJersey() {
-      if (jerseyBuilder_ == null) {
-        jersey_ = null;
-        onChanged();
-      } else {
-        jersey_ = null;
+      bitField0_ = (bitField0_ & ~0x00000200);
+      jersey_ = null;
+      if (jerseyBuilder_ != null) {
+        jerseyBuilder_.dispose();
         jerseyBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.MatchParticipantJerseyMessage jersey = 10;</code>
      */
     public com.sts.rpclib.MatchParticipantJerseyMessage.Builder getJerseyBuilder() {
-      
+      bitField0_ |= 0x00000200;
       onChanged();
       return getJerseyFieldBuilder().getBuilder();
     }
@@ -1852,6 +2191,438 @@ private static final long serialVersionUID = 0L;
         jersey_ = null;
       }
       return jerseyBuilder_;
+    }
+
+    private java.lang.Object conferenceId_ = "";
+    /**
+     * <code>string conferenceId = 11;</code>
+     * @return The conferenceId.
+     */
+    public java.lang.String getConferenceId() {
+      java.lang.Object ref = conferenceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        conferenceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string conferenceId = 11;</code>
+     * @return The bytes for conferenceId.
+     */
+    public com.google.protobuf.ByteString
+        getConferenceIdBytes() {
+      java.lang.Object ref = conferenceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        conferenceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string conferenceId = 11;</code>
+     * @param value The conferenceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConferenceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      conferenceId_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string conferenceId = 11;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConferenceId() {
+      conferenceId_ = getDefaultInstance().getConferenceId();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string conferenceId = 11;</code>
+     * @param value The bytes for conferenceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConferenceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      conferenceId_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object conferenceName_ = "";
+    /**
+     * <code>string conferenceName = 12;</code>
+     * @return The conferenceName.
+     */
+    public java.lang.String getConferenceName() {
+      java.lang.Object ref = conferenceName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        conferenceName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string conferenceName = 12;</code>
+     * @return The bytes for conferenceName.
+     */
+    public com.google.protobuf.ByteString
+        getConferenceNameBytes() {
+      java.lang.Object ref = conferenceName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        conferenceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string conferenceName = 12;</code>
+     * @param value The conferenceName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConferenceName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      conferenceName_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string conferenceName = 12;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConferenceName() {
+      conferenceName_ = getDefaultInstance().getConferenceName();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string conferenceName = 12;</code>
+     * @param value The bytes for conferenceName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConferenceNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      conferenceName_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object divisionId_ = "";
+    /**
+     * <code>string divisionId = 13;</code>
+     * @return The divisionId.
+     */
+    public java.lang.String getDivisionId() {
+      java.lang.Object ref = divisionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        divisionId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string divisionId = 13;</code>
+     * @return The bytes for divisionId.
+     */
+    public com.google.protobuf.ByteString
+        getDivisionIdBytes() {
+      java.lang.Object ref = divisionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        divisionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string divisionId = 13;</code>
+     * @param value The divisionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDivisionId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      divisionId_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string divisionId = 13;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDivisionId() {
+      divisionId_ = getDefaultInstance().getDivisionId();
+      bitField0_ = (bitField0_ & ~0x00001000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string divisionId = 13;</code>
+     * @param value The bytes for divisionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDivisionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      divisionId_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object divisionName_ = "";
+    /**
+     * <code>string divisionName = 14;</code>
+     * @return The divisionName.
+     */
+    public java.lang.String getDivisionName() {
+      java.lang.Object ref = divisionName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        divisionName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string divisionName = 14;</code>
+     * @return The bytes for divisionName.
+     */
+    public com.google.protobuf.ByteString
+        getDivisionNameBytes() {
+      java.lang.Object ref = divisionName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        divisionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string divisionName = 14;</code>
+     * @param value The divisionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDivisionName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      divisionName_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string divisionName = 14;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDivisionName() {
+      divisionName_ = getDefaultInstance().getDivisionName();
+      bitField0_ = (bitField0_ & ~0x00002000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string divisionName = 14;</code>
+     * @param value The bytes for divisionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDivisionNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      divisionName_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object firstName_ = "";
+    /**
+     * <code>string firstName = 15;</code>
+     * @return The firstName.
+     */
+    public java.lang.String getFirstName() {
+      java.lang.Object ref = firstName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        firstName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string firstName = 15;</code>
+     * @return The bytes for firstName.
+     */
+    public com.google.protobuf.ByteString
+        getFirstNameBytes() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        firstName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string firstName = 15;</code>
+     * @param value The firstName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFirstName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      firstName_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string firstName = 15;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFirstName() {
+      firstName_ = getDefaultInstance().getFirstName();
+      bitField0_ = (bitField0_ & ~0x00004000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string firstName = 15;</code>
+     * @param value The bytes for firstName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFirstNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      firstName_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object lastName_ = "";
+    /**
+     * <code>string lastName = 16;</code>
+     * @return The lastName.
+     */
+    public java.lang.String getLastName() {
+      java.lang.Object ref = lastName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string lastName = 16;</code>
+     * @return The bytes for lastName.
+     */
+    public com.google.protobuf.ByteString
+        getLastNameBytes() {
+      java.lang.Object ref = lastName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string lastName = 16;</code>
+     * @param value The lastName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      lastName_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string lastName = 16;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLastName() {
+      lastName_ = getDefaultInstance().getLastName();
+      bitField0_ = (bitField0_ & ~0x00008000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string lastName = 16;</code>
+     * @param value The bytes for lastName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      lastName_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -1886,7 +2657,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ParticipantMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

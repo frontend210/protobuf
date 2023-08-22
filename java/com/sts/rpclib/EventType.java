@@ -69,17 +69,137 @@ public enum EventType
    */
   ODI(14),
   /**
-   * <code>MATCH_X_DAYS = 15;</code>
+   * <code>MATCH_ONE_DAY = 15;</code>
    */
-  MATCH_X_DAYS(15),
+  MATCH_ONE_DAY(15),
   /**
-   * <code>MATCH_ONE_DAY = 16;</code>
+   * <code>TEST = 16;</code>
    */
-  MATCH_ONE_DAY(16),
+  TEST(16),
   /**
-   * <code>ICC = 17;</code>
+   * <code>LIST_A = 17;</code>
    */
-  ICC(17),
+  LIST_A(17),
+  /**
+   * <code>LIST_A_ODI = 18;</code>
+   */
+  LIST_A_ODI(18),
+  /**
+   * <code>MATCH_5_OVERS = 19;</code>
+   */
+  MATCH_5_OVERS(19),
+  /**
+   * <code>MATCH_10_OVERS = 20;</code>
+   */
+  MATCH_10_OVERS(20),
+  /**
+   * <code>MATCH_35_OVERS = 21;</code>
+   */
+  MATCH_35_OVERS(21),
+  /**
+   * <code>MATCH_100_BALLS = 22;</code>
+   */
+  MATCH_100_BALLS(22),
+  /**
+   * <code>TEST_3_DAYS = 23;</code>
+   */
+  TEST_3_DAYS(23),
+  /**
+   * <code>TEST_4_DAYS = 24;</code>
+   */
+  TEST_4_DAYS(24),
+  /**
+   * <code>TEST_5_DAYS = 25;</code>
+   */
+  TEST_5_DAYS(25),
+  /**
+   * <code>TEST_6_DAYS = 26;</code>
+   */
+  TEST_6_DAYS(26),
+  /**
+   * <code>TEST_YOUTH = 27;</code>
+   */
+  TEST_YOUTH(27),
+  /**
+   * <code>ICL = 28;</code>
+   */
+  ICL(28),
+  /**
+   * <code>IPL = 29;</code>
+   */
+  IPL(29),
+  /**
+   * <code>MATCH_2_DAYS = 30;</code>
+   */
+  MATCH_2_DAYS(30),
+  /**
+   * <code>MATCH_3_DAYS = 31;</code>
+   */
+  MATCH_3_DAYS(31),
+  /**
+   * <code>MATCH_4_DAYS = 32;</code>
+   */
+  MATCH_4_DAYS(32),
+  /**
+   * <code>MATCH_5_DAYS = 33;</code>
+   */
+  MATCH_5_DAYS(33),
+  /**
+   * <code>MATCH_6_OVERS = 34;</code>
+   */
+  MATCH_6_OVERS(34),
+  /**
+   * <code>MATCH_7_OVERS = 35;</code>
+   */
+  MATCH_7_OVERS(35),
+  /**
+   * <code>MATCH_8_OVERS = 36;</code>
+   */
+  MATCH_8_OVERS(36),
+  /**
+   * <code>MATCH_9_OVERS = 37;</code>
+   */
+  MATCH_9_OVERS(37),
+  /**
+   * <code>MATCH_60_OVERS = 38;</code>
+   */
+  MATCH_60_OVERS(38),
+  /**
+   * <code>ONLY_T_20 = 39;</code>
+   */
+  ONLY_T_20(39),
+  /**
+   * <code>LIST_A_T_20 = 40;</code>
+   */
+  LIST_A_T_20(40),
+  /**
+   * <code>T_20_WORLD_CUP = 41;</code>
+   */
+  T_20_WORLD_CUP(41),
+  /**
+   * <code>T_20_WORLD_CUP_FEMALE = 42;</code>
+   */
+  T_20_WORLD_CUP_FEMALE(42),
+  /**
+   * <code>T_20_YOUTH = 43;</code>
+   */
+  T_20_YOUTH(43),
+  /**
+   * <code>ONLY_ODI = 44;</code>
+   */
+  ONLY_ODI(44),
+  /**
+   * <code>ODI_WORLD_CUP = 45;</code>
+   */
+  ODI_WORLD_CUP(45),
+  /**
+   * <code>ODI_YOUTH = 46;</code>
+   */
+  ODI_YOUTH(46),
+  /**
+   * <code>LIST_A_ODI_FEMALE = 47;</code>
+   */
+  LIST_A_ODI_FEMALE(47),
   UNRECOGNIZED(-1),
   ;
 
@@ -144,17 +264,137 @@ public enum EventType
    */
   public static final int ODI_VALUE = 14;
   /**
-   * <code>MATCH_X_DAYS = 15;</code>
+   * <code>MATCH_ONE_DAY = 15;</code>
    */
-  public static final int MATCH_X_DAYS_VALUE = 15;
+  public static final int MATCH_ONE_DAY_VALUE = 15;
   /**
-   * <code>MATCH_ONE_DAY = 16;</code>
+   * <code>TEST = 16;</code>
    */
-  public static final int MATCH_ONE_DAY_VALUE = 16;
+  public static final int TEST_VALUE = 16;
   /**
-   * <code>ICC = 17;</code>
+   * <code>LIST_A = 17;</code>
    */
-  public static final int ICC_VALUE = 17;
+  public static final int LIST_A_VALUE = 17;
+  /**
+   * <code>LIST_A_ODI = 18;</code>
+   */
+  public static final int LIST_A_ODI_VALUE = 18;
+  /**
+   * <code>MATCH_5_OVERS = 19;</code>
+   */
+  public static final int MATCH_5_OVERS_VALUE = 19;
+  /**
+   * <code>MATCH_10_OVERS = 20;</code>
+   */
+  public static final int MATCH_10_OVERS_VALUE = 20;
+  /**
+   * <code>MATCH_35_OVERS = 21;</code>
+   */
+  public static final int MATCH_35_OVERS_VALUE = 21;
+  /**
+   * <code>MATCH_100_BALLS = 22;</code>
+   */
+  public static final int MATCH_100_BALLS_VALUE = 22;
+  /**
+   * <code>TEST_3_DAYS = 23;</code>
+   */
+  public static final int TEST_3_DAYS_VALUE = 23;
+  /**
+   * <code>TEST_4_DAYS = 24;</code>
+   */
+  public static final int TEST_4_DAYS_VALUE = 24;
+  /**
+   * <code>TEST_5_DAYS = 25;</code>
+   */
+  public static final int TEST_5_DAYS_VALUE = 25;
+  /**
+   * <code>TEST_6_DAYS = 26;</code>
+   */
+  public static final int TEST_6_DAYS_VALUE = 26;
+  /**
+   * <code>TEST_YOUTH = 27;</code>
+   */
+  public static final int TEST_YOUTH_VALUE = 27;
+  /**
+   * <code>ICL = 28;</code>
+   */
+  public static final int ICL_VALUE = 28;
+  /**
+   * <code>IPL = 29;</code>
+   */
+  public static final int IPL_VALUE = 29;
+  /**
+   * <code>MATCH_2_DAYS = 30;</code>
+   */
+  public static final int MATCH_2_DAYS_VALUE = 30;
+  /**
+   * <code>MATCH_3_DAYS = 31;</code>
+   */
+  public static final int MATCH_3_DAYS_VALUE = 31;
+  /**
+   * <code>MATCH_4_DAYS = 32;</code>
+   */
+  public static final int MATCH_4_DAYS_VALUE = 32;
+  /**
+   * <code>MATCH_5_DAYS = 33;</code>
+   */
+  public static final int MATCH_5_DAYS_VALUE = 33;
+  /**
+   * <code>MATCH_6_OVERS = 34;</code>
+   */
+  public static final int MATCH_6_OVERS_VALUE = 34;
+  /**
+   * <code>MATCH_7_OVERS = 35;</code>
+   */
+  public static final int MATCH_7_OVERS_VALUE = 35;
+  /**
+   * <code>MATCH_8_OVERS = 36;</code>
+   */
+  public static final int MATCH_8_OVERS_VALUE = 36;
+  /**
+   * <code>MATCH_9_OVERS = 37;</code>
+   */
+  public static final int MATCH_9_OVERS_VALUE = 37;
+  /**
+   * <code>MATCH_60_OVERS = 38;</code>
+   */
+  public static final int MATCH_60_OVERS_VALUE = 38;
+  /**
+   * <code>ONLY_T_20 = 39;</code>
+   */
+  public static final int ONLY_T_20_VALUE = 39;
+  /**
+   * <code>LIST_A_T_20 = 40;</code>
+   */
+  public static final int LIST_A_T_20_VALUE = 40;
+  /**
+   * <code>T_20_WORLD_CUP = 41;</code>
+   */
+  public static final int T_20_WORLD_CUP_VALUE = 41;
+  /**
+   * <code>T_20_WORLD_CUP_FEMALE = 42;</code>
+   */
+  public static final int T_20_WORLD_CUP_FEMALE_VALUE = 42;
+  /**
+   * <code>T_20_YOUTH = 43;</code>
+   */
+  public static final int T_20_YOUTH_VALUE = 43;
+  /**
+   * <code>ONLY_ODI = 44;</code>
+   */
+  public static final int ONLY_ODI_VALUE = 44;
+  /**
+   * <code>ODI_WORLD_CUP = 45;</code>
+   */
+  public static final int ODI_WORLD_CUP_VALUE = 45;
+  /**
+   * <code>ODI_YOUTH = 46;</code>
+   */
+  public static final int ODI_YOUTH_VALUE = 46;
+  /**
+   * <code>LIST_A_ODI_FEMALE = 47;</code>
+   */
+  public static final int LIST_A_ODI_FEMALE_VALUE = 47;
 
 
   public final int getNumber() {
@@ -196,9 +436,39 @@ public enum EventType
       case 12: return T_20;
       case 13: return T_20_INTL;
       case 14: return ODI;
-      case 15: return MATCH_X_DAYS;
-      case 16: return MATCH_ONE_DAY;
-      case 17: return ICC;
+      case 15: return MATCH_ONE_DAY;
+      case 16: return TEST;
+      case 17: return LIST_A;
+      case 18: return LIST_A_ODI;
+      case 19: return MATCH_5_OVERS;
+      case 20: return MATCH_10_OVERS;
+      case 21: return MATCH_35_OVERS;
+      case 22: return MATCH_100_BALLS;
+      case 23: return TEST_3_DAYS;
+      case 24: return TEST_4_DAYS;
+      case 25: return TEST_5_DAYS;
+      case 26: return TEST_6_DAYS;
+      case 27: return TEST_YOUTH;
+      case 28: return ICL;
+      case 29: return IPL;
+      case 30: return MATCH_2_DAYS;
+      case 31: return MATCH_3_DAYS;
+      case 32: return MATCH_4_DAYS;
+      case 33: return MATCH_5_DAYS;
+      case 34: return MATCH_6_OVERS;
+      case 35: return MATCH_7_OVERS;
+      case 36: return MATCH_8_OVERS;
+      case 37: return MATCH_9_OVERS;
+      case 38: return MATCH_60_OVERS;
+      case 39: return ONLY_T_20;
+      case 40: return LIST_A_T_20;
+      case 41: return T_20_WORLD_CUP;
+      case 42: return T_20_WORLD_CUP_FEMALE;
+      case 43: return T_20_YOUTH;
+      case 44: return ONLY_ODI;
+      case 45: return ODI_WORLD_CUP;
+      case 46: return ODI_YOUTH;
+      case 47: return LIST_A_ODI_FEMALE;
       default: return null;
     }
   }

@@ -810,4 +810,318 @@ public interface MatchParticipantStatsMessageOrBuilder extends
    * @return The winners.
    */
   int getWinners();
+
+  /**
+   * <code>int32 totalAssists = 133;</code>
+   * @return The totalAssists.
+   */
+  int getTotalAssists();
+
+  /**
+   * <code>int32 totalCrosses = 134;</code>
+   * @return The totalCrosses.
+   */
+  int getTotalCrosses();
+
+  /**
+   * <code>int32 goalsInsideBox = 135;</code>
+   * @return The goalsInsideBox.
+   */
+  int getGoalsInsideBox();
+
+  /**
+   * <code>int32 totalBlockedShots = 136;</code>
+   * @return The totalBlockedShots.
+   */
+  int getTotalBlockedShots();
+
+  /**
+   * <code>int32 keyPasses = 137;</code>
+   * @return The keyPasses.
+   */
+  int getKeyPasses();
+
+  /**
+   * <code>int32 totalClearances = 138;</code>
+   * @return The totalClearances.
+   */
+  int getTotalClearances();
+
+  /**
+   * <code>int32 totalAirChallengesWon = 139;</code>
+   * @return The totalAirChallengesWon.
+   */
+  int getTotalAirChallengesWon();
+
+  /**
+   * <code>int32 totalAirChallengesLost = 140;</code>
+   * @return The totalAirChallengesLost.
+   */
+  int getTotalAirChallengesLost();
+
+  /**
+   * <code>int32 totalTackles = 141;</code>
+   * @return The totalTackles.
+   */
+  int getTotalTackles();
+
+  /**
+   * <code>int32 totalInterceptedCrosses = 142;</code>
+   * @return The totalInterceptedCrosses.
+   */
+  int getTotalInterceptedCrosses();
+
+  /**
+   * <code>int32 totalGoalAttempts = 143;</code>
+   * @return The totalGoalAttempts.
+   */
+  int getTotalGoalAttempts();
+
+  /**
+   * <code>int32 totalSuccessfulCrosses = 144;</code>
+   * @return The totalSuccessfulCrosses.
+   */
+  int getTotalSuccessfulCrosses();
+
+  /**
+   * <pre>
+   * statistics type 1 player
+   * </pre>
+   *
+   * <code>double firstScorer = 145;</code>
+   * @return The firstScorer.
+   */
+  double getFirstScorer();
+
+  /**
+   * <code>double firstScorerPercentage = 146;</code>
+   * @return The firstScorerPercentage.
+   */
+  double getFirstScorerPercentage();
+
+  /**
+   * <code>double noScoredInRow = 147;</code>
+   * @return The noScoredInRow.
+   */
+  double getNoScoredInRow();
+
+  /**
+   * <code>double goalConceded = 148;</code>
+   * @return The goalConceded.
+   */
+  double getGoalConceded();
+
+  /**
+   * <code>double goalRatioMinute1x15Percentage = 149;</code>
+   * @return The goalRatioMinute1x15Percentage.
+   */
+  double getGoalRatioMinute1X15Percentage();
+
+  /**
+   * <code>double goalRatioMinute16x30Percentage = 150;</code>
+   * @return The goalRatioMinute16x30Percentage.
+   */
+  double getGoalRatioMinute16X30Percentage();
+
+  /**
+   * <code>double goalRatioMinute31x45Percentage = 151;</code>
+   * @return The goalRatioMinute31x45Percentage.
+   */
+  double getGoalRatioMinute31X45Percentage();
+
+  /**
+   * <code>double goalRatioMinute46x60Percentage = 152;</code>
+   * @return The goalRatioMinute46x60Percentage.
+   */
+  double getGoalRatioMinute46X60Percentage();
+
+  /**
+   * <code>double goalRatioMinute61x75Percentage = 153;</code>
+   * @return The goalRatioMinute61x75Percentage.
+   */
+  double getGoalRatioMinute61X75Percentage();
+
+  /**
+   * <code>double goalRatioMinute76x90Percentage = 154;</code>
+   * @return The goalRatioMinute76x90Percentage.
+   */
+  double getGoalRatioMinute76X90Percentage();
+
+  /**
+   * <code>double lastGaspGoal = 155;</code>
+   * @return The lastGaspGoal.
+   */
+  double getLastGaspGoal();
+
+  /**
+   * <code>double lastGaspGoalPercentage = 156;</code>
+   * @return The lastGaspGoalPercentage.
+   */
+  double getLastGaspGoalPercentage();
+
+  /**
+   * <code>double lastToScore = 157;</code>
+   * @return The lastToScore.
+   */
+  double getLastToScore();
+
+  /**
+   * <code>double lastToScorePercentage = 158;</code>
+   * @return The lastToScorePercentage.
+   */
+  double getLastToScorePercentage();
+
+  /**
+   * <code>double minutesPerGoal = 159;</code>
+   * @return The minutesPerGoal.
+   */
+  double getMinutesPerGoal();
+
+  /**
+   * <code>double min = 160;</code>
+   * @return The min.
+   */
+  double getMin();
+
+  /**
+   * <code>double teamContribution = 161;</code>
+   * @return The teamContribution.
+   */
+  double getTeamContribution();
+
+  /**
+   * <code>string teamFK = 162;</code>
+   * @return The teamFK.
+   */
+  java.lang.String getTeamFK();
+  /**
+   * <code>string teamFK = 162;</code>
+   * @return The bytes for teamFK.
+   */
+  com.google.protobuf.ByteString
+      getTeamFKBytes();
+
+  /**
+   * <code>double totalCards = 163;</code>
+   * @return The totalCards.
+   */
+  double getTotalCards();
+
+  /**
+   * <code>double totalCardsPerGame = 164;</code>
+   * @return The totalCardsPerGame.
+   */
+  double getTotalCardsPerGame();
+
+  /**
+   * <code>double sheetsPercentage = 165;</code>
+   * @return The sheetsPercentage.
+   */
+  double getSheetsPercentage();
+
+  /**
+   * <code>double played = 166;</code>
+   * @return The played.
+   */
+  double getPlayed();
+
+  /**
+   * <code>double noScoringGames = 167;</code>
+   * @return The noScoringGames.
+   */
+  double getNoScoringGames();
+
+  /**
+   * <code>double goalsBench = 168;</code>
+   * @return The goalsBench.
+   */
+  double getGoalsBench();
+
+  /**
+   * <code>double goalsBenchPercentage = 169;</code>
+   * @return The goalsBenchPercentage.
+   */
+  double getGoalsBenchPercentage();
+
+  /**
+   * <code>double playedLineup = 170;</code>
+   * @return The playedLineup.
+   */
+  double getPlayedLineup();
+
+  /**
+   * <code>double playedLineupPercentage = 171;</code>
+   * @return The playedLineupPercentage.
+   */
+  double getPlayedLineupPercentage();
+
+  /**
+   * <code>double substIn = 172;</code>
+   * @return The substIn.
+   */
+  double getSubstIn();
+
+  /**
+   * <code>double substInPercentage = 173;</code>
+   * @return The substInPercentage.
+   */
+  double getSubstInPercentage();
+
+  /**
+   * <code>double substOut = 174;</code>
+   * @return The substOut.
+   */
+  double getSubstOut();
+
+  /**
+   * <code>double substOutPercentage = 175;</code>
+   * @return The substOutPercentage.
+   */
+  double getSubstOutPercentage();
+
+  /**
+   * <pre>
+   * statistics type 4 player
+   * </pre>
+   *
+   * <code>double foulsPerGame = 176;</code>
+   * @return The foulsPerGame.
+   */
+  double getFoulsPerGame();
+
+  /**
+   * <code>double saves = 177;</code>
+   * @return The saves.
+   */
+  double getSaves();
+
+  /**
+   * <code>double savesPerGame = 178;</code>
+   * @return The savesPerGame.
+   */
+  double getSavesPerGame();
+
+  /**
+   * <code>double savesPercentage = 179;</code>
+   * @return The savesPercentage.
+   */
+  double getSavesPercentage();
+
+  /**
+   * <code>double goalsLeftFoot = 180;</code>
+   * @return The goalsLeftFoot.
+   */
+  double getGoalsLeftFoot();
+
+  /**
+   * <code>double goalsRightFoot = 181;</code>
+   * @return The goalsRightFoot.
+   */
+  double getGoalsRightFoot();
+
+  /**
+   * <code>double totalShotsAllowed = 182;</code>
+   * @return The totalShotsAllowed.
+   */
+  double getTotalShotsAllowed();
 }

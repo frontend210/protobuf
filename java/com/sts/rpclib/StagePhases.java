@@ -308,6 +308,14 @@ public enum StagePhases
    * <code>QUALIFICATION_TO_EIGHTH_FINALS = 75;</code>
    */
   QUALIFICATION_TO_EIGHTH_FINALS(75),
+  /**
+   * <code>DIVISION_CHAMPIONSHIP_PLAYOFF = 76;</code>
+   */
+  DIVISION_CHAMPIONSHIP_PLAYOFF(76),
+  /**
+   * <code>CONFERENCE_CHAMPIONSHIP_PLAYOFF = 77;</code>
+   */
+  CONFERENCE_CHAMPIONSHIP_PLAYOFF(77),
   UNRECOGNIZED(-1),
   ;
 
@@ -611,6 +619,14 @@ public enum StagePhases
    * <code>QUALIFICATION_TO_EIGHTH_FINALS = 75;</code>
    */
   public static final int QUALIFICATION_TO_EIGHTH_FINALS_VALUE = 75;
+  /**
+   * <code>DIVISION_CHAMPIONSHIP_PLAYOFF = 76;</code>
+   */
+  public static final int DIVISION_CHAMPIONSHIP_PLAYOFF_VALUE = 76;
+  /**
+   * <code>CONFERENCE_CHAMPIONSHIP_PLAYOFF = 77;</code>
+   */
+  public static final int CONFERENCE_CHAMPIONSHIP_PLAYOFF_VALUE = 77;
 
 
   public final int getNumber() {
@@ -712,6 +728,8 @@ public enum StagePhases
       case 73: return POSSIBLE_CHAMPIONSHIP_PLAY_OFF;
       case 74: return QUALIFICATION_TO_QUARTER_FINALS;
       case 75: return QUALIFICATION_TO_EIGHTH_FINALS;
+      case 76: return DIVISION_CHAMPIONSHIP_PLAYOFF;
+      case 77: return CONFERENCE_CHAMPIONSHIP_PLAYOFF;
       default: return null;
     }
   }

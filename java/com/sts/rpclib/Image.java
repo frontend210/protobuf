@@ -45,7 +45,8 @@ public final class Image {
       "NKNOWN\020\000\022\032\n\026IMAGE_CONTENT_TYPE_SVG\020\001\022\032\n\026" +
       "IMAGE_CONTENT_TYPE_PNG\020\002\022\033\n\027IMAGE_CONTEN" +
       "T_TYPE_JPEG\020\003\022\032\n\026IMAGE_CONTENT_TYPE_GIF\020" +
-      "\004B\rP\001Z\t/gorpclibb\006proto3"
+      "\004B/P\001Z+github.com/frontend210/protobu" +
+      "f/gorpclibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

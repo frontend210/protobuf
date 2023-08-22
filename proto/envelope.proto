@@ -16,6 +16,7 @@ import "image.proto";
 import "odds.proto";
 import "team_page.proto";
 import "draw.proto";
+import "player_profile.proto";
 
 option java_multiple_files = true;
 option go_package = "github.com/frontend210/protobuf/gorpclib";
@@ -119,6 +120,8 @@ message EventMessage {
     DrawFullMessage drawFullMessage = 34;
     RankingsMessage rankingsMessage = 35;
     RankingsFullMessage rankingsFullMessage = 36;
+    PlayerProfileMessage playerProfileMessage = 37;
+    PlayerProfileFullMessage playerProfileFullMessage = 38;
 
   }
 

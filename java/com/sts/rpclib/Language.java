@@ -52,6 +52,22 @@ public enum Language
    * <code>PORTUGUESE = 10;</code>
    */
   PORTUGUESE(10),
+  /**
+   * <code>DUTCH = 11;</code>
+   */
+  DUTCH(11),
+  /**
+   * <code>SWEDISH = 12;</code>
+   */
+  SWEDISH(12),
+  /**
+   * <code>JAPANESE = 13;</code>
+   */
+  JAPANESE(13),
+  /**
+   * <code>HINDI = 14;</code>
+   */
+  HINDI(14),
   UNRECOGNIZED(-1),
   ;
 
@@ -99,6 +115,22 @@ public enum Language
    * <code>PORTUGUESE = 10;</code>
    */
   public static final int PORTUGUESE_VALUE = 10;
+  /**
+   * <code>DUTCH = 11;</code>
+   */
+  public static final int DUTCH_VALUE = 11;
+  /**
+   * <code>SWEDISH = 12;</code>
+   */
+  public static final int SWEDISH_VALUE = 12;
+  /**
+   * <code>JAPANESE = 13;</code>
+   */
+  public static final int JAPANESE_VALUE = 13;
+  /**
+   * <code>HINDI = 14;</code>
+   */
+  public static final int HINDI_VALUE = 14;
 
 
   public final int getNumber() {
@@ -136,6 +168,10 @@ public enum Language
       case 8: return FRENCH;
       case 9: return ARABIC;
       case 10: return PORTUGUESE;
+      case 11: return DUTCH;
+      case 12: return SWEDISH;
+      case 13: return JAPANESE;
+      case 14: return HINDI;
       default: return null;
     }
   }

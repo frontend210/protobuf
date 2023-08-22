@@ -31,7 +31,7 @@ public final class Providers {
       "\n\017providers.proto\022\016com.sts.rpclib\032\013enums" +
       ".proto\"K\n\025ProviderStatusMessage\0222\n\006statu" +
       "s\030\001 \001(\0162\".com.sts.rpclib.ProviderConnect" +
-      "ion*\242\004\n\010Provider\022\024\n\020UNKNOWN_PROVIDER\020\000\022\014" +
+      "ion*\312\004\n\010Provider\022\024\n\020UNKNOWN_PROVIDER\020\000\022\014" +
       "\n\010INTERNAL\020\001\022\010\n\004ENET\020\002\022\016\n\nSPORTRADAR\020\003\022\t" +
       "\n\005RBALL\020\004\022\021\n\rPERFORM_GROUP\020\005\022\010\n\004OPTA\020\006\022\021" +
       "\n\rWATCH_AND_BET\020\007\022\016\n\nBET_GENIUS\020\010\022\007\n\003SCC" +
@@ -44,8 +44,10 @@ public final class Providers {
       "\010ATP_TOUR\020\030\022\014\n\010WTA_TOUR\020\031\022\r\n\tWHOSCORED\020\032" +
       "\022\010\n\004ESPN\020\033\022\036\n\032ULTIMATE_TENNIS_STATISTICS" +
       "\020\034\022\017\n\013FOOTBALL365\020\035\022\021\n\rBETWAY_AFRICA\020\036\022\014" +
-      "\n\010GAZZETTA\020\037\022\022\n\016CESKA_TELEVIZE\020 B\rP\001Z\t/g" +
-      "orpclibb\006proto3"
+      "\n\010GAZZETTA\020\037\022\022\n\016CESKA_TELEVIZE\020 \022\013\n\007SPOR" +
+      "TAL\020!\022\031\n\025BETWAY_REST_OF_AFRICA\020\"B/P\001Z+gi" +
+      "thub.com/frontend210/protobuf/gorpcli" +
+      "bb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

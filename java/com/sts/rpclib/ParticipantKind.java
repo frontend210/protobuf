@@ -36,6 +36,46 @@ public enum ParticipantKind
    * <code>REFEREE_ASSISTANT = 6;</code>
    */
   REFEREE_ASSISTANT(6),
+  /**
+   * <code>UMPIRE = 7;</code>
+   */
+  UMPIRE(7),
+  /**
+   * <code>FIRST_UMPIRE = 8;</code>
+   */
+  FIRST_UMPIRE(8),
+  /**
+   * <code>SECOND_UMPIRE = 9;</code>
+   */
+  SECOND_UMPIRE(9),
+  /**
+   * <code>TV_UMPIRE = 10;</code>
+   */
+  TV_UMPIRE(10),
+  /**
+   * <code>HOME_PLATE_UMPIRE = 11;</code>
+   */
+  HOME_PLATE_UMPIRE(11),
+  /**
+   * <code>FIRST_BASE_UMPIRE = 12;</code>
+   */
+  FIRST_BASE_UMPIRE(12),
+  /**
+   * <code>SECOND_BASE_UMPIRE = 13;</code>
+   */
+  SECOND_BASE_UMPIRE(13),
+  /**
+   * <code>THIRD_BASE_UMPIRE = 14;</code>
+   */
+  THIRD_BASE_UMPIRE(14),
+  /**
+   * <code>LEFT_FIELD_UMPIRE = 15;</code>
+   */
+  LEFT_FIELD_UMPIRE(15),
+  /**
+   * <code>RIGHT_FIELD_UMPIRE = 16;</code>
+   */
+  RIGHT_FIELD_UMPIRE(16),
   UNRECOGNIZED(-1),
   ;
 
@@ -67,6 +107,46 @@ public enum ParticipantKind
    * <code>REFEREE_ASSISTANT = 6;</code>
    */
   public static final int REFEREE_ASSISTANT_VALUE = 6;
+  /**
+   * <code>UMPIRE = 7;</code>
+   */
+  public static final int UMPIRE_VALUE = 7;
+  /**
+   * <code>FIRST_UMPIRE = 8;</code>
+   */
+  public static final int FIRST_UMPIRE_VALUE = 8;
+  /**
+   * <code>SECOND_UMPIRE = 9;</code>
+   */
+  public static final int SECOND_UMPIRE_VALUE = 9;
+  /**
+   * <code>TV_UMPIRE = 10;</code>
+   */
+  public static final int TV_UMPIRE_VALUE = 10;
+  /**
+   * <code>HOME_PLATE_UMPIRE = 11;</code>
+   */
+  public static final int HOME_PLATE_UMPIRE_VALUE = 11;
+  /**
+   * <code>FIRST_BASE_UMPIRE = 12;</code>
+   */
+  public static final int FIRST_BASE_UMPIRE_VALUE = 12;
+  /**
+   * <code>SECOND_BASE_UMPIRE = 13;</code>
+   */
+  public static final int SECOND_BASE_UMPIRE_VALUE = 13;
+  /**
+   * <code>THIRD_BASE_UMPIRE = 14;</code>
+   */
+  public static final int THIRD_BASE_UMPIRE_VALUE = 14;
+  /**
+   * <code>LEFT_FIELD_UMPIRE = 15;</code>
+   */
+  public static final int LEFT_FIELD_UMPIRE_VALUE = 15;
+  /**
+   * <code>RIGHT_FIELD_UMPIRE = 16;</code>
+   */
+  public static final int RIGHT_FIELD_UMPIRE_VALUE = 16;
 
 
   public final int getNumber() {
@@ -100,6 +180,16 @@ public enum ParticipantKind
       case 4: return COACH_KIND;
       case 5: return REFEREE;
       case 6: return REFEREE_ASSISTANT;
+      case 7: return UMPIRE;
+      case 8: return FIRST_UMPIRE;
+      case 9: return SECOND_UMPIRE;
+      case 10: return TV_UMPIRE;
+      case 11: return HOME_PLATE_UMPIRE;
+      case 12: return FIRST_BASE_UMPIRE;
+      case 13: return SECOND_BASE_UMPIRE;
+      case 14: return THIRD_BASE_UMPIRE;
+      case 15: return LEFT_FIELD_UMPIRE;
+      case 16: return RIGHT_FIELD_UMPIRE;
       default: return null;
     }
   }

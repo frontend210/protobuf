@@ -29,79 +29,6 @@ private static final long serialVersionUID = 0L;
     return new WidgetEventMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private WidgetEventMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            id_ = s;
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            eventType_ = rawValue;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            refEventId_ = s;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            zone_ = rawValue;
-            break;
-          }
-          case 40: {
-
-            timestamp_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.WidgetEvent.internal_static_com_sts_rpclib_WidgetEventMessage_descriptor;
@@ -116,7 +43,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object id_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object id_ = "";
   /**
    * <code>string id = 1;</code>
    * @return The id.
@@ -154,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EVENTTYPE_FIELD_NUMBER = 2;
-  private int eventType_;
+  private int eventType_ = 0;
   /**
    * <code>.com.sts.rpclib.WidgetEventType eventType = 2;</code>
    * @return The enum numeric value on the wire for eventType.
@@ -167,13 +95,13 @@ private static final long serialVersionUID = 0L;
    * @return The eventType.
    */
   @java.lang.Override public com.sts.rpclib.WidgetEventType getEventType() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.WidgetEventType result = com.sts.rpclib.WidgetEventType.valueOf(eventType_);
+    com.sts.rpclib.WidgetEventType result = com.sts.rpclib.WidgetEventType.forNumber(eventType_);
     return result == null ? com.sts.rpclib.WidgetEventType.UNRECOGNIZED : result;
   }
 
   public static final int REFEVENTID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object refEventId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object refEventId_ = "";
   /**
    * <code>string refEventId = 3;</code>
    * @return The refEventId.
@@ -211,7 +139,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ZONE_FIELD_NUMBER = 4;
-  private int zone_;
+  private int zone_ = 0;
   /**
    * <code>.com.sts.rpclib.PitchZone zone = 4;</code>
    * @return The enum numeric value on the wire for zone.
@@ -224,13 +152,12 @@ private static final long serialVersionUID = 0L;
    * @return The zone.
    */
   @java.lang.Override public com.sts.rpclib.PitchZone getZone() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.PitchZone result = com.sts.rpclib.PitchZone.valueOf(zone_);
+    com.sts.rpclib.PitchZone result = com.sts.rpclib.PitchZone.forNumber(zone_);
     return result == null ? com.sts.rpclib.PitchZone.UNRECOGNIZED : result;
   }
 
   public static final int TIMESTAMP_FIELD_NUMBER = 5;
-  private long timestamp_;
+  private long timestamp_ = 0L;
   /**
    * <code>int64 timestamp = 5;</code>
    * @return The timestamp.
@@ -269,7 +196,7 @@ private static final long serialVersionUID = 0L;
     if (timestamp_ != 0L) {
       output.writeInt64(5, timestamp_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -296,7 +223,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, timestamp_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -319,7 +246,7 @@ private static final long serialVersionUID = 0L;
     if (zone_ != other.zone_) return false;
     if (getTimestamp()
         != other.getTimestamp()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -341,7 +268,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTimestamp());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -390,11 +317,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.WidgetEventMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.WidgetEventMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -458,32 +387,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.WidgetEventMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       id_ = "";
-
       eventType_ = 0;
-
       refEventId_ = "";
-
       zone_ = 0;
-
       timestamp_ = 0L;
-
       return this;
     }
 
@@ -510,13 +430,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.WidgetEventMessage buildPartial() {
       com.sts.rpclib.WidgetEventMessage result = new com.sts.rpclib.WidgetEventMessage(this);
-      result.id_ = id_;
-      result.eventType_ = eventType_;
-      result.refEventId_ = refEventId_;
-      result.zone_ = zone_;
-      result.timestamp_ = timestamp_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.WidgetEventMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.eventType_ = eventType_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.refEventId_ = refEventId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.zone_ = zone_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.timestamp_ = timestamp_;
+      }
     }
 
     @java.lang.Override
@@ -565,6 +500,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.sts.rpclib.WidgetEventMessage.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.eventType_ != 0) {
@@ -572,6 +508,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getRefEventId().isEmpty()) {
         refEventId_ = other.refEventId_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.zone_ != 0) {
@@ -580,7 +517,7 @@ private static final long serialVersionUID = 0L;
       if (other.getTimestamp() != 0L) {
         setTimestamp(other.getTimestamp());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -595,19 +532,58 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.WidgetEventMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              id_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              eventType_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              refEventId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              zone_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              timestamp_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.WidgetEventMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object id_ = "";
     /**
@@ -650,11 +626,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -663,8 +637,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
       id_ = getDefaultInstance().getId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -675,12 +649,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -699,8 +671,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEventTypeValue(int value) {
-      
       eventType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -710,8 +682,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.WidgetEventType getEventType() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.WidgetEventType result = com.sts.rpclib.WidgetEventType.valueOf(eventType_);
+      com.sts.rpclib.WidgetEventType result = com.sts.rpclib.WidgetEventType.forNumber(eventType_);
       return result == null ? com.sts.rpclib.WidgetEventType.UNRECOGNIZED : result;
     }
     /**
@@ -723,7 +694,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       eventType_ = value.getNumber();
       onChanged();
       return this;
@@ -733,7 +704,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEventType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       eventType_ = 0;
       onChanged();
       return this;
@@ -780,11 +751,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRefEventId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       refEventId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -793,8 +762,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRefEventId() {
-      
       refEventId_ = getDefaultInstance().getRefEventId();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -805,12 +774,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRefEventIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       refEventId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -829,8 +796,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setZoneValue(int value) {
-      
       zone_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -840,8 +807,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.PitchZone getZone() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.PitchZone result = com.sts.rpclib.PitchZone.valueOf(zone_);
+      com.sts.rpclib.PitchZone result = com.sts.rpclib.PitchZone.forNumber(zone_);
       return result == null ? com.sts.rpclib.PitchZone.UNRECOGNIZED : result;
     }
     /**
@@ -853,7 +819,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       zone_ = value.getNumber();
       onChanged();
       return this;
@@ -863,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearZone() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       zone_ = 0;
       onChanged();
       return this;
@@ -884,8 +850,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimestamp(long value) {
-      
+
       timestamp_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -894,7 +861,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimestamp() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       timestamp_ = 0L;
       onChanged();
       return this;
@@ -932,7 +899,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new WidgetEventMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

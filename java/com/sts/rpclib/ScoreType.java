@@ -209,6 +209,14 @@ public enum ScoreType
    * <code>EXTRA_INNING_SCORE = 39;</code>
    */
   EXTRA_INNING_SCORE(39),
+  /**
+   * <pre>
+   * TODO: RUGBY, HANDBALL, VOLLEY, American Football, Golf
+   * </pre>
+   *
+   * <code>COMPOSITE_SCORE = 40;</code>
+   */
+  COMPOSITE_SCORE(40),
   UNRECOGNIZED(-1),
   ;
 
@@ -413,6 +421,14 @@ public enum ScoreType
    * <code>EXTRA_INNING_SCORE = 39;</code>
    */
   public static final int EXTRA_INNING_SCORE_VALUE = 39;
+  /**
+   * <pre>
+   * TODO: RUGBY, HANDBALL, VOLLEY, American Football, Golf
+   * </pre>
+   *
+   * <code>COMPOSITE_SCORE = 40;</code>
+   */
+  public static final int COMPOSITE_SCORE_VALUE = 40;
 
 
   public final int getNumber() {
@@ -479,6 +495,7 @@ public enum ScoreType
       case 37: return PENALTY_SHOOTOUT_TOTAL_SCORE;
       case 38: return INNING_SCORES;
       case 39: return EXTRA_INNING_SCORE;
+      case 40: return COMPOSITE_SCORE;
       default: return null;
     }
   }

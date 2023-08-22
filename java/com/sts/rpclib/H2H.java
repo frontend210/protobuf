@@ -48,7 +48,8 @@ public final class H2H {
       "\003 \001(\0132\035.com.sts.rpclib.LocalizedName\"b\n\022" +
       "TeamMatchesMessage\022>\n\017h2hParticipants\030\001 " +
       "\001(\0132%.com.sts.rpclib.H2HParticipantMessa" +
-      "ge\022\014\n\004data\030\002 \001(\014B\rP\001Z\t/gorpclibb\006proto3"
+      "ge\022\014\n\004data\030\002 \001(\014B/P\001Z+github.com/snapsco" +
+      "regroup/protobuf/gorpclibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

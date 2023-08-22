@@ -290,4 +290,10 @@ public interface IncidentMessageOrBuilder extends
    * @return The timestamp.
    */
   long getTimestamp();
+
+  /**
+   * <code>int32 minutePlus = 24;</code>
+   * @return The minutePlus.
+   */
+  int getMinutePlus();
 }

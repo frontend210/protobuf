@@ -565,5 +565,65 @@ public interface EventMessageOrBuilder extends
    */
   com.sts.rpclib.DrawFullMessageOrBuilder getDrawFullMessageOrBuilder();
 
-  public com.sts.rpclib.EventMessage.BodyCase getBodyCase();
+  /**
+   * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+   * @return Whether the rankingsMessage field is set.
+   */
+  boolean hasRankingsMessage();
+  /**
+   * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+   * @return The rankingsMessage.
+   */
+  com.sts.rpclib.RankingsMessage getRankingsMessage();
+  /**
+   * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+   */
+  com.sts.rpclib.RankingsMessageOrBuilder getRankingsMessageOrBuilder();
+
+  /**
+   * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+   * @return Whether the rankingsFullMessage field is set.
+   */
+  boolean hasRankingsFullMessage();
+  /**
+   * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+   * @return The rankingsFullMessage.
+   */
+  com.sts.rpclib.RankingsFullMessage getRankingsFullMessage();
+  /**
+   * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+   */
+  com.sts.rpclib.RankingsFullMessageOrBuilder getRankingsFullMessageOrBuilder();
+
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+   * @return Whether the playerProfileMessage field is set.
+   */
+  boolean hasPlayerProfileMessage();
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+   * @return The playerProfileMessage.
+   */
+  com.sts.rpclib.PlayerProfileMessage getPlayerProfileMessage();
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+   */
+  com.sts.rpclib.PlayerProfileMessageOrBuilder getPlayerProfileMessageOrBuilder();
+
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+   * @return Whether the playerProfileFullMessage field is set.
+   */
+  boolean hasPlayerProfileFullMessage();
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+   * @return The playerProfileFullMessage.
+   */
+  com.sts.rpclib.PlayerProfileFullMessage getPlayerProfileFullMessage();
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+   */
+  com.sts.rpclib.PlayerProfileFullMessageOrBuilder getPlayerProfileFullMessageOrBuilder();
+
+  com.sts.rpclib.EventMessage.BodyCase getBodyCase();
 }

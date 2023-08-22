@@ -26,68 +26,6 @@ private static final long serialVersionUID = 0L;
     return new TeamMatchesMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private TeamMatchesMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.sts.rpclib.H2HParticipantMessage.Builder subBuilder = null;
-            if (h2HParticipants_ != null) {
-              subBuilder = h2HParticipants_.toBuilder();
-            }
-            h2HParticipants_ = input.readMessage(com.sts.rpclib.H2HParticipantMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(h2HParticipants_);
-              h2HParticipants_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-
-            data_ = input.readBytes();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.H2H.internal_static_com_sts_rpclib_TeamMatchesMessage_descriptor;
@@ -124,11 +62,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.sts.rpclib.H2HParticipantMessageOrBuilder getH2HParticipantsOrBuilder() {
-    return getH2HParticipants();
+    return h2HParticipants_ == null ? com.sts.rpclib.H2HParticipantMessage.getDefaultInstance() : h2HParticipants_;
   }
 
   public static final int DATA_FIELD_NUMBER = 2;
-  private com.google.protobuf.ByteString data_;
+  private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
   /**
    * <code>bytes data = 2;</code>
    * @return The data.
@@ -158,7 +96,7 @@ private static final long serialVersionUID = 0L;
     if (!data_.isEmpty()) {
       output.writeBytes(2, data_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -175,7 +113,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(2, data_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -197,7 +135,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getData()
         .equals(other.getData())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -214,7 +152,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DATA_FIELD_NUMBER;
     hash = (53 * hash) + getData().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -263,11 +201,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.TeamMatchesMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.TeamMatchesMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -331,30 +271,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.TeamMatchesMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (h2HParticipantsBuilder_ == null) {
-        h2HParticipants_ = null;
-      } else {
-        h2HParticipants_ = null;
+      bitField0_ = 0;
+      h2HParticipants_ = null;
+      if (h2HParticipantsBuilder_ != null) {
+        h2HParticipantsBuilder_.dispose();
         h2HParticipantsBuilder_ = null;
       }
       data_ = com.google.protobuf.ByteString.EMPTY;
-
       return this;
     }
 
@@ -381,14 +315,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.TeamMatchesMessage buildPartial() {
       com.sts.rpclib.TeamMatchesMessage result = new com.sts.rpclib.TeamMatchesMessage(this);
-      if (h2HParticipantsBuilder_ == null) {
-        result.h2HParticipants_ = h2HParticipants_;
-      } else {
-        result.h2HParticipants_ = h2HParticipantsBuilder_.build();
-      }
-      result.data_ = data_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.TeamMatchesMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.h2HParticipants_ = h2HParticipantsBuilder_ == null
+            ? h2HParticipants_
+            : h2HParticipantsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.data_ = data_;
+      }
     }
 
     @java.lang.Override
@@ -441,7 +382,7 @@ private static final long serialVersionUID = 0L;
       if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
         setData(other.getData());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -456,19 +397,45 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.TeamMatchesMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getH2HParticipantsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              data_ = input.readBytes();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.TeamMatchesMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.sts.rpclib.H2HParticipantMessage h2HParticipants_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -478,7 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the h2hParticipants field is set.
      */
     public boolean hasH2HParticipants() {
-      return h2HParticipantsBuilder_ != null || h2HParticipants_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.com.sts.rpclib.H2HParticipantMessage h2hParticipants = 1;</code>
@@ -500,11 +467,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         h2HParticipants_ = value;
-        onChanged();
       } else {
         h2HParticipantsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -514,11 +481,11 @@ private static final long serialVersionUID = 0L;
         com.sts.rpclib.H2HParticipantMessage.Builder builderForValue) {
       if (h2HParticipantsBuilder_ == null) {
         h2HParticipants_ = builderForValue.build();
-        onChanged();
       } else {
         h2HParticipantsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -526,38 +493,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeH2HParticipants(com.sts.rpclib.H2HParticipantMessage value) {
       if (h2HParticipantsBuilder_ == null) {
-        if (h2HParticipants_ != null) {
-          h2HParticipants_ =
-            com.sts.rpclib.H2HParticipantMessage.newBuilder(h2HParticipants_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          h2HParticipants_ != null &&
+          h2HParticipants_ != com.sts.rpclib.H2HParticipantMessage.getDefaultInstance()) {
+          getH2HParticipantsBuilder().mergeFrom(value);
         } else {
           h2HParticipants_ = value;
         }
-        onChanged();
       } else {
         h2HParticipantsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.H2HParticipantMessage h2hParticipants = 1;</code>
      */
     public Builder clearH2HParticipants() {
-      if (h2HParticipantsBuilder_ == null) {
-        h2HParticipants_ = null;
-        onChanged();
-      } else {
-        h2HParticipants_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      h2HParticipants_ = null;
+      if (h2HParticipantsBuilder_ != null) {
+        h2HParticipantsBuilder_.dispose();
         h2HParticipantsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.H2HParticipantMessage h2hParticipants = 1;</code>
      */
     public com.sts.rpclib.H2HParticipantMessage.Builder getH2HParticipantsBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getH2HParticipantsFieldBuilder().getBuilder();
     }
@@ -604,11 +571,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setData(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       data_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -617,7 +582,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearData() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       data_ = getDefaultInstance().getData();
       onChanged();
       return this;
@@ -655,7 +620,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new TeamMatchesMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

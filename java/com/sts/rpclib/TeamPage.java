@@ -42,8 +42,9 @@ public final class TeamPage {
       "om.sts.rpclib.ParticipantMessage\022$\n\005spor" +
       "t\030\005 \001(\0162\025.com.sts.rpclib.Sport\022\016\n\006gender" +
       "\030\006 \001(\005\022\025\n\risPlaceHolder\030\007 \001(\010\"/\n\023TeamPag" +
-      "eFullMessage\022\014\n\004data\030\001 \001(\014\022\n\n\002id\030\002 \001(\tB\r" +
-      "P\001Z\t/gorpclibb\006proto3"
+      "eFullMessage\022\014\n\004data\030\001 \001(\014\022\n\n\002id\030\002 \001(\tB/" +
+      "P\001Z+github.com/frontend210/protobuf/g" +
+      "orpclibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

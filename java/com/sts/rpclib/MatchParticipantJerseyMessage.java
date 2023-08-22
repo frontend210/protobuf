@@ -31,91 +31,6 @@ private static final long serialVersionUID = 0L;
     return new MatchParticipantJerseyMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private MatchParticipantJerseyMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            shirtColor1_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            shirtColor2_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            pantsColor_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            socksColor_ = s;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            jerseyDesign_ = rawValue;
-            break;
-          }
-          case 48: {
-
-            teamPosition_ = input.readInt32();
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            jerseyNumber_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Match.internal_static_com_sts_rpclib_MatchParticipantJerseyMessage_descriptor;
@@ -130,7 +45,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHIRTCOLOR1_FIELD_NUMBER = 1;
-  private volatile java.lang.Object shirtColor1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object shirtColor1_ = "";
   /**
    * <code>string shirtColor1 = 1;</code>
    * @return The shirtColor1.
@@ -168,7 +84,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHIRTCOLOR2_FIELD_NUMBER = 2;
-  private volatile java.lang.Object shirtColor2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object shirtColor2_ = "";
   /**
    * <code>string shirtColor2 = 2;</code>
    * @return The shirtColor2.
@@ -206,7 +123,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PANTSCOLOR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object pantsColor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pantsColor_ = "";
   /**
    * <code>string pantsColor = 3;</code>
    * @return The pantsColor.
@@ -244,7 +162,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SOCKSCOLOR_FIELD_NUMBER = 4;
-  private volatile java.lang.Object socksColor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object socksColor_ = "";
   /**
    * <code>string socksColor = 4;</code>
    * @return The socksColor.
@@ -282,7 +201,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int JERSEYDESIGN_FIELD_NUMBER = 5;
-  private int jerseyDesign_;
+  private int jerseyDesign_ = 0;
   /**
    * <code>.com.sts.rpclib.JerseyDesign jerseyDesign = 5;</code>
    * @return The enum numeric value on the wire for jerseyDesign.
@@ -295,13 +214,12 @@ private static final long serialVersionUID = 0L;
    * @return The jerseyDesign.
    */
   @java.lang.Override public com.sts.rpclib.JerseyDesign getJerseyDesign() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.JerseyDesign result = com.sts.rpclib.JerseyDesign.valueOf(jerseyDesign_);
+    com.sts.rpclib.JerseyDesign result = com.sts.rpclib.JerseyDesign.forNumber(jerseyDesign_);
     return result == null ? com.sts.rpclib.JerseyDesign.UNRECOGNIZED : result;
   }
 
   public static final int TEAMPOSITION_FIELD_NUMBER = 6;
-  private int teamPosition_;
+  private int teamPosition_ = 0;
   /**
    * <code>int32 teamPosition = 6;</code>
    * @return The teamPosition.
@@ -312,7 +230,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int JERSEYNUMBER_FIELD_NUMBER = 7;
-  private volatile java.lang.Object jerseyNumber_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object jerseyNumber_ = "";
   /**
    * <code>string jerseyNumber = 7;</code>
    * @return The jerseyNumber.
@@ -384,7 +303,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jerseyNumber_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, jerseyNumber_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -416,7 +335,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jerseyNumber_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, jerseyNumber_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -444,7 +363,7 @@ private static final long serialVersionUID = 0L;
         != other.getTeamPosition()) return false;
     if (!getJerseyNumber()
         .equals(other.getJerseyNumber())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -469,7 +388,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTeamPosition();
     hash = (37 * hash) + JERSEYNUMBER_FIELD_NUMBER;
     hash = (53 * hash) + getJerseyNumber().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -518,11 +437,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.MatchParticipantJerseyMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.MatchParticipantJerseyMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -586,36 +507,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.MatchParticipantJerseyMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       shirtColor1_ = "";
-
       shirtColor2_ = "";
-
       pantsColor_ = "";
-
       socksColor_ = "";
-
       jerseyDesign_ = 0;
-
       teamPosition_ = 0;
-
       jerseyNumber_ = "";
-
       return this;
     }
 
@@ -642,15 +552,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.MatchParticipantJerseyMessage buildPartial() {
       com.sts.rpclib.MatchParticipantJerseyMessage result = new com.sts.rpclib.MatchParticipantJerseyMessage(this);
-      result.shirtColor1_ = shirtColor1_;
-      result.shirtColor2_ = shirtColor2_;
-      result.pantsColor_ = pantsColor_;
-      result.socksColor_ = socksColor_;
-      result.jerseyDesign_ = jerseyDesign_;
-      result.teamPosition_ = teamPosition_;
-      result.jerseyNumber_ = jerseyNumber_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.MatchParticipantJerseyMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.shirtColor1_ = shirtColor1_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.shirtColor2_ = shirtColor2_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.pantsColor_ = pantsColor_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.socksColor_ = socksColor_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.jerseyDesign_ = jerseyDesign_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.teamPosition_ = teamPosition_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.jerseyNumber_ = jerseyNumber_;
+      }
     }
 
     @java.lang.Override
@@ -699,18 +628,22 @@ private static final long serialVersionUID = 0L;
       if (other == com.sts.rpclib.MatchParticipantJerseyMessage.getDefaultInstance()) return this;
       if (!other.getShirtColor1().isEmpty()) {
         shirtColor1_ = other.shirtColor1_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getShirtColor2().isEmpty()) {
         shirtColor2_ = other.shirtColor2_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getPantsColor().isEmpty()) {
         pantsColor_ = other.pantsColor_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getSocksColor().isEmpty()) {
         socksColor_ = other.socksColor_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.jerseyDesign_ != 0) {
@@ -721,9 +654,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getJerseyNumber().isEmpty()) {
         jerseyNumber_ = other.jerseyNumber_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -738,19 +672,68 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.MatchParticipantJerseyMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              shirtColor1_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              shirtColor2_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              pantsColor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              socksColor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              jerseyDesign_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              teamPosition_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 58: {
+              jerseyNumber_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.MatchParticipantJerseyMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object shirtColor1_ = "";
     /**
@@ -793,11 +776,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShirtColor1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       shirtColor1_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -806,8 +787,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShirtColor1() {
-      
       shirtColor1_ = getDefaultInstance().getShirtColor1();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -818,12 +799,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShirtColor1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       shirtColor1_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -869,11 +848,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShirtColor2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       shirtColor2_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -882,8 +859,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShirtColor2() {
-      
       shirtColor2_ = getDefaultInstance().getShirtColor2();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -894,12 +871,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShirtColor2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       shirtColor2_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -945,11 +920,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPantsColor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pantsColor_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -958,8 +931,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPantsColor() {
-      
       pantsColor_ = getDefaultInstance().getPantsColor();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -970,12 +943,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPantsColorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pantsColor_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1021,11 +992,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSocksColor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       socksColor_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1034,8 +1003,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSocksColor() {
-      
       socksColor_ = getDefaultInstance().getSocksColor();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1046,12 +1015,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSocksColorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       socksColor_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1070,8 +1037,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setJerseyDesignValue(int value) {
-      
       jerseyDesign_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1081,8 +1048,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.JerseyDesign getJerseyDesign() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.JerseyDesign result = com.sts.rpclib.JerseyDesign.valueOf(jerseyDesign_);
+      com.sts.rpclib.JerseyDesign result = com.sts.rpclib.JerseyDesign.forNumber(jerseyDesign_);
       return result == null ? com.sts.rpclib.JerseyDesign.UNRECOGNIZED : result;
     }
     /**
@@ -1094,7 +1060,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       jerseyDesign_ = value.getNumber();
       onChanged();
       return this;
@@ -1104,7 +1070,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJerseyDesign() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       jerseyDesign_ = 0;
       onChanged();
       return this;
@@ -1125,8 +1091,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTeamPosition(int value) {
-      
+
       teamPosition_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1135,7 +1102,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTeamPosition() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       teamPosition_ = 0;
       onChanged();
       return this;
@@ -1182,11 +1149,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setJerseyNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       jerseyNumber_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1195,8 +1160,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJerseyNumber() {
-      
       jerseyNumber_ = getDefaultInstance().getJerseyNumber();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1207,12 +1172,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setJerseyNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       jerseyNumber_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1249,7 +1212,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MatchParticipantJerseyMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

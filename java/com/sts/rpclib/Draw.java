@@ -53,7 +53,8 @@ public final class Draw {
       "\020\003\022\025\n\021MIXED_DOUBLE_DRAW\020\004\022\r\n\tTEAM_DRAW\020\005" +
       "\022\022\n\016MALE_TEAM_DRAW\020\006\022\024\n\020FEMALE_TEAM_DRAW" +
       "\020\007\022\026\n\022QUALIFICATION_DRAW\020\010\022\r\n\tMAIN_DRAW\020" +
-      "\tB\rP\001Z\t/gorpclibb\006proto3"
+      "\tB/P\001Z+github.com/frontend210/protobu" +
+      "f/gorpclibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

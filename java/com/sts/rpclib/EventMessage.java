@@ -29,525 +29,6 @@ private static final long serialVersionUID = 0L;
     return new EventMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private EventMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.sts.rpclib.Headers.Builder subBuilder = null;
-            if (headers_ != null) {
-              subBuilder = headers_.toBuilder();
-            }
-            headers_ = input.readMessage(com.sts.rpclib.Headers.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(headers_);
-              headers_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            com.sts.rpclib.StageMessage.Builder subBuilder = null;
-            if (bodyCase_ == 2) {
-              subBuilder = ((com.sts.rpclib.StageMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.StageMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.StageMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 2;
-            break;
-          }
-          case 26: {
-            com.sts.rpclib.CommentaryMessage.Builder subBuilder = null;
-            if (bodyCase_ == 3) {
-              subBuilder = ((com.sts.rpclib.CommentaryMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.CommentaryMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.CommentaryMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 3;
-            break;
-          }
-          case 34: {
-            com.sts.rpclib.AddCommentaryMessage.Builder subBuilder = null;
-            if (bodyCase_ == 4) {
-              subBuilder = ((com.sts.rpclib.AddCommentaryMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.AddCommentaryMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.AddCommentaryMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 4;
-            break;
-          }
-          case 42: {
-            com.sts.rpclib.ProviderStatusMessage.Builder subBuilder = null;
-            if (bodyCase_ == 5) {
-              subBuilder = ((com.sts.rpclib.ProviderStatusMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.ProviderStatusMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.ProviderStatusMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 5;
-            break;
-          }
-          case 50: {
-            com.sts.rpclib.LeagueTableMessage.Builder subBuilder = null;
-            if (bodyCase_ == 6) {
-              subBuilder = ((com.sts.rpclib.LeagueTableMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.LeagueTableMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.LeagueTableMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 6;
-            break;
-          }
-          case 58: {
-            com.sts.rpclib.TopScorerMessage.Builder subBuilder = null;
-            if (bodyCase_ == 7) {
-              subBuilder = ((com.sts.rpclib.TopScorerMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.TopScorerMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.TopScorerMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 7;
-            break;
-          }
-          case 66: {
-            com.sts.rpclib.ScoutConnectionMessage.Builder subBuilder = null;
-            if (bodyCase_ == 8) {
-              subBuilder = ((com.sts.rpclib.ScoutConnectionMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.ScoutConnectionMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.ScoutConnectionMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 8;
-            break;
-          }
-          case 74: {
-            com.sts.rpclib.WidgetEventMessage.Builder subBuilder = null;
-            if (bodyCase_ == 9) {
-              subBuilder = ((com.sts.rpclib.WidgetEventMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.WidgetEventMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.WidgetEventMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 9;
-            break;
-          }
-          case 82: {
-            com.sts.rpclib.VarStatusMessage.Builder subBuilder = null;
-            if (bodyCase_ == 10) {
-              subBuilder = ((com.sts.rpclib.VarStatusMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.VarStatusMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.VarStatusMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 10;
-            break;
-          }
-          case 90: {
-            com.sts.rpclib.VarReasonMessage.Builder subBuilder = null;
-            if (bodyCase_ == 11) {
-              subBuilder = ((com.sts.rpclib.VarReasonMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.VarReasonMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.VarReasonMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 11;
-            break;
-          }
-          case 98: {
-            com.sts.rpclib.FullMatchDataMessage.Builder subBuilder = null;
-            if (bodyCase_ == 12) {
-              subBuilder = ((com.sts.rpclib.FullMatchDataMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.FullMatchDataMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.FullMatchDataMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 12;
-            break;
-          }
-          case 106: {
-            com.sts.rpclib.MatchDeletedMessage.Builder subBuilder = null;
-            if (bodyCase_ == 13) {
-              subBuilder = ((com.sts.rpclib.MatchDeletedMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchDeletedMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchDeletedMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 13;
-            break;
-          }
-          case 114: {
-            com.sts.rpclib.IncidentMessage.Builder subBuilder = null;
-            if (bodyCase_ == 14) {
-              subBuilder = ((com.sts.rpclib.IncidentMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.IncidentMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.IncidentMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 14;
-            break;
-          }
-          case 122: {
-            com.sts.rpclib.MatchStatusChangeMessage.Builder subBuilder = null;
-            if (bodyCase_ == 15) {
-              subBuilder = ((com.sts.rpclib.MatchStatusChangeMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchStatusChangeMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchStatusChangeMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 15;
-            break;
-          }
-          case 130: {
-            com.sts.rpclib.MatchScoreChangeMessage.Builder subBuilder = null;
-            if (bodyCase_ == 16) {
-              subBuilder = ((com.sts.rpclib.MatchScoreChangeMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchScoreChangeMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchScoreChangeMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 16;
-            break;
-          }
-          case 138: {
-            com.sts.rpclib.MatchIncidentChangeMessage.Builder subBuilder = null;
-            if (bodyCase_ == 17) {
-              subBuilder = ((com.sts.rpclib.MatchIncidentChangeMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchIncidentChangeMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchIncidentChangeMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 17;
-            break;
-          }
-          case 146: {
-            com.sts.rpclib.MatchWinnerChangeMessage.Builder subBuilder = null;
-            if (bodyCase_ == 18) {
-              subBuilder = ((com.sts.rpclib.MatchWinnerChangeMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchWinnerChangeMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchWinnerChangeMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 18;
-            break;
-          }
-          case 154: {
-            com.sts.rpclib.MatchParticipantsChangeMessage.Builder subBuilder = null;
-            if (bodyCase_ == 19) {
-              subBuilder = ((com.sts.rpclib.MatchParticipantsChangeMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchParticipantsChangeMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchParticipantsChangeMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 19;
-            break;
-          }
-          case 162: {
-            com.sts.rpclib.MatchLineupChangeMessage.Builder subBuilder = null;
-            if (bodyCase_ == 20) {
-              subBuilder = ((com.sts.rpclib.MatchLineupChangeMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchLineupChangeMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchLineupChangeMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 20;
-            break;
-          }
-          case 170: {
-            com.sts.rpclib.MatchStatsChangeMessage.Builder subBuilder = null;
-            if (bodyCase_ == 21) {
-              subBuilder = ((com.sts.rpclib.MatchStatsChangeMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchStatsChangeMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchStatsChangeMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 21;
-            break;
-          }
-          case 178: {
-            com.sts.rpclib.DeleteIncidentMessage.Builder subBuilder = null;
-            if (bodyCase_ == 22) {
-              subBuilder = ((com.sts.rpclib.DeleteIncidentMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.DeleteIncidentMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.DeleteIncidentMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 22;
-            break;
-          }
-          case 186: {
-            com.sts.rpclib.ResponseMessage.Builder subBuilder = null;
-            if (bodyCase_ == 23) {
-              subBuilder = ((com.sts.rpclib.ResponseMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.ResponseMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.ResponseMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 23;
-            break;
-          }
-          case 194: {
-            com.sts.rpclib.HeartbeatMessage.Builder subBuilder = null;
-            if (bodyCase_ == 24) {
-              subBuilder = ((com.sts.rpclib.HeartbeatMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.HeartbeatMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.HeartbeatMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 24;
-            break;
-          }
-          case 202: {
-            com.sts.rpclib.LeagueTableFullMessage.Builder subBuilder = null;
-            if (bodyCase_ == 25) {
-              subBuilder = ((com.sts.rpclib.LeagueTableFullMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.LeagueTableFullMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.LeagueTableFullMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 25;
-            break;
-          }
-          case 210: {
-            com.sts.rpclib.TopScorerFullMessage.Builder subBuilder = null;
-            if (bodyCase_ == 26) {
-              subBuilder = ((com.sts.rpclib.TopScorerFullMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.TopScorerFullMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.TopScorerFullMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 26;
-            break;
-          }
-          case 218: {
-            com.sts.rpclib.H2HMatchesMessage.Builder subBuilder = null;
-            if (bodyCase_ == 27) {
-              subBuilder = ((com.sts.rpclib.H2HMatchesMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.H2HMatchesMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.H2HMatchesMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 27;
-            break;
-          }
-          case 226: {
-            com.sts.rpclib.Base64ImageMessage.Builder subBuilder = null;
-            if (bodyCase_ == 28) {
-              subBuilder = ((com.sts.rpclib.Base64ImageMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.Base64ImageMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.Base64ImageMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 28;
-            break;
-          }
-          case 234: {
-            com.sts.rpclib.ImageFullMessage.Builder subBuilder = null;
-            if (bodyCase_ == 29) {
-              subBuilder = ((com.sts.rpclib.ImageFullMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.ImageFullMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.ImageFullMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 29;
-            break;
-          }
-          case 242: {
-            com.sts.rpclib.StageParticipantsStatisticsFullMessage.Builder subBuilder = null;
-            if (bodyCase_ == 30) {
-              subBuilder = ((com.sts.rpclib.StageParticipantsStatisticsFullMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.StageParticipantsStatisticsFullMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.StageParticipantsStatisticsFullMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 30;
-            break;
-          }
-          case 250: {
-            com.sts.rpclib.MatchOddsFullMessage.Builder subBuilder = null;
-            if (bodyCase_ == 31) {
-              subBuilder = ((com.sts.rpclib.MatchOddsFullMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.MatchOddsFullMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.MatchOddsFullMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 31;
-            break;
-          }
-          case 258: {
-            com.sts.rpclib.TeamPageMessage.Builder subBuilder = null;
-            if (bodyCase_ == 32) {
-              subBuilder = ((com.sts.rpclib.TeamPageMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.TeamPageMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.TeamPageMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 32;
-            break;
-          }
-          case 266: {
-            com.sts.rpclib.TeamPageFullMessage.Builder subBuilder = null;
-            if (bodyCase_ == 33) {
-              subBuilder = ((com.sts.rpclib.TeamPageFullMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.TeamPageFullMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.TeamPageFullMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 33;
-            break;
-          }
-          case 274: {
-            com.sts.rpclib.DrawFullMessage.Builder subBuilder = null;
-            if (bodyCase_ == 34) {
-              subBuilder = ((com.sts.rpclib.DrawFullMessage) body_).toBuilder();
-            }
-            body_ =
-                input.readMessage(com.sts.rpclib.DrawFullMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.sts.rpclib.DrawFullMessage) body_);
-              body_ = subBuilder.buildPartial();
-            }
-            bodyCase_ = 34;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Envelope.internal_static_com_sts_rpclib_EventMessage_descriptor;
@@ -562,6 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bodyCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object body_;
   public enum BodyCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -599,6 +81,10 @@ private static final long serialVersionUID = 0L;
     TEAMPAGEMESSAGE(32),
     TEAMPAGEFULLMESSAGE(33),
     DRAWFULLMESSAGE(34),
+    RANKINGSMESSAGE(35),
+    RANKINGSFULLMESSAGE(36),
+    PLAYERPROFILEMESSAGE(37),
+    PLAYERPROFILEFULLMESSAGE(38),
     BODY_NOT_SET(0);
     private final int value;
     private BodyCase(int value) {
@@ -649,6 +135,10 @@ private static final long serialVersionUID = 0L;
         case 32: return TEAMPAGEMESSAGE;
         case 33: return TEAMPAGEFULLMESSAGE;
         case 34: return DRAWFULLMESSAGE;
+        case 35: return RANKINGSMESSAGE;
+        case 36: return RANKINGSFULLMESSAGE;
+        case 37: return PLAYERPROFILEMESSAGE;
+        case 38: return PLAYERPROFILEFULLMESSAGE;
         case 0: return BODY_NOT_SET;
         default: return null;
       }
@@ -687,7 +177,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.sts.rpclib.HeadersOrBuilder getHeadersOrBuilder() {
-    return getHeaders();
+    return headers_ == null ? com.sts.rpclib.Headers.getDefaultInstance() : headers_;
   }
 
   public static final int STAGE_FIELD_NUMBER = 2;
@@ -1761,6 +1251,130 @@ private static final long serialVersionUID = 0L;
     return com.sts.rpclib.DrawFullMessage.getDefaultInstance();
   }
 
+  public static final int RANKINGSMESSAGE_FIELD_NUMBER = 35;
+  /**
+   * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+   * @return Whether the rankingsMessage field is set.
+   */
+  @java.lang.Override
+  public boolean hasRankingsMessage() {
+    return bodyCase_ == 35;
+  }
+  /**
+   * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+   * @return The rankingsMessage.
+   */
+  @java.lang.Override
+  public com.sts.rpclib.RankingsMessage getRankingsMessage() {
+    if (bodyCase_ == 35) {
+       return (com.sts.rpclib.RankingsMessage) body_;
+    }
+    return com.sts.rpclib.RankingsMessage.getDefaultInstance();
+  }
+  /**
+   * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+   */
+  @java.lang.Override
+  public com.sts.rpclib.RankingsMessageOrBuilder getRankingsMessageOrBuilder() {
+    if (bodyCase_ == 35) {
+       return (com.sts.rpclib.RankingsMessage) body_;
+    }
+    return com.sts.rpclib.RankingsMessage.getDefaultInstance();
+  }
+
+  public static final int RANKINGSFULLMESSAGE_FIELD_NUMBER = 36;
+  /**
+   * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+   * @return Whether the rankingsFullMessage field is set.
+   */
+  @java.lang.Override
+  public boolean hasRankingsFullMessage() {
+    return bodyCase_ == 36;
+  }
+  /**
+   * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+   * @return The rankingsFullMessage.
+   */
+  @java.lang.Override
+  public com.sts.rpclib.RankingsFullMessage getRankingsFullMessage() {
+    if (bodyCase_ == 36) {
+       return (com.sts.rpclib.RankingsFullMessage) body_;
+    }
+    return com.sts.rpclib.RankingsFullMessage.getDefaultInstance();
+  }
+  /**
+   * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+   */
+  @java.lang.Override
+  public com.sts.rpclib.RankingsFullMessageOrBuilder getRankingsFullMessageOrBuilder() {
+    if (bodyCase_ == 36) {
+       return (com.sts.rpclib.RankingsFullMessage) body_;
+    }
+    return com.sts.rpclib.RankingsFullMessage.getDefaultInstance();
+  }
+
+  public static final int PLAYERPROFILEMESSAGE_FIELD_NUMBER = 37;
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+   * @return Whether the playerProfileMessage field is set.
+   */
+  @java.lang.Override
+  public boolean hasPlayerProfileMessage() {
+    return bodyCase_ == 37;
+  }
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+   * @return The playerProfileMessage.
+   */
+  @java.lang.Override
+  public com.sts.rpclib.PlayerProfileMessage getPlayerProfileMessage() {
+    if (bodyCase_ == 37) {
+       return (com.sts.rpclib.PlayerProfileMessage) body_;
+    }
+    return com.sts.rpclib.PlayerProfileMessage.getDefaultInstance();
+  }
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+   */
+  @java.lang.Override
+  public com.sts.rpclib.PlayerProfileMessageOrBuilder getPlayerProfileMessageOrBuilder() {
+    if (bodyCase_ == 37) {
+       return (com.sts.rpclib.PlayerProfileMessage) body_;
+    }
+    return com.sts.rpclib.PlayerProfileMessage.getDefaultInstance();
+  }
+
+  public static final int PLAYERPROFILEFULLMESSAGE_FIELD_NUMBER = 38;
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+   * @return Whether the playerProfileFullMessage field is set.
+   */
+  @java.lang.Override
+  public boolean hasPlayerProfileFullMessage() {
+    return bodyCase_ == 38;
+  }
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+   * @return The playerProfileFullMessage.
+   */
+  @java.lang.Override
+  public com.sts.rpclib.PlayerProfileFullMessage getPlayerProfileFullMessage() {
+    if (bodyCase_ == 38) {
+       return (com.sts.rpclib.PlayerProfileFullMessage) body_;
+    }
+    return com.sts.rpclib.PlayerProfileFullMessage.getDefaultInstance();
+  }
+  /**
+   * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+   */
+  @java.lang.Override
+  public com.sts.rpclib.PlayerProfileFullMessageOrBuilder getPlayerProfileFullMessageOrBuilder() {
+    if (bodyCase_ == 38) {
+       return (com.sts.rpclib.PlayerProfileFullMessage) body_;
+    }
+    return com.sts.rpclib.PlayerProfileFullMessage.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1877,7 +1491,19 @@ private static final long serialVersionUID = 0L;
     if (bodyCase_ == 34) {
       output.writeMessage(34, (com.sts.rpclib.DrawFullMessage) body_);
     }
-    unknownFields.writeTo(output);
+    if (bodyCase_ == 35) {
+      output.writeMessage(35, (com.sts.rpclib.RankingsMessage) body_);
+    }
+    if (bodyCase_ == 36) {
+      output.writeMessage(36, (com.sts.rpclib.RankingsFullMessage) body_);
+    }
+    if (bodyCase_ == 37) {
+      output.writeMessage(37, (com.sts.rpclib.PlayerProfileMessage) body_);
+    }
+    if (bodyCase_ == 38) {
+      output.writeMessage(38, (com.sts.rpclib.PlayerProfileFullMessage) body_);
+    }
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2022,7 +1648,23 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(34, (com.sts.rpclib.DrawFullMessage) body_);
     }
-    size += unknownFields.getSerializedSize();
+    if (bodyCase_ == 35) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(35, (com.sts.rpclib.RankingsMessage) body_);
+    }
+    if (bodyCase_ == 36) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, (com.sts.rpclib.RankingsFullMessage) body_);
+    }
+    if (bodyCase_ == 37) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(37, (com.sts.rpclib.PlayerProfileMessage) body_);
+    }
+    if (bodyCase_ == 38) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, (com.sts.rpclib.PlayerProfileFullMessage) body_);
+    }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2176,10 +1818,26 @@ private static final long serialVersionUID = 0L;
         if (!getDrawFullMessage()
             .equals(other.getDrawFullMessage())) return false;
         break;
+      case 35:
+        if (!getRankingsMessage()
+            .equals(other.getRankingsMessage())) return false;
+        break;
+      case 36:
+        if (!getRankingsFullMessage()
+            .equals(other.getRankingsFullMessage())) return false;
+        break;
+      case 37:
+        if (!getPlayerProfileMessage()
+            .equals(other.getPlayerProfileMessage())) return false;
+        break;
+      case 38:
+        if (!getPlayerProfileFullMessage()
+            .equals(other.getPlayerProfileFullMessage())) return false;
+        break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2327,10 +1985,26 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + DRAWFULLMESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getDrawFullMessage().hashCode();
         break;
+      case 35:
+        hash = (37 * hash) + RANKINGSMESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getRankingsMessage().hashCode();
+        break;
+      case 36:
+        hash = (37 * hash) + RANKINGSFULLMESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getRankingsFullMessage().hashCode();
+        break;
+      case 37:
+        hash = (37 * hash) + PLAYERPROFILEMESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayerProfileMessage().hashCode();
+        break;
+      case 38:
+        hash = (37 * hash) + PLAYERPROFILEFULLMESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayerProfileFullMessage().hashCode();
+        break;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2379,11 +2053,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.EventMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.EventMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2451,27 +2127,134 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.EventMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (headersBuilder_ == null) {
-        headers_ = null;
-      } else {
-        headers_ = null;
+      bitField0_ = 0;
+      bitField1_ = 0;
+      headers_ = null;
+      if (headersBuilder_ != null) {
+        headersBuilder_.dispose();
         headersBuilder_ = null;
+      }
+      if (stageBuilder_ != null) {
+        stageBuilder_.clear();
+      }
+      if (commentaryBuilder_ != null) {
+        commentaryBuilder_.clear();
+      }
+      if (matchCommentaryAddBuilder_ != null) {
+        matchCommentaryAddBuilder_.clear();
+      }
+      if (providerStatusBuilder_ != null) {
+        providerStatusBuilder_.clear();
+      }
+      if (leagueTableBuilder_ != null) {
+        leagueTableBuilder_.clear();
+      }
+      if (topScorerBuilder_ != null) {
+        topScorerBuilder_.clear();
+      }
+      if (scoutConnectionBuilder_ != null) {
+        scoutConnectionBuilder_.clear();
+      }
+      if (widgetEventBuilder_ != null) {
+        widgetEventBuilder_.clear();
+      }
+      if (varStatusBuilder_ != null) {
+        varStatusBuilder_.clear();
+      }
+      if (varReasonBuilder_ != null) {
+        varReasonBuilder_.clear();
+      }
+      if (fullMatchDataBuilder_ != null) {
+        fullMatchDataBuilder_.clear();
+      }
+      if (matchDeletedBuilder_ != null) {
+        matchDeletedBuilder_.clear();
+      }
+      if (incidentBuilder_ != null) {
+        incidentBuilder_.clear();
+      }
+      if (matchStatusChangeBuilder_ != null) {
+        matchStatusChangeBuilder_.clear();
+      }
+      if (matchScoreChangeBuilder_ != null) {
+        matchScoreChangeBuilder_.clear();
+      }
+      if (matchIncidentChangeBuilder_ != null) {
+        matchIncidentChangeBuilder_.clear();
+      }
+      if (matchWinnerChangeBuilder_ != null) {
+        matchWinnerChangeBuilder_.clear();
+      }
+      if (matchParticipantsChangeBuilder_ != null) {
+        matchParticipantsChangeBuilder_.clear();
+      }
+      if (matchLineupChangeBuilder_ != null) {
+        matchLineupChangeBuilder_.clear();
+      }
+      if (matchStatsMessageBuilder_ != null) {
+        matchStatsMessageBuilder_.clear();
+      }
+      if (deletedIncidentMessageBuilder_ != null) {
+        deletedIncidentMessageBuilder_.clear();
+      }
+      if (responseMessageBuilder_ != null) {
+        responseMessageBuilder_.clear();
+      }
+      if (heartbeatMessageBuilder_ != null) {
+        heartbeatMessageBuilder_.clear();
+      }
+      if (leagueTableMessageFullBuilder_ != null) {
+        leagueTableMessageFullBuilder_.clear();
+      }
+      if (topScorerFullMessageBuilder_ != null) {
+        topScorerFullMessageBuilder_.clear();
+      }
+      if (h2HMatchesMessageBuilder_ != null) {
+        h2HMatchesMessageBuilder_.clear();
+      }
+      if (base64ImageBuilder_ != null) {
+        base64ImageBuilder_.clear();
+      }
+      if (imageFullMessageBuilder_ != null) {
+        imageFullMessageBuilder_.clear();
+      }
+      if (stageParticipantsStatisticsFullMessageBuilder_ != null) {
+        stageParticipantsStatisticsFullMessageBuilder_.clear();
+      }
+      if (matchOddsFullMessageBuilder_ != null) {
+        matchOddsFullMessageBuilder_.clear();
+      }
+      if (teamPageMessageBuilder_ != null) {
+        teamPageMessageBuilder_.clear();
+      }
+      if (teamPageFullMessageBuilder_ != null) {
+        teamPageFullMessageBuilder_.clear();
+      }
+      if (drawFullMessageBuilder_ != null) {
+        drawFullMessageBuilder_.clear();
+      }
+      if (rankingsMessageBuilder_ != null) {
+        rankingsMessageBuilder_.clear();
+      }
+      if (rankingsFullMessageBuilder_ != null) {
+        rankingsFullMessageBuilder_.clear();
+      }
+      if (playerProfileMessageBuilder_ != null) {
+        playerProfileMessageBuilder_.clear();
+      }
+      if (playerProfileFullMessageBuilder_ != null) {
+        playerProfileFullMessageBuilder_.clear();
       }
       bodyCase_ = 0;
       body_ = null;
@@ -2501,245 +2284,177 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.EventMessage buildPartial() {
       com.sts.rpclib.EventMessage result = new com.sts.rpclib.EventMessage(this);
-      if (headersBuilder_ == null) {
-        result.headers_ = headers_;
-      } else {
-        result.headers_ = headersBuilder_.build();
-      }
-      if (bodyCase_ == 2) {
-        if (stageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = stageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 3) {
-        if (commentaryBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = commentaryBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 4) {
-        if (matchCommentaryAddBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchCommentaryAddBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 5) {
-        if (providerStatusBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = providerStatusBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 6) {
-        if (leagueTableBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = leagueTableBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 7) {
-        if (topScorerBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = topScorerBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 8) {
-        if (scoutConnectionBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = scoutConnectionBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 9) {
-        if (widgetEventBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = widgetEventBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 10) {
-        if (varStatusBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = varStatusBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 11) {
-        if (varReasonBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = varReasonBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 12) {
-        if (fullMatchDataBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = fullMatchDataBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 13) {
-        if (matchDeletedBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchDeletedBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 14) {
-        if (incidentBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = incidentBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 15) {
-        if (matchStatusChangeBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchStatusChangeBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 16) {
-        if (matchScoreChangeBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchScoreChangeBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 17) {
-        if (matchIncidentChangeBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchIncidentChangeBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 18) {
-        if (matchWinnerChangeBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchWinnerChangeBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 19) {
-        if (matchParticipantsChangeBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchParticipantsChangeBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 20) {
-        if (matchLineupChangeBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchLineupChangeBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 21) {
-        if (matchStatsMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchStatsMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 22) {
-        if (deletedIncidentMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = deletedIncidentMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 23) {
-        if (responseMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = responseMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 24) {
-        if (heartbeatMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = heartbeatMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 25) {
-        if (leagueTableMessageFullBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = leagueTableMessageFullBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 26) {
-        if (topScorerFullMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = topScorerFullMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 27) {
-        if (h2HMatchesMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = h2HMatchesMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 28) {
-        if (base64ImageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = base64ImageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 29) {
-        if (imageFullMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = imageFullMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 30) {
-        if (stageParticipantsStatisticsFullMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = stageParticipantsStatisticsFullMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 31) {
-        if (matchOddsFullMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = matchOddsFullMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 32) {
-        if (teamPageMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = teamPageMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 33) {
-        if (teamPageFullMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = teamPageFullMessageBuilder_.build();
-        }
-      }
-      if (bodyCase_ == 34) {
-        if (drawFullMessageBuilder_ == null) {
-          result.body_ = body_;
-        } else {
-          result.body_ = drawFullMessageBuilder_.build();
-        }
-      }
-      result.bodyCase_ = bodyCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.EventMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.headers_ = headersBuilder_ == null
+            ? headers_
+            : headersBuilder_.build();
+      }
+    }
+
+    private void buildPartial1(com.sts.rpclib.EventMessage result) {
+      int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartialOneofs(com.sts.rpclib.EventMessage result) {
+      result.bodyCase_ = bodyCase_;
+      result.body_ = this.body_;
+      if (bodyCase_ == 2 &&
+          stageBuilder_ != null) {
+        result.body_ = stageBuilder_.build();
+      }
+      if (bodyCase_ == 3 &&
+          commentaryBuilder_ != null) {
+        result.body_ = commentaryBuilder_.build();
+      }
+      if (bodyCase_ == 4 &&
+          matchCommentaryAddBuilder_ != null) {
+        result.body_ = matchCommentaryAddBuilder_.build();
+      }
+      if (bodyCase_ == 5 &&
+          providerStatusBuilder_ != null) {
+        result.body_ = providerStatusBuilder_.build();
+      }
+      if (bodyCase_ == 6 &&
+          leagueTableBuilder_ != null) {
+        result.body_ = leagueTableBuilder_.build();
+      }
+      if (bodyCase_ == 7 &&
+          topScorerBuilder_ != null) {
+        result.body_ = topScorerBuilder_.build();
+      }
+      if (bodyCase_ == 8 &&
+          scoutConnectionBuilder_ != null) {
+        result.body_ = scoutConnectionBuilder_.build();
+      }
+      if (bodyCase_ == 9 &&
+          widgetEventBuilder_ != null) {
+        result.body_ = widgetEventBuilder_.build();
+      }
+      if (bodyCase_ == 10 &&
+          varStatusBuilder_ != null) {
+        result.body_ = varStatusBuilder_.build();
+      }
+      if (bodyCase_ == 11 &&
+          varReasonBuilder_ != null) {
+        result.body_ = varReasonBuilder_.build();
+      }
+      if (bodyCase_ == 12 &&
+          fullMatchDataBuilder_ != null) {
+        result.body_ = fullMatchDataBuilder_.build();
+      }
+      if (bodyCase_ == 13 &&
+          matchDeletedBuilder_ != null) {
+        result.body_ = matchDeletedBuilder_.build();
+      }
+      if (bodyCase_ == 14 &&
+          incidentBuilder_ != null) {
+        result.body_ = incidentBuilder_.build();
+      }
+      if (bodyCase_ == 15 &&
+          matchStatusChangeBuilder_ != null) {
+        result.body_ = matchStatusChangeBuilder_.build();
+      }
+      if (bodyCase_ == 16 &&
+          matchScoreChangeBuilder_ != null) {
+        result.body_ = matchScoreChangeBuilder_.build();
+      }
+      if (bodyCase_ == 17 &&
+          matchIncidentChangeBuilder_ != null) {
+        result.body_ = matchIncidentChangeBuilder_.build();
+      }
+      if (bodyCase_ == 18 &&
+          matchWinnerChangeBuilder_ != null) {
+        result.body_ = matchWinnerChangeBuilder_.build();
+      }
+      if (bodyCase_ == 19 &&
+          matchParticipantsChangeBuilder_ != null) {
+        result.body_ = matchParticipantsChangeBuilder_.build();
+      }
+      if (bodyCase_ == 20 &&
+          matchLineupChangeBuilder_ != null) {
+        result.body_ = matchLineupChangeBuilder_.build();
+      }
+      if (bodyCase_ == 21 &&
+          matchStatsMessageBuilder_ != null) {
+        result.body_ = matchStatsMessageBuilder_.build();
+      }
+      if (bodyCase_ == 22 &&
+          deletedIncidentMessageBuilder_ != null) {
+        result.body_ = deletedIncidentMessageBuilder_.build();
+      }
+      if (bodyCase_ == 23 &&
+          responseMessageBuilder_ != null) {
+        result.body_ = responseMessageBuilder_.build();
+      }
+      if (bodyCase_ == 24 &&
+          heartbeatMessageBuilder_ != null) {
+        result.body_ = heartbeatMessageBuilder_.build();
+      }
+      if (bodyCase_ == 25 &&
+          leagueTableMessageFullBuilder_ != null) {
+        result.body_ = leagueTableMessageFullBuilder_.build();
+      }
+      if (bodyCase_ == 26 &&
+          topScorerFullMessageBuilder_ != null) {
+        result.body_ = topScorerFullMessageBuilder_.build();
+      }
+      if (bodyCase_ == 27 &&
+          h2HMatchesMessageBuilder_ != null) {
+        result.body_ = h2HMatchesMessageBuilder_.build();
+      }
+      if (bodyCase_ == 28 &&
+          base64ImageBuilder_ != null) {
+        result.body_ = base64ImageBuilder_.build();
+      }
+      if (bodyCase_ == 29 &&
+          imageFullMessageBuilder_ != null) {
+        result.body_ = imageFullMessageBuilder_.build();
+      }
+      if (bodyCase_ == 30 &&
+          stageParticipantsStatisticsFullMessageBuilder_ != null) {
+        result.body_ = stageParticipantsStatisticsFullMessageBuilder_.build();
+      }
+      if (bodyCase_ == 31 &&
+          matchOddsFullMessageBuilder_ != null) {
+        result.body_ = matchOddsFullMessageBuilder_.build();
+      }
+      if (bodyCase_ == 32 &&
+          teamPageMessageBuilder_ != null) {
+        result.body_ = teamPageMessageBuilder_.build();
+      }
+      if (bodyCase_ == 33 &&
+          teamPageFullMessageBuilder_ != null) {
+        result.body_ = teamPageFullMessageBuilder_.build();
+      }
+      if (bodyCase_ == 34 &&
+          drawFullMessageBuilder_ != null) {
+        result.body_ = drawFullMessageBuilder_.build();
+      }
+      if (bodyCase_ == 35 &&
+          rankingsMessageBuilder_ != null) {
+        result.body_ = rankingsMessageBuilder_.build();
+      }
+      if (bodyCase_ == 36 &&
+          rankingsFullMessageBuilder_ != null) {
+        result.body_ = rankingsFullMessageBuilder_.build();
+      }
+      if (bodyCase_ == 37 &&
+          playerProfileMessageBuilder_ != null) {
+        result.body_ = playerProfileMessageBuilder_.build();
+      }
+      if (bodyCase_ == 38 &&
+          playerProfileFullMessageBuilder_ != null) {
+        result.body_ = playerProfileFullMessageBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2922,11 +2637,27 @@ private static final long serialVersionUID = 0L;
           mergeDrawFullMessage(other.getDrawFullMessage());
           break;
         }
+        case RANKINGSMESSAGE: {
+          mergeRankingsMessage(other.getRankingsMessage());
+          break;
+        }
+        case RANKINGSFULLMESSAGE: {
+          mergeRankingsFullMessage(other.getRankingsFullMessage());
+          break;
+        }
+        case PLAYERPROFILEMESSAGE: {
+          mergePlayerProfileMessage(other.getPlayerProfileMessage());
+          break;
+        }
+        case PLAYERPROFILEFULLMESSAGE: {
+          mergePlayerProfileFullMessage(other.getPlayerProfileFullMessage());
+          break;
+        }
         case BODY_NOT_SET: {
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2941,17 +2672,296 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.EventMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getHeadersFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getStageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getCommentaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getMatchCommentaryAddFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getProviderStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getLeagueTableFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getTopScorerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 7;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getScoutConnectionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 8;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getWidgetEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 9;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getVarStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 10;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getVarReasonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 11;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getFullMatchDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getMatchDeletedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 13;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getIncidentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 14;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getMatchStatusChangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 15;
+              break;
+            } // case 122
+            case 130: {
+              input.readMessage(
+                  getMatchScoreChangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 16;
+              break;
+            } // case 130
+            case 138: {
+              input.readMessage(
+                  getMatchIncidentChangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 17;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getMatchWinnerChangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 18;
+              break;
+            } // case 146
+            case 154: {
+              input.readMessage(
+                  getMatchParticipantsChangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 19;
+              break;
+            } // case 154
+            case 162: {
+              input.readMessage(
+                  getMatchLineupChangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 20;
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getMatchStatsMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 21;
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  getDeletedIncidentMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 22;
+              break;
+            } // case 178
+            case 186: {
+              input.readMessage(
+                  getResponseMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 23;
+              break;
+            } // case 186
+            case 194: {
+              input.readMessage(
+                  getHeartbeatMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 24;
+              break;
+            } // case 194
+            case 202: {
+              input.readMessage(
+                  getLeagueTableMessageFullFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 25;
+              break;
+            } // case 202
+            case 210: {
+              input.readMessage(
+                  getTopScorerFullMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 26;
+              break;
+            } // case 210
+            case 218: {
+              input.readMessage(
+                  getH2HMatchesMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 27;
+              break;
+            } // case 218
+            case 226: {
+              input.readMessage(
+                  getBase64ImageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 28;
+              break;
+            } // case 226
+            case 234: {
+              input.readMessage(
+                  getImageFullMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 29;
+              break;
+            } // case 234
+            case 242: {
+              input.readMessage(
+                  getStageParticipantsStatisticsFullMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 30;
+              break;
+            } // case 242
+            case 250: {
+              input.readMessage(
+                  getMatchOddsFullMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 31;
+              break;
+            } // case 250
+            case 258: {
+              input.readMessage(
+                  getTeamPageMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 32;
+              break;
+            } // case 258
+            case 266: {
+              input.readMessage(
+                  getTeamPageFullMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 33;
+              break;
+            } // case 266
+            case 274: {
+              input.readMessage(
+                  getDrawFullMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 34;
+              break;
+            } // case 274
+            case 282: {
+              input.readMessage(
+                  getRankingsMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 35;
+              break;
+            } // case 282
+            case 290: {
+              input.readMessage(
+                  getRankingsFullMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 36;
+              break;
+            } // case 290
+            case 298: {
+              input.readMessage(
+                  getPlayerProfileMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 37;
+              break;
+            } // case 298
+            case 306: {
+              input.readMessage(
+                  getPlayerProfileFullMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 38;
+              break;
+            } // case 306
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.EventMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bodyCase_ = 0;
@@ -2969,6 +2979,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
+    private int bitField1_;
 
     private com.sts.rpclib.Headers headers_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2978,7 +2990,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the headers field is set.
      */
     public boolean hasHeaders() {
-      return headersBuilder_ != null || headers_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.com.sts.rpclib.Headers headers = 1;</code>
@@ -3000,11 +3012,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         headers_ = value;
-        onChanged();
       } else {
         headersBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -3014,11 +3026,11 @@ private static final long serialVersionUID = 0L;
         com.sts.rpclib.Headers.Builder builderForValue) {
       if (headersBuilder_ == null) {
         headers_ = builderForValue.build();
-        onChanged();
       } else {
         headersBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -3026,38 +3038,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHeaders(com.sts.rpclib.Headers value) {
       if (headersBuilder_ == null) {
-        if (headers_ != null) {
-          headers_ =
-            com.sts.rpclib.Headers.newBuilder(headers_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          headers_ != null &&
+          headers_ != com.sts.rpclib.Headers.getDefaultInstance()) {
+          getHeadersBuilder().mergeFrom(value);
         } else {
           headers_ = value;
         }
-        onChanged();
       } else {
         headersBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.Headers headers = 1;</code>
      */
     public Builder clearHeaders() {
-      if (headersBuilder_ == null) {
-        headers_ = null;
-        onChanged();
-      } else {
-        headers_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      headers_ = null;
+      if (headersBuilder_ != null) {
+        headersBuilder_.dispose();
         headersBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.Headers headers = 1;</code>
      */
     public com.sts.rpclib.Headers.Builder getHeadersBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getHeadersFieldBuilder().getBuilder();
     }
@@ -3263,7 +3275,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 2;
-      onChanged();;
+      onChanged();
       return stageBuilder_;
     }
 
@@ -3405,7 +3417,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 3;
-      onChanged();;
+      onChanged();
       return commentaryBuilder_;
     }
 
@@ -3547,7 +3559,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 4;
-      onChanged();;
+      onChanged();
       return matchCommentaryAddBuilder_;
     }
 
@@ -3689,7 +3701,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 5;
-      onChanged();;
+      onChanged();
       return providerStatusBuilder_;
     }
 
@@ -3867,7 +3879,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 6;
-      onChanged();;
+      onChanged();
       return leagueTableBuilder_;
     }
 
@@ -4045,7 +4057,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 7;
-      onChanged();;
+      onChanged();
       return topScorerBuilder_;
     }
 
@@ -4187,7 +4199,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 8;
-      onChanged();;
+      onChanged();
       return scoutConnectionBuilder_;
     }
 
@@ -4329,7 +4341,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 9;
-      onChanged();;
+      onChanged();
       return widgetEventBuilder_;
     }
 
@@ -4471,7 +4483,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 10;
-      onChanged();;
+      onChanged();
       return varStatusBuilder_;
     }
 
@@ -4613,7 +4625,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 11;
-      onChanged();;
+      onChanged();
       return varReasonBuilder_;
     }
 
@@ -4791,7 +4803,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 12;
-      onChanged();;
+      onChanged();
       return fullMatchDataBuilder_;
     }
 
@@ -4933,7 +4945,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 13;
-      onChanged();;
+      onChanged();
       return matchDeletedBuilder_;
     }
 
@@ -5075,7 +5087,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 14;
-      onChanged();;
+      onChanged();
       return incidentBuilder_;
     }
 
@@ -5217,7 +5229,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 15;
-      onChanged();;
+      onChanged();
       return matchStatusChangeBuilder_;
     }
 
@@ -5359,7 +5371,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 16;
-      onChanged();;
+      onChanged();
       return matchScoreChangeBuilder_;
     }
 
@@ -5501,7 +5513,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 17;
-      onChanged();;
+      onChanged();
       return matchIncidentChangeBuilder_;
     }
 
@@ -5643,7 +5655,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 18;
-      onChanged();;
+      onChanged();
       return matchWinnerChangeBuilder_;
     }
 
@@ -5785,7 +5797,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 19;
-      onChanged();;
+      onChanged();
       return matchParticipantsChangeBuilder_;
     }
 
@@ -5927,7 +5939,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 20;
-      onChanged();;
+      onChanged();
       return matchLineupChangeBuilder_;
     }
 
@@ -6069,7 +6081,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 21;
-      onChanged();;
+      onChanged();
       return matchStatsMessageBuilder_;
     }
 
@@ -6211,7 +6223,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 22;
-      onChanged();;
+      onChanged();
       return deletedIncidentMessageBuilder_;
     }
 
@@ -6353,7 +6365,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 23;
-      onChanged();;
+      onChanged();
       return responseMessageBuilder_;
     }
 
@@ -6495,7 +6507,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 24;
-      onChanged();;
+      onChanged();
       return heartbeatMessageBuilder_;
     }
 
@@ -6637,7 +6649,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 25;
-      onChanged();;
+      onChanged();
       return leagueTableMessageFullBuilder_;
     }
 
@@ -6779,7 +6791,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 26;
-      onChanged();;
+      onChanged();
       return topScorerFullMessageBuilder_;
     }
 
@@ -6921,7 +6933,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 27;
-      onChanged();;
+      onChanged();
       return h2HMatchesMessageBuilder_;
     }
 
@@ -7063,7 +7075,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 28;
-      onChanged();;
+      onChanged();
       return base64ImageBuilder_;
     }
 
@@ -7205,7 +7217,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 29;
-      onChanged();;
+      onChanged();
       return imageFullMessageBuilder_;
     }
 
@@ -7347,7 +7359,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 30;
-      onChanged();;
+      onChanged();
       return stageParticipantsStatisticsFullMessageBuilder_;
     }
 
@@ -7489,7 +7501,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 31;
-      onChanged();;
+      onChanged();
       return matchOddsFullMessageBuilder_;
     }
 
@@ -7631,7 +7643,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 32;
-      onChanged();;
+      onChanged();
       return teamPageMessageBuilder_;
     }
 
@@ -7773,7 +7785,7 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 33;
-      onChanged();;
+      onChanged();
       return teamPageFullMessageBuilder_;
     }
 
@@ -7915,8 +7927,576 @@ private static final long serialVersionUID = 0L;
         body_ = null;
       }
       bodyCase_ = 34;
-      onChanged();;
+      onChanged();
       return drawFullMessageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.sts.rpclib.RankingsMessage, com.sts.rpclib.RankingsMessage.Builder, com.sts.rpclib.RankingsMessageOrBuilder> rankingsMessageBuilder_;
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     * @return Whether the rankingsMessage field is set.
+     */
+    @java.lang.Override
+    public boolean hasRankingsMessage() {
+      return bodyCase_ == 35;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     * @return The rankingsMessage.
+     */
+    @java.lang.Override
+    public com.sts.rpclib.RankingsMessage getRankingsMessage() {
+      if (rankingsMessageBuilder_ == null) {
+        if (bodyCase_ == 35) {
+          return (com.sts.rpclib.RankingsMessage) body_;
+        }
+        return com.sts.rpclib.RankingsMessage.getDefaultInstance();
+      } else {
+        if (bodyCase_ == 35) {
+          return rankingsMessageBuilder_.getMessage();
+        }
+        return com.sts.rpclib.RankingsMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     */
+    public Builder setRankingsMessage(com.sts.rpclib.RankingsMessage value) {
+      if (rankingsMessageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        body_ = value;
+        onChanged();
+      } else {
+        rankingsMessageBuilder_.setMessage(value);
+      }
+      bodyCase_ = 35;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     */
+    public Builder setRankingsMessage(
+        com.sts.rpclib.RankingsMessage.Builder builderForValue) {
+      if (rankingsMessageBuilder_ == null) {
+        body_ = builderForValue.build();
+        onChanged();
+      } else {
+        rankingsMessageBuilder_.setMessage(builderForValue.build());
+      }
+      bodyCase_ = 35;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     */
+    public Builder mergeRankingsMessage(com.sts.rpclib.RankingsMessage value) {
+      if (rankingsMessageBuilder_ == null) {
+        if (bodyCase_ == 35 &&
+            body_ != com.sts.rpclib.RankingsMessage.getDefaultInstance()) {
+          body_ = com.sts.rpclib.RankingsMessage.newBuilder((com.sts.rpclib.RankingsMessage) body_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          body_ = value;
+        }
+        onChanged();
+      } else {
+        if (bodyCase_ == 35) {
+          rankingsMessageBuilder_.mergeFrom(value);
+        } else {
+          rankingsMessageBuilder_.setMessage(value);
+        }
+      }
+      bodyCase_ = 35;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     */
+    public Builder clearRankingsMessage() {
+      if (rankingsMessageBuilder_ == null) {
+        if (bodyCase_ == 35) {
+          bodyCase_ = 0;
+          body_ = null;
+          onChanged();
+        }
+      } else {
+        if (bodyCase_ == 35) {
+          bodyCase_ = 0;
+          body_ = null;
+        }
+        rankingsMessageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     */
+    public com.sts.rpclib.RankingsMessage.Builder getRankingsMessageBuilder() {
+      return getRankingsMessageFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     */
+    @java.lang.Override
+    public com.sts.rpclib.RankingsMessageOrBuilder getRankingsMessageOrBuilder() {
+      if ((bodyCase_ == 35) && (rankingsMessageBuilder_ != null)) {
+        return rankingsMessageBuilder_.getMessageOrBuilder();
+      } else {
+        if (bodyCase_ == 35) {
+          return (com.sts.rpclib.RankingsMessage) body_;
+        }
+        return com.sts.rpclib.RankingsMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsMessage rankingsMessage = 35;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.sts.rpclib.RankingsMessage, com.sts.rpclib.RankingsMessage.Builder, com.sts.rpclib.RankingsMessageOrBuilder> 
+        getRankingsMessageFieldBuilder() {
+      if (rankingsMessageBuilder_ == null) {
+        if (!(bodyCase_ == 35)) {
+          body_ = com.sts.rpclib.RankingsMessage.getDefaultInstance();
+        }
+        rankingsMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.sts.rpclib.RankingsMessage, com.sts.rpclib.RankingsMessage.Builder, com.sts.rpclib.RankingsMessageOrBuilder>(
+                (com.sts.rpclib.RankingsMessage) body_,
+                getParentForChildren(),
+                isClean());
+        body_ = null;
+      }
+      bodyCase_ = 35;
+      onChanged();
+      return rankingsMessageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.sts.rpclib.RankingsFullMessage, com.sts.rpclib.RankingsFullMessage.Builder, com.sts.rpclib.RankingsFullMessageOrBuilder> rankingsFullMessageBuilder_;
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     * @return Whether the rankingsFullMessage field is set.
+     */
+    @java.lang.Override
+    public boolean hasRankingsFullMessage() {
+      return bodyCase_ == 36;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     * @return The rankingsFullMessage.
+     */
+    @java.lang.Override
+    public com.sts.rpclib.RankingsFullMessage getRankingsFullMessage() {
+      if (rankingsFullMessageBuilder_ == null) {
+        if (bodyCase_ == 36) {
+          return (com.sts.rpclib.RankingsFullMessage) body_;
+        }
+        return com.sts.rpclib.RankingsFullMessage.getDefaultInstance();
+      } else {
+        if (bodyCase_ == 36) {
+          return rankingsFullMessageBuilder_.getMessage();
+        }
+        return com.sts.rpclib.RankingsFullMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     */
+    public Builder setRankingsFullMessage(com.sts.rpclib.RankingsFullMessage value) {
+      if (rankingsFullMessageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        body_ = value;
+        onChanged();
+      } else {
+        rankingsFullMessageBuilder_.setMessage(value);
+      }
+      bodyCase_ = 36;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     */
+    public Builder setRankingsFullMessage(
+        com.sts.rpclib.RankingsFullMessage.Builder builderForValue) {
+      if (rankingsFullMessageBuilder_ == null) {
+        body_ = builderForValue.build();
+        onChanged();
+      } else {
+        rankingsFullMessageBuilder_.setMessage(builderForValue.build());
+      }
+      bodyCase_ = 36;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     */
+    public Builder mergeRankingsFullMessage(com.sts.rpclib.RankingsFullMessage value) {
+      if (rankingsFullMessageBuilder_ == null) {
+        if (bodyCase_ == 36 &&
+            body_ != com.sts.rpclib.RankingsFullMessage.getDefaultInstance()) {
+          body_ = com.sts.rpclib.RankingsFullMessage.newBuilder((com.sts.rpclib.RankingsFullMessage) body_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          body_ = value;
+        }
+        onChanged();
+      } else {
+        if (bodyCase_ == 36) {
+          rankingsFullMessageBuilder_.mergeFrom(value);
+        } else {
+          rankingsFullMessageBuilder_.setMessage(value);
+        }
+      }
+      bodyCase_ = 36;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     */
+    public Builder clearRankingsFullMessage() {
+      if (rankingsFullMessageBuilder_ == null) {
+        if (bodyCase_ == 36) {
+          bodyCase_ = 0;
+          body_ = null;
+          onChanged();
+        }
+      } else {
+        if (bodyCase_ == 36) {
+          bodyCase_ = 0;
+          body_ = null;
+        }
+        rankingsFullMessageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     */
+    public com.sts.rpclib.RankingsFullMessage.Builder getRankingsFullMessageBuilder() {
+      return getRankingsFullMessageFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     */
+    @java.lang.Override
+    public com.sts.rpclib.RankingsFullMessageOrBuilder getRankingsFullMessageOrBuilder() {
+      if ((bodyCase_ == 36) && (rankingsFullMessageBuilder_ != null)) {
+        return rankingsFullMessageBuilder_.getMessageOrBuilder();
+      } else {
+        if (bodyCase_ == 36) {
+          return (com.sts.rpclib.RankingsFullMessage) body_;
+        }
+        return com.sts.rpclib.RankingsFullMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.com.sts.rpclib.RankingsFullMessage rankingsFullMessage = 36;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.sts.rpclib.RankingsFullMessage, com.sts.rpclib.RankingsFullMessage.Builder, com.sts.rpclib.RankingsFullMessageOrBuilder> 
+        getRankingsFullMessageFieldBuilder() {
+      if (rankingsFullMessageBuilder_ == null) {
+        if (!(bodyCase_ == 36)) {
+          body_ = com.sts.rpclib.RankingsFullMessage.getDefaultInstance();
+        }
+        rankingsFullMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.sts.rpclib.RankingsFullMessage, com.sts.rpclib.RankingsFullMessage.Builder, com.sts.rpclib.RankingsFullMessageOrBuilder>(
+                (com.sts.rpclib.RankingsFullMessage) body_,
+                getParentForChildren(),
+                isClean());
+        body_ = null;
+      }
+      bodyCase_ = 36;
+      onChanged();
+      return rankingsFullMessageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.sts.rpclib.PlayerProfileMessage, com.sts.rpclib.PlayerProfileMessage.Builder, com.sts.rpclib.PlayerProfileMessageOrBuilder> playerProfileMessageBuilder_;
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     * @return Whether the playerProfileMessage field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlayerProfileMessage() {
+      return bodyCase_ == 37;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     * @return The playerProfileMessage.
+     */
+    @java.lang.Override
+    public com.sts.rpclib.PlayerProfileMessage getPlayerProfileMessage() {
+      if (playerProfileMessageBuilder_ == null) {
+        if (bodyCase_ == 37) {
+          return (com.sts.rpclib.PlayerProfileMessage) body_;
+        }
+        return com.sts.rpclib.PlayerProfileMessage.getDefaultInstance();
+      } else {
+        if (bodyCase_ == 37) {
+          return playerProfileMessageBuilder_.getMessage();
+        }
+        return com.sts.rpclib.PlayerProfileMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     */
+    public Builder setPlayerProfileMessage(com.sts.rpclib.PlayerProfileMessage value) {
+      if (playerProfileMessageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        body_ = value;
+        onChanged();
+      } else {
+        playerProfileMessageBuilder_.setMessage(value);
+      }
+      bodyCase_ = 37;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     */
+    public Builder setPlayerProfileMessage(
+        com.sts.rpclib.PlayerProfileMessage.Builder builderForValue) {
+      if (playerProfileMessageBuilder_ == null) {
+        body_ = builderForValue.build();
+        onChanged();
+      } else {
+        playerProfileMessageBuilder_.setMessage(builderForValue.build());
+      }
+      bodyCase_ = 37;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     */
+    public Builder mergePlayerProfileMessage(com.sts.rpclib.PlayerProfileMessage value) {
+      if (playerProfileMessageBuilder_ == null) {
+        if (bodyCase_ == 37 &&
+            body_ != com.sts.rpclib.PlayerProfileMessage.getDefaultInstance()) {
+          body_ = com.sts.rpclib.PlayerProfileMessage.newBuilder((com.sts.rpclib.PlayerProfileMessage) body_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          body_ = value;
+        }
+        onChanged();
+      } else {
+        if (bodyCase_ == 37) {
+          playerProfileMessageBuilder_.mergeFrom(value);
+        } else {
+          playerProfileMessageBuilder_.setMessage(value);
+        }
+      }
+      bodyCase_ = 37;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     */
+    public Builder clearPlayerProfileMessage() {
+      if (playerProfileMessageBuilder_ == null) {
+        if (bodyCase_ == 37) {
+          bodyCase_ = 0;
+          body_ = null;
+          onChanged();
+        }
+      } else {
+        if (bodyCase_ == 37) {
+          bodyCase_ = 0;
+          body_ = null;
+        }
+        playerProfileMessageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     */
+    public com.sts.rpclib.PlayerProfileMessage.Builder getPlayerProfileMessageBuilder() {
+      return getPlayerProfileMessageFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     */
+    @java.lang.Override
+    public com.sts.rpclib.PlayerProfileMessageOrBuilder getPlayerProfileMessageOrBuilder() {
+      if ((bodyCase_ == 37) && (playerProfileMessageBuilder_ != null)) {
+        return playerProfileMessageBuilder_.getMessageOrBuilder();
+      } else {
+        if (bodyCase_ == 37) {
+          return (com.sts.rpclib.PlayerProfileMessage) body_;
+        }
+        return com.sts.rpclib.PlayerProfileMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileMessage playerProfileMessage = 37;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.sts.rpclib.PlayerProfileMessage, com.sts.rpclib.PlayerProfileMessage.Builder, com.sts.rpclib.PlayerProfileMessageOrBuilder> 
+        getPlayerProfileMessageFieldBuilder() {
+      if (playerProfileMessageBuilder_ == null) {
+        if (!(bodyCase_ == 37)) {
+          body_ = com.sts.rpclib.PlayerProfileMessage.getDefaultInstance();
+        }
+        playerProfileMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.sts.rpclib.PlayerProfileMessage, com.sts.rpclib.PlayerProfileMessage.Builder, com.sts.rpclib.PlayerProfileMessageOrBuilder>(
+                (com.sts.rpclib.PlayerProfileMessage) body_,
+                getParentForChildren(),
+                isClean());
+        body_ = null;
+      }
+      bodyCase_ = 37;
+      onChanged();
+      return playerProfileMessageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.sts.rpclib.PlayerProfileFullMessage, com.sts.rpclib.PlayerProfileFullMessage.Builder, com.sts.rpclib.PlayerProfileFullMessageOrBuilder> playerProfileFullMessageBuilder_;
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     * @return Whether the playerProfileFullMessage field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlayerProfileFullMessage() {
+      return bodyCase_ == 38;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     * @return The playerProfileFullMessage.
+     */
+    @java.lang.Override
+    public com.sts.rpclib.PlayerProfileFullMessage getPlayerProfileFullMessage() {
+      if (playerProfileFullMessageBuilder_ == null) {
+        if (bodyCase_ == 38) {
+          return (com.sts.rpclib.PlayerProfileFullMessage) body_;
+        }
+        return com.sts.rpclib.PlayerProfileFullMessage.getDefaultInstance();
+      } else {
+        if (bodyCase_ == 38) {
+          return playerProfileFullMessageBuilder_.getMessage();
+        }
+        return com.sts.rpclib.PlayerProfileFullMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     */
+    public Builder setPlayerProfileFullMessage(com.sts.rpclib.PlayerProfileFullMessage value) {
+      if (playerProfileFullMessageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        body_ = value;
+        onChanged();
+      } else {
+        playerProfileFullMessageBuilder_.setMessage(value);
+      }
+      bodyCase_ = 38;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     */
+    public Builder setPlayerProfileFullMessage(
+        com.sts.rpclib.PlayerProfileFullMessage.Builder builderForValue) {
+      if (playerProfileFullMessageBuilder_ == null) {
+        body_ = builderForValue.build();
+        onChanged();
+      } else {
+        playerProfileFullMessageBuilder_.setMessage(builderForValue.build());
+      }
+      bodyCase_ = 38;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     */
+    public Builder mergePlayerProfileFullMessage(com.sts.rpclib.PlayerProfileFullMessage value) {
+      if (playerProfileFullMessageBuilder_ == null) {
+        if (bodyCase_ == 38 &&
+            body_ != com.sts.rpclib.PlayerProfileFullMessage.getDefaultInstance()) {
+          body_ = com.sts.rpclib.PlayerProfileFullMessage.newBuilder((com.sts.rpclib.PlayerProfileFullMessage) body_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          body_ = value;
+        }
+        onChanged();
+      } else {
+        if (bodyCase_ == 38) {
+          playerProfileFullMessageBuilder_.mergeFrom(value);
+        } else {
+          playerProfileFullMessageBuilder_.setMessage(value);
+        }
+      }
+      bodyCase_ = 38;
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     */
+    public Builder clearPlayerProfileFullMessage() {
+      if (playerProfileFullMessageBuilder_ == null) {
+        if (bodyCase_ == 38) {
+          bodyCase_ = 0;
+          body_ = null;
+          onChanged();
+        }
+      } else {
+        if (bodyCase_ == 38) {
+          bodyCase_ = 0;
+          body_ = null;
+        }
+        playerProfileFullMessageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     */
+    public com.sts.rpclib.PlayerProfileFullMessage.Builder getPlayerProfileFullMessageBuilder() {
+      return getPlayerProfileFullMessageFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     */
+    @java.lang.Override
+    public com.sts.rpclib.PlayerProfileFullMessageOrBuilder getPlayerProfileFullMessageOrBuilder() {
+      if ((bodyCase_ == 38) && (playerProfileFullMessageBuilder_ != null)) {
+        return playerProfileFullMessageBuilder_.getMessageOrBuilder();
+      } else {
+        if (bodyCase_ == 38) {
+          return (com.sts.rpclib.PlayerProfileFullMessage) body_;
+        }
+        return com.sts.rpclib.PlayerProfileFullMessage.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.com.sts.rpclib.PlayerProfileFullMessage playerProfileFullMessage = 38;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.sts.rpclib.PlayerProfileFullMessage, com.sts.rpclib.PlayerProfileFullMessage.Builder, com.sts.rpclib.PlayerProfileFullMessageOrBuilder> 
+        getPlayerProfileFullMessageFieldBuilder() {
+      if (playerProfileFullMessageBuilder_ == null) {
+        if (!(bodyCase_ == 38)) {
+          body_ = com.sts.rpclib.PlayerProfileFullMessage.getDefaultInstance();
+        }
+        playerProfileFullMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.sts.rpclib.PlayerProfileFullMessage, com.sts.rpclib.PlayerProfileFullMessage.Builder, com.sts.rpclib.PlayerProfileFullMessageOrBuilder>(
+                (com.sts.rpclib.PlayerProfileFullMessage) body_,
+                getParentForChildren(),
+                isClean());
+        body_ = null;
+      }
+      bodyCase_ = 38;
+      onChanged();
+      return playerProfileFullMessageBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -7951,7 +8531,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new EventMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

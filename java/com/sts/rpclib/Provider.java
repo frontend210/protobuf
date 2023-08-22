@@ -144,6 +144,14 @@ public enum Provider
    * <code>CESKA_TELEVIZE = 32;</code>
    */
   CESKA_TELEVIZE(32),
+  /**
+   * <code>SPORTAL = 33;</code>
+   */
+  SPORTAL(33),
+  /**
+   * <code>BETWAY_REST_OF_AFRICA = 34;</code>
+   */
+  BETWAY_REST_OF_AFRICA(34),
   UNRECOGNIZED(-1),
   ;
 
@@ -283,6 +291,14 @@ public enum Provider
    * <code>CESKA_TELEVIZE = 32;</code>
    */
   public static final int CESKA_TELEVIZE_VALUE = 32;
+  /**
+   * <code>SPORTAL = 33;</code>
+   */
+  public static final int SPORTAL_VALUE = 33;
+  /**
+   * <code>BETWAY_REST_OF_AFRICA = 34;</code>
+   */
+  public static final int BETWAY_REST_OF_AFRICA_VALUE = 34;
 
 
   public final int getNumber() {
@@ -342,6 +358,8 @@ public enum Provider
       case 30: return BETWAY_AFRICA;
       case 31: return GAZZETTA;
       case 32: return CESKA_TELEVIZE;
+      case 33: return SPORTAL;
+      case 34: return BETWAY_REST_OF_AFRICA;
       default: return null;
     }
   }

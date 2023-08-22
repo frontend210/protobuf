@@ -152,6 +152,22 @@ public enum MessageType
    * <code>DRAW_FULL = 34;</code>
    */
   DRAW_FULL(34),
+  /**
+   * <code>RANKINGS = 35;</code>
+   */
+  RANKINGS(35),
+  /**
+   * <code>RANKINGS_FULL = 36;</code>
+   */
+  RANKINGS_FULL(36),
+  /**
+   * <code>PLAYERS_STATISTICS_FULL = 37;</code>
+   */
+  PLAYERS_STATISTICS_FULL(37),
+  /**
+   * <code>PLAYER_PROFILE_FULL = 38;</code>
+   */
+  PLAYER_PROFILE_FULL(38),
   UNRECOGNIZED(-1),
   ;
 
@@ -299,6 +315,22 @@ public enum MessageType
    * <code>DRAW_FULL = 34;</code>
    */
   public static final int DRAW_FULL_VALUE = 34;
+  /**
+   * <code>RANKINGS = 35;</code>
+   */
+  public static final int RANKINGS_VALUE = 35;
+  /**
+   * <code>RANKINGS_FULL = 36;</code>
+   */
+  public static final int RANKINGS_FULL_VALUE = 36;
+  /**
+   * <code>PLAYERS_STATISTICS_FULL = 37;</code>
+   */
+  public static final int PLAYERS_STATISTICS_FULL_VALUE = 37;
+  /**
+   * <code>PLAYER_PROFILE_FULL = 38;</code>
+   */
+  public static final int PLAYER_PROFILE_FULL_VALUE = 38;
 
 
   public final int getNumber() {
@@ -360,6 +392,10 @@ public enum MessageType
       case 32: return TEAM_PAGE_FULL;
       case 33: return TEAM_FIXTURES_MATCHES;
       case 34: return DRAW_FULL;
+      case 35: return RANKINGS;
+      case 36: return RANKINGS_FULL;
+      case 37: return PLAYERS_STATISTICS_FULL;
+      case 38: return PLAYER_PROFILE_FULL;
       default: return null;
     }
   }

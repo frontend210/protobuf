@@ -25,69 +25,6 @@ private static final long serialVersionUID = 0L;
     return new MatchStatsMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private MatchStatsMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            teamPosition_ = input.readInt32();
-            break;
-          }
-          case 122: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              stats_ = com.google.protobuf.MapField.newMapField(
-                  StatsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-            stats__ = input.readMessage(
-                StatsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            stats_.getMutableMap().put(
-                stats__.getKey(), stats__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Match.internal_static_com_sts_rpclib_MatchStatsMessage_descriptor;
@@ -114,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEAMPOSITION_FIELD_NUMBER = 1;
-  private int teamPosition_;
+  private int teamPosition_ = 0;
   /**
    * <code>int32 teamPosition = 1;</code>
    * @return The teamPosition.
@@ -136,6 +73,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.INT32,
                 0);
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Integer, java.lang.Integer> stats_;
   private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
@@ -146,18 +84,16 @@ private static final long serialVersionUID = 0L;
     }
     return stats_;
   }
-
   public int getStatsCount() {
     return internalGetStats().getMap().size();
   }
   /**
    * <code>map&lt;int32, int32&gt; stats = 15;</code>
    */
-
   @java.lang.Override
   public boolean containsStats(
       int key) {
-    
+
     return internalGetStats().getMap().containsKey(key);
   }
   /**
@@ -172,7 +108,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int32&gt; stats = 15;</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.Integer, java.lang.Integer> getStatsMap() {
     return internalGetStats().getMap();
   }
@@ -180,11 +115,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int32&gt; stats = 15;</code>
    */
   @java.lang.Override
-
   public int getStatsOrDefault(
       int key,
       int defaultValue) {
-    
+
     java.util.Map<java.lang.Integer, java.lang.Integer> map =
         internalGetStats().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -193,10 +127,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int32&gt; stats = 15;</code>
    */
   @java.lang.Override
-
   public int getStatsOrThrow(
       int key) {
-    
+
     java.util.Map<java.lang.Integer, java.lang.Integer> map =
         internalGetStats().getMap();
     if (!map.containsKey(key)) {
@@ -228,7 +161,7 @@ private static final long serialVersionUID = 0L;
         internalGetStats(),
         StatsDefaultEntryHolder.defaultEntry,
         15);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -251,7 +184,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, stats__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -270,7 +203,7 @@ private static final long serialVersionUID = 0L;
         != other.getTeamPosition()) return false;
     if (!internalGetStats().equals(
         other.internalGetStats())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -287,7 +220,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + STATS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetStats().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -336,11 +269,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.MatchStatsMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.MatchStatsMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -426,24 +361,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.MatchStatsMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       teamPosition_ = 0;
-
       internalGetMutableStats().clear();
       return this;
     }
@@ -471,12 +401,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.MatchStatsMessage buildPartial() {
       com.sts.rpclib.MatchStatsMessage result = new com.sts.rpclib.MatchStatsMessage(this);
-      int from_bitField0_ = bitField0_;
-      result.teamPosition_ = teamPosition_;
-      result.stats_ = internalGetStats();
-      result.stats_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.MatchStatsMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.teamPosition_ = teamPosition_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.stats_ = internalGetStats();
+        result.stats_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -528,7 +466,8 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableStats().mergeFrom(
           other.internalGetStats());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000002;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -543,17 +482,44 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.MatchStatsMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              teamPosition_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 122: {
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              stats__ = input.readMessage(
+                  StatsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableStats().getMutableMap().put(
+                  stats__.getKey(), stats__.getValue());
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 122
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.MatchStatsMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -573,8 +539,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTeamPosition(int value) {
-      
+
       teamPosition_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -583,7 +550,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTeamPosition() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       teamPosition_ = 0;
       onChanged();
       return this;
@@ -592,7 +559,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Integer> stats_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetStats() {
+        internalGetStats() {
       if (stats_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             StatsDefaultEntryHolder.defaultEntry);
@@ -600,8 +567,7 @@ private static final long serialVersionUID = 0L;
       return stats_;
     }
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetMutableStats() {
-      onChanged();;
+        internalGetMutableStats() {
       if (stats_ == null) {
         stats_ = com.google.protobuf.MapField.newMapField(
             StatsDefaultEntryHolder.defaultEntry);
@@ -609,20 +575,20 @@ private static final long serialVersionUID = 0L;
       if (!stats_.isMutable()) {
         stats_ = stats_.copy();
       }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return stats_;
     }
-
     public int getStatsCount() {
       return internalGetStats().getMap().size();
     }
     /**
      * <code>map&lt;int32, int32&gt; stats = 15;</code>
      */
-
     @java.lang.Override
     public boolean containsStats(
         int key) {
-      
+
       return internalGetStats().getMap().containsKey(key);
     }
     /**
@@ -637,7 +603,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int32&gt; stats = 15;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, java.lang.Integer> getStatsMap() {
       return internalGetStats().getMap();
     }
@@ -645,11 +610,10 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int32&gt; stats = 15;</code>
      */
     @java.lang.Override
-
     public int getStatsOrDefault(
         int key,
         int defaultValue) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
           internalGetStats().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -658,10 +622,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int32&gt; stats = 15;</code>
      */
     @java.lang.Override
-
     public int getStatsOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
           internalGetStats().getMap();
       if (!map.containsKey(key)) {
@@ -669,8 +632,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearStats() {
+      bitField0_ = (bitField0_ & ~0x00000002);
       internalGetMutableStats().getMutableMap()
           .clear();
       return this;
@@ -678,10 +641,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;int32, int32&gt; stats = 15;</code>
      */
-
     public Builder removeStats(
         int key) {
-      
+
       internalGetMutableStats().getMutableMap()
           .remove(key);
       return this;
@@ -691,7 +653,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Integer, java.lang.Integer>
-    getMutableStats() {
+        getMutableStats() {
+      bitField0_ |= 0x00000002;
       return internalGetMutableStats().getMutableMap();
     }
     /**
@@ -700,20 +663,21 @@ private static final long serialVersionUID = 0L;
     public Builder putStats(
         int key,
         int value) {
-      
-      
+
+
       internalGetMutableStats().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000002;
       return this;
     }
     /**
      * <code>map&lt;int32, int32&gt; stats = 15;</code>
      */
-
     public Builder putAllStats(
         java.util.Map<java.lang.Integer, java.lang.Integer> values) {
       internalGetMutableStats().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000002;
       return this;
     }
     @java.lang.Override
@@ -749,7 +713,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MatchStatsMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

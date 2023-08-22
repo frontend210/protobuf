@@ -45,8 +45,9 @@ public final class Stages {
       "pantsStatisticsMessage\0228\n\014participants\030\001" +
       " \003(\0132\".com.sts.rpclib.ParticipantMessage" +
       "\022\017\n\007stageId\030\002 \001(\t\022\016\n\006season\030\003 \001(\t\022$\n\005spo" +
-      "rt\030\004 \001(\0162\025.com.sts.rpclib.SportB\rP\001Z\t/go" +
-      "rpclibb\006proto3"
+      "rt\030\004 \001(\0162\025.com.sts.rpclib.SportB/P\001Z+git" +
+      "hub.com/frontend210/protobuf/gorpclib" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

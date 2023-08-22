@@ -37,8 +37,9 @@ public final class Sports {
       "ET\020\005\022\016\n\nVOLLEYBALL\020\006\022\014\n\010HANDBALL\020\007\022\t\n\005RU" +
       "GBY\020\010\022\025\n\021AMERICAN_FOOTBALL\020\t\022\010\n\004GOLF\020\n\022\020" +
       "\n\014BEACH_VOLLEY\020\013\022\013\n\007SNOOKER\020\014\022\n\n\006ESPORT\020" +
-      "\r\022\017\n\013RUGBY_UNION\020\016\022\014\n\010BASEBALL\020\017B\rP\001Z\t/g" +
-      "orpclibb\006proto3"
+      "\r\022\017\n\013RUGBY_UNION\020\016\022\014\n\010BASEBALL\020\017B/P\001Z+gi" +
+      "thub.com/frontend210/protobuf/gorpcli" +
+      "bb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

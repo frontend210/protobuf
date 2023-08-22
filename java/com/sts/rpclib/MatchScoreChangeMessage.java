@@ -32,100 +32,6 @@ private static final long serialVersionUID = 0L;
     return new MatchScoreChangeMessage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private MatchScoreChangeMessage(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            status_ = rawValue;
-            break;
-          }
-          case 16: {
-
-            isSum_ = input.readBool();
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            scoreType_ = rawValue;
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              scoreValues_ = com.google.protobuf.MapField.newMapField(
-                  ScoreValuesDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-            scoreValues__ = input.readMessage(
-                ScoreValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            scoreValues_.getMutableMap().put(
-                scoreValues__.getKey(), scoreValues__.getValue());
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              scoreValuesFloat_ = com.google.protobuf.MapField.newMapField(
-                  ScoreValuesFloatDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000002;
-            }
-            com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
-            scoreValuesFloat__ = input.readMessage(
-                ScoreValuesFloatDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            scoreValuesFloat_.getMutableMap().put(
-                scoreValuesFloat__.getKey(), scoreValuesFloat__.getValue());
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            sport_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Match.internal_static_com_sts_rpclib_MatchScoreChangeMessage_descriptor;
@@ -154,7 +60,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 1;
-  private int status_;
+  private int status_ = 0;
   /**
    * <code>.com.sts.rpclib.MatchStatus status = 1;</code>
    * @return The enum numeric value on the wire for status.
@@ -167,13 +73,12 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.sts.rpclib.MatchStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.MatchStatus result = com.sts.rpclib.MatchStatus.valueOf(status_);
+    com.sts.rpclib.MatchStatus result = com.sts.rpclib.MatchStatus.forNumber(status_);
     return result == null ? com.sts.rpclib.MatchStatus.UNRECOGNIZED : result;
   }
 
   public static final int ISSUM_FIELD_NUMBER = 2;
-  private boolean isSum_;
+  private boolean isSum_ = false;
   /**
    * <pre>
    * signals whether the provider sums up all the scores
@@ -188,7 +93,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCORETYPE_FIELD_NUMBER = 3;
-  private int scoreType_;
+  private int scoreType_ = 0;
   /**
    * <code>.com.sts.rpclib.ScoreType scoreType = 3;</code>
    * @return The enum numeric value on the wire for scoreType.
@@ -201,8 +106,7 @@ private static final long serialVersionUID = 0L;
    * @return The scoreType.
    */
   @java.lang.Override public com.sts.rpclib.ScoreType getScoreType() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.ScoreType result = com.sts.rpclib.ScoreType.valueOf(scoreType_);
+    com.sts.rpclib.ScoreType result = com.sts.rpclib.ScoreType.forNumber(scoreType_);
     return result == null ? com.sts.rpclib.ScoreType.UNRECOGNIZED : result;
   }
 
@@ -218,6 +122,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.INT32,
                 0);
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Integer, java.lang.Integer> scoreValues_;
   private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
@@ -228,18 +133,16 @@ private static final long serialVersionUID = 0L;
     }
     return scoreValues_;
   }
-
   public int getScoreValuesCount() {
     return internalGetScoreValues().getMap().size();
   }
   /**
    * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
    */
-
   @java.lang.Override
   public boolean containsScoreValues(
       int key) {
-    
+
     return internalGetScoreValues().getMap().containsKey(key);
   }
   /**
@@ -254,7 +157,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.Integer, java.lang.Integer> getScoreValuesMap() {
     return internalGetScoreValues().getMap();
   }
@@ -262,11 +164,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
    */
   @java.lang.Override
-
   public int getScoreValuesOrDefault(
       int key,
       int defaultValue) {
-    
+
     java.util.Map<java.lang.Integer, java.lang.Integer> map =
         internalGetScoreValues().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -275,10 +176,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
    */
   @java.lang.Override
-
   public int getScoreValuesOrThrow(
       int key) {
-    
+
     java.util.Map<java.lang.Integer, java.lang.Integer> map =
         internalGetScoreValues().getMap();
     if (!map.containsKey(key)) {
@@ -299,6 +199,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.FLOAT,
                 0F);
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Integer, java.lang.Float> scoreValuesFloat_;
   private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
@@ -309,18 +210,16 @@ private static final long serialVersionUID = 0L;
     }
     return scoreValuesFloat_;
   }
-
   public int getScoreValuesFloatCount() {
     return internalGetScoreValuesFloat().getMap().size();
   }
   /**
    * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
    */
-
   @java.lang.Override
   public boolean containsScoreValuesFloat(
       int key) {
-    
+
     return internalGetScoreValuesFloat().getMap().containsKey(key);
   }
   /**
@@ -335,7 +234,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.Integer, java.lang.Float> getScoreValuesFloatMap() {
     return internalGetScoreValuesFloat().getMap();
   }
@@ -343,11 +241,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
    */
   @java.lang.Override
-
   public float getScoreValuesFloatOrDefault(
       int key,
       float defaultValue) {
-    
+
     java.util.Map<java.lang.Integer, java.lang.Float> map =
         internalGetScoreValuesFloat().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -356,10 +253,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
    */
   @java.lang.Override
-
   public float getScoreValuesFloatOrThrow(
       int key) {
-    
+
     java.util.Map<java.lang.Integer, java.lang.Float> map =
         internalGetScoreValuesFloat().getMap();
     if (!map.containsKey(key)) {
@@ -369,7 +265,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SPORT_FIELD_NUMBER = 6;
-  private int sport_;
+  private int sport_ = 0;
   /**
    * <code>.com.sts.rpclib.Sport sport = 6;</code>
    * @return The enum numeric value on the wire for sport.
@@ -382,8 +278,7 @@ private static final long serialVersionUID = 0L;
    * @return The sport.
    */
   @java.lang.Override public com.sts.rpclib.Sport getSport() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.Sport result = com.sts.rpclib.Sport.valueOf(sport_);
+    com.sts.rpclib.Sport result = com.sts.rpclib.Sport.forNumber(sport_);
     return result == null ? com.sts.rpclib.Sport.UNRECOGNIZED : result;
   }
 
@@ -425,7 +320,7 @@ private static final long serialVersionUID = 0L;
     if (sport_ != com.sts.rpclib.Sport.UNKNOWN_SPORT.getNumber()) {
       output.writeEnum(6, sport_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -470,7 +365,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, sport_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -494,7 +389,7 @@ private static final long serialVersionUID = 0L;
     if (!internalGetScoreValuesFloat().equals(
         other.internalGetScoreValuesFloat())) return false;
     if (sport_ != other.sport_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -522,7 +417,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + SPORT_FIELD_NUMBER;
     hash = (53 * hash) + sport_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -571,11 +466,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.MatchScoreChangeMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.MatchScoreChangeMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -669,32 +566,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.MatchScoreChangeMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       status_ = 0;
-
       isSum_ = false;
-
       scoreType_ = 0;
-
       internalGetMutableScoreValues().clear();
       internalGetMutableScoreValuesFloat().clear();
       sport_ = 0;
-
       return this;
     }
 
@@ -721,17 +610,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.MatchScoreChangeMessage buildPartial() {
       com.sts.rpclib.MatchScoreChangeMessage result = new com.sts.rpclib.MatchScoreChangeMessage(this);
-      int from_bitField0_ = bitField0_;
-      result.status_ = status_;
-      result.isSum_ = isSum_;
-      result.scoreType_ = scoreType_;
-      result.scoreValues_ = internalGetScoreValues();
-      result.scoreValues_.makeImmutable();
-      result.scoreValuesFloat_ = internalGetScoreValuesFloat();
-      result.scoreValuesFloat_.makeImmutable();
-      result.sport_ = sport_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.MatchScoreChangeMessage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.isSum_ = isSum_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.scoreType_ = scoreType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.scoreValues_ = internalGetScoreValues();
+        result.scoreValues_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.scoreValuesFloat_ = internalGetScoreValuesFloat();
+        result.scoreValuesFloat_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.sport_ = sport_;
+      }
     }
 
     @java.lang.Override
@@ -789,12 +694,14 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableScoreValues().mergeFrom(
           other.internalGetScoreValues());
+      bitField0_ |= 0x00000008;
       internalGetMutableScoreValuesFloat().mergeFrom(
           other.internalGetScoreValuesFloat());
+      bitField0_ |= 0x00000010;
       if (other.sport_ != 0) {
         setSportValue(other.getSportValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -809,17 +716,68 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.MatchScoreChangeMessage parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              isSum_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              scoreType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              scoreValues__ = input.readMessage(
+                  ScoreValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableScoreValues().getMutableMap().put(
+                  scoreValues__.getKey(), scoreValues__.getValue());
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
+              scoreValuesFloat__ = input.readMessage(
+                  ScoreValuesFloatDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableScoreValuesFloat().getMutableMap().put(
+                  scoreValuesFloat__.getKey(), scoreValuesFloat__.getValue());
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              sport_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.MatchScoreChangeMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -838,8 +796,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -849,8 +807,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.MatchStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.MatchStatus result = com.sts.rpclib.MatchStatus.valueOf(status_);
+      com.sts.rpclib.MatchStatus result = com.sts.rpclib.MatchStatus.forNumber(status_);
       return result == null ? com.sts.rpclib.MatchStatus.UNRECOGNIZED : result;
     }
     /**
@@ -862,7 +819,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -872,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       status_ = 0;
       onChanged();
       return this;
@@ -901,8 +858,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsSum(boolean value) {
-      
+
       isSum_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -915,7 +873,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsSum() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       isSum_ = false;
       onChanged();
       return this;
@@ -935,8 +893,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScoreTypeValue(int value) {
-      
       scoreType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -946,8 +904,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.ScoreType getScoreType() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.ScoreType result = com.sts.rpclib.ScoreType.valueOf(scoreType_);
+      com.sts.rpclib.ScoreType result = com.sts.rpclib.ScoreType.forNumber(scoreType_);
       return result == null ? com.sts.rpclib.ScoreType.UNRECOGNIZED : result;
     }
     /**
@@ -959,7 +916,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       scoreType_ = value.getNumber();
       onChanged();
       return this;
@@ -969,7 +926,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScoreType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       scoreType_ = 0;
       onChanged();
       return this;
@@ -978,7 +935,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Integer> scoreValues_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetScoreValues() {
+        internalGetScoreValues() {
       if (scoreValues_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             ScoreValuesDefaultEntryHolder.defaultEntry);
@@ -986,8 +943,7 @@ private static final long serialVersionUID = 0L;
       return scoreValues_;
     }
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetMutableScoreValues() {
-      onChanged();;
+        internalGetMutableScoreValues() {
       if (scoreValues_ == null) {
         scoreValues_ = com.google.protobuf.MapField.newMapField(
             ScoreValuesDefaultEntryHolder.defaultEntry);
@@ -995,20 +951,20 @@ private static final long serialVersionUID = 0L;
       if (!scoreValues_.isMutable()) {
         scoreValues_ = scoreValues_.copy();
       }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return scoreValues_;
     }
-
     public int getScoreValuesCount() {
       return internalGetScoreValues().getMap().size();
     }
     /**
      * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
      */
-
     @java.lang.Override
     public boolean containsScoreValues(
         int key) {
-      
+
       return internalGetScoreValues().getMap().containsKey(key);
     }
     /**
@@ -1023,7 +979,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, java.lang.Integer> getScoreValuesMap() {
       return internalGetScoreValues().getMap();
     }
@@ -1031,11 +986,10 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
      */
     @java.lang.Override
-
     public int getScoreValuesOrDefault(
         int key,
         int defaultValue) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
           internalGetScoreValues().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1044,10 +998,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
      */
     @java.lang.Override
-
     public int getScoreValuesOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
           internalGetScoreValues().getMap();
       if (!map.containsKey(key)) {
@@ -1055,8 +1008,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearScoreValues() {
+      bitField0_ = (bitField0_ & ~0x00000008);
       internalGetMutableScoreValues().getMutableMap()
           .clear();
       return this;
@@ -1064,10 +1017,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
      */
-
     public Builder removeScoreValues(
         int key) {
-      
+
       internalGetMutableScoreValues().getMutableMap()
           .remove(key);
       return this;
@@ -1077,7 +1029,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Integer, java.lang.Integer>
-    getMutableScoreValues() {
+        getMutableScoreValues() {
+      bitField0_ |= 0x00000008;
       return internalGetMutableScoreValues().getMutableMap();
     }
     /**
@@ -1086,27 +1039,28 @@ private static final long serialVersionUID = 0L;
     public Builder putScoreValues(
         int key,
         int value) {
-      
-      
+
+
       internalGetMutableScoreValues().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000008;
       return this;
     }
     /**
      * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
      */
-
     public Builder putAllScoreValues(
         java.util.Map<java.lang.Integer, java.lang.Integer> values) {
       internalGetMutableScoreValues().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000008;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Float> scoreValuesFloat_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
-    internalGetScoreValuesFloat() {
+        internalGetScoreValuesFloat() {
       if (scoreValuesFloat_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             ScoreValuesFloatDefaultEntryHolder.defaultEntry);
@@ -1114,8 +1068,7 @@ private static final long serialVersionUID = 0L;
       return scoreValuesFloat_;
     }
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
-    internalGetMutableScoreValuesFloat() {
-      onChanged();;
+        internalGetMutableScoreValuesFloat() {
       if (scoreValuesFloat_ == null) {
         scoreValuesFloat_ = com.google.protobuf.MapField.newMapField(
             ScoreValuesFloatDefaultEntryHolder.defaultEntry);
@@ -1123,20 +1076,20 @@ private static final long serialVersionUID = 0L;
       if (!scoreValuesFloat_.isMutable()) {
         scoreValuesFloat_ = scoreValuesFloat_.copy();
       }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return scoreValuesFloat_;
     }
-
     public int getScoreValuesFloatCount() {
       return internalGetScoreValuesFloat().getMap().size();
     }
     /**
      * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
      */
-
     @java.lang.Override
     public boolean containsScoreValuesFloat(
         int key) {
-      
+
       return internalGetScoreValuesFloat().getMap().containsKey(key);
     }
     /**
@@ -1151,7 +1104,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, java.lang.Float> getScoreValuesFloatMap() {
       return internalGetScoreValuesFloat().getMap();
     }
@@ -1159,11 +1111,10 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
      */
     @java.lang.Override
-
     public float getScoreValuesFloatOrDefault(
         int key,
         float defaultValue) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Float> map =
           internalGetScoreValuesFloat().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1172,10 +1123,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
      */
     @java.lang.Override
-
     public float getScoreValuesFloatOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Float> map =
           internalGetScoreValuesFloat().getMap();
       if (!map.containsKey(key)) {
@@ -1183,8 +1133,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearScoreValuesFloat() {
+      bitField0_ = (bitField0_ & ~0x00000010);
       internalGetMutableScoreValuesFloat().getMutableMap()
           .clear();
       return this;
@@ -1192,10 +1142,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
      */
-
     public Builder removeScoreValuesFloat(
         int key) {
-      
+
       internalGetMutableScoreValuesFloat().getMutableMap()
           .remove(key);
       return this;
@@ -1205,7 +1154,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Integer, java.lang.Float>
-    getMutableScoreValuesFloat() {
+        getMutableScoreValuesFloat() {
+      bitField0_ |= 0x00000010;
       return internalGetMutableScoreValuesFloat().getMutableMap();
     }
     /**
@@ -1214,20 +1164,21 @@ private static final long serialVersionUID = 0L;
     public Builder putScoreValuesFloat(
         int key,
         float value) {
-      
-      
+
+
       internalGetMutableScoreValuesFloat().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000010;
       return this;
     }
     /**
      * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
      */
-
     public Builder putAllScoreValuesFloat(
         java.util.Map<java.lang.Integer, java.lang.Float> values) {
       internalGetMutableScoreValuesFloat().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000010;
       return this;
     }
 
@@ -1245,8 +1196,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSportValue(int value) {
-      
       sport_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1256,8 +1207,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.Sport getSport() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.Sport result = com.sts.rpclib.Sport.valueOf(sport_);
+      com.sts.rpclib.Sport result = com.sts.rpclib.Sport.forNumber(sport_);
       return result == null ? com.sts.rpclib.Sport.UNRECOGNIZED : result;
     }
     /**
@@ -1269,7 +1219,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       sport_ = value.getNumber();
       onChanged();
       return this;
@@ -1279,7 +1229,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSport() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       sport_ = 0;
       onChanged();
       return this;
@@ -1317,7 +1267,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MatchScoreChangeMessage(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

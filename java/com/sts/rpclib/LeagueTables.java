@@ -44,7 +44,7 @@ public final class LeagueTables {
   static {
     java.lang.String[] descriptorData = {
       "\n\023league_tables.proto\022\016com.sts.rpclib\032\014s" +
-      "ports.proto\032\017languages.proto\"\265\003\n\020LeagueT" +
+      "ports.proto\032\017languages.proto\"\361\003\n\020LeagueT" +
       "ableEntry\022\017\n\007ranking\030\001 \001(\005\022\017\n\007team_id\030\002 " +
       "\001(\t\0220\n\tteam_name\030\003 \003(\0132\035.com.sts.rpclib." +
       "LocalizedName\022\016\n\006played\030\004 \001(\t\022\014\n\004wins\030\005 " +
@@ -54,23 +54,27 @@ public final class LeagueTables {
       "centage\030\014 \001(\t\022K\n\021league_table_kind\030\r \001(\016" +
       "20.com.sts.rpclib.LeagueTableEntry.Leagu" +
       "eTableKind\022\024\n\014stage_phases\030\016 \003(\005\022\030\n\020poin" +
-      "ts_deduction\030\017 \001(\t\"0\n\017LeagueTableKind\022\t\n" +
-      "\005TOTAL\020\000\022\010\n\004HOME\020\001\022\010\n\004AWAY\020\002\"\352\003\n\022LeagueT" +
-      "ableMessage\022\022\n\ncategoryId\030\001 \001(\t\0223\n\014categ" +
-      "oryName\030\002 \003(\0132\035.com.sts.rpclib.Localized" +
-      "Name\022\017\n\007stageId\030\003 \001(\t\0220\n\tstageName\030\004 \003(\013" +
-      "2\035.com.sts.rpclib.LocalizedName\0221\n\007entri" +
-      "es\030\005 \003(\0132 .com.sts.rpclib.LeagueTableEnt" +
-      "ry\022O\n\021leagueTableGroups\030\006 \001(\01624.com.sts." +
-      "rpclib.LeagueTableMessage.LeagueTableGro" +
-      "ups\022$\n\005sport\030\007 \001(\0162\025.com.sts.rpclib.Spor" +
-      "t\022\016\n\006season\030\010 \001(\t\022\014\n\004name\030\t \001(\t\022A\n\016addit" +
-      "ionalInfo\030\n \003(\0132).com.sts.rpclib.LeagueT" +
-      "ableAdditionalInfo\"=\n\021LeagueTableGroups\022" +
-      "\n\n\006LEAGUE\020\000\022\016\n\nCONFERENCE\020\001\022\014\n\010DIVISION\020" +
-      "\002\"5\n\031LeagueTableAdditionalInfo\022\030\n\020additi" +
-      "onalInfoId\030\001 \001(\t\"&\n\026LeagueTableFullMessa" +
-      "ge\022\014\n\004data\030\001 \001(\014B\rP\001Z\t/gorpclibb\006proto3"
+      "ts_deduction\030\017 \001(\t\022\021\n\tabandoned\030\020 \001(\t\022\021\n" +
+      "\tno_result\030\021 \001(\t\022\024\n\014net_run_rate\030\022 \001(\t\"0" +
+      "\n\017LeagueTableKind\022\t\n\005TOTAL\020\000\022\010\n\004HOME\020\001\022\010" +
+      "\n\004AWAY\020\002\"\234\004\n\022LeagueTableMessage\022\022\n\ncateg" +
+      "oryId\030\001 \001(\t\0223\n\014categoryName\030\002 \003(\0132\035.com." +
+      "sts.rpclib.LocalizedName\022\017\n\007stageId\030\003 \001(" +
+      "\t\0220\n\tstageName\030\004 \003(\0132\035.com.sts.rpclib.Lo" +
+      "calizedName\0221\n\007entries\030\005 \003(\0132 .com.sts.r" +
+      "pclib.LeagueTableEntry\022O\n\021leagueTableGro" +
+      "ups\030\006 \001(\01624.com.sts.rpclib.LeagueTableMe" +
+      "ssage.LeagueTableGroups\022$\n\005sport\030\007 \001(\0162\025" +
+      ".com.sts.rpclib.Sport\022\016\n\006season\030\010 \001(\t\022\014\n" +
+      "\004name\030\t \001(\t\022A\n\016additionalInfo\030\n \003(\0132).co" +
+      "m.sts.rpclib.LeagueTableAdditionalInfo\0220" +
+      "\n\ttableName\030\013 \003(\0132\035.com.sts.rpclib.Local" +
+      "izedName\"=\n\021LeagueTableGroups\022\n\n\006LEAGUE\020" +
+      "\000\022\016\n\nCONFERENCE\020\001\022\014\n\010DIVISION\020\002\"5\n\031Leagu" +
+      "eTableAdditionalInfo\022\030\n\020additionalInfoId" +
+      "\030\001 \001(\t\"&\n\026LeagueTableFullMessage\022\014\n\004data" +
+      "\030\001 \001(\014B/P\001Z+github.com/frontend210/pr" +
+      "otobuf/gorpclibb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -83,13 +87,13 @@ public final class LeagueTables {
     internal_static_com_sts_rpclib_LeagueTableEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_LeagueTableEntry_descriptor,
-        new java.lang.String[] { "Ranking", "TeamId", "TeamName", "Played", "Wins", "Draws", "Loss", "GoalFor", "GoalAgainst", "GoalDifference", "Points", "Percentage", "LeagueTableKind", "StagePhases", "PointsDeduction", });
+        new java.lang.String[] { "Ranking", "TeamId", "TeamName", "Played", "Wins", "Draws", "Loss", "GoalFor", "GoalAgainst", "GoalDifference", "Points", "Percentage", "LeagueTableKind", "StagePhases", "PointsDeduction", "Abandoned", "NoResult", "NetRunRate", });
     internal_static_com_sts_rpclib_LeagueTableMessage_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_sts_rpclib_LeagueTableMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sts_rpclib_LeagueTableMessage_descriptor,
-        new java.lang.String[] { "CategoryId", "CategoryName", "StageId", "StageName", "Entries", "LeagueTableGroups", "Sport", "Season", "Name", "AdditionalInfo", });
+        new java.lang.String[] { "CategoryId", "CategoryName", "StageId", "StageName", "Entries", "LeagueTableGroups", "Sport", "Season", "Name", "AdditionalInfo", "TableName", });
     internal_static_com_sts_rpclib_LeagueTableAdditionalInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_sts_rpclib_LeagueTableAdditionalInfo_fieldAccessorTable = new

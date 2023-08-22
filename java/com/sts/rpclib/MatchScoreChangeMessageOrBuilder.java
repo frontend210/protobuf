@@ -62,14 +62,12 @@ public interface MatchScoreChangeMessageOrBuilder extends
   /**
    * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
    */
-
   int getScoreValuesOrDefault(
       int key,
       int defaultValue);
   /**
    * <code>map&lt;int32, int32&gt; scoreValues = 4;</code>
    */
-
   int getScoreValuesOrThrow(
       int key);
 
@@ -96,14 +94,12 @@ public interface MatchScoreChangeMessageOrBuilder extends
   /**
    * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
    */
-
   float getScoreValuesFloatOrDefault(
       int key,
       float defaultValue);
   /**
    * <code>map&lt;int32, float&gt; scoreValuesFloat = 5;</code>
    */
-
   float getScoreValuesFloatOrThrow(
       int key);
 

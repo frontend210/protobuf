@@ -56,6 +56,7 @@ message MatchStatusChangeMessage {
   int32 elapsedInjuryTime = 9;
   ElapsedType elapsedType = 10;
   string description = 11;
+  string description2 = 12;
 }
 
 // -
@@ -301,6 +302,48 @@ message MatchParticipantStatsMessage {
   int32 totalInterceptedCrosses = 142;
   int32 totalGoalAttempts = 143;
   int32 totalSuccessfulCrosses = 144;
+
+  // statistics type 1 player
+  double firstScorer = 145;
+  double firstScorerPercentage =146;
+  double noScoredInRow = 147;
+  double goalConceded = 148;
+  double goalRatioMinute1x15Percentage = 149;
+  double goalRatioMinute16x30Percentage = 150;
+  double goalRatioMinute31x45Percentage = 151;
+  double goalRatioMinute46x60Percentage = 152;
+  double goalRatioMinute61x75Percentage = 153;
+  double goalRatioMinute76x90Percentage = 154;
+  double lastGaspGoal = 155;
+  double lastGaspGoalPercentage = 156;
+  double lastToScore = 157;
+  double lastToScorePercentage = 158;
+  double minutesPerGoal = 159;
+  double min = 160;
+  double teamContribution = 161;
+  string teamFK = 162;
+  double totalCards = 163;
+  double totalCardsPerGame = 164;
+  double sheetsPercentage = 165;
+  double played = 166;
+  double noScoringGames = 167;
+  double goalsBench = 168;
+  double goalsBenchPercentage = 169;
+  double playedLineup = 170;
+  double playedLineupPercentage = 171;
+  double substIn = 172;
+  double substInPercentage = 173;
+  double substOut = 174;
+  double substOutPercentage = 175;
+
+  // statistics type 4 player
+  double foulsPerGame = 176;
+  double saves = 177;
+  double savesPerGame = 178;
+  double savesPercentage = 179;
+  double goalsLeftFoot = 180;
+  double goalsRightFoot = 181;
+  double totalShotsAllowed = 182;
 }
 
 message MatchParticipantJerseyMessage {

@@ -28,91 +28,6 @@ private static final long serialVersionUID = 0L;
     return new MatchCommentaryEntry();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private MatchCommentaryEntry(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            commentaryId_ = s;
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            language_ = rawValue;
-            break;
-          }
-          case 24: {
-
-            elapsed_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            injury_ = input.readInt32();
-            break;
-          }
-          case 42: {
-            com.sts.rpclib.LocalizedName.Builder subBuilder = null;
-            if (commentary_ != null) {
-              subBuilder = commentary_.toBuilder();
-            }
-            commentary_ = input.readMessage(com.sts.rpclib.LocalizedName.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(commentary_);
-              commentary_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            type_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.Match.internal_static_com_sts_rpclib_MatchCommentaryEntry_descriptor;
@@ -127,7 +42,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COMMENTARYID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object commentaryId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object commentaryId_ = "";
   /**
    * <code>string commentaryId = 1;</code>
    * @return The commentaryId.
@@ -165,7 +81,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LANGUAGE_FIELD_NUMBER = 2;
-  private int language_;
+  private int language_ = 0;
   /**
    * <code>.com.sts.rpclib.Language language = 2;</code>
    * @return The enum numeric value on the wire for language.
@@ -178,13 +94,12 @@ private static final long serialVersionUID = 0L;
    * @return The language.
    */
   @java.lang.Override public com.sts.rpclib.Language getLanguage() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.Language result = com.sts.rpclib.Language.valueOf(language_);
+    com.sts.rpclib.Language result = com.sts.rpclib.Language.forNumber(language_);
     return result == null ? com.sts.rpclib.Language.UNRECOGNIZED : result;
   }
 
   public static final int ELAPSED_FIELD_NUMBER = 3;
-  private int elapsed_;
+  private int elapsed_ = 0;
   /**
    * <code>int32 elapsed = 3;</code>
    * @return The elapsed.
@@ -195,7 +110,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INJURY_FIELD_NUMBER = 4;
-  private int injury_;
+  private int injury_ = 0;
   /**
    * <code>int32 injury = 4;</code>
    * @return The injury.
@@ -228,11 +143,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.sts.rpclib.LocalizedNameOrBuilder getCommentaryOrBuilder() {
-    return getCommentary();
+    return commentary_ == null ? com.sts.rpclib.LocalizedName.getDefaultInstance() : commentary_;
   }
 
   public static final int TYPE_FIELD_NUMBER = 6;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * repeated CommentaryValue text = 7;
@@ -253,8 +168,7 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.sts.rpclib.CommentaryType getType() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.CommentaryType result = com.sts.rpclib.CommentaryType.valueOf(type_);
+    com.sts.rpclib.CommentaryType result = com.sts.rpclib.CommentaryType.forNumber(type_);
     return result == null ? com.sts.rpclib.CommentaryType.UNRECOGNIZED : result;
   }
 
@@ -290,7 +204,7 @@ private static final long serialVersionUID = 0L;
     if (type_ != com.sts.rpclib.CommentaryType.UNKNOWN_COMMENTARY_TYPE.getNumber()) {
       output.writeEnum(6, type_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -322,7 +236,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, type_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -350,7 +264,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getCommentary())) return false;
     }
     if (type_ != other.type_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -375,7 +289,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -424,11 +338,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.MatchCommentaryEntry parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.MatchCommentaryEntry parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -492,38 +408,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.MatchCommentaryEntry.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       commentaryId_ = "";
-
       language_ = 0;
-
       elapsed_ = 0;
-
       injury_ = 0;
-
-      if (commentaryBuilder_ == null) {
-        commentary_ = null;
-      } else {
-        commentary_ = null;
+      commentary_ = null;
+      if (commentaryBuilder_ != null) {
+        commentaryBuilder_.dispose();
         commentaryBuilder_ = null;
       }
       type_ = 0;
-
       return this;
     }
 
@@ -550,18 +456,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.MatchCommentaryEntry buildPartial() {
       com.sts.rpclib.MatchCommentaryEntry result = new com.sts.rpclib.MatchCommentaryEntry(this);
-      result.commentaryId_ = commentaryId_;
-      result.language_ = language_;
-      result.elapsed_ = elapsed_;
-      result.injury_ = injury_;
-      if (commentaryBuilder_ == null) {
-        result.commentary_ = commentary_;
-      } else {
-        result.commentary_ = commentaryBuilder_.build();
-      }
-      result.type_ = type_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.MatchCommentaryEntry result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.commentaryId_ = commentaryId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.language_ = language_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.elapsed_ = elapsed_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.injury_ = injury_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.commentary_ = commentaryBuilder_ == null
+            ? commentary_
+            : commentaryBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.type_ = type_;
+      }
     }
 
     @java.lang.Override
@@ -610,6 +531,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.sts.rpclib.MatchCommentaryEntry.getDefaultInstance()) return this;
       if (!other.getCommentaryId().isEmpty()) {
         commentaryId_ = other.commentaryId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.language_ != 0) {
@@ -627,7 +549,7 @@ private static final long serialVersionUID = 0L;
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -642,19 +564,65 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.MatchCommentaryEntry parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              commentaryId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              language_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              elapsed_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              injury_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              input.readMessage(
+                  getCommentaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              type_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.MatchCommentaryEntry) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object commentaryId_ = "";
     /**
@@ -697,11 +665,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCommentaryId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       commentaryId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -710,8 +676,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCommentaryId() {
-      
       commentaryId_ = getDefaultInstance().getCommentaryId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -722,12 +688,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCommentaryIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       commentaryId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -746,8 +710,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLanguageValue(int value) {
-      
       language_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -757,8 +721,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.Language getLanguage() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.Language result = com.sts.rpclib.Language.valueOf(language_);
+      com.sts.rpclib.Language result = com.sts.rpclib.Language.forNumber(language_);
       return result == null ? com.sts.rpclib.Language.UNRECOGNIZED : result;
     }
     /**
@@ -770,7 +733,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       language_ = value.getNumber();
       onChanged();
       return this;
@@ -780,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLanguage() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       language_ = 0;
       onChanged();
       return this;
@@ -801,8 +764,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setElapsed(int value) {
-      
+
       elapsed_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -811,7 +775,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearElapsed() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       elapsed_ = 0;
       onChanged();
       return this;
@@ -832,8 +796,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInjury(int value) {
-      
+
       injury_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -842,7 +807,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInjury() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       injury_ = 0;
       onChanged();
       return this;
@@ -856,7 +821,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the commentary field is set.
      */
     public boolean hasCommentary() {
-      return commentaryBuilder_ != null || commentary_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.com.sts.rpclib.LocalizedName commentary = 5;</code>
@@ -878,11 +843,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         commentary_ = value;
-        onChanged();
       } else {
         commentaryBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -892,11 +857,11 @@ private static final long serialVersionUID = 0L;
         com.sts.rpclib.LocalizedName.Builder builderForValue) {
       if (commentaryBuilder_ == null) {
         commentary_ = builderForValue.build();
-        onChanged();
       } else {
         commentaryBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -904,38 +869,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommentary(com.sts.rpclib.LocalizedName value) {
       if (commentaryBuilder_ == null) {
-        if (commentary_ != null) {
-          commentary_ =
-            com.sts.rpclib.LocalizedName.newBuilder(commentary_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          commentary_ != null &&
+          commentary_ != com.sts.rpclib.LocalizedName.getDefaultInstance()) {
+          getCommentaryBuilder().mergeFrom(value);
         } else {
           commentary_ = value;
         }
-        onChanged();
       } else {
         commentaryBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.LocalizedName commentary = 5;</code>
      */
     public Builder clearCommentary() {
-      if (commentaryBuilder_ == null) {
-        commentary_ = null;
-        onChanged();
-      } else {
-        commentary_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      commentary_ = null;
+      if (commentaryBuilder_ != null) {
+        commentaryBuilder_.dispose();
         commentaryBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.com.sts.rpclib.LocalizedName commentary = 5;</code>
      */
     public com.sts.rpclib.LocalizedName.Builder getCommentaryBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getCommentaryFieldBuilder().getBuilder();
     }
@@ -989,8 +954,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1004,8 +969,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.CommentaryType getType() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.CommentaryType result = com.sts.rpclib.CommentaryType.valueOf(type_);
+      com.sts.rpclib.CommentaryType result = com.sts.rpclib.CommentaryType.forNumber(type_);
       return result == null ? com.sts.rpclib.CommentaryType.UNRECOGNIZED : result;
     }
     /**
@@ -1021,7 +985,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -1035,7 +999,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       type_ = 0;
       onChanged();
       return this;
@@ -1073,7 +1037,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MatchCommentaryEntry(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

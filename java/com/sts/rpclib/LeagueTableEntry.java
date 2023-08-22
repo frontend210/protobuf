@@ -30,6 +30,9 @@ private static final long serialVersionUID = 0L;
     leagueTableKind_ = 0;
     stagePhases_ = emptyIntList();
     pointsDeduction_ = "";
+    abandoned_ = "";
+    noResult_ = "";
+    netRunRate_ = "";
   }
 
   @java.lang.Override
@@ -39,164 +42,6 @@ private static final long serialVersionUID = 0L;
     return new LeagueTableEntry();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private LeagueTableEntry(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            ranking_ = input.readInt32();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            teamId_ = s;
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              teamName_ = new java.util.ArrayList<com.sts.rpclib.LocalizedName>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            teamName_.add(
-                input.readMessage(com.sts.rpclib.LocalizedName.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            played_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            wins_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            draws_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            loss_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            goalFor_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            goalAgainst_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            goalDifference_ = s;
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            points_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            percentage_ = s;
-            break;
-          }
-          case 104: {
-            int rawValue = input.readEnum();
-
-            leagueTableKind_ = rawValue;
-            break;
-          }
-          case 112: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              stagePhases_ = newIntList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            stagePhases_.addInt(input.readInt32());
-            break;
-          }
-          case 114: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-              stagePhases_ = newIntList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              stagePhases_.addInt(input.readInt32());
-            }
-            input.popLimit(limit);
-            break;
-          }
-          case 122: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            pointsDeduction_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        teamName_ = java.util.Collections.unmodifiableList(teamName_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        stagePhases_.makeImmutable(); // C
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.sts.rpclib.LeagueTables.internal_static_com_sts_rpclib_LeagueTableEntry_descriptor;
@@ -328,7 +173,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RANKING_FIELD_NUMBER = 1;
-  private int ranking_;
+  private int ranking_ = 0;
   /**
    * <code>int32 ranking = 1;</code>
    * @return The ranking.
@@ -339,7 +184,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEAM_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object teamId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object teamId_ = "";
   /**
    * <code>string team_id = 2;</code>
    * @return The teamId.
@@ -377,6 +223,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEAM_NAME_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.sts.rpclib.LocalizedName> teamName_;
   /**
    * <code>repeated .com.sts.rpclib.LocalizedName team_name = 3;</code>
@@ -417,7 +264,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLAYED_FIELD_NUMBER = 4;
-  private volatile java.lang.Object played_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object played_ = "";
   /**
    * <code>string played = 4;</code>
    * @return The played.
@@ -455,7 +303,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WINS_FIELD_NUMBER = 5;
-  private volatile java.lang.Object wins_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object wins_ = "";
   /**
    * <code>string wins = 5;</code>
    * @return The wins.
@@ -493,7 +342,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DRAWS_FIELD_NUMBER = 6;
-  private volatile java.lang.Object draws_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object draws_ = "";
   /**
    * <code>string draws = 6;</code>
    * @return The draws.
@@ -531,7 +381,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOSS_FIELD_NUMBER = 7;
-  private volatile java.lang.Object loss_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object loss_ = "";
   /**
    * <code>string loss = 7;</code>
    * @return The loss.
@@ -569,7 +420,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOAL_FOR_FIELD_NUMBER = 8;
-  private volatile java.lang.Object goalFor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object goalFor_ = "";
   /**
    * <code>string goal_for = 8;</code>
    * @return The goalFor.
@@ -607,7 +459,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOAL_AGAINST_FIELD_NUMBER = 9;
-  private volatile java.lang.Object goalAgainst_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object goalAgainst_ = "";
   /**
    * <code>string goal_against = 9;</code>
    * @return The goalAgainst.
@@ -645,7 +498,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOAL_DIFFERENCE_FIELD_NUMBER = 10;
-  private volatile java.lang.Object goalDifference_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object goalDifference_ = "";
   /**
    * <code>string goal_difference = 10;</code>
    * @return The goalDifference.
@@ -683,7 +537,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int POINTS_FIELD_NUMBER = 11;
-  private volatile java.lang.Object points_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object points_ = "";
   /**
    * <code>string points = 11;</code>
    * @return The points.
@@ -721,7 +576,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PERCENTAGE_FIELD_NUMBER = 12;
-  private volatile java.lang.Object percentage_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object percentage_ = "";
   /**
    * <code>string percentage = 12;</code>
    * @return The percentage.
@@ -759,7 +615,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LEAGUE_TABLE_KIND_FIELD_NUMBER = 13;
-  private int leagueTableKind_;
+  private int leagueTableKind_ = 0;
   /**
    * <code>.com.sts.rpclib.LeagueTableEntry.LeagueTableKind league_table_kind = 13;</code>
    * @return The enum numeric value on the wire for leagueTableKind.
@@ -772,12 +628,12 @@ private static final long serialVersionUID = 0L;
    * @return The leagueTableKind.
    */
   @java.lang.Override public com.sts.rpclib.LeagueTableEntry.LeagueTableKind getLeagueTableKind() {
-    @SuppressWarnings("deprecation")
-    com.sts.rpclib.LeagueTableEntry.LeagueTableKind result = com.sts.rpclib.LeagueTableEntry.LeagueTableKind.valueOf(leagueTableKind_);
+    com.sts.rpclib.LeagueTableEntry.LeagueTableKind result = com.sts.rpclib.LeagueTableEntry.LeagueTableKind.forNumber(leagueTableKind_);
     return result == null ? com.sts.rpclib.LeagueTableEntry.LeagueTableKind.UNRECOGNIZED : result;
   }
 
   public static final int STAGE_PHASES_FIELD_NUMBER = 14;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.IntList stagePhases_;
   /**
    * <code>repeated int32 stage_phases = 14;</code>
@@ -806,7 +662,8 @@ private static final long serialVersionUID = 0L;
   private int stagePhasesMemoizedSerializedSize = -1;
 
   public static final int POINTS_DEDUCTION_FIELD_NUMBER = 15;
-  private volatile java.lang.Object pointsDeduction_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pointsDeduction_ = "";
   /**
    * <code>string points_deduction = 15;</code>
    * @return The pointsDeduction.
@@ -837,6 +694,123 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       pointsDeduction_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ABANDONED_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object abandoned_ = "";
+  /**
+   * <code>string abandoned = 16;</code>
+   * @return The abandoned.
+   */
+  @java.lang.Override
+  public java.lang.String getAbandoned() {
+    java.lang.Object ref = abandoned_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      abandoned_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string abandoned = 16;</code>
+   * @return The bytes for abandoned.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAbandonedBytes() {
+    java.lang.Object ref = abandoned_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      abandoned_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int NO_RESULT_FIELD_NUMBER = 17;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object noResult_ = "";
+  /**
+   * <code>string no_result = 17;</code>
+   * @return The noResult.
+   */
+  @java.lang.Override
+  public java.lang.String getNoResult() {
+    java.lang.Object ref = noResult_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      noResult_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string no_result = 17;</code>
+   * @return The bytes for noResult.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNoResultBytes() {
+    java.lang.Object ref = noResult_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      noResult_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int NET_RUN_RATE_FIELD_NUMBER = 18;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object netRunRate_ = "";
+  /**
+   * <code>string net_run_rate = 18;</code>
+   * @return The netRunRate.
+   */
+  @java.lang.Override
+  public java.lang.String getNetRunRate() {
+    java.lang.Object ref = netRunRate_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      netRunRate_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string net_run_rate = 18;</code>
+   * @return The bytes for netRunRate.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNetRunRateBytes() {
+    java.lang.Object ref = netRunRate_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      netRunRate_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -907,7 +881,16 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pointsDeduction_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, pointsDeduction_);
     }
-    unknownFields.writeTo(output);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(abandoned_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, abandoned_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(noResult_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, noResult_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(netRunRate_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, netRunRate_);
+    }
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -975,7 +958,16 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pointsDeduction_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, pointsDeduction_);
     }
-    size += unknownFields.getSerializedSize();
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(abandoned_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, abandoned_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(noResult_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, noResult_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(netRunRate_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, netRunRate_);
+    }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1019,7 +1011,13 @@ private static final long serialVersionUID = 0L;
         .equals(other.getStagePhasesList())) return false;
     if (!getPointsDeduction()
         .equals(other.getPointsDeduction())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getAbandoned()
+        .equals(other.getAbandoned())) return false;
+    if (!getNoResult()
+        .equals(other.getNoResult())) return false;
+    if (!getNetRunRate()
+        .equals(other.getNetRunRate())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1064,7 +1062,13 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + POINTS_DEDUCTION_FIELD_NUMBER;
     hash = (53 * hash) + getPointsDeduction().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (37 * hash) + ABANDONED_FIELD_NUMBER;
+    hash = (53 * hash) + getAbandoned().hashCode();
+    hash = (37 * hash) + NO_RESULT_FIELD_NUMBER;
+    hash = (53 * hash) + getNoResult().hashCode();
+    hash = (37 * hash) + NET_RUN_RATE_FIELD_NUMBER;
+    hash = (53 * hash) + getNetRunRate().hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1113,11 +1117,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.sts.rpclib.LeagueTableEntry parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.sts.rpclib.LeagueTableEntry parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1181,57 +1187,42 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.sts.rpclib.LeagueTableEntry.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getTeamNameFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       ranking_ = 0;
-
       teamId_ = "";
-
       if (teamNameBuilder_ == null) {
         teamName_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        teamName_ = null;
         teamNameBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       played_ = "";
-
       wins_ = "";
-
       draws_ = "";
-
       loss_ = "";
-
       goalFor_ = "";
-
       goalAgainst_ = "";
-
       goalDifference_ = "";
-
       points_ = "";
-
       percentage_ = "";
-
       leagueTableKind_ = 0;
-
       stagePhases_ = emptyIntList();
-      bitField0_ = (bitField0_ & ~0x00000002);
       pointsDeduction_ = "";
-
+      abandoned_ = "";
+      noResult_ = "";
+      netRunRate_ = "";
       return this;
     }
 
@@ -1258,36 +1249,79 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.sts.rpclib.LeagueTableEntry buildPartial() {
       com.sts.rpclib.LeagueTableEntry result = new com.sts.rpclib.LeagueTableEntry(this);
-      int from_bitField0_ = bitField0_;
-      result.ranking_ = ranking_;
-      result.teamId_ = teamId_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.sts.rpclib.LeagueTableEntry result) {
       if (teamNameBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           teamName_ = java.util.Collections.unmodifiableList(teamName_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.teamName_ = teamName_;
       } else {
         result.teamName_ = teamNameBuilder_.build();
       }
-      result.played_ = played_;
-      result.wins_ = wins_;
-      result.draws_ = draws_;
-      result.loss_ = loss_;
-      result.goalFor_ = goalFor_;
-      result.goalAgainst_ = goalAgainst_;
-      result.goalDifference_ = goalDifference_;
-      result.points_ = points_;
-      result.percentage_ = percentage_;
-      result.leagueTableKind_ = leagueTableKind_;
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00002000) != 0)) {
         stagePhases_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00002000);
       }
       result.stagePhases_ = stagePhases_;
-      result.pointsDeduction_ = pointsDeduction_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.sts.rpclib.LeagueTableEntry result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.ranking_ = ranking_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.teamId_ = teamId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.played_ = played_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.wins_ = wins_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.draws_ = draws_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.loss_ = loss_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.goalFor_ = goalFor_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.goalAgainst_ = goalAgainst_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.goalDifference_ = goalDifference_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.points_ = points_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.percentage_ = percentage_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.leagueTableKind_ = leagueTableKind_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.pointsDeduction_ = pointsDeduction_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.abandoned_ = abandoned_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.noResult_ = noResult_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.netRunRate_ = netRunRate_;
+      }
     }
 
     @java.lang.Override
@@ -1339,13 +1373,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTeamId().isEmpty()) {
         teamId_ = other.teamId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (teamNameBuilder_ == null) {
         if (!other.teamName_.isEmpty()) {
           if (teamName_.isEmpty()) {
             teamName_ = other.teamName_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTeamNameIsMutable();
             teamName_.addAll(other.teamName_);
@@ -1358,7 +1393,7 @@ private static final long serialVersionUID = 0L;
             teamNameBuilder_.dispose();
             teamNameBuilder_ = null;
             teamName_ = other.teamName_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             teamNameBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTeamNameFieldBuilder() : null;
@@ -1369,38 +1404,47 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPlayed().isEmpty()) {
         played_ = other.played_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getWins().isEmpty()) {
         wins_ = other.wins_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getDraws().isEmpty()) {
         draws_ = other.draws_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getLoss().isEmpty()) {
         loss_ = other.loss_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getGoalFor().isEmpty()) {
         goalFor_ = other.goalFor_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getGoalAgainst().isEmpty()) {
         goalAgainst_ = other.goalAgainst_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (!other.getGoalDifference().isEmpty()) {
         goalDifference_ = other.goalDifference_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (!other.getPoints().isEmpty()) {
         points_ = other.points_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (!other.getPercentage().isEmpty()) {
         percentage_ = other.percentage_;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (other.leagueTableKind_ != 0) {
@@ -1409,7 +1453,7 @@ private static final long serialVersionUID = 0L;
       if (!other.stagePhases_.isEmpty()) {
         if (stagePhases_.isEmpty()) {
           stagePhases_ = other.stagePhases_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00002000);
         } else {
           ensureStagePhasesIsMutable();
           stagePhases_.addAll(other.stagePhases_);
@@ -1418,9 +1462,25 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPointsDeduction().isEmpty()) {
         pointsDeduction_ = other.pointsDeduction_;
+        bitField0_ |= 0x00004000;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      if (!other.getAbandoned().isEmpty()) {
+        abandoned_ = other.abandoned_;
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
+      if (!other.getNoResult().isEmpty()) {
+        noResult_ = other.noResult_;
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
+      if (!other.getNetRunRate().isEmpty()) {
+        netRunRate_ = other.netRunRate_;
+        bitField0_ |= 0x00020000;
+        onChanged();
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1435,17 +1495,139 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sts.rpclib.LeagueTableEntry parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              ranking_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              teamId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              com.sts.rpclib.LocalizedName m =
+                  input.readMessage(
+                      com.sts.rpclib.LocalizedName.parser(),
+                      extensionRegistry);
+              if (teamNameBuilder_ == null) {
+                ensureTeamNameIsMutable();
+                teamName_.add(m);
+              } else {
+                teamNameBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            case 34: {
+              played_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              wins_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              draws_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              loss_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              goalFor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              goalAgainst_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              goalDifference_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              points_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              percentage_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 104: {
+              leagueTableKind_ = input.readEnum();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 112: {
+              int v = input.readInt32();
+              ensureStagePhasesIsMutable();
+              stagePhases_.addInt(v);
+              break;
+            } // case 112
+            case 114: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureStagePhasesIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                stagePhases_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 114
+            case 122: {
+              pointsDeduction_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
+            case 130: {
+              abandoned_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 130
+            case 138: {
+              noResult_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 138
+            case 146: {
+              netRunRate_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 146
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sts.rpclib.LeagueTableEntry) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1465,8 +1647,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRanking(int value) {
-      
+
       ranking_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1475,7 +1658,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRanking() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       ranking_ = 0;
       onChanged();
       return this;
@@ -1522,11 +1705,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTeamId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       teamId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1535,8 +1716,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTeamId() {
-      
       teamId_ = getDefaultInstance().getTeamId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1547,12 +1728,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTeamIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       teamId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1560,9 +1739,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.sts.rpclib.LocalizedName> teamName_ =
       java.util.Collections.emptyList();
     private void ensureTeamNameIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         teamName_ = new java.util.ArrayList<com.sts.rpclib.LocalizedName>(teamName_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1712,7 +1891,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTeamName() {
       if (teamNameBuilder_ == null) {
         teamName_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         teamNameBuilder_.clear();
@@ -1789,7 +1968,7 @@ private static final long serialVersionUID = 0L;
         teamNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.sts.rpclib.LocalizedName, com.sts.rpclib.LocalizedName.Builder, com.sts.rpclib.LocalizedNameOrBuilder>(
                 teamName_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         teamName_ = null;
@@ -1838,11 +2017,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayed(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       played_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1851,8 +2028,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlayed() {
-      
       played_ = getDefaultInstance().getPlayed();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1863,12 +2040,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlayedBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       played_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1914,11 +2089,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWins(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       wins_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1927,8 +2100,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWins() {
-      
       wins_ = getDefaultInstance().getWins();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1939,12 +2112,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWinsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       wins_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1990,11 +2161,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDraws(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       draws_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2003,8 +2172,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDraws() {
-      
       draws_ = getDefaultInstance().getDraws();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -2015,12 +2184,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDrawsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       draws_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2066,11 +2233,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLoss(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       loss_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2079,8 +2244,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLoss() {
-      
       loss_ = getDefaultInstance().getLoss();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2091,12 +2256,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLossBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       loss_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2142,11 +2305,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoalFor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       goalFor_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2155,8 +2316,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalFor() {
-      
       goalFor_ = getDefaultInstance().getGoalFor();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2167,12 +2328,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoalForBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       goalFor_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2218,11 +2377,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoalAgainst(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       goalAgainst_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2231,8 +2388,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalAgainst() {
-      
       goalAgainst_ = getDefaultInstance().getGoalAgainst();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2243,12 +2400,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoalAgainstBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       goalAgainst_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2294,11 +2449,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoalDifference(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       goalDifference_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2307,8 +2460,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoalDifference() {
-      
       goalDifference_ = getDefaultInstance().getGoalDifference();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -2319,12 +2472,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoalDifferenceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       goalDifference_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2370,11 +2521,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPoints(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       points_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2383,8 +2532,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPoints() {
-      
       points_ = getDefaultInstance().getPoints();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2395,12 +2544,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPointsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       points_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2446,11 +2593,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPercentage(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       percentage_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2459,8 +2604,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPercentage() {
-      
       percentage_ = getDefaultInstance().getPercentage();
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -2471,12 +2616,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPercentageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       percentage_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2495,8 +2638,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLeagueTableKindValue(int value) {
-      
       leagueTableKind_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2506,8 +2649,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.sts.rpclib.LeagueTableEntry.LeagueTableKind getLeagueTableKind() {
-      @SuppressWarnings("deprecation")
-      com.sts.rpclib.LeagueTableEntry.LeagueTableKind result = com.sts.rpclib.LeagueTableEntry.LeagueTableKind.valueOf(leagueTableKind_);
+      com.sts.rpclib.LeagueTableEntry.LeagueTableKind result = com.sts.rpclib.LeagueTableEntry.LeagueTableKind.forNumber(leagueTableKind_);
       return result == null ? com.sts.rpclib.LeagueTableEntry.LeagueTableKind.UNRECOGNIZED : result;
     }
     /**
@@ -2519,7 +2661,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00001000;
       leagueTableKind_ = value.getNumber();
       onChanged();
       return this;
@@ -2529,7 +2671,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLeagueTableKind() {
-      
+      bitField0_ = (bitField0_ & ~0x00001000);
       leagueTableKind_ = 0;
       onChanged();
       return this;
@@ -2537,10 +2679,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.IntList stagePhases_ = emptyIntList();
     private void ensureStagePhasesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00002000) != 0)) {
         stagePhases_ = mutableCopy(stagePhases_);
-        bitField0_ |= 0x00000002;
-       }
+        bitField0_ |= 0x00002000;
+      }
     }
     /**
      * <code>repeated int32 stage_phases = 14;</code>
@@ -2548,7 +2690,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Integer>
         getStagePhasesList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
+      return ((bitField0_ & 0x00002000) != 0) ?
                java.util.Collections.unmodifiableList(stagePhases_) : stagePhases_;
     }
     /**
@@ -2574,6 +2716,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStagePhases(
         int index, int value) {
+
       ensureStagePhasesIsMutable();
       stagePhases_.setInt(index, value);
       onChanged();
@@ -2585,6 +2728,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addStagePhases(int value) {
+
       ensureStagePhasesIsMutable();
       stagePhases_.addInt(value);
       onChanged();
@@ -2609,7 +2753,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearStagePhases() {
       stagePhases_ = emptyIntList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -2655,11 +2799,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPointsDeduction(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pointsDeduction_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2668,8 +2810,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPointsDeduction() {
-      
       pointsDeduction_ = getDefaultInstance().getPointsDeduction();
+      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -2680,12 +2822,226 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPointsDeductionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pointsDeduction_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object abandoned_ = "";
+    /**
+     * <code>string abandoned = 16;</code>
+     * @return The abandoned.
+     */
+    public java.lang.String getAbandoned() {
+      java.lang.Object ref = abandoned_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        abandoned_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string abandoned = 16;</code>
+     * @return The bytes for abandoned.
+     */
+    public com.google.protobuf.ByteString
+        getAbandonedBytes() {
+      java.lang.Object ref = abandoned_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abandoned_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string abandoned = 16;</code>
+     * @param value The abandoned to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAbandoned(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      abandoned_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string abandoned = 16;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAbandoned() {
+      abandoned_ = getDefaultInstance().getAbandoned();
+      bitField0_ = (bitField0_ & ~0x00008000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string abandoned = 16;</code>
+     * @param value The bytes for abandoned to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAbandonedBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      abandoned_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object noResult_ = "";
+    /**
+     * <code>string no_result = 17;</code>
+     * @return The noResult.
+     */
+    public java.lang.String getNoResult() {
+      java.lang.Object ref = noResult_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        noResult_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string no_result = 17;</code>
+     * @return The bytes for noResult.
+     */
+    public com.google.protobuf.ByteString
+        getNoResultBytes() {
+      java.lang.Object ref = noResult_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        noResult_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string no_result = 17;</code>
+     * @param value The noResult to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNoResult(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      noResult_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string no_result = 17;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNoResult() {
+      noResult_ = getDefaultInstance().getNoResult();
+      bitField0_ = (bitField0_ & ~0x00010000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string no_result = 17;</code>
+     * @param value The bytes for noResult to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNoResultBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      noResult_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object netRunRate_ = "";
+    /**
+     * <code>string net_run_rate = 18;</code>
+     * @return The netRunRate.
+     */
+    public java.lang.String getNetRunRate() {
+      java.lang.Object ref = netRunRate_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        netRunRate_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string net_run_rate = 18;</code>
+     * @return The bytes for netRunRate.
+     */
+    public com.google.protobuf.ByteString
+        getNetRunRateBytes() {
+      java.lang.Object ref = netRunRate_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        netRunRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string net_run_rate = 18;</code>
+     * @param value The netRunRate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNetRunRate(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      netRunRate_ = value;
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string net_run_rate = 18;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNetRunRate() {
+      netRunRate_ = getDefaultInstance().getNetRunRate();
+      bitField0_ = (bitField0_ & ~0x00020000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string net_run_rate = 18;</code>
+     * @param value The bytes for netRunRate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNetRunRateBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      netRunRate_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -2722,7 +3078,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new LeagueTableEntry(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 
