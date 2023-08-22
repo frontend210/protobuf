@@ -42,6 +42,8 @@ enum Provider {
     // Italian news provider for sports
     GAZZETTA = 31;
     CESKA_TELEVIZE = 32;
+    SPORTAL = 33;
+    BETWAY_REST_OF_AFRICA = 34;
 }
 
 message ProviderStatusMessage {
